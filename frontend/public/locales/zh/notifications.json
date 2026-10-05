@@ -24,7 +24,7 @@
       "username": {
         "description": "通知机器人的自定义名称",
         "label": "机器人用户名（可选）",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "在您的Discord服务器设置中创建webhook",

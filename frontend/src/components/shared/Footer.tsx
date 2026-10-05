@@ -1,19 +1,18 @@
 /**
  * Footer - Shared footer component
- * Displays copyright and GitHub link across all pages
+ * Displays the clinic copyright and credits the upstream MediKeep project.
  */
 
 import React from 'react';
 import { Box, Text, Anchor, Group } from '@mantine/core';
-import { IconBrandGithub, IconHeartFilled } from '@tabler/icons-react';
-import { useTranslation } from 'react-i18next';
+import { IconBrandGithub } from '@tabler/icons-react';
+import { BRAND } from '../../config/brand';
 
 interface FooterProps {
   className?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
-  const { t } = useTranslation('settings');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -25,8 +24,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
     >
       <Group justify="center" gap="xs">
         <Text size="sm" c="dimmed">
-          {/* eslint-disable-next-line i18next/no-literal-string -- brand name with copyright */}
-          {`© ${currentYear} MediKeep`}
+          {`© ${currentYear} ${BRAND.fullName}`}
         </Text>
         <Text size="sm" c="dimmed">
           •
@@ -40,26 +38,8 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
         >
           <IconBrandGithub size={16} />
-          {/* eslint-disable-next-line i18next/no-literal-string -- product name */}
-          {'GitHub'}
-        </Anchor>
-        <Text size="sm" c="dimmed">
-          •
-        </Text>
-        <Anchor
-          href="https://github.com/sponsors/afairgiant"
-          target="_blank"
-          rel="noopener noreferrer"
-          size="sm"
-          c="dimmed"
-          style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
-          aria-label="Sponsor MediKeep"
-        >
-          <IconHeartFilled
-            size={14}
-            style={{ color: 'var(--mantine-color-pink-5)' }}
-          />
-          {t('sponsor.buttonShort')}
+          {/* eslint-disable-next-line i18next/no-literal-string -- upstream project name */}
+          {'MediKeep'}
         </Anchor>
       </Group>
     </Box>

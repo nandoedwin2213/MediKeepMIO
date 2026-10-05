@@ -24,7 +24,7 @@
       "username": {
         "description": "Nome personalizado para o bot de notificações",
         "label": "Nome de Usuário do Bot (Opcional)",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "Crie um webhook nas configurações do seu servidor Discord",

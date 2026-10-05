@@ -12,6 +12,7 @@ import { shouldSuppressAutoRedirect } from '../../utils/loginRedirect';
 import { useAutoRedirectToProvider } from '../../hooks/useAutoRedirectToProvider';
 import { IconUser, IconLock, IconEye, IconEyeOff } from '@tabler/icons-react';
 import styles from '../../styles/pages/Login.module.css';
+import { BRAND } from '../../config/brand';
 
 /**
  * Copy for each `reason` the redirect helper can attach.
@@ -130,8 +131,7 @@ const Login = () => {
   // divider exists only to separate this form from the SSO button, so deciding
   // it independently is how the page ended up drawing a rule and the word "or"
   // across empty space with nothing above them.
-  const passwordFormVisible =
-    !ssoOnly && autoRedirect.status !== 'redirecting';
+  const passwordFormVisible = !ssoOnly && autoRedirect.status !== 'redirecting';
 
   // Redirect if already authenticated
   useEffect(() => {
@@ -360,15 +360,15 @@ const Login = () => {
         <div className={styles.loginHeader}>
           <h1>
             <img
-              src="/medikeep-icon.svg"
+              src={BRAND.logo}
               alt=""
               width={40}
               height={40}
               style={{ verticalAlign: 'middle', marginRight: '8px' }}
             />
-            {/* eslint-disable-next-line i18next/no-literal-string -- brand name */}
-            {'MediKeep'}
+            {BRAND.name}
           </h1>
+          <p style={{ margin: '4px 0 0', opacity: 0.8 }}>{BRAND.tagline}</p>
         </div>
 
         <div className={styles.loginDivider}>

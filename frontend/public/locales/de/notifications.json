@@ -24,7 +24,7 @@
       "username": {
         "description": "Benutzerdefinierter Name für den Benachrichtigungs-Bot",
         "label": "Bot-Benutzername (optional)",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "Erstellen Sie einen Webhook in Ihren Discord-Servereinstellungen",

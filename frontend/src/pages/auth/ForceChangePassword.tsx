@@ -10,6 +10,7 @@ import logger from '../../services/logger';
 import { buildLoginPath } from '../../utils/loginRedirect';
 import styles from '../../styles/pages/Login.module.css';
 import '../../components/auth/ChangePasswordModal.css';
+import { BRAND } from '../../config/brand';
 
 /**
  * Forced password change page.
@@ -123,14 +124,13 @@ const ForceChangePassword = () => {
         />
         <h1>
           <img
-            src="/medikeep-icon.svg"
-            alt="MediKeep"
+            src={BRAND.logo}
+            alt={BRAND.name}
             width={40}
             height={40}
             style={{ verticalAlign: 'middle', marginRight: '8px' }}
           />
-          {/* eslint-disable-next-line i18next/no-literal-string -- brand name */}
-          {'MediKeep'}
+          {BRAND.name}
         </h1>
         <h2>{t('settings:security.password.forceChange.title')}</h2>
         <p

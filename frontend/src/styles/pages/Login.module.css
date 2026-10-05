@@ -1,7 +1,7 @@
 .loginContainer {
   /* Local design tokens */
-  --login-bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --login-btn-gradient: linear-gradient(135deg, #a030ff 0%, #7d00d9 100%);
+  --login-bg-gradient: linear-gradient(135deg, #0b1a33 0%, #2b4a85 100%);
+  --login-btn-gradient: linear-gradient(135deg, #c9a45c 0%, #a8843f 100%);
   --login-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -25,7 +25,7 @@
     #1a0033 40%,
     #0d0018 100%
   );
-  --login-btn-gradient: linear-gradient(135deg, #9b6dff 0%, #7d00d9 100%);
+  --login-btn-gradient: linear-gradient(135deg, #c9a45c 0%, #a8843f 100%);
   --login-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 

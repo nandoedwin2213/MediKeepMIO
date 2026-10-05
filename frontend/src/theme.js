@@ -48,18 +48,18 @@ export const theme = createTheme({
 
   /** Primary color scheme */
   colors: {
-    // Primary blue theme (based on your current --primary-color: #667eea)
+    // Primary: SILHO navy
     primary: [
-      '#f0f4ff',
-      '#d1e7ff',
-      '#a3d0ff',
-      '#74b3ff',
-      '#4285ff',
-      '#667eea', // Your main primary color
-      '#5a67d8',
-      '#4c63d2',
-      '#4055c7',
-      '#3347bb',
+      '#eef2f8',
+      '#d5deec',
+      '#aabbd8',
+      '#7c96c2',
+      '#5574ad',
+      '#3a5a98', // SILHO navy (accessible on light backgrounds)
+      '#2b4a85',
+      '#1f3a6e',
+      '#152b55',
+      '#0b1a33', // SILHO brand navy
     ],
     // Success green
     success: [

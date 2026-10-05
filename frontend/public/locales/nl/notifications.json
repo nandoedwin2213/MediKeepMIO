@@ -24,7 +24,7 @@
       "username": {
         "description": "Aangepaste naam voor de meldingsbot",
         "label": "Bot-gebruikersnaam (optioneel)",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "Maak een webhook aan in uw Discord-serverinstellingen",

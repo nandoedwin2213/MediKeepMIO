@@ -11,6 +11,7 @@ import {
   markFirstLoginCompleted,
 } from '../../utils/profileUtils';
 import './ProfileCompletionModal.css';
+import { BRAND } from '../../config/brand';
 
 const ProfileCompletionModal = ({ isOpen, onClose, onComplete }) => {
   const { t } = useTranslation('auth');
@@ -50,7 +51,7 @@ const ProfileCompletionModal = ({ isOpen, onClose, onComplete }) => {
       <div className="profile-completion-content">
         <div className="completion-header">
           <div className="completion-icon">
-            <img src="/medikeep-icon.svg" alt="" width={48} height={48} />
+            <img src={BRAND.logo} alt="" width={48} height={48} />
           </div>
           <p className="completion-message">{message}</p>
         </div>

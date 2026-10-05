@@ -1,6 +1,6 @@
-
 import { ENTITY_TYPES } from '../utils/entityRelationships';
 import { buildEntityUrl } from '../utils/entityNavigation';
+import { isModuleHidden } from './brand';
 
 // Breakpoint definitions
 export const BREAKPOINTS = {
@@ -285,7 +285,15 @@ export const VIEWPORT_CONFIGS = {
 export const getNavigationSections = (viewport, isAdmin = false) => {
   // Removed frequent navigation logging for performance
 
-  const sections = { ...NAVIGATION_SECTIONS };
+  const sections = Object.fromEntries(
+    Object.entries(NAVIGATION_SECTIONS).map(([key, section]) => [
+      key,
+      {
+        ...section,
+        items: section.items.filter(item => !isModuleHidden(item.path)),
+      },
+    ])
+  );
 
   // Add admin section if user is admin
   if (isAdmin) {
@@ -310,6 +318,7 @@ export const getFeaturedItems = () => {
 
   Object.values(NAVIGATION_SECTIONS).forEach(section => {
     section.items.forEach(item => {
+      if (isModuleHidden(item.path)) return;
       if (item.featured || item.alwaysVisible) {
         featured.push({
           ...item,

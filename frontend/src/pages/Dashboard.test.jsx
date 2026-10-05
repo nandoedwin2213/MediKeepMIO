@@ -32,7 +32,10 @@ vi.mock('../hooks/useGlobalData', () => ({
   })),
 }));
 vi.mock('../components/medical', () => ({
-  PatientSelector: ({ onPatientChange: _onPatientChange, currentPatientId }) => (
+  PatientSelector: ({
+    onPatientChange: _onPatientChange,
+    currentPatientId,
+  }) => (
     <div data-testid="patient-selector">
       <span data-testid="current-patient-id">{currentPatientId}</span>
     </div>
@@ -222,9 +225,7 @@ describe('Dashboard Component', () => {
 
       await waitFor(() => {
         expect(screen.getByTestId('page-header')).toBeInTheDocument();
-        expect(screen.getByTestId('header-title')).toHaveTextContent(
-          'MediKeep'
-        );
+        expect(screen.getByTestId('header-title')).toHaveTextContent('SILHO');
         expect(screen.getByTestId('header-icon')).toBeInTheDocument();
         expect(screen.getByTestId('header-variant')).toHaveTextContent(
           'dashboard'
@@ -258,7 +259,7 @@ describe('Dashboard Component', () => {
         expect(screen.getByText('Total Records')).toBeInTheDocument();
         expect(screen.getByText('Active Medications')).toBeInTheDocument();
         expect(screen.getAllByText('Lab Results')).toHaveLength(2); // One in stats, one in modules
-        expect(screen.getAllByText('Procedures')).toHaveLength(2); // One in stats, one in modules
+        expect(screen.getAllByText('Procedures')).toHaveLength(1); // Stats only; module hidden
         expect(screen.getByText('10')).toBeInTheDocument();
         expect(screen.getByText('5')).toBeInTheDocument();
         expect(screen.getByText('8')).toBeInTheDocument();
@@ -718,7 +719,7 @@ describe('Dashboard Component', () => {
       );
     });
 
-    it('renders all treatment modules', async () => {
+    it('renders treatment modules except hidden ones', async () => {
       await act(async () => {
         renderDashboard();
       });
@@ -726,7 +727,7 @@ describe('Dashboard Component', () => {
       await waitFor(
         () => {
           expect(screen.getByText('Treatments')).toBeInTheDocument();
-          expect(screen.getAllByText('Procedures')).toHaveLength(2); // One in stats, one in modules
+          expect(screen.getAllByText('Procedures')).toHaveLength(1); // Stats only; module hidden
         },
         { timeout: 2000 }
       );
@@ -744,13 +745,13 @@ describe('Dashboard Component', () => {
       });
     });
 
-    it('renders all prevention modules', async () => {
+    it('renders prevention modules except hidden ones', async () => {
       await act(async () => {
         renderDashboard();
       });
 
       await waitFor(() => {
-        expect(screen.getByText('Immunizations')).toBeInTheDocument();
+        expect(screen.queryByText('Immunizations')).not.toBeInTheDocument();
         expect(screen.getByText('Visit History')).toBeInTheDocument();
       });
     });
