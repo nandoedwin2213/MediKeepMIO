@@ -1,6 +1,6 @@
 from datetime import date, datetime, timedelta, timezone
 
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel
@@ -25,7 +25,9 @@ from app.core.logging.helpers import (
     log_endpoint_error,
     log_security_event,
 )
+from app.core.utils.client_ip import get_client_ip
 from app.core.utils.cookie_auth import clear_auth_cookie, set_auth_cookie
+from app.core.utils.rate_limit import SlidingWindowRateLimiter
 from app.core.utils.security import create_access_token, verify_password
 from app.crud.user import user
 from app.events.security_events import PasswordChangedEvent
@@ -289,6 +291,22 @@ def log_successful_login(user_id: int, username: str, request: Request):
     )
 
 
+# Counts failed password logins only. One bucket per client IP and one per
+# username, so neither a single source nor one targeted account can be guessed at
+# faster than the configured rate. In-process: the container pins --workers 1.
+_failed_login_limiter = SlidingWindowRateLimiter(
+    max_requests=settings.LOGIN_RATE_LIMIT_ATTEMPTS,
+    window_seconds=settings.LOGIN_RATE_LIMIT_WINDOW_MINUTES * 60,
+)
+
+
+def _login_rate_limit_keys(request: Request, username: str) -> list:
+    return [
+        ("ip", get_client_ip(request)),
+        ("user", (username or "").strip().lower()),
+    ]
+
+
 @router.post("/login", response_model=Token)
 def login(
     request: Request,
@@ -328,6 +346,36 @@ def login(
         getattr(request.client, "host", "unknown") if request.client else "unknown"
     )
 
+    # Checked before authenticate() so a limited caller learns nothing about the
+    # password, and pays no bcrypt cost on the server.
+    rate_limit_keys = _login_rate_limit_keys(request, form_data.username)
+    limited_key = next(
+        (
+            key
+            for key in rate_limit_keys
+            if _failed_login_limiter.get_remaining_requests(key) == 0
+        ),
+        None,
+    )
+    if limited_key is not None:
+        headers = _failed_login_limiter.rate_limit_headers(limited_key)
+        log_security_event(
+            logger,
+            "login_rate_limited",
+            request,
+            f"Login rate limited ({limited_key[0]}) for username: {form_data.username}",
+            username=form_data.username,
+            retry_after_seconds=headers["Retry-After"],
+        )
+        raise HTTPException(
+            status_code=429,
+            detail=(
+                "Too many failed sign-in attempts. "
+                f"Please wait {headers['Retry-After']} seconds and try again."
+            ),
+            headers={**headers, "X-Error-Code": AuthErrorCode.LOGIN_RATE_LIMITED},
+        )
+
     # Log login attempt
     log_security_event(
         logger,
@@ -343,6 +391,9 @@ def login(
     )
 
     if not db_user:
+        for key in rate_limit_keys:
+            _failed_login_limiter.is_allowed(key)
+
         # Log failed login attempt
         log_security_event(
             logger,
