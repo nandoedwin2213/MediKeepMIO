@@ -58,6 +58,16 @@ def reduce_bcrypt_rounds() -> Generator[None, None, None]:
         bcrypt.gensalt = original_gensalt
 
 
+@pytest.fixture(autouse=True)
+def reset_login_rate_limiter() -> Generator[None, None, None]:
+    """Failed-login counters are module-scope; clear them so tests cannot leak."""
+    from app.api.v1.endpoints.auth import _failed_login_limiter
+
+    _failed_login_limiter.reset()
+    yield
+    _failed_login_limiter.reset()
+
+
 # Test database setup
 @pytest.fixture(scope="session")
 def test_db_engine():

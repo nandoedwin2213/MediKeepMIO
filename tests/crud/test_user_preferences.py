@@ -136,22 +136,18 @@ class TestUserPreferencesCRUD:
         assert prefs1.user_id != prefs2.user_id
 
     def test_update_nonexistent_user(self, db_session: Session):
-        """Test updating preferences for nonexistent user creates them.
+        """Updating preferences for a user that does not exist returns None.
 
-        Note: The CRUD method creates preferences if they don't exist,
-        rather than raising an error.
+        The user_id foreign key rejects the insert, and the CRUD method rolls
+        back and returns None rather than raising.
         """
         update_data = UserPreferencesUpdate(unit_system="metric")
 
-        # This creates preferences for the user_id even if user doesn't exist in users table
         result = user_prefs_crud.update_by_user_id(
             db_session, user_id=99999, obj_in=update_data
         )
 
-        # Should create new preferences with the update data
-        assert result is not None
-        assert result.user_id == 99999
-        assert result.unit_system == "metric"
+        assert result is None
 
     def test_multiple_updates(self, db_session: Session, test_user):
         """Test multiple sequential updates work correctly."""

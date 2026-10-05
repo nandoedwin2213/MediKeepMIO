@@ -387,6 +387,14 @@ class Settings:  # App Info
         os.getenv("SSO_RATE_LIMIT_WINDOW_MINUTES", "10")
     )
 
+    # Failed password logins per window, counted per client IP and per username.
+    # Only failures are counted, so a household signing in normally never hits it;
+    # the per-username bucket also slows a brute force spread across many IPs.
+    LOGIN_RATE_LIMIT_ATTEMPTS: int = int(os.getenv("LOGIN_RATE_LIMIT_ATTEMPTS", "10"))
+    LOGIN_RATE_LIMIT_WINDOW_MINUTES: int = int(
+        os.getenv("LOGIN_RATE_LIMIT_WINDOW_MINUTES", "15")
+    )
+
     # SSO-only mode and IdP auto-redirect.
     #
     # Both default off, so a deployment upgrading to this release behaves exactly
