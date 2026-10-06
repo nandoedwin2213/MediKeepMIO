@@ -225,3 +225,11 @@ export const hba1cToPercent = (value, unit) => {
   if (u === 'mmol/mol') return round(n / 10.929 + 2.15, 1);
   return null;
 };
+
+/** BMI from storage units (weight in lb, height in inches). */
+export const calculateBmiImperial = (weightLbs, heightInches) => {
+  const w = toNumber(weightLbs);
+  const h = toNumber(heightInches);
+  if (w === null || h === null || w <= 0 || h <= 0) return null;
+  return round((w / (h * h)) * 703, 1);
+};

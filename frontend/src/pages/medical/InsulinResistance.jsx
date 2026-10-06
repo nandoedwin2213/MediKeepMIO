@@ -14,6 +14,7 @@ import {
   Stack,
   Text,
   Title,
+  useMantineColorScheme,
 } from '@mantine/core';
 import {
   IconArrowDownRight,
@@ -44,6 +45,7 @@ import {
   LEVEL_COLORS,
   buildHomaIrSeries,
   buildTgHdlSeries,
+  calculateBmiImperial,
   classify,
   glucoseToMgDl,
   hba1cToPercent,
@@ -69,22 +71,43 @@ const LAB_QUERIES = {
 const GOLD = '#C9A45C';
 const CYAN = '#4FD8F0';
 const NAVY = '#2B4A85';
+const NAVY_LIGHT = '#8FB0F0';
 
-const fetchLabSeries = async (patientId, { names, convert }, signal) => {
-  const results = await Promise.allSettled(
-    names.map(name =>
-      labTestComponentApi.getTrendsByPatientAndTest(
+const fetchTrendWithRetry = async (patientId, name, signal) => {
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      return await labTestComponentApi.getTrendsByPatientAndTest(
         patientId,
         name,
         { limit: 100 },
         signal
-      )
-    )
-  );
-  const points = results.flatMap(r =>
-    r.status === 'fulfilled' ? r.value?.data_points || [] : []
-  );
-  return normalizeLabPoints(points, convert);
+      );
+    } catch (err) {
+      if (signal?.aborted) throw err;
+      if (attempt === 1) throw err;
+    }
+  }
+  return null;
+};
+
+const fetchLabSeries = async (patientId, { names, convert }, signal) => {
+  const points = [];
+  let failed = false;
+  for (const name of names) {
+    try {
+      const res = await fetchTrendWithRetry(patientId, name, signal);
+      points.push(...(res?.data_points || []));
+    } catch (err) {
+      if (signal?.aborted) throw err;
+      failed = true;
+      logger.warn('insulin_resistance_trend_failed', {
+        component: 'InsulinResistance',
+        testName: name,
+        error: err?.message,
+      });
+    }
+  }
+  return { series: normalizeLabPoints(points, convert), failed };
 };
 
 const vitalSeries = (vitals, pick) =>
@@ -164,6 +187,9 @@ function MetricCard({
 
 function TrendCard({ title, lines, reference, formatDate }) {
   const { t } = useTranslation('medical');
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === 'dark';
+  const axisTick = { fontSize: 11, fill: dark ? '#C9D4EA' : '#41506B' };
   const data = useMemo(() => {
     const byDate = new Map();
     lines.forEach(line => {
@@ -195,28 +221,30 @@ function TrendCard({ title, lines, reference, formatDate }) {
           >
             <CartesianGrid
               strokeDasharray="3 3"
-              stroke="rgba(43,74,133,0.18)"
+              stroke={dark ? 'rgba(201,212,234,0.18)' : 'rgba(43,74,133,0.18)'}
             />
-            <XAxis
-              dataKey="date"
-              tickFormatter={formatDate}
-              tick={{ fontSize: 11 }}
-            />
-            <YAxis
-              yAxisId="left"
-              tick={{ fontSize: 11 }}
-              domain={['auto', 'auto']}
-            />
+            <XAxis dataKey="date" tickFormatter={formatDate} tick={axisTick} />
+            <YAxis yAxisId="left" tick={axisTick} domain={['auto', 'auto']} />
             {lines.some(l => l.axis === 'right') && (
               <YAxis
                 yAxisId="right"
                 orientation="right"
-                tick={{ fontSize: 11 }}
+                tick={axisTick}
                 domain={['auto', 'auto']}
               />
             )}
             <Tooltip
               labelFormatter={formatDate}
+              contentStyle={{
+                background: dark ? '#0B1A33' : '#FFFFFF',
+                border: '1px solid rgba(201,164,92,0.45)',
+                borderRadius: 8,
+              }}
+              labelStyle={{
+                color: dark ? '#E5CF95' : '#0B1A33',
+                fontWeight: 600,
+              }}
+              itemStyle={{ color: dark ? '#E8EEF8' : '#152B55' }}
               formatter={(value, name) => {
                 const line = lines.find(l => l.key === name);
                 return [`${value} ${line?.unit || ''}`, line?.label || name];
@@ -243,7 +271,7 @@ function TrendCard({ title, lines, reference, formatDate }) {
                 dataKey={line.key}
                 name={line.key}
                 yAxisId={line.axis || 'left'}
-                stroke={line.color}
+                stroke={dark && line.color === NAVY ? NAVY_LIGHT : line.color}
                 strokeWidth={2.5}
                 dot={{ r: 3 }}
                 connectNulls
@@ -262,6 +290,7 @@ const InsulinResistance = () => {
   const { patient } = usePatientWithStaticData();
   const currentPatient = patient?.patient;
   const patientId = currentPatient?.id;
+  const patientHeight = currentPatient?.height;
   const { unitSystem } = useUserPreferences();
   const { formatDate } = useDateFormat();
 
@@ -269,6 +298,7 @@ const InsulinResistance = () => {
   const [vitals, setVitals] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [partial, setPartial] = useState(false);
 
   const load = useCallback(
     async signal => {
@@ -277,16 +307,24 @@ const InsulinResistance = () => {
       setError(null);
       try {
         const keys = Object.keys(LAB_QUERIES);
-        const [labSeries, vitalsResponse] = await Promise.all([
-          Promise.all(
-            keys.map(k => fetchLabSeries(patientId, LAB_QUERIES[k], signal))
-          ),
-          apiService
-            .getPatientEntities('vitals', patientId, signal)
-            .catch(() => []),
-        ]);
+        const labSeries = [];
+        for (const k of keys) {
+          labSeries.push(
+            await fetchLabSeries(patientId, LAB_QUERIES[k], signal)
+          );
+        }
+        let vitalsFailed = false;
+        const vitalsResponse = await apiService
+          .getPatientEntities('vitals', patientId, signal)
+          .catch(() => {
+            vitalsFailed = true;
+            return [];
+          });
         if (signal?.aborted) return;
-        setLabs(Object.fromEntries(keys.map((k, i) => [k, labSeries[i]])));
+        setLabs(
+          Object.fromEntries(keys.map((k, i) => [k, labSeries[i].series]))
+        );
+        setPartial(vitalsFailed || labSeries.some(r => r.failed));
         const list = Array.isArray(vitalsResponse)
           ? vitalsResponse
           : vitalsResponse?.data || [];
@@ -325,12 +363,16 @@ const InsulinResistance = () => {
           ? round(convertForDisplay(v.weight, 'weight', unitSystem), 1)
           : null
       ),
-      bmi: vitalSeries(vitals, v => (v.bmi ? round(v.bmi, 1) : null)),
+      bmi: vitalSeries(vitals, v =>
+        v.bmi
+          ? round(v.bmi, 1)
+          : calculateBmiImperial(v.weight, v.height || patientHeight)
+      ),
       systolic: vitalSeries(vitals, v => v.systolic_bp ?? null),
       diastolic: vitalSeries(vitals, v => v.diastolic_bp ?? null),
       weightUnit,
     };
-  }, [labs, vitals, unitSystem]);
+  }, [labs, vitals, unitSystem, patientHeight]);
 
   const summaries = useMemo(
     () => ({
@@ -390,6 +432,22 @@ const InsulinResistance = () => {
         title={t('insulinResistance.title', 'Insulin resistance')}
         icon="🧬"
       />
+
+      {partial && !error && (
+        <Alert color="yellow" variant="light" mt="md">
+          <Group justify="space-between" gap="sm">
+            <Text size="sm">
+              {t(
+                'insulinResistance.partialError',
+                'Some results could not be loaded; the values shown may be incomplete.'
+              )}
+            </Text>
+            <Button size="xs" variant="light" onClick={() => load()}>
+              {t('insulinResistance.retry', 'Retry')}
+            </Button>
+          </Group>
+        </Alert>
+      )}
 
       {error && (
         <Alert color="red" mt="md">

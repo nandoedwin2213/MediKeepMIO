@@ -1732,6 +1732,8 @@
       "body": "Waga i BMI",
       "systolic": "Skurczowe",
       "diastolic": "Rozkurczowe"
-    }
+    },
+    "partialError": "Nie udało się wczytać części wyników; wyświetlane wartości mogą być niepełne.",
+    "retry": "Spróbuj ponownie"
   }
 }

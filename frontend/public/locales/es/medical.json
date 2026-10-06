@@ -1732,6 +1732,8 @@
       "body": "Peso e IMC",
       "systolic": "Sistólica",
       "diastolic": "Diastólica"
-    }
+    },
+    "partialError": "No se pudieron cargar algunos resultados; los valores mostrados pueden estar incompletos.",
+    "retry": "Reintentar"
   }
 }

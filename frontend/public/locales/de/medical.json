@@ -1732,6 +1732,8 @@
       "body": "Gewicht und BMI-Wert",
       "systolic": "Systolisch",
       "diastolic": "Diastolisch"
-    }
+    },
+    "partialError": "Einige Ergebnisse konnten nicht geladen werden; die angezeigten Werte sind möglicherweise unvollständig.",
+    "retry": "Erneut versuchen"
   }
 }
