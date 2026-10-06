@@ -112,7 +112,8 @@
       "visitHistory": "Historia wizyt",
       "vitalSigns": "Podstawowe parametry życiowe",
       "insulinResistance": "Insulinooporność",
-      "metabolicRisk": "Ryzyko metaboliczne"
+      "metabolicRisk": "Ryzyko metaboliczne",
+      "myMetabolicHealth": "Moje zdrowie metaboliczne"
     },
     "sections": {
       "administration": "Administracja",

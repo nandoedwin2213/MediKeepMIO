@@ -1847,7 +1847,13 @@
       "mets_ir": "Kombinerar glukos, triglycerider, HDL och BMI för att uppskatta insulinresistens.",
       "tg_hdl": "Förhållandet mellan triglycerider och det goda kolesterolet.",
       "waist_height": "Ditt midjemått bör vara mindre än halva din längd.",
-      "waist_hip": "Visar hur mycket fett som samlas runt magen."
+      "waist_hip": "Visar hur mycket fett som samlas runt magen.",
+      "bmi": "Sätter din vikt i relation till din längd.",
+      "waist": "Uppskattar fettet som samlas runt buken.",
+      "hba1c": "Visar ditt genomsnittliga blodsocker de senaste 3 månaderna.",
+      "triglycerides": "Blodfetter; de ökar med socker, alkohol och stillasittande.",
+      "blood_pressure": "Blodets kraft mot artärerna; det högsta av de två värdena räknas.",
+      "glucose": "Fasteblodsocker."
     },
     "evolution": {
       "title": "Poängens utveckling",
@@ -1908,6 +1914,48 @@
           "former": "Jag rökte tidigare",
           "current": "Jag röker"
         }
+      }
+    },
+    "health": {
+      "title": "Min metabola hälsa",
+      "subtitle": "Hur mår jag? Vad ökar min risk? Vad ska jag förbättra? Blir jag bättre?",
+      "noValue": "Ingen mätning ännu",
+      "keyTitle": "Mina indikatorer",
+      "keySubtitle": "Vad varje värde betyder och vilken nivå du ligger på.",
+      "why": {
+        "title": "Varför ändrades din risk?",
+        "none": "Det finns ingen tidigare bedömning att jämföra med ännu.",
+        "improved": "Din poäng förbättrades med {{delta}} poäng",
+        "worsened": "Din poäng sjönk med {{delta}} poäng",
+        "same": "Din poäng är oförändrad",
+        "period": "Från {{from}} till {{to}}",
+        "mainly": "Främst på grund av:",
+        "others": "Andra förändringar:",
+        "noDrivers": "Ingen poängfaktor bytte nivå."
+      },
+      "progress": {
+        "title": "Dina framsteg",
+        "compare": "Jämför början med:",
+        "empty": "Dina framsteg visas när du har mätningar från två olika datum.",
+        "notReached": "Det finns inga mätningar för den här perioden ännu."
+      },
+      "windows": {
+        "baseline": "Början",
+        "d30": "30 dagar",
+        "d60": "60 dagar",
+        "d90": "90 dagar",
+        "m6": "6 månader",
+        "m12": "12 månader",
+        "latest": "Nuvarande"
+      },
+      "direction": {
+        "improved": "Förbättrad",
+        "worsened": "Försämrad",
+        "same": "Ingen förändring"
+      },
+      "chart": {
+        "title": "Min utveckling",
+        "empty": "Diagrammet visas med två eller fler mätningar."
       }
     }
   }

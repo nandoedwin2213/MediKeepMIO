@@ -1847,7 +1847,13 @@
       "mets_ir": "Combines glucose, triglycerides, HDL and BMI to estimate insulin resistance.",
       "tg_hdl": "Relationship between triglycerides and good cholesterol.",
       "waist_height": "Your waist should be less than half your height.",
-      "waist_hip": "Shows how fat is distributed around the abdomen."
+      "waist_hip": "Shows how fat is distributed around the abdomen.",
+      "bmi": "Relates your weight to your height.",
+      "waist": "Estimates the fat accumulated around the abdomen.",
+      "hba1c": "Reflects your average blood sugar over the last 3 months.",
+      "triglycerides": "Fats in the blood; they rise with sugar, alcohol and inactivity.",
+      "blood_pressure": "The force of blood against your arteries; the higher of the two readings counts.",
+      "glucose": "Blood sugar after fasting."
     },
     "evolution": {
       "title": "Score evolution",
@@ -1908,6 +1914,48 @@
           "former": "I used to smoke",
           "current": "I smoke"
         }
+      }
+    },
+    "health": {
+      "title": "My metabolic health",
+      "subtitle": "How am I? What is raising my risk? What should I improve? Am I improving?",
+      "noValue": "No measurement yet",
+      "keyTitle": "My indicators",
+      "keySubtitle": "What each value means and which level you are in.",
+      "why": {
+        "title": "Why did your risk change?",
+        "none": "There is no previous evaluation to compare yet.",
+        "improved": "Your score improved {{delta}} points",
+        "worsened": "Your score dropped {{delta}} points",
+        "same": "Your score stayed the same",
+        "period": "From {{from}} to {{to}}",
+        "mainly": "Mainly because of:",
+        "others": "Other changes:",
+        "noDrivers": "No score factor changed level."
+      },
+      "progress": {
+        "title": "Your progress",
+        "compare": "Compare the start with:",
+        "empty": "Your progress appears once you have measurements on two different dates.",
+        "notReached": "There are no measurements for this period yet."
+      },
+      "windows": {
+        "baseline": "Start",
+        "d30": "30 days",
+        "d60": "60 days",
+        "d90": "90 days",
+        "m6": "6 months",
+        "m12": "12 months",
+        "latest": "Current"
+      },
+      "direction": {
+        "improved": "Improved",
+        "worsened": "Worsened",
+        "same": "No change"
+      },
+      "chart": {
+        "title": "My evolution",
+        "empty": "The chart appears with two or more measurements."
       }
     }
   }

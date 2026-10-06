@@ -1,6 +1,6 @@
 """Metabolic Risk Engine endpoints: clinical config, evaluations and metabolic history."""
 
-from typing import Any, List
+from typing import Any, Dict, List
 
 from fastapi import APIRouter, Depends, Query, Request
 from sqlalchemy.orm import Session
@@ -33,6 +33,7 @@ from app.services.metabolic_engine import (
     get_active_config,
     save_if_changed,
 )
+from app.services.metabolic_progress import build_progress
 
 router = APIRouter()
 
@@ -128,6 +129,25 @@ def evaluate(
             saved=True,
             result=result,
         )
+
+
+@router.get("/patients/{patient_id}/progress", response_model=Dict[str, Any])
+def read_progress(
+    *,
+    patient_id: int,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+) -> Any:
+    """Baseline/30/60/90-day/6/12-month comparison, progress and why the score changed."""
+    deps.verify_patient_access(patient_id, db, current_user)
+    assessments = (
+        db.query(MetabolicAssessment)
+        .filter(MetabolicAssessment.patient_id == patient_id)
+        .order_by(MetabolicAssessment.assessed_at.desc(), MetabolicAssessment.id.desc())
+        .limit(500)
+        .all()
+    )
+    return build_progress(assessments)
 
 
 @router.get(

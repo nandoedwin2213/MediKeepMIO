@@ -1847,7 +1847,13 @@
       "mets_ir": "Kombiniert Glukose, Triglyceride, HDL und BMI zur Abschätzung der Insulinresistenz.",
       "tg_hdl": "Verhältnis von Triglyceriden zu gutem Cholesterin.",
       "waist_height": "Ihre Taille sollte weniger als die Hälfte Ihrer Größe messen.",
-      "waist_hip": "Zeigt, wie viel Fett sich am Bauch ansammelt."
+      "waist_hip": "Zeigt, wie viel Fett sich am Bauch ansammelt.",
+      "bmi": "Setzt Ihr Gewicht ins Verhältnis zu Ihrer Größe.",
+      "waist": "Schätzt das Fett, das sich am Bauch ansammelt.",
+      "hba1c": "Spiegelt Ihren durchschnittlichen Blutzucker der letzten 3 Monate wider.",
+      "triglycerides": "Blutfette; sie steigen durch Zucker, Alkohol und Bewegungsmangel.",
+      "blood_pressure": "Die Kraft des Blutes gegen die Arterien; der höhere der beiden Werte zählt.",
+      "glucose": "Blutzucker nüchtern."
     },
     "evolution": {
       "title": "Verlauf des Scores",
@@ -1908,6 +1914,48 @@
           "former": "Ich habe früher geraucht",
           "current": "Ich rauche"
         }
+      }
+    },
+    "health": {
+      "title": "Meine Stoffwechselgesundheit",
+      "subtitle": "Wie geht es mir? Was erhöht mein Risiko? Was sollte ich verbessern? Werde ich besser?",
+      "noValue": "Noch keine Messung",
+      "keyTitle": "Meine Indikatoren",
+      "keySubtitle": "Was jeder Wert bedeutet und auf welcher Stufe Sie liegen.",
+      "why": {
+        "title": "Warum hat sich Ihr Risiko verändert?",
+        "none": "Es gibt noch keine frühere Bewertung zum Vergleich.",
+        "improved": "Ihr Score hat sich um {{delta}} Punkte verbessert",
+        "worsened": "Ihr Score ist um {{delta}} Punkte gesunken",
+        "same": "Ihr Score ist gleich geblieben",
+        "period": "Vom {{from}} bis {{to}}",
+        "mainly": "Hauptsächlich wegen:",
+        "others": "Weitere Änderungen:",
+        "noDrivers": "Kein Score-Faktor hat die Stufe gewechselt."
+      },
+      "progress": {
+        "title": "Ihr Fortschritt",
+        "compare": "Beginn vergleichen mit:",
+        "empty": "Ihr Fortschritt erscheint, sobald Messungen an zwei verschiedenen Tagen vorliegen.",
+        "notReached": "Für diesen Zeitraum gibt es noch keine Messungen."
+      },
+      "windows": {
+        "baseline": "Beginn",
+        "d30": "30 Tage",
+        "d60": "60 Tage",
+        "d90": "90 Tage",
+        "m6": "6 Monate",
+        "m12": "12 Monate",
+        "latest": "Aktuell"
+      },
+      "direction": {
+        "improved": "Verbessert",
+        "worsened": "Verschlechtert",
+        "same": "Keine Änderung"
+      },
+      "chart": {
+        "title": "Mein Verlauf",
+        "empty": "Das Diagramm erscheint ab zwei Messungen."
       }
     }
   }

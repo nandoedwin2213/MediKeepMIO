@@ -112,7 +112,8 @@
       "visitHistory": "История визитов",
       "vitalSigns": "Жизненные показатели",
       "insulinResistance": "Инсулинорезистентность",
-      "metabolicRisk": "Метаболический риск"
+      "metabolicRisk": "Метаболический риск",
+      "myMetabolicHealth": "Моё метаболическое здоровье"
     },
     "sections": {
       "administration": "Администрирование",

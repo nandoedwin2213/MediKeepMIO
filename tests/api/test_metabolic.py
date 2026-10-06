@@ -176,3 +176,46 @@ def test_patient_sex_change_stores_new_assessment(
     second = authenticated_client.post(url).json()
     assert second["result"]["patient"]["sex"] != first["result"]["patient"]["sex"]
     assert second["assessment_id"] != first["assessment_id"]
+
+
+def test_progress_endpoint_compares_assessments(
+    authenticated_client, db_session, test_patient
+):
+    add_ir_panel(db_session, test_patient.id)
+    url = f"{BASE}/patients/{test_patient.id}"
+    authenticated_client.post(f"{url}/evaluate")
+    empty = authenticated_client.get(f"{url}/progress").json()
+    assert len(empty["timeline"]) == 1 and empty["change"] is None
+    db_session.add(
+        Vitals(
+            patient_id=test_patient.id,
+            recorded_date=datetime(2026, 12, 1, 8),
+            weight=165.35,
+            height=66.93,
+            waist_circumference=33.46,
+            hip_circumference=39.37,
+            systolic_bp=115,
+            diastolic_bp=75,
+        )
+    )
+    db_session.commit()
+    authenticated_client.post(f"{url}/evaluate")
+    r = authenticated_client.get(f"{url}/progress")
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert len(body["timeline"]) == 2
+    waist = {row["key"]: row for row in body["progress"]}["waist"]
+    assert waist["from"] == 95.0 and waist["to"] == 85.0
+    assert waist["direction"] == "improved"
+    assert body["change"]["score_delta"] > 0
+    assert any(d["key"] == "waist" for d in body["change"]["drivers"])
+    windows = {w["key"]: w for w in body["windows"]}
+    assert (
+        windows["d90"]["snapshot"]["assessment_id"]
+        == body["timeline"][1]["assessment_id"]
+    )
+
+
+def test_progress_requires_access(admin_client, test_patient):
+    r = admin_client.get(f"{BASE}/patients/{test_patient.id}/progress")
+    assert r.status_code in (403, 404)

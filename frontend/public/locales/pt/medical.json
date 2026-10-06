@@ -1847,7 +1847,13 @@
       "mets_ir": "Combina glicose, triglicerídeos, HDL e IMC para estimar a resistência à insulina.",
       "tg_hdl": "Relação entre triglicerídeos e colesterol bom.",
       "waist_height": "Sua cintura deveria medir menos da metade da sua altura.",
-      "waist_hip": "Indica quanta gordura se acumula no abdômen."
+      "waist_hip": "Indica quanta gordura se acumula no abdômen.",
+      "bmi": "Relaciona seu peso com sua altura.",
+      "waist": "Estima a gordura acumulada ao redor do abdômen.",
+      "hba1c": "Reflete sua glicose média dos últimos 3 meses.",
+      "triglycerides": "Gorduras no sangue; aumentam com açúcar, álcool e sedentarismo.",
+      "blood_pressure": "A força do sangue contra as artérias; conta o maior dos dois valores.",
+      "glucose": "Glicose no sangue em jejum."
     },
     "evolution": {
       "title": "Evolução do score",
@@ -1908,6 +1914,48 @@
           "former": "Eu fumava",
           "current": "Fumo"
         }
+      }
+    },
+    "health": {
+      "title": "Minha saúde metabólica",
+      "subtitle": "Como estou? O que está aumentando meu risco? O que devo melhorar? Estou melhorando?",
+      "noValue": "Ainda sem medição",
+      "keyTitle": "Meus indicadores",
+      "keySubtitle": "O que cada valor significa e em que nível você está.",
+      "why": {
+        "title": "Por que seu risco mudou?",
+        "none": "Ainda não há uma avaliação anterior para comparar.",
+        "improved": "Seu score melhorou {{delta}} pontos",
+        "worsened": "Seu score caiu {{delta}} pontos",
+        "same": "Seu score continua igual",
+        "period": "De {{from}} a {{to}}",
+        "mainly": "Principalmente por:",
+        "others": "Outras mudanças:",
+        "noDrivers": "Nenhum fator do score mudou de nível."
+      },
+      "progress": {
+        "title": "Seu progresso",
+        "compare": "Comparar o início com:",
+        "empty": "Seu progresso aparece quando houver medições em duas datas diferentes.",
+        "notReached": "Ainda não há medições para este período."
+      },
+      "windows": {
+        "baseline": "Início",
+        "d30": "30 dias",
+        "d60": "60 dias",
+        "d90": "90 dias",
+        "m6": "6 meses",
+        "m12": "12 meses",
+        "latest": "Atual"
+      },
+      "direction": {
+        "improved": "Melhorou",
+        "worsened": "Piorou",
+        "same": "Sem mudança"
+      },
+      "chart": {
+        "title": "Minha evolução",
+        "empty": "O gráfico aparece com duas ou mais medições."
       }
     }
   }

@@ -73,7 +73,7 @@ const INDEX_INPUTS = {
   waist_hip: ['waist', 'hip'],
 };
 
-const fmt = (value, locale) =>
+export const fmt = (value, locale) =>
   typeof value === 'number'
     ? value.toLocaleString(locale, { maximumFractionDigits: 3 })
     : value;
@@ -86,7 +86,7 @@ export const formatBand = (band, locale) => {
   return `${fmt(band.min, locale)} – ${fmt(band.max, locale)}`;
 };
 
-function LevelScale({ bands, level, locale }) {
+export function LevelScale({ bands, level, locale }) {
   const { t } = useTranslation('medical');
   if (!bands?.length) return null;
   return (
@@ -140,7 +140,7 @@ function LevelScale({ bands, level, locale }) {
   );
 }
 
-function ScoreHero({ score, formatDate, assessedAt, versions }) {
+export function ScoreHero({ score, formatDate, assessedAt, versions }) {
   const { t } = useTranslation('medical');
   const has = score?.value !== null && score?.value !== undefined;
   const color = has ? RISK_COLORS[score.level] : 'gray';
@@ -172,7 +172,18 @@ function ScoreHero({ score, formatDate, assessedAt, versions }) {
             })}
           </Text>
           {has ? (
-            <Badge color={color} size="xl" variant="light" w="fit-content">
+            <Badge
+              color={color}
+              size="xl"
+              variant="light"
+              w="fit-content"
+              maw="100%"
+              h="auto"
+              py={4}
+              styles={{
+                label: { whiteSpace: 'normal', overflow: 'visible' },
+              }}
+            >
               {t(`metabolic.risk.${score.level}`, score.level)}
             </Badge>
           ) : (

@@ -112,7 +112,8 @@
       "visitHistory": "Visit History",
       "vitalSigns": "Vital Signs",
       "insulinResistance": "Insulin Resistance",
-      "metabolicRisk": "Metabolic risk"
+      "metabolicRisk": "Metabolic risk",
+      "myMetabolicHealth": "My metabolic health"
     },
     "sections": {
       "administration": "Administration",

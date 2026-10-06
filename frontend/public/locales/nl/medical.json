@@ -1847,7 +1847,13 @@
       "mets_ir": "Combineert glucose, triglyceriden, HDL en BMI om insulineresistentie te schatten.",
       "tg_hdl": "Verhouding tussen triglyceriden en goed cholesterol.",
       "waist_height": "Je taille zou minder dan de helft van je lengte moeten zijn.",
-      "waist_hip": "Geeft aan hoeveel vet zich rond de buik ophoopt."
+      "waist_hip": "Geeft aan hoeveel vet zich rond de buik ophoopt.",
+      "bmi": "Zet uw gewicht af tegen uw lengte.",
+      "waist": "Schat het vet dat zich rond de buik ophoopt.",
+      "hba1c": "Geeft uw gemiddelde bloedsuiker van de afgelopen 3 maanden weer.",
+      "triglycerides": "Vetten in het bloed; ze stijgen door suiker, alcohol en weinig beweging.",
+      "blood_pressure": "De kracht van het bloed tegen uw slagaders; de hoogste van de twee waarden telt.",
+      "glucose": "Nuchtere bloedsuiker."
     },
     "evolution": {
       "title": "Verloop van de score",
@@ -1908,6 +1914,48 @@
           "former": "Ik rookte vroeger",
           "current": "Ik rook"
         }
+      }
+    },
+    "health": {
+      "title": "Mijn metabole gezondheid",
+      "subtitle": "Hoe gaat het met me? Wat verhoogt mijn risico? Wat moet ik verbeteren? Ga ik vooruit?",
+      "noValue": "Nog geen meting",
+      "keyTitle": "Mijn indicatoren",
+      "keySubtitle": "Wat elke waarde betekent en op welk niveau u zit.",
+      "why": {
+        "title": "Waarom is uw risico veranderd?",
+        "none": "Er is nog geen eerdere beoordeling om mee te vergelijken.",
+        "improved": "Uw score is {{delta}} punten verbeterd",
+        "worsened": "Uw score is {{delta}} punten gedaald",
+        "same": "Uw score is gelijk gebleven",
+        "period": "Van {{from}} tot {{to}}",
+        "mainly": "Vooral door:",
+        "others": "Andere veranderingen:",
+        "noDrivers": "Geen enkele scorefactor is van niveau veranderd."
+      },
+      "progress": {
+        "title": "Uw vooruitgang",
+        "compare": "Begin vergelijken met:",
+        "empty": "Uw vooruitgang verschijnt zodra u metingen op twee verschillende data heeft.",
+        "notReached": "Er zijn nog geen metingen voor deze periode."
+      },
+      "windows": {
+        "baseline": "Begin",
+        "d30": "30 dagen",
+        "d60": "60 dagen",
+        "d90": "90 dagen",
+        "m6": "6 maanden",
+        "m12": "12 maanden",
+        "latest": "Huidig"
+      },
+      "direction": {
+        "improved": "Verbeterd",
+        "worsened": "Verslechterd",
+        "same": "Geen verandering"
+      },
+      "chart": {
+        "title": "Mijn verloop",
+        "empty": "De grafiek verschijnt bij twee of meer metingen."
       }
     }
   }
