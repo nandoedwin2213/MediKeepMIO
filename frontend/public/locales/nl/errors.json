@@ -23,6 +23,7 @@
     "deleteFailed": "Bestand verwijderen mislukt. Probeer het opnieuw.",
     "downloadFailed": "Bestand downloaden mislukt. Probeer het opnieuw.",
     "notFound": "Bestand niet gevonden.",
+    "popupBlocked": "Het afdrukvenster is geblokkeerd door je browser. Sta pop-ups toe voor deze site en probeer het opnieuw.",
     "viewFailed": "Bestand openen voor weergave mislukt. Probeer het opnieuw."
   },
   "form": {
@@ -43,6 +44,7 @@
     "submissionFailed": "Formulier opslaan mislukt. Controleer uw invoer en probeer het opnieuw."
   },
   "general": {
+    "incorrectCredentials": "Onjuiste inloggegevens.",
     "maintenanceMode": "Het systeem is momenteel in onderhoud. Probeer het later opnieuw.",
     "permissionDenied": "U heeft geen toestemming om deze actie uit te voeren.",
     "rateLimitExceeded": "Te veel verzoeken. Wacht even en probeer het opnieuw.",
@@ -85,10 +87,26 @@
     "fetchFailed": "Relaties laden mislukt",
     "updateFailed": "Relatie bijwerken mislukt"
   },
+  "submission": {
+    "completeMessage": "Formulier en bestanden succesvol opgeslagen.",
+    "failedMessage": "Formulier verzenden mislukt.",
+    "failedShortTitle": "Mislukt",
+    "failedTitle": "Verzenden mislukt",
+    "partialCompleteMessage": "Formulier opgeslagen, maar sommige bestanden konden niet worden geüpload.",
+    "partialCompleteTitle": "Gedeeltelijk voltooid",
+    "partialMessage": "Formulier opgeslagen, maar {{failed}} bestand(en) konden niet worden geüpload. {{completed}} bestand(en) succesvol geüpload.",
+    "partialTitle": "Gedeeltelijk geslaagd",
+    "savingMessage": "Even geduld terwijl je gegevens worden opgeslagen.",
+    "savingTitle": "Formulier opslaan...",
+    "successTitle": "Gelukt!",
+    "uploadingMessage": "Je formulier is opgeslagen, bestanden worden geüpload...",
+    "uploadingTitle": "Bestanden uploaden..."
+  },
   "success": {
     "batchUploadSuccess": "Alle bestanden succesvol geüpload!",
     "fileDeleted": "Bestand succesvol verwijderd.",
     "formSaved": "Formulier succesvol opgeslagen!",
+    "formSavedWithFiles": "Formulier opgeslagen en {{count}} bestand(en) succesvol geüpload!",
     "paperlessSyncSuccess": "Succesvol gesynchroniseerd met Paperless-documentbeheer.",
     "uploadMultipleSuccess": "Alle bestanden succesvol geüpload!",
     "uploadSuccess": "Bestand succesvol geüpload!"
@@ -98,10 +116,15 @@
     "batchUploadFailed": "Sommige bestanden zijn niet geüpload. Controleer de individuele bestandsfouten.",
     "connectionError": "Verbindingsfout. Controleer uw netwerk en probeer het opnieuw.",
     "duplicateFile": "Dit bestand is al geüpload.",
+    "duplicateFileNamed": "Bestand \"{{name}}\" is al geüpload.",
     "failed": "Bestand uploaden mislukt. Probeer het opnieuw.",
+    "failedNamed": "Uploaden van \"{{name}}\" mislukt. Probeer het opnieuw.",
     "fileProcessingFailed": "Bestand verwerken mislukt. Probeer een ander bestand.",
+    "fileProcessingFailedNamed": "Verwerken van \"{{name}}\" mislukt. Probeer een ander bestand.",
     "fileTooLarge": "Bestandsgrootte overschrijdt de maximale limiet.",
+    "fileTooLargeNamed": "Bestand \"{{name}}\" overschrijdt de maximale grootte.",
     "invalidFileType": "Bestandstype wordt niet ondersteund.",
+    "invalidFileTypeNamed": "Bestandstype van \"{{name}}\" wordt niet ondersteund.",
     "partialUploadSuccess": "Upload voltooid met enkele fouten. Controleer de mislukte bestanden."
   },
   "warnings": {

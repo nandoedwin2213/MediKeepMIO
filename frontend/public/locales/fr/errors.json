@@ -23,6 +23,7 @@
     "deleteFailed": "Echec de la suppression du fichier. Veuillez réessayer.",
     "downloadFailed": "Echec du téléchargement du fichier. Veuillez réessayer.",
     "notFound": "Fichier non trouvé.",
+    "popupBlocked": "La fenêtre d'impression a été bloquée par votre navigateur. Autorisez les fenêtres contextuelles pour ce site et réessayez.",
     "viewFailed": "Echec de l'ouverture du fichier pour le visionner. Veuillez réessayer."
   },
   "form": {
@@ -43,6 +44,7 @@
     "submissionFailed": "Echec de la sauvegarde du formulaire. Veuillez vérifier votre saisie et réessayer."
   },
   "general": {
+    "incorrectCredentials": "Identifiants incorrects.",
     "maintenanceMode": "Le système est actuellement en cours de maintenance. Veuillez réessayer plus tard.",
     "permissionDenied": "Vous n'avez pas la permission pour réaliser cette action.",
     "rateLimitExceeded": "Requêtes trop nombreuses. Veuillez attendre un instant et réessayer.",
@@ -85,10 +87,26 @@
     "fetchFailed": "Echec du chargement des connexions",
     "updateFailed": "Echec de la mise à jour d'une connexion"
   },
+  "submission": {
+    "completeMessage": "Formulaire et fichiers enregistrés avec succès.",
+    "failedMessage": "Échec de l'envoi du formulaire.",
+    "failedShortTitle": "Échec",
+    "failedTitle": "Envoi échoué",
+    "partialCompleteMessage": "Formulaire enregistré, mais certains fichiers n'ont pas pu être téléversés.",
+    "partialCompleteTitle": "Partiellement terminé",
+    "partialMessage": "Formulaire enregistré, mais {{failed}} fichier(s) n'ont pas pu être téléversés. {{completed}} fichier(s) téléversé(s) avec succès.",
+    "partialTitle": "Succès partiel",
+    "savingMessage": "Veuillez patienter pendant l'enregistrement de vos informations.",
+    "savingTitle": "Enregistrement du formulaire...",
+    "successTitle": "Succès !",
+    "uploadingMessage": "Votre formulaire a été enregistré, téléversement des fichiers en cours...",
+    "uploadingTitle": "Téléversement des fichiers..."
+  },
   "success": {
     "batchUploadSuccess": "Tous les fichiers ont été téléversés avec succès.",
     "fileDeleted": "Fichier supprimé avec succès.",
     "formSaved": "Formulaire sauvegardé avec succès.",
+    "formSavedWithFiles": "Formulaire enregistré et {{count}} fichier(s) téléversé(s) avec succès !",
     "paperlessSyncSuccess": "Synchronisation réussie avec le système de gestion de document Paperless.",
     "uploadMultipleSuccess": "Tous les fichiers ont été téléversés avec succès.",
     "uploadSuccess": "Fichier téléversé avec succès."
@@ -98,10 +116,15 @@
     "batchUploadFailed": "Echec du téléversement de certains fichiers. Veuillez consulter les erreurs des fichiers individuels.",
     "connectionError": "Erreur de connexion. Veuillez vérifier votre réseau et réessayer.",
     "duplicateFile": "Ce fichier a déjà été téléversé.",
+    "duplicateFileNamed": "Le fichier « {{name}} » a déjà été téléversé.",
     "failed": "Echec du téléversement. Veuillez réessayer.",
+    "failedNamed": "Échec du téléversement de « {{name}} ». Veuillez réessayer.",
     "fileProcessingFailed": "Echec du traitement du fichier. Veuillez essayer un fichier différent.",
+    "fileProcessingFailedNamed": "Impossible de traiter « {{name}} ». Essayez un autre fichier.",
     "fileTooLarge": "La taille du fichier dépasse la limite maximale.",
+    "fileTooLargeNamed": "Le fichier « {{name}} » dépasse la taille maximale autorisée.",
     "invalidFileType": "Format de fichier non supporté.",
+    "invalidFileTypeNamed": "Le type du fichier « {{name}} » n'est pas pris en charge.",
     "partialUploadSuccess": "Téléversement complété avec des erreurs. Veuillez vérifier les fichiers en échec."
   },
   "warnings": {

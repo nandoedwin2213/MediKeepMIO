@@ -23,6 +23,7 @@
     "deleteFailed": "Failed to delete file. Please try again.",
     "downloadFailed": "Failed to download file. Please try again.",
     "notFound": "File not found.",
+    "popupBlocked": "Print window was blocked by your browser. Please allow pop-ups for this site and try again.",
     "viewFailed": "Failed to open file for viewing. Please try again."
   },
   "form": {
@@ -43,6 +44,7 @@
     "submissionFailed": "Failed to save form. Please check your input and try again."
   },
   "general": {
+    "incorrectCredentials": "Incorrect credentials.",
     "maintenanceMode": "The system is currently under maintenance. Please try again later.",
     "permissionDenied": "You do not have permission to perform this action.",
     "rateLimitExceeded": "Too many requests. Please wait a moment and try again.",
@@ -85,10 +87,26 @@
     "fetchFailed": "Failed to load relationships",
     "updateFailed": "Failed to update relationship"
   },
+  "submission": {
+    "completeMessage": "Form and files saved successfully.",
+    "failedMessage": "Form submission failed.",
+    "failedShortTitle": "Failed",
+    "failedTitle": "Submission Failed",
+    "partialCompleteMessage": "Form saved, but some files failed to upload.",
+    "partialCompleteTitle": "Partially Complete",
+    "partialMessage": "Form saved successfully, but {{failed}} file(s) failed to upload. {{completed}} file(s) uploaded successfully.",
+    "partialTitle": "Partially Successful",
+    "savingMessage": "Please wait while your information is being saved.",
+    "savingTitle": "Saving Form...",
+    "successTitle": "Success!",
+    "uploadingMessage": "Your form has been saved, now uploading files...",
+    "uploadingTitle": "Uploading Files..."
+  },
   "success": {
     "batchUploadSuccess": "All files uploaded successfully!",
     "fileDeleted": "File deleted successfully.",
     "formSaved": "Form saved successfully!",
+    "formSavedWithFiles": "Form saved and {{count}} file(s) uploaded successfully!",
     "paperlessSyncSuccess": "Successfully synced with Paperless document management.",
     "uploadMultipleSuccess": "All files uploaded successfully!",
     "uploadSuccess": "File uploaded successfully!"
@@ -98,10 +116,15 @@
     "batchUploadFailed": "Some files failed to upload. Please check individual file errors.",
     "connectionError": "Connection error. Please check your network and try again.",
     "duplicateFile": "This file has already been uploaded.",
+    "duplicateFileNamed": "File \"{{name}}\" has already been uploaded.",
     "failed": "Failed to upload file. Please try again.",
+    "failedNamed": "Failed to upload \"{{name}}\". Please try again.",
     "fileProcessingFailed": "Failed to process file. Please try a different file.",
+    "fileProcessingFailedNamed": "Failed to process \"{{name}}\". Please try a different file.",
     "fileTooLarge": "File size exceeds the maximum limit.",
+    "fileTooLargeNamed": "File \"{{name}}\" exceeds the maximum size limit.",
     "invalidFileType": "File type not supported.",
+    "invalidFileTypeNamed": "File type for \"{{name}}\" is not supported.",
     "partialUploadSuccess": "Upload completed with some errors. Please review failed files."
   },
   "warnings": {

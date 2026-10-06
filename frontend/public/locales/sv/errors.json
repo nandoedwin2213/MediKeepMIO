@@ -23,6 +23,7 @@
     "deleteFailed": "Det gick inte att ta bort filen. Försök igen.",
     "downloadFailed": "Det gick inte att ladda ner filen. Försök igen.",
     "notFound": "Filen hittades inte.",
+    "popupBlocked": "Utskriftsfönstret blockerades av webbläsaren. Tillåt popup-fönster för den här webbplatsen och försök igen.",
     "viewFailed": "Det gick inte att öppna filen för visning. Försök igen."
   },
   "form": {
@@ -43,6 +44,7 @@
     "submissionFailed": "Det gick inte att spara formuläret. Kontrollera dina uppgifter och försök igen."
   },
   "general": {
+    "incorrectCredentials": "Felaktiga inloggningsuppgifter.",
     "maintenanceMode": "Systemet är för närvarande under underhåll. Försök igen senare.",
     "permissionDenied": "Du har inte behörighet att utföra den här åtgärden.",
     "rateLimitExceeded": "För många förfrågningar. Vänta en stund och försök igen.",
@@ -85,10 +87,26 @@
     "fetchFailed": "Det gick inte att ladda relationer",
     "updateFailed": "Det gick inte att uppdatera relationen"
   },
+  "submission": {
+    "completeMessage": "Formulär och filer sparades.",
+    "failedMessage": "Det gick inte att skicka formuläret.",
+    "failedShortTitle": "Misslyckades",
+    "failedTitle": "Sändning misslyckades",
+    "partialCompleteMessage": "Formuläret sparades, men vissa filer kunde inte laddas upp.",
+    "partialCompleteTitle": "Delvis klart",
+    "partialMessage": "Formuläret sparades, men {{failed}} fil(er) kunde inte laddas upp. {{completed}} fil(er) laddades upp.",
+    "partialTitle": "Delvis lyckat",
+    "savingMessage": "Vänta medan din information sparas.",
+    "savingTitle": "Sparar formulär...",
+    "successTitle": "Klart!",
+    "uploadingMessage": "Formuläret har sparats, filer laddas nu upp...",
+    "uploadingTitle": "Laddar upp filer..."
+  },
   "success": {
     "batchUploadSuccess": "Alla filer har laddats upp framgångsrikt!",
     "fileDeleted": "Filen har tagits bort framgångsrikt.",
     "formSaved": "Formuläret har sparats framgångsrikt!",
+    "formSavedWithFiles": "Formuläret sparades och {{count}} fil(er) laddades upp!",
     "paperlessSyncSuccess": "Synkronisering med Paperless dokumenthantering lyckades.",
     "uploadMultipleSuccess": "Alla filer har laddats upp framgångsrikt!",
     "uploadSuccess": "Filen har laddats upp framgångsrikt!"
@@ -98,10 +116,15 @@
     "batchUploadFailed": "Vissa filer kunde inte laddas upp. Kontrollera enskilda filfel.",
     "connectionError": "Anslutningsfel. Kontrollera din nätverksanslutning och försök igen.",
     "duplicateFile": "Den här filen har redan laddats upp.",
+    "duplicateFileNamed": "Filen \"{{name}}\" har redan laddats upp.",
     "failed": "Det gick inte att ladda upp filen. Försök igen.",
+    "failedNamed": "Det gick inte att ladda upp \"{{name}}\". Försök igen.",
     "fileProcessingFailed": "Det gick inte att bearbeta filen. Försök med en annan fil.",
+    "fileProcessingFailedNamed": "Det gick inte att bearbeta \"{{name}}\". Prova en annan fil.",
     "fileTooLarge": "Filstorleken överskrider den maximala gränsen.",
+    "fileTooLargeNamed": "Filen \"{{name}}\" överskrider maxstorleken.",
     "invalidFileType": "Filtypen stöds inte.",
+    "invalidFileTypeNamed": "Filtypen för \"{{name}}\" stöds inte.",
     "partialUploadSuccess": "Uppladdningen slutfördes med vissa fel. Granska misslyckade filer."
   },
   "warnings": {

@@ -17,8 +17,10 @@
  * - Single source of truth: Backend defines codes, frontend displays them
  */
 
-// Main error messages organized by category
-export const ERROR_MESSAGES = {
+import i18n from '../i18n/config';
+
+// English source text; the exported catalogs below resolve to the active language.
+const ERROR_MESSAGES_EN = {
   // Upload-related errors
   UPLOAD_FAILED: 'Failed to upload file. Please try again.',
   CONNECTION_ERROR:
@@ -102,52 +104,51 @@ export const ERROR_CATEGORIES = {
 
 // Map error types to categories
 export const ERROR_TYPE_MAPPING = {
-  [ERROR_MESSAGES.CONNECTION_ERROR]: ERROR_CATEGORIES.NETWORK,
-  [ERROR_MESSAGES.NETWORK_UNAVAILABLE]: ERROR_CATEGORIES.NETWORK,
-  [ERROR_MESSAGES.TIMEOUT_ERROR]: ERROR_CATEGORIES.NETWORK,
-  [ERROR_MESSAGES.PAPERLESS_CONNECTION_FAILED]: ERROR_CATEGORIES.NETWORK,
+  [ERROR_MESSAGES_EN.CONNECTION_ERROR]: ERROR_CATEGORIES.NETWORK,
+  [ERROR_MESSAGES_EN.NETWORK_UNAVAILABLE]: ERROR_CATEGORIES.NETWORK,
+  [ERROR_MESSAGES_EN.TIMEOUT_ERROR]: ERROR_CATEGORIES.NETWORK,
+  [ERROR_MESSAGES_EN.PAPERLESS_CONNECTION_FAILED]: ERROR_CATEGORIES.NETWORK,
 
-  [ERROR_MESSAGES.VALIDATION_ERROR]: ERROR_CATEGORIES.VALIDATION,
-  [ERROR_MESSAGES.REQUIRED_FIELD_MISSING]: ERROR_CATEGORIES.VALIDATION,
-  [ERROR_MESSAGES.INVALID_DATE]: ERROR_CATEGORIES.VALIDATION,
-  [ERROR_MESSAGES.INVALID_EMAIL]: ERROR_CATEGORIES.VALIDATION,
-  [ERROR_MESSAGES.INVALID_PHONE]: ERROR_CATEGORIES.VALIDATION,
-  [ERROR_MESSAGES.INVALID_FILE_TYPE]: ERROR_CATEGORIES.VALIDATION,
-  [ERROR_MESSAGES.FILE_TOO_LARGE]: ERROR_CATEGORIES.VALIDATION,
+  [ERROR_MESSAGES_EN.VALIDATION_ERROR]: ERROR_CATEGORIES.VALIDATION,
+  [ERROR_MESSAGES_EN.REQUIRED_FIELD_MISSING]: ERROR_CATEGORIES.VALIDATION,
+  [ERROR_MESSAGES_EN.INVALID_DATE]: ERROR_CATEGORIES.VALIDATION,
+  [ERROR_MESSAGES_EN.INVALID_EMAIL]: ERROR_CATEGORIES.VALIDATION,
+  [ERROR_MESSAGES_EN.INVALID_PHONE]: ERROR_CATEGORIES.VALIDATION,
+  [ERROR_MESSAGES_EN.INVALID_FILE_TYPE]: ERROR_CATEGORIES.VALIDATION,
+  [ERROR_MESSAGES_EN.FILE_TOO_LARGE]: ERROR_CATEGORIES.VALIDATION,
 
-  [ERROR_MESSAGES.SERVER_ERROR]: ERROR_CATEGORIES.SYSTEM,
-  [ERROR_MESSAGES.UNKNOWN_ERROR]: ERROR_CATEGORIES.SYSTEM,
-  [ERROR_MESSAGES.SESSION_EXPIRED]: ERROR_CATEGORIES.SYSTEM,
-  [ERROR_MESSAGES.MAINTENANCE_MODE]: ERROR_CATEGORIES.SYSTEM,
-  [ERROR_MESSAGES.STORAGE_FULL]: ERROR_CATEGORIES.SYSTEM,
+  [ERROR_MESSAGES_EN.SERVER_ERROR]: ERROR_CATEGORIES.SYSTEM,
+  [ERROR_MESSAGES_EN.UNKNOWN_ERROR]: ERROR_CATEGORIES.SYSTEM,
+  [ERROR_MESSAGES_EN.SESSION_EXPIRED]: ERROR_CATEGORIES.SYSTEM,
+  [ERROR_MESSAGES_EN.MAINTENANCE_MODE]: ERROR_CATEGORIES.SYSTEM,
+  [ERROR_MESSAGES_EN.STORAGE_FULL]: ERROR_CATEGORIES.SYSTEM,
 
-  [ERROR_MESSAGES.PERMISSION_DENIED]: ERROR_CATEGORIES.PERMISSION,
-  [ERROR_MESSAGES.PAPERLESS_AUTH_FAILED]: ERROR_CATEGORIES.PERMISSION,
+  [ERROR_MESSAGES_EN.PERMISSION_DENIED]: ERROR_CATEGORIES.PERMISSION,
+  [ERROR_MESSAGES_EN.PAPERLESS_AUTH_FAILED]: ERROR_CATEGORIES.PERMISSION,
 
-  [ERROR_MESSAGES.UPLOAD_FAILED]: ERROR_CATEGORIES.FILE,
-  [ERROR_MESSAGES.FILE_PROCESSING_FAILED]: ERROR_CATEGORIES.FILE,
-  [ERROR_MESSAGES.POPUP_BLOCKED]: ERROR_CATEGORIES.FILE,
-  [ERROR_MESSAGES.DUPLICATE_FILE]: ERROR_CATEGORIES.FILE,
-  [ERROR_MESSAGES.FILE_DELETE_FAILED]: ERROR_CATEGORIES.FILE,
-  [ERROR_MESSAGES.FILE_DOWNLOAD_FAILED]: ERROR_CATEGORIES.FILE,
-  [ERROR_MESSAGES.FILE_VIEW_FAILED]: ERROR_CATEGORIES.FILE,
-  [ERROR_MESSAGES.FILE_NOT_FOUND]: ERROR_CATEGORIES.FILE,
+  [ERROR_MESSAGES_EN.UPLOAD_FAILED]: ERROR_CATEGORIES.FILE,
+  [ERROR_MESSAGES_EN.FILE_PROCESSING_FAILED]: ERROR_CATEGORIES.FILE,
+  [ERROR_MESSAGES_EN.POPUP_BLOCKED]: ERROR_CATEGORIES.FILE,
+  [ERROR_MESSAGES_EN.DUPLICATE_FILE]: ERROR_CATEGORIES.FILE,
+  [ERROR_MESSAGES_EN.FILE_DELETE_FAILED]: ERROR_CATEGORIES.FILE,
+  [ERROR_MESSAGES_EN.FILE_DOWNLOAD_FAILED]: ERROR_CATEGORIES.FILE,
+  [ERROR_MESSAGES_EN.FILE_VIEW_FAILED]: ERROR_CATEGORIES.FILE,
+  [ERROR_MESSAGES_EN.FILE_NOT_FOUND]: ERROR_CATEGORIES.FILE,
 
-  [ERROR_MESSAGES.PAPERLESS_UNAVAILABLE]: ERROR_CATEGORIES.PAPERLESS,
-  [ERROR_MESSAGES.PAPERLESS_NOT_ENABLED]: ERROR_CATEGORIES.PAPERLESS,
-  [ERROR_MESSAGES.PAPERLESS_CONFIG_INCOMPLETE]: ERROR_CATEGORIES.PAPERLESS,
-  [ERROR_MESSAGES.PAPERLESS_UPLOAD_FAILED]: ERROR_CATEGORIES.PAPERLESS,
-  [ERROR_MESSAGES.PAPERLESS_DUPLICATE_DOCUMENT]: ERROR_CATEGORIES.PAPERLESS,
-  [ERROR_MESSAGES.PAPERLESS_TASK_FAILED]: ERROR_CATEGORIES.PAPERLESS,
-  [ERROR_MESSAGES.PAPERLESS_TASK_TIMEOUT]: ERROR_CATEGORIES.PAPERLESS,
+  [ERROR_MESSAGES_EN.PAPERLESS_UNAVAILABLE]: ERROR_CATEGORIES.PAPERLESS,
+  [ERROR_MESSAGES_EN.PAPERLESS_NOT_ENABLED]: ERROR_CATEGORIES.PAPERLESS,
+  [ERROR_MESSAGES_EN.PAPERLESS_CONFIG_INCOMPLETE]: ERROR_CATEGORIES.PAPERLESS,
+  [ERROR_MESSAGES_EN.PAPERLESS_UPLOAD_FAILED]: ERROR_CATEGORIES.PAPERLESS,
+  [ERROR_MESSAGES_EN.PAPERLESS_DUPLICATE_DOCUMENT]: ERROR_CATEGORIES.PAPERLESS,
+  [ERROR_MESSAGES_EN.PAPERLESS_TASK_FAILED]: ERROR_CATEGORIES.PAPERLESS,
+  [ERROR_MESSAGES_EN.PAPERLESS_TASK_TIMEOUT]: ERROR_CATEGORIES.PAPERLESS,
 
-  [ERROR_MESSAGES.FORM_SUBMISSION_FAILED]: ERROR_CATEGORIES.FORM,
-  [ERROR_MESSAGES.PATIENT_NOT_SELECTED]: ERROR_CATEGORIES.FORM,
-  [ERROR_MESSAGES.ENTITY_NOT_FOUND]: ERROR_CATEGORIES.FORM,
+  [ERROR_MESSAGES_EN.FORM_SUBMISSION_FAILED]: ERROR_CATEGORIES.FORM,
+  [ERROR_MESSAGES_EN.PATIENT_NOT_SELECTED]: ERROR_CATEGORIES.FORM,
+  [ERROR_MESSAGES_EN.ENTITY_NOT_FOUND]: ERROR_CATEGORIES.FORM,
 };
 
-// Success messages for consistency
-export const SUCCESS_MESSAGES = {
+const SUCCESS_MESSAGES_EN = {
   UPLOAD_SUCCESS: 'File uploaded successfully!',
   UPLOAD_MULTIPLE_SUCCESS: 'All files uploaded successfully!',
   FORM_SAVED: 'Form saved successfully!',
@@ -157,12 +158,110 @@ export const SUCCESS_MESSAGES = {
   BATCH_UPLOAD_SUCCESS: 'All files uploaded successfully!',
 };
 
-// Warning messages
-export const WARNING_MESSAGES = {
+const WARNING_MESSAGES_EN = {
   PARTIAL_SUCCESS: 'Operation completed with some warnings.',
   SLOW_CONNECTION: 'Upload is taking longer than usual due to slow connection.',
   LARGE_FILE_WARNING: 'Large file detected. Upload may take several minutes.',
   DUPLICATE_WARNING: 'This file appears to be a duplicate.',
+};
+
+const ERROR_MESSAGE_KEYS = {
+  UPLOAD_FAILED: 'upload.failed',
+  CONNECTION_ERROR: 'network.connectionError',
+  FILE_TOO_LARGE: 'upload.fileTooLarge',
+  INVALID_FILE_TYPE: 'upload.invalidFileType',
+  PAPERLESS_UNAVAILABLE: 'paperless.unavailable',
+  FORM_SUBMISSION_FAILED: 'form.submissionFailed',
+  PERMISSION_DENIED: 'general.permissionDenied',
+  SERVER_ERROR: 'network.serverError',
+  TIMEOUT_ERROR: 'network.timeout',
+  VALIDATION_ERROR: 'general.validationError',
+  NETWORK_UNAVAILABLE: 'network.unavailable',
+  FILE_PROCESSING_FAILED: 'upload.fileProcessingFailed',
+  POPUP_BLOCKED: 'file.popupBlocked',
+  DUPLICATE_FILE: 'upload.duplicateFile',
+  STORAGE_FULL: 'general.storageFull',
+  PAPERLESS_NOT_ENABLED: 'paperless.notEnabled',
+  PAPERLESS_CONFIG_INCOMPLETE: 'paperless.configIncomplete',
+  PAPERLESS_UPLOAD_FAILED: 'paperless.uploadFailed',
+  PAPERLESS_CONNECTION_FAILED: 'paperless.connectionFailed',
+  PAPERLESS_AUTH_FAILED: 'paperless.authFailed',
+  PAPERLESS_DUPLICATE_DOCUMENT: 'paperless.duplicateDocument',
+  PAPERLESS_TASK_FAILED: 'paperless.taskFailed',
+  PAPERLESS_TASK_TIMEOUT: 'paperless.taskTimeout',
+  REQUIRED_FIELD_MISSING: 'form.requiredFieldMissing',
+  INVALID_DATE: 'form.invalidDate',
+  INVALID_EMAIL: 'form.invalidEmail',
+  INVALID_PHONE: 'form.invalidPhone',
+  PATIENT_NOT_SELECTED: 'form.patientNotSelected',
+  ENTITY_NOT_FOUND: 'form.entityNotFound',
+  FILE_DELETE_FAILED: 'file.deleteFailed',
+  FILE_DOWNLOAD_FAILED: 'file.downloadFailed',
+  FILE_VIEW_FAILED: 'file.viewFailed',
+  FILE_NOT_FOUND: 'file.notFound',
+  BATCH_UPLOAD_FAILED: 'upload.batchUploadFailed',
+  PARTIAL_UPLOAD_SUCCESS: 'upload.partialUploadSuccess',
+  ALL_UPLOADS_FAILED: 'upload.allUploadsFailed',
+  UNKNOWN_ERROR: 'general.unknownError',
+  SESSION_EXPIRED: 'general.sessionExpired',
+  RATE_LIMIT_EXCEEDED: 'general.rateLimitExceeded',
+  MAINTENANCE_MODE: 'general.maintenanceMode',
+};
+
+const SUCCESS_MESSAGE_KEYS = {
+  UPLOAD_SUCCESS: 'success.uploadSuccess',
+  UPLOAD_MULTIPLE_SUCCESS: 'success.uploadMultipleSuccess',
+  FORM_SAVED: 'success.formSaved',
+  FILE_DELETED: 'success.fileDeleted',
+  PAPERLESS_SYNC_SUCCESS: 'success.paperlessSyncSuccess',
+  BATCH_UPLOAD_SUCCESS: 'success.batchUploadSuccess',
+};
+
+const WARNING_MESSAGE_KEYS = {
+  PARTIAL_SUCCESS: 'warnings.partialSuccess',
+  SLOW_CONNECTION: 'warnings.slowConnection',
+  LARGE_FILE_WARNING: 'warnings.largeFileWarning',
+  DUPLICATE_WARNING: 'warnings.duplicateWarning',
+};
+
+const localizedCatalog = (english, keys) =>
+  Object.defineProperties(
+    {},
+    Object.fromEntries(
+      Object.keys(english).map(name => [
+        name,
+        {
+          enumerable: true,
+          get: () =>
+            i18n.t(`errors:${keys[name]}`, { defaultValue: english[name] }),
+        },
+      ])
+    )
+  );
+
+// Main error messages organized by category (resolved in the active language)
+export const ERROR_MESSAGES = localizedCatalog(
+  ERROR_MESSAGES_EN,
+  ERROR_MESSAGE_KEYS
+);
+
+// Success messages for consistency
+export const SUCCESS_MESSAGES = localizedCatalog(
+  SUCCESS_MESSAGES_EN,
+  SUCCESS_MESSAGE_KEYS
+);
+
+// Warning messages
+export const WARNING_MESSAGES = localizedCatalog(
+  WARNING_MESSAGES_EN,
+  WARNING_MESSAGE_KEYS
+);
+
+const toEnglishMessage = message => {
+  const name = Object.keys(ERROR_MESSAGES_EN).find(
+    key => ERROR_MESSAGES[key] === message
+  );
+  return name ? ERROR_MESSAGES_EN[name] : message;
 };
 
 /**
@@ -175,7 +274,11 @@ export const WARNING_MESSAGES = {
  * @returns {string} The error category
  */
 export const getErrorCategory = errorMessage => {
-  return ERROR_TYPE_MAPPING[errorMessage] || ERROR_CATEGORIES.SYSTEM;
+  return (
+    ERROR_TYPE_MAPPING[errorMessage] ||
+    ERROR_TYPE_MAPPING[toEnglishMessage(errorMessage)] ||
+    ERROR_CATEGORIES.SYSTEM
+  );
 };
 
 /**
@@ -190,15 +293,30 @@ export const formatErrorWithContext = (baseMessage, context) => {
   // Add context to specific error types
   switch (baseMessage) {
     case ERROR_MESSAGES.UPLOAD_FAILED:
-      return `Failed to upload "${context}". Please try again.`;
+      return i18n.t('errors:upload.failedNamed', {
+        defaultValue: 'Failed to upload "{{name}}". Please try again.',
+        name: context,
+      });
     case ERROR_MESSAGES.FILE_TOO_LARGE:
-      return `File "${context}" exceeds the maximum size limit.`;
+      return i18n.t('errors:upload.fileTooLargeNamed', {
+        defaultValue: 'File "{{name}}" exceeds the maximum size limit.',
+        name: context,
+      });
     case ERROR_MESSAGES.INVALID_FILE_TYPE:
-      return `File type for "${context}" is not supported.`;
+      return i18n.t('errors:upload.invalidFileTypeNamed', {
+        defaultValue: 'File type for "{{name}}" is not supported.',
+        name: context,
+      });
     case ERROR_MESSAGES.DUPLICATE_FILE:
-      return `File "${context}" has already been uploaded.`;
+      return i18n.t('errors:upload.duplicateFileNamed', {
+        defaultValue: 'File "{{name}}" has already been uploaded.',
+        name: context,
+      });
     case ERROR_MESSAGES.FILE_PROCESSING_FAILED:
-      return `Failed to process "${context}". Please try a different file.`;
+      return i18n.t('errors:upload.fileProcessingFailedNamed', {
+        defaultValue: 'Failed to process "{{name}}". Please try a different file.',
+        name: context,
+      });
     default:
       return baseMessage;
   }
@@ -363,7 +481,9 @@ export const getUserFriendlyError = (error, operation = 'operation') => {
       lowerError.includes('denied') ||
       lowerError.includes('401'))
   ) {
-    friendlyMessage = 'Incorrect credentials.';
+    friendlyMessage = i18n.t('errors:general.incorrectCredentials', {
+      defaultValue: 'Incorrect credentials.',
+    });
     errorCode = errorCode || 'AUTH-401';
   }
   // Permission errors (skip login operation - already handled above)
