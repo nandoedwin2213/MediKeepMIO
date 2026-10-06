@@ -376,7 +376,48 @@ html[data-theme='dark'] body .silho-ir-chart {
 html[data-theme='dark'] body .silho-ir-metric .silho-ir-value {
   color: var(--silho-gold-light, #e5cf95);
 }
-||||||| 1809920c
+
+html body .silho-ir-scale {
+  display: flex;
+  gap: 3px;
+  height: 6px;
+  margin: 2px 0 4px;
+}
+
+html body .silho-ir-scale-seg {
+  flex: 1;
+  border-radius: 999px;
+  opacity: 0.25;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+html body .silho-ir-scale-seg[data-active] {
+  opacity: 1;
+  transform: scaleY(1.6);
+}
+
+html body .silho-ir-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+html body .silho-ir-range {
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+html body .silho-ir-range[data-active] {
+  background: rgba(201, 164, 92, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(201, 164, 92, 0.45);
+}
+
+html[data-theme='dark'] body .silho-ir-range[data-active] {
+  background: rgba(229, 207, 149, 0.12);
+}
 
 /* Desktop navigation (sections menu under the header) */
 html body .desktop-navigation {

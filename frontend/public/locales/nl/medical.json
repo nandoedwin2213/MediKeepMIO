@@ -1715,7 +1715,9 @@
     "levels": {
       "normal": "Optimaal",
       "borderline": "Opletten",
-      "high": "Verhoogd"
+      "high": "Verhoogd",
+      "low": "Laag",
+      "veryHigh": "Sterk verhoogd"
     },
     "metrics": {
       "glucose": "Nuchtere glucose",
@@ -1735,6 +1737,8 @@
       "diastolic": "Diastolisch"
     },
     "partialError": "Sommige resultaten konden niet worden geladen; de getoonde waarden zijn mogelijk onvolledig.",
-    "retry": "Opnieuw proberen"
+    "retry": "Opnieuw proberen",
+    "rangesTitle": "Referentiewaarden",
+    "waistNoGender": "Registreer het geslacht van de patiënt om de taillewaarden te zien."
   }
 }

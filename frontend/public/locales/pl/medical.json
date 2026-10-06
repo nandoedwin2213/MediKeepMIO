@@ -1715,7 +1715,9 @@
     "levels": {
       "normal": "Optymalny",
       "borderline": "Do obserwacji",
-      "high": "Podwyższony"
+      "high": "Podwyższony",
+      "low": "Niski",
+      "veryHigh": "Bardzo wysoki"
     },
     "metrics": {
       "glucose": "Glukoza na czczo",
@@ -1735,6 +1737,8 @@
       "diastolic": "Rozkurczowe"
     },
     "partialError": "Nie udało się wczytać części wyników; wyświetlane wartości mogą być niepełne.",
-    "retry": "Spróbuj ponownie"
+    "retry": "Spróbuj ponownie",
+    "rangesTitle": "Zakresy referencyjne",
+    "waistNoGender": "Uzupełnij płeć pacjenta, aby zobaczyć zakresy obwodu talii."
   }
 }

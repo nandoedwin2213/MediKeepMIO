@@ -1715,7 +1715,9 @@
     "levels": {
       "normal": "Optimalt",
       "borderline": "Bevaka",
-      "high": "Förhöjt"
+      "high": "Förhöjt",
+      "low": "Lågt",
+      "veryHigh": "Mycket förhöjt"
     },
     "metrics": {
       "glucose": "Fasteglukos",
@@ -1735,6 +1737,8 @@
       "diastolic": "Diastoliskt"
     },
     "partialError": "Vissa resultat kunde inte läsas in; de visade värdena kan vara ofullständiga.",
-    "retry": "Försök igen"
+    "retry": "Försök igen",
+    "rangesTitle": "Referensintervall",
+    "waistNoGender": "Registrera patientens kön för att se midjeintervallen."
   }
 }

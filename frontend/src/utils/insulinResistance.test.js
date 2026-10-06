@@ -6,6 +6,10 @@ import {
   insulinToMicroUnits,
   hba1cToPercent,
   classify,
+  classifyBp,
+  classifyWaist,
+  bandRanges,
+  formatBandRange,
   normalizeLabPoints,
   buildHomaIrSeries,
   summarizeSeries,
@@ -54,6 +58,49 @@ describe('insulinResistance utils', () => {
     expect(classify('homaIr', 4)).toBe('high');
     expect(classify('hba1c', 6.5)).toBe('high');
     expect(classify('glucose', null)).toBeNull();
+  });
+
+  it('classifies very high, low, blood pressure and waist levels', () => {
+    expect(classify('homaIr', 5.2)).toBe('veryHigh');
+    expect(classify('bmi', 17)).toBe('low');
+    expect(classify('bmi', 32)).toBe('high');
+    expect(classifyBp(125, 78)).toBe('borderline');
+    expect(classifyBp(118, 92)).toBe('veryHigh');
+    expect(classifyBp(null, null)).toBeNull();
+    expect(classifyWaist(95, 'M')).toBe('high');
+    expect(classifyWaist(105, 'Male')).toBe('veryHigh');
+    expect(classifyWaist(85, 'F')).toBe('high');
+    expect(classifyWaist(85, null)).toBeNull();
+  });
+
+  it('builds display ranges from the bands', () => {
+    expect(bandRanges('homaIr').map(r => formatBandRange(r))).toEqual([
+      '< 2.5',
+      '2.5 – 3.4',
+      '3.5 – 4.9',
+      '≥ 5',
+    ]);
+    expect(bandRanges('glucose').map(r => formatBandRange(r))).toEqual([
+      '< 100',
+      '100 – 125',
+      '126 – 199',
+      '≥ 200',
+    ]);
+    expect(
+      bandRanges('waistMale', 1 / 2.54).map(r => formatBandRange(r))
+    ).toEqual(['< 35.4', '35.4 – 40.1', '≥ 40.2']);
+  });
+
+  it('does not pair glucose and insulin from different lab results on the same day', () => {
+    const glucose = normalizeLabPoints(
+      [point(1, 20, '2026-06-10', 200, 'mg/dL')],
+      glucoseToMgDl
+    );
+    const insulin = normalizeLabPoints(
+      [point(2, 21, '2026-06-10', 100, 'µIU/mL')],
+      insulinToMicroUnits
+    );
+    expect(buildHomaIrSeries(glucose, insulin)).toEqual([]);
   });
 
   it('pairs glucose and insulin from the same lab result', () => {
