@@ -1732,6 +1732,8 @@
       "body": "Vikt och kroppsmasseindex",
       "systolic": "Systoliskt",
       "diastolic": "Diastoliskt"
-    }
+    },
+    "partialError": "Vissa resultat kunde inte läsas in; de visade värdena kan vara ofullständiga.",
+    "retry": "Försök igen"
   }
 }

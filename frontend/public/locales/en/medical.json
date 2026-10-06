@@ -1732,6 +1732,8 @@
       "body": "Weight and BMI",
       "systolic": "Systolic",
       "diastolic": "Diastolic"
-    }
+    },
+    "partialError": "Some results could not be loaded; the values shown may be incomplete.",
+    "retry": "Retry"
   }
 }

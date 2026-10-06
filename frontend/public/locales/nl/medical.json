@@ -1732,6 +1732,8 @@
       "body": "Gewicht en queteletindex",
       "systolic": "Systolisch",
       "diastolic": "Diastolisch"
-    }
+    },
+    "partialError": "Sommige resultaten konden niet worden geladen; de getoonde waarden zijn mogelijk onvolledig.",
+    "retry": "Opnieuw proberen"
   }
 }

@@ -9,6 +9,7 @@ import {
   normalizeLabPoints,
   buildHomaIrSeries,
   summarizeSeries,
+  calculateBmiImperial,
 } from './insulinResistance';
 
 const point = (id, labId, date, value, unit) => ({
@@ -96,5 +97,12 @@ describe('insulinResistance utils', () => {
     );
     expect(series).toHaveLength(1);
     expect(summarizeSeries([])).toBeNull();
+  });
+
+  it('calculates BMI from lb and inches', () => {
+    expect(calculateBmiImperial(200, 70)).toBe(28.7);
+    expect(calculateBmiImperial(220, 70)).toBe(31.6);
+    expect(calculateBmiImperial(200, null)).toBeNull();
+    expect(calculateBmiImperial(0, 70)).toBeNull();
   });
 });
