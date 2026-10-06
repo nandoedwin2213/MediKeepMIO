@@ -278,6 +278,15 @@ const Dashboard = () => {
   // Core medical modules - organized in 2x2 grid sections like the schematic
   const coreModules = [
     {
+      title: t(
+        'navigation:sidebarNav.items.myMetabolicHealth',
+        'My metabolic health'
+      ),
+      icon: IconHeartbeat,
+      color: 'yellow',
+      link: '/my-metabolic-health',
+    },
+    {
       title: t('navigation:sidebarNav.items.metabolicRisk', 'Metabolic risk'),
       icon: IconTarget,
       color: 'yellow',

@@ -12,6 +12,8 @@ const metabolicApi = {
     }),
   getAssessments: (patientId, signal) =>
     apiService.get(`/metabolic/patients/${patientId}/assessments`, { signal }),
+  getProgress: (patientId, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/progress`, { signal }),
   getProfile: (patientId, signal) =>
     apiService.get(`/metabolic/patients/${patientId}/profile`, { signal }),
   updateProfile: (patientId, profile) =>

@@ -74,6 +74,7 @@ import Vitals from './pages/medical/Vitals';
 import Symptoms from './pages/medical/Symptoms';
 import InsulinResistance from './pages/medical/InsulinResistance';
 import MetabolicRisk from './pages/medical/MetabolicRisk';
+import MetabolicHealth from './pages/medical/MetabolicHealth';
 import MetabolicProfile from './pages/medical/MetabolicProfile';
 import MetabolicSettings from './pages/admin/MetabolicSettings';
 import Injuries from './pages/medical/Injuries';
@@ -484,6 +485,14 @@ function App() {
                           {/* Generated entity routes */}
                           {generateEntityRoutes()}
                           {/* Metabolic Risk Engine Routes */}
+                          <Route
+                            path="/my-metabolic-health"
+                            element={
+                              <ProtectedRoute>
+                                <MetabolicHealth />
+                              </ProtectedRoute>
+                            }
+                          />
                           <Route
                             path="/metabolic-risk"
                             element={

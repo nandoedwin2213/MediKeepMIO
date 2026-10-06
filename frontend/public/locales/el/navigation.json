@@ -112,7 +112,8 @@
       "visitHistory": "Ιστορικό Επισκέψεων",
       "vitalSigns": "Ζωτικά Σημεία",
       "insulinResistance": "Αντίσταση στην ινσουλίνη",
-      "metabolicRisk": "Μεταβολικός κίνδυνος"
+      "metabolicRisk": "Μεταβολικός κίνδυνος",
+      "myMetabolicHealth": "Η μεταβολική μου υγεία"
     },
     "sections": {
       "administration": "Διαχείριση",

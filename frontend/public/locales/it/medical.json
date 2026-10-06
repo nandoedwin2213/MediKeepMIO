@@ -1847,7 +1847,13 @@
       "mets_ir": "Combina glicemia, trigliceridi, HDL e BMI per stimare l'insulino-resistenza.",
       "tg_hdl": "Rapporto tra trigliceridi e colesterolo buono.",
       "waist_height": "La tua vita dovrebbe misurare meno della metà della tua altezza.",
-      "waist_hip": "Indica quanto grasso si accumula sull'addome."
+      "waist_hip": "Indica quanto grasso si accumula sull'addome.",
+      "bmi": "Mette in relazione il tuo peso con la tua altezza.",
+      "waist": "Stima il grasso accumulato intorno all'addome.",
+      "hba1c": "Riflette la glicemia media degli ultimi 3 mesi.",
+      "triglycerides": "Grassi nel sangue; aumentano con zuccheri, alcol e sedentarietà.",
+      "blood_pressure": "La forza del sangue contro le arterie; conta il più alto dei due valori.",
+      "glucose": "Glicemia a digiuno."
     },
     "evolution": {
       "title": "Andamento del punteggio",
@@ -1908,6 +1914,48 @@
           "former": "Fumavo",
           "current": "Fumo"
         }
+      }
+    },
+    "health": {
+      "title": "La mia salute metabolica",
+      "subtitle": "Come sto? Cosa aumenta il mio rischio? Cosa devo migliorare? Sto migliorando?",
+      "noValue": "Nessuna misurazione ancora",
+      "keyTitle": "I miei indicatori",
+      "keySubtitle": "Cosa significa ogni valore e in quale livello ti trovi.",
+      "why": {
+        "title": "Perché è cambiato il tuo rischio?",
+        "none": "Non c'è ancora una valutazione precedente da confrontare.",
+        "improved": "Il tuo score è migliorato di {{delta}} punti",
+        "worsened": "Il tuo score è sceso di {{delta}} punti",
+        "same": "Il tuo score è rimasto uguale",
+        "period": "Dal {{from}} al {{to}}",
+        "mainly": "Principalmente per:",
+        "others": "Altri cambiamenti:",
+        "noDrivers": "Nessun fattore dello score ha cambiato livello."
+      },
+      "progress": {
+        "title": "I tuoi progressi",
+        "compare": "Confronta l'inizio con:",
+        "empty": "I tuoi progressi compaiono quando hai misurazioni in due date diverse.",
+        "notReached": "Non ci sono ancora misurazioni per questo periodo."
+      },
+      "windows": {
+        "baseline": "Inizio",
+        "d30": "30 giorni",
+        "d60": "60 giorni",
+        "d90": "90 giorni",
+        "m6": "6 mesi",
+        "m12": "12 mesi",
+        "latest": "Attuale"
+      },
+      "direction": {
+        "improved": "Migliorato",
+        "worsened": "Peggiorato",
+        "same": "Nessun cambiamento"
+      },
+      "chart": {
+        "title": "La mia evoluzione",
+        "empty": "Il grafico compare con due o più misurazioni."
       }
     }
   }

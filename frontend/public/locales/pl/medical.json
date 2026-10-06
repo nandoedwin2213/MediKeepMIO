@@ -1847,7 +1847,13 @@
       "mets_ir": "Łączy glukozę, triglicerydy, HDL i BMI, aby oszacować insulinooporność.",
       "tg_hdl": "Stosunek triglicerydów do dobrego cholesterolu.",
       "waist_height": "Obwód talii powinien być mniejszy niż połowa wzrostu.",
-      "waist_hip": "Pokazuje, ile tłuszczu gromadzi się na brzuchu."
+      "waist_hip": "Pokazuje, ile tłuszczu gromadzi się na brzuchu.",
+      "bmi": "Odnosi Twoją masę ciała do wzrostu.",
+      "waist": "Szacuje tłuszcz zgromadzony wokół brzucha.",
+      "hba1c": "Odzwierciedla średni poziom cukru z ostatnich 3 miesięcy.",
+      "triglycerides": "Tłuszcze we krwi; rosną przy cukrze, alkoholu i braku ruchu.",
+      "blood_pressure": "Siła, z jaką krew naciska na tętnice; liczy się wyższa z dwóch wartości.",
+      "glucose": "Cukier we krwi na czczo."
     },
     "evolution": {
       "title": "Zmiany wyniku",
@@ -1908,6 +1914,48 @@
           "former": "Paliłem wcześniej",
           "current": "Palę"
         }
+      }
+    },
+    "health": {
+      "title": "Moje zdrowie metaboliczne",
+      "subtitle": "Jak się czuję? Co zwiększa moje ryzyko? Co powinienem poprawić? Czy jest lepiej?",
+      "noValue": "Brak pomiaru",
+      "keyTitle": "Moje wskaźniki",
+      "keySubtitle": "Co oznacza każda wartość i na jakim jesteś poziomie.",
+      "why": {
+        "title": "Dlaczego zmieniło się Twoje ryzyko?",
+        "none": "Nie ma jeszcze wcześniejszej oceny do porównania.",
+        "improved": "Twój wynik poprawił się o {{delta}} pkt",
+        "worsened": "Twój wynik spadł o {{delta}} pkt",
+        "same": "Twój wynik się nie zmienił",
+        "period": "Od {{from}} do {{to}}",
+        "mainly": "Głównie z powodu:",
+        "others": "Inne zmiany:",
+        "noDrivers": "Żaden czynnik wyniku nie zmienił poziomu."
+      },
+      "progress": {
+        "title": "Twoje postępy",
+        "compare": "Porównaj początek z:",
+        "empty": "Postępy pojawią się, gdy będziesz mieć pomiary z dwóch różnych dat.",
+        "notReached": "Brak pomiarów dla tego okresu."
+      },
+      "windows": {
+        "baseline": "Początek",
+        "d30": "30 dni",
+        "d60": "60 dni",
+        "d90": "90 dni",
+        "m6": "6 miesięcy",
+        "m12": "12 miesięcy",
+        "latest": "Obecnie"
+      },
+      "direction": {
+        "improved": "Poprawa",
+        "worsened": "Pogorszenie",
+        "same": "Bez zmian"
+      },
+      "chart": {
+        "title": "Mój przebieg",
+        "empty": "Wykres pojawi się przy dwóch lub więcej pomiarach."
       }
     }
   }

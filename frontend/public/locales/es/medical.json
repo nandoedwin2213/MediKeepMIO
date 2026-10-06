@@ -1847,7 +1847,13 @@
       "mets_ir": "Combina glucosa, triglicéridos, HDL e IMC para estimar la resistencia a la insulina.",
       "tg_hdl": "Relación entre triglicéridos y colesterol bueno.",
       "waist_height": "Tu cintura debería medir menos de la mitad de tu altura.",
-      "waist_hip": "Indica cuánta grasa se acumula en el abdomen."
+      "waist_hip": "Indica cuánta grasa se acumula en el abdomen.",
+      "bmi": "Relaciona tu peso con tu talla.",
+      "waist": "Estima la grasa acumulada alrededor del abdomen.",
+      "hba1c": "Refleja tu azúcar promedio en sangre de los últimos 3 meses.",
+      "triglycerides": "Grasas en la sangre; suben con azúcares, alcohol y sedentarismo.",
+      "blood_pressure": "La fuerza de la sangre contra tus arterias; cuenta la más alta de las dos cifras.",
+      "glucose": "Azúcar en la sangre en ayunas."
     },
     "evolution": {
       "title": "Evolución del score",
@@ -1908,6 +1914,48 @@
           "former": "Fumaba antes",
           "current": "Fumo"
         }
+      }
+    },
+    "health": {
+      "title": "Mi salud metabólica",
+      "subtitle": "¿Cómo estoy? ¿Qué está aumentando mi riesgo? ¿Qué debo mejorar? ¿Estoy mejorando?",
+      "noValue": "Aún sin medición",
+      "keyTitle": "Mis indicadores",
+      "keySubtitle": "Qué significa cada valor y en qué nivel estás.",
+      "why": {
+        "title": "¿Por qué cambió tu riesgo?",
+        "none": "Aún no hay una evaluación anterior para comparar.",
+        "improved": "Tu score mejoró {{delta}} puntos",
+        "worsened": "Tu score bajó {{delta}} puntos",
+        "same": "Tu score se mantiene igual",
+        "period": "Del {{from}} al {{to}}",
+        "mainly": "Principalmente por:",
+        "others": "Otros cambios:",
+        "noDrivers": "Ningún factor del score cambió de nivel."
+      },
+      "progress": {
+        "title": "Tu progreso",
+        "compare": "Comparar el inicio con:",
+        "empty": "Tu progreso aparece cuando tengas mediciones en dos fechas distintas.",
+        "notReached": "Aún no hay mediciones para este periodo."
+      },
+      "windows": {
+        "baseline": "Inicio",
+        "d30": "30 días",
+        "d60": "60 días",
+        "d90": "90 días",
+        "m6": "6 meses",
+        "m12": "12 meses",
+        "latest": "Actual"
+      },
+      "direction": {
+        "improved": "Mejoró",
+        "worsened": "Empeoró",
+        "same": "Sin cambio"
+      },
+      "chart": {
+        "title": "Mi evolución",
+        "empty": "La gráfica aparece con dos o más mediciones."
       }
     }
   }

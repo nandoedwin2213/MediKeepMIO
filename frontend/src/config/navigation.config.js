@@ -48,6 +48,14 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.myMetabolicHealth',
+        name: 'My metabolic health',
+        path: '/my-metabolic-health',
+        icon: '💚',
+        id: 'my-metabolic-health',
+        featured: true,
+      },
+      {
         nameKey: 'sidebarNav.items.metabolicRisk',
         name: 'Metabolic risk',
         path: '/metabolic-risk',
