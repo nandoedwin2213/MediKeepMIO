@@ -259,11 +259,11 @@ describe('Dashboard Component', () => {
         expect(screen.getByText('Total Records')).toBeInTheDocument();
         expect(screen.getByText('Active Medications')).toBeInTheDocument();
         expect(screen.getAllByText('Lab Results')).toHaveLength(2); // One in stats, one in modules
-        expect(screen.getAllByText('Procedures')).toHaveLength(1); // Stats only; module hidden
+        expect(screen.queryAllByText('Procedures')).toHaveLength(0); // Module and stat hidden
         expect(screen.getByText('10')).toBeInTheDocument();
         expect(screen.getByText('5')).toBeInTheDocument();
         expect(screen.getByText('8')).toBeInTheDocument();
-        expect(screen.getByText('3')).toBeInTheDocument();
+        expect(screen.queryByText('3')).not.toBeInTheDocument(); // Procedures stat hidden
       });
     });
 
@@ -406,7 +406,7 @@ describe('Dashboard Component', () => {
 
       // Should display fallback stats - there are multiple 0s so check for presence
       await waitFor(() => {
-        expect(screen.getAllByText('0')).toHaveLength(4); // Four stat cards with 0
+        expect(screen.getAllByText('0')).toHaveLength(3); // Three stat cards with 0
       });
     });
 
@@ -727,7 +727,7 @@ describe('Dashboard Component', () => {
       await waitFor(
         () => {
           expect(screen.getByText('Treatments')).toBeInTheDocument();
-          expect(screen.getAllByText('Procedures')).toHaveLength(1); // Stats only; module hidden
+          expect(screen.queryAllByText('Procedures')).toHaveLength(0); // Module and stat hidden
         },
         { timeout: 2000 }
       );

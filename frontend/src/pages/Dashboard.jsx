@@ -270,8 +270,9 @@ const Dashboard = () => {
       label: t('shared:categories.procedures', 'Procedures'),
       value: dashboardStats?.total_procedures?.toString() || '0',
       color: 'violet',
+      link: '/procedures',
     },
-  ];
+  ].filter(stat => !isModuleHidden(stat.link));
 
   // Core medical modules - organized in 2x2 grid sections like the schematic
   const coreModules = [
@@ -424,7 +425,11 @@ const Dashboard = () => {
   }
 
   const StatsRow = props => (
-    <SimpleGrid cols={{ base: 2, sm: 4 }} spacing={12} {...props}>
+    <SimpleGrid
+      cols={{ base: 2, sm: dashboardStatsCards.length }}
+      spacing={12}
+      {...props}
+    >
       {dashboardStatsCards.map((stat, index) => (
         <StatCard key={index} stat={stat} />
       ))}
@@ -441,6 +446,7 @@ const Dashboard = () => {
     >
       <Stack align="center" justify="center" h="100%">
         <Text
+          className="silho-stat-value"
           size={isMobile ? '18px' : '22px'}
           fw={700}
           c={colorScheme === 'dark' ? `${stat.color}.3` : stat.color}
