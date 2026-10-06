@@ -35,7 +35,7 @@ class CRUDUserPreferences(
             return None
 
     def get_or_create_by_user_id(
-        self, db: Session, *, user_id: int, unit_system: str = "imperial"
+        self, db: Session, *, user_id: int, unit_system: str = "metric"
     ) -> UserPreferences:
         """
         Get existing preferences or create default preferences for a user.

@@ -125,7 +125,7 @@ class UserPreferences(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False, unique=True)
 
     # Unit system preference: 'imperial' or 'metric'
-    unit_system = Column(String, default="imperial", nullable=False)
+    unit_system = Column(String, default="metric", nullable=False)
 
     # Session timeout in minutes (default 120 minutes)
     session_timeout_minutes = Column(Integer, default=120, nullable=False)
@@ -135,7 +135,7 @@ class UserPreferences(Base):
     language = Column(String(10), nullable=True)
 
     # Date format preference: 'mdy' (US), 'dmy' (European), 'ymd' (ISO)
-    date_format = Column(String(10), default="mdy", nullable=False)
+    date_format = Column(String(10), default="dmy", nullable=False)
 
     # Paperless-ngx integration fields
     paperless_enabled = Column(Boolean, default=False, nullable=False)

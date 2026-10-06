@@ -121,10 +121,10 @@ describe('InvitationCard Component', () => {
     it('should render formatted timestamps', () => {
       renderInvitationCard(baseFamilyHistoryInvitation);
 
-      // formatDateTime returns a datetime string with date and time (en-US locale, mdy format)
+      // formatDateTime returns a datetime string with date and time (default dmy format)
       // The date part is rendered in a separate Text element from the label
-      // created_at: 2024-01-15 -> 01/15/2024 (with time)
-      expect(screen.getByText(/01\/15\/2024/)).toBeInTheDocument();
+      // created_at: 2024-01-15 -> 15/01/2024 (with time)
+      expect(screen.getByText(/15\/01\/2024/)).toBeInTheDocument();
       // expires_at uses translation key 'card.expiresDate' (mock returns key as-is, no interpolation since key has no {{date}})
       expect(screen.getByText('card.expiresDate')).toBeInTheDocument();
     });
