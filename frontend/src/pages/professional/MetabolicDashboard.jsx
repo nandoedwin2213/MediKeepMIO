@@ -236,7 +236,7 @@ function PatientsTable({ rows, onOpen, opening }) {
                 <Table.Td>
                   <Button
                     size="xs"
-                    variant="light"
+                    variant="filled"
                     loading={opening === row.patient_id}
                     onClick={() => onOpen(row.patient_id)}
                   >
