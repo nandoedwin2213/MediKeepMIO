@@ -2000,6 +2000,191 @@
         "lastData": "Last measurement",
         "alerts": "Follow-up"
       }
+    },
+    "movement": {
+      "title": "My exercise",
+      "subtitle": "Functional tests and your supervised exercise plan (METABOLIC MOVEMENT).",
+      "disclaimer": "The exercise plan is prepared and approved by your health professional. Do not start or increase intensity without their indication, and stop if you feel chest pain, shortness of breath or dizziness.",
+      "loadError": "Could not load the data.",
+      "error": "The action could not be completed.",
+      "units": {
+        "reps": "reps"
+      },
+      "functional": {
+        "title": "Functional assessment",
+        "subtitle": "Simple tests of strength, walking and endurance. Repeat them to see your progress.",
+        "add": "Record tests",
+        "save": "Save tests",
+        "saved": "Functional tests saved",
+        "saveError": "Could not save the tests.",
+        "deleted": "Record deleted",
+        "delete": "Delete record",
+        "date": "Test date",
+        "latest": "Latest results ({{date}})",
+        "history": "History",
+        "empty": "No functional tests recorded yet.",
+        "noReference": "No reference range: record the patient’s sex (and height/weight for the walk test).",
+        "percentPredicted": "{{pct}}% of predicted ({{predicted}} m)",
+        "atLeastOne": "Enter at least one result"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "30-second chair stand",
+          "short": "Sit-to-stand",
+          "help": "How many times you can stand up from a chair in 30 seconds. Reflects leg strength.",
+          "how": "Arms crossed, full stands in 30 s"
+        },
+        "grip": {
+          "name": "Grip strength",
+          "short": "Grip",
+          "help": "Hand squeeze strength with a dynamometer. A marker of overall muscle strength.",
+          "how": "Best of the attempts with the dominant hand"
+        },
+        "gait_speed": {
+          "name": "Gait speed",
+          "short": "Gait",
+          "help": "Usual walking speed over a short distance. Low speed is linked to lower physical capacity.",
+          "how": "Usual pace over 4 m: distance ÷ seconds"
+        },
+        "walk_test": {
+          "name": "6-minute walk test",
+          "short": "6MWT",
+          "help": "Distance walked in 6 minutes, compared with the value expected for age, sex, height and weight.",
+          "how": "Meters walked in 6 minutes"
+        },
+        "rpe": {
+          "name": "Perceived exertion (Borg CR10)",
+          "short": "Effort",
+          "help": "How hard the effort felt, from 0 (rest) to 10 (maximum). Used to dose intensity.",
+          "how": "Effort at the end of the walk test (0–10)"
+        }
+      },
+      "levels": {
+        "low": "Low",
+        "reduced": "Reduced",
+        "adequate": "Adequate",
+        "light": "Light",
+        "moderate": "Moderate",
+        "vigorous": "Vigorous",
+        "very_hard": "Very hard"
+      },
+      "intensity": {
+        "light": "Light",
+        "light_moderate": "Light to moderate",
+        "moderate": "Moderate",
+        "moderate_vigorous": "Moderate to vigorous",
+        "vigorous": "Vigorous"
+      },
+      "plan": {
+        "title": "Exercise prescription",
+        "titlePatient": "My exercise plan",
+        "subtitlePro": "Generate a draft from the metabolic risk, history and functional tests, adjust it and approve it so the patient can see it.",
+        "generate": "Generate draft",
+        "generated": "Draft created",
+        "save": "Save draft",
+        "saved": "Draft saved",
+        "approve": "Approve and publish",
+        "approved": "Plan approved: the patient can now see it",
+        "delete": "Delete draft",
+        "deleted": "Draft deleted",
+        "newVersion": "New version from this plan",
+        "copied": "New draft created from the plan",
+        "none": "Your professional has not approved an exercise plan yet.",
+        "noneProfessional": "No plans yet. Record the functional tests and the metabolic history, then generate a draft.",
+        "draftNotice": "Draft proposal: the patient will not see it until you approve it. Review and adjust every section.",
+        "notes": "Notes for the patient",
+        "approvedOn": "Approved by your professional on {{date}}",
+        "why": "Why this proposal",
+        "status": {
+          "draft": "Draft",
+          "approved": "Approved",
+          "archived": "Archived"
+        }
+      },
+      "sections": {
+        "aerobic": "Aerobic exercise",
+        "strength": "Strength training",
+        "mobility": "Mobility",
+        "balance": "Balance",
+        "daily": "Daily activity",
+        "progression": "Progression",
+        "safety": "Safety"
+      },
+      "fields": {
+        "days": "Days/week",
+        "minutes": "Minutes",
+        "intensity": "Intensity",
+        "rpeMin": "Min. effort (0–10)",
+        "rpeMax": "Max. effort (0–10)",
+        "rpeRange": "Effort {{min}}–{{max}} out of 10",
+        "types": "Activity type",
+        "setsMin": "Min. sets",
+        "setsMax": "Max. sets",
+        "repsMin": "Min. reps",
+        "repsMax": "Max. reps",
+        "muscleGroups": "Muscle groups",
+        "exercises": "Exercises",
+        "focus": "Focus areas",
+        "stepsStart": "Starting steps/day",
+        "stepsTarget": "Target steps/day",
+        "walkAfterMealsText": "Walk 10 minutes after the main meals",
+        "breakSittingText": "Stand up and move 2–3 minutes every 30–60 minutes sitting",
+        "notes": "Notes",
+        "summaryDays": "{{days}} days/week · {{minutes}} min",
+        "summaryStrength": "{{days}} days/week · {{sets}} sets × {{reps}} reps",
+        "summarySteps": "{{start}} → {{target}} steps/day"
+      },
+      "options": {
+        "brisk_walking": "Brisk walking",
+        "walking_flat": "Walking on flat ground",
+        "cycling": "Cycling",
+        "stationary_bike": "Stationary bike",
+        "aquatic": "Aquatic exercise",
+        "dancing": "Dancing",
+        "intervals": "Intervals",
+        "lower_limbs": "Lower limbs",
+        "upper_limbs": "Upper limbs",
+        "core": "Core",
+        "grip": "Grip",
+        "sit_to_stand": "Sit-to-stand from a chair",
+        "wall_pushups": "Wall push-ups",
+        "band_rows": "Band rows",
+        "glute_bridge": "Glute bridge",
+        "calf_raises": "Calf raises",
+        "step_ups": "Step-ups",
+        "grip_squeeze": "Ball or putty squeeze",
+        "single_leg_stance": "Single-leg stance",
+        "tandem_walk": "Heel-to-toe walk",
+        "sit_to_stand_slow": "Slow sit-to-stand",
+        "hips": "Hips",
+        "spine": "Spine",
+        "shoulders": "Shoulders"
+      },
+      "progression": {
+        "aerobic_build": "Add 5 minutes per session every 1–2 weeks if well tolerated, up to 30 minutes.",
+        "aerobic_150": "Progress to at least 150 minutes per week of moderate activity.",
+        "aerobic_maintain": "Maintain the volume and add 1–2 short higher-intensity intervals if there are no contraindications.",
+        "strength_load": "When all reps feel easy (effort below 5), add load or one more set.",
+        "steps_build": "Increase about 1,000 steps per day each week until the target."
+      },
+      "safety": {
+        "medical_clearance": "Requires medical assessment before increasing intensity.",
+        "low_impact": "Prefer low-impact activities (bike, water, flat walking) and avoid jumps.",
+        "pain_rule": "Pain during exercise should not exceed 3/10 nor last more than 24 h; if it does, reduce the load and tell your physiotherapist.",
+        "stop_symptoms": "Stop and seek care if you feel chest pain, unusual shortness of breath, dizziness or palpitations."
+      },
+      "rationale": {
+        "medical_clearance": "Cardiovascular history, very high blood pressure or clinical alerts: conservative intensity.",
+        "low_impact": "BMI ≥ 35, pain ≥ 5/10 or musculoskeletal limitations: low-impact activities.",
+        "activity_unknown": "Weekly physical activity not recorded: starts at an introductory level.",
+        "start_gradually": "Low activity, low walking capacity or high pain: short sessions with gradual progression.",
+        "below_150": "Below 150 min/week of activity: plan to reach the recommended minimum.",
+        "active": "Already reaches 150 min/week: maintenance with more strength work.",
+        "weak_lower_limbs": "Low sit-to-stand or reduced gait speed: extra lower-limb strength work.",
+        "weak_grip": "Low grip strength: grip exercises and upper-limb strength.",
+        "balance_priority": "Age ≥ 65 or weak lower limbs: balance work 3 days a week.",
+        "sitting": "Six or more hours sitting per day: active breaks every 30–60 minutes."
+      }
     }
   }
 }

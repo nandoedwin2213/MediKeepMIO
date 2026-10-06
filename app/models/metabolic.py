@@ -93,3 +93,54 @@ class MetabolicProfile(Base):
     updated_at = Column(
         DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
     )
+
+
+class FunctionalAssessment(Base):
+    """Simple functional tests (sit-to-stand, grip, gait speed, 6-minute walk, RPE)."""
+
+    __tablename__ = "functional_assessments"
+
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(
+        Integer,
+        ForeignKey("patients.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    assessed_at = Column(DateTime, nullable=False, index=True)
+    sit_to_stand_30s = Column(Integer, nullable=True)
+    grip_strength_kg = Column(Float, nullable=True)
+    gait_speed_m_s = Column(Float, nullable=True)
+    walk_test_m = Column(Float, nullable=True)
+    rpe = Column(Integer, nullable=True)
+    notes = Column(Text, nullable=True)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    created_at = Column(DateTime, default=get_utc_now, nullable=False)
+
+
+class ExercisePlan(Base):
+    """Structured exercise prescription; patients only see it once a professional approves it."""
+
+    __tablename__ = "exercise_plans"
+
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(
+        Integer,
+        ForeignKey("patients.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    status = Column(
+        String(20), default="draft", nullable=False
+    )  # draft/approved/archived
+    plan = Column(JSON, nullable=False)
+    rationale = Column(JSON, nullable=True)
+    generator_version = Column(String(30), nullable=True)
+    notes = Column(Text, nullable=True)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    approved_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    approved_at = Column(DateTime, nullable=True)
+    created_at = Column(DateTime, default=get_utc_now, nullable=False)
+    updated_at = Column(
+        DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
+    )

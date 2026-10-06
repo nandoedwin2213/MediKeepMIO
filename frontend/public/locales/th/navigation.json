@@ -114,7 +114,8 @@
       "insulinResistance": "ภาวะดื้อต่ออินซูลิน",
       "metabolicRisk": "ความเสี่ยงเมตาบอลิก",
       "myMetabolicHealth": "สุขภาพเมตาบอลิกของฉัน",
-      "professionalDashboard": "แดชบอร์ดผู้เชี่ยวชาญ"
+      "professionalDashboard": "แดชบอร์ดผู้เชี่ยวชาญ",
+      "metabolicMovement": "การออกกำลังกายของฉัน"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

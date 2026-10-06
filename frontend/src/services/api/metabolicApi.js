@@ -18,6 +18,33 @@ const metabolicApi = {
     apiService.get(`/metabolic/patients/${patientId}/profile`, { signal }),
   updateProfile: (patientId, profile) =>
     apiService.put(`/metabolic/patients/${patientId}/profile`, profile),
+  getFunctional: (patientId, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/functional`, { signal }),
+  createFunctional: (patientId, data) =>
+    apiService.post(`/metabolic/patients/${patientId}/functional`, data),
+  deleteFunctional: (patientId, id) =>
+    apiService.delete(`/metabolic/patients/${patientId}/functional/${id}`),
+  getExercisePlans: (patientId, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/exercise-plans`, {
+      signal,
+    }),
+  generateExercisePlan: patientId =>
+    apiService.post(`/metabolic/patients/${patientId}/exercise-plans/generate`),
+  createExercisePlan: (patientId, body) =>
+    apiService.post(`/metabolic/patients/${patientId}/exercise-plans`, body),
+  updateExercisePlan: (patientId, planId, body) =>
+    apiService.put(
+      `/metabolic/patients/${patientId}/exercise-plans/${planId}`,
+      body
+    ),
+  approveExercisePlan: (patientId, planId) =>
+    apiService.post(
+      `/metabolic/patients/${patientId}/exercise-plans/${planId}/approve`
+    ),
+  deleteExercisePlan: (patientId, planId) =>
+    apiService.delete(
+      `/metabolic/patients/${patientId}/exercise-plans/${planId}`
+    ),
   getProfessionalDashboard: signal =>
     apiService.get('/metabolic/professional/dashboard', { signal }),
 };

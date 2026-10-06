@@ -2000,6 +2000,191 @@
         "lastData": "Dernière mesure",
         "alerts": "Suivi"
       }
+    },
+    "movement": {
+      "title": "Mon activité physique",
+      "subtitle": "Tests fonctionnels et ton programme d’exercice supervisé (METABOLIC MOVEMENT).",
+      "disclaimer": "Le programme est préparé et validé par ton professionnel de santé. Ne commence pas et n’augmente pas l’intensité sans son indication, et arrête-toi en cas de douleur thoracique, d’essoufflement ou de vertige.",
+      "loadError": "Impossible de charger les données.",
+      "error": "L’action n’a pas pu être effectuée.",
+      "units": {
+        "reps": "répétitions"
+      },
+      "functional": {
+        "title": "Évaluation fonctionnelle",
+        "subtitle": "Tests simples de force, de marche et d’endurance. Répète-les pour voir tes progrès.",
+        "add": "Enregistrer des tests",
+        "save": "Enregistrer",
+        "saved": "Tests fonctionnels enregistrés",
+        "saveError": "Impossible d’enregistrer les tests.",
+        "deleted": "Enregistrement supprimé",
+        "delete": "Supprimer l’enregistrement",
+        "date": "Date des tests",
+        "latest": "Derniers résultats ({{date}})",
+        "history": "Historique",
+        "empty": "Aucun test fonctionnel enregistré.",
+        "noReference": "Pas de plage de référence : renseigne le sexe (et taille/poids pour la marche).",
+        "percentPredicted": "{{pct}} % de la valeur prédite ({{predicted}} m)",
+        "atLeastOne": "Saisis au moins un résultat"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "Lever de chaise 30 s",
+          "short": "Lever chaise",
+          "help": "Nombre de levers de chaise en 30 secondes. Reflète la force des jambes.",
+          "how": "Bras croisés, levers complets en 30 s"
+        },
+        "grip": {
+          "name": "Force de préhension",
+          "short": "Préhension",
+          "help": "Force de serrage au dynamomètre. Marqueur de la force musculaire globale.",
+          "how": "Meilleur essai, main dominante"
+        },
+        "gait_speed": {
+          "name": "Vitesse de marche",
+          "short": "Marche",
+          "help": "Vitesse de marche habituelle sur une courte distance. Une vitesse basse est liée à une capacité physique réduite.",
+          "how": "Allure habituelle sur 4 m : distance ÷ secondes"
+        },
+        "walk_test": {
+          "name": "Test de marche de 6 minutes",
+          "short": "TM6",
+          "help": "Distance parcourue en 6 minutes, comparée à la valeur attendue selon l’âge, le sexe, la taille et le poids.",
+          "how": "Mètres parcourus en 6 minutes"
+        },
+        "rpe": {
+          "name": "Effort perçu (Borg CR10)",
+          "short": "Effort perçu",
+          "help": "Ressenti de l’effort de 0 (repos) à 10 (maximum). Sert à doser l’intensité.",
+          "how": "Effort à la fin du test de marche (0–10)"
+        }
+      },
+      "levels": {
+        "low": "Faible",
+        "reduced": "Réduit",
+        "adequate": "Adéquat",
+        "light": "Léger",
+        "moderate": "Modéré",
+        "vigorous": "Soutenu",
+        "very_hard": "Très dur"
+      },
+      "intensity": {
+        "light": "Légère",
+        "light_moderate": "Légère à modérée",
+        "moderate": "Modérée",
+        "moderate_vigorous": "Modérée à soutenue",
+        "vigorous": "Soutenue"
+      },
+      "plan": {
+        "title": "Prescription d’exercice",
+        "titlePatient": "Mon programme d’exercice",
+        "subtitlePro": "Génère un brouillon à partir du risque métabolique, de l’historique et des tests fonctionnels, ajuste-le et valide-le pour que le patient le voie.",
+        "generate": "Générer un brouillon",
+        "generated": "Brouillon créé",
+        "save": "Enregistrer le brouillon",
+        "saved": "Brouillon enregistré",
+        "approve": "Valider et publier",
+        "approved": "Programme validé : le patient peut le voir",
+        "delete": "Supprimer le brouillon",
+        "deleted": "Brouillon supprimé",
+        "newVersion": "Nouvelle version à partir de ce programme",
+        "copied": "Nouveau brouillon créé à partir du programme",
+        "none": "Ton professionnel n’a pas encore validé de programme.",
+        "noneProfessional": "Aucun programme. Enregistre les tests fonctionnels et l’historique métabolique, puis génère un brouillon.",
+        "draftNotice": "Proposition en brouillon : le patient ne la verra qu’après ta validation. Vérifie et ajuste chaque section.",
+        "notes": "Consignes pour le patient",
+        "approvedOn": "Validé par ton professionnel le {{date}}",
+        "why": "Pourquoi cette proposition",
+        "status": {
+          "draft": "Brouillon",
+          "approved": "Validé",
+          "archived": "Archivé"
+        }
+      },
+      "sections": {
+        "aerobic": "Exercice aérobie",
+        "strength": "Renforcement musculaire",
+        "mobility": "Mobilité",
+        "balance": "Équilibre",
+        "daily": "Activité quotidienne",
+        "progression": "Progressivité",
+        "safety": "Sécurité"
+      },
+      "fields": {
+        "days": "Jours/semaine",
+        "minutes": "Durée (min)",
+        "intensity": "Intensité",
+        "rpeMin": "Effort min. (0–10)",
+        "rpeMax": "Effort max. (0–10)",
+        "rpeRange": "Effort {{min}}–{{max}} sur 10",
+        "types": "Type d’activité",
+        "setsMin": "Séries min.",
+        "setsMax": "Séries max.",
+        "repsMin": "Répétitions min.",
+        "repsMax": "Répétitions max.",
+        "muscleGroups": "Groupes musculaires",
+        "exercises": "Exercices",
+        "focus": "Zones ciblées",
+        "stepsStart": "Pas/jour au départ",
+        "stepsTarget": "Objectif pas/jour",
+        "walkAfterMealsText": "Marcher 10 minutes après les repas principaux",
+        "breakSittingText": "Se lever et bouger 2–3 minutes toutes les 30–60 minutes assis",
+        "notes": "Remarques",
+        "summaryDays": "{{days}} jours/semaine · {{minutes}} min",
+        "summaryStrength": "{{days}} jours/semaine · {{sets}} séries × {{reps}} répétitions",
+        "summarySteps": "{{start}} → {{target}} pas/jour"
+      },
+      "options": {
+        "brisk_walking": "Marche rapide",
+        "walking_flat": "Marche sur terrain plat",
+        "cycling": "Vélo",
+        "stationary_bike": "Vélo d’appartement",
+        "aquatic": "Aquagym",
+        "dancing": "Danse",
+        "intervals": "Fractionné",
+        "lower_limbs": "Membres inférieurs",
+        "upper_limbs": "Membres supérieurs",
+        "core": "Gainage",
+        "grip": "Préhension",
+        "sit_to_stand": "Lever de chaise",
+        "wall_pushups": "Pompes contre le mur",
+        "band_rows": "Tirage avec élastique",
+        "glute_bridge": "Pont fessier",
+        "calf_raises": "Montées sur pointes",
+        "step_ups": "Montées sur marche",
+        "grip_squeeze": "Serrer une balle",
+        "single_leg_stance": "Appui sur une jambe",
+        "tandem_walk": "Marche talon-pointe",
+        "sit_to_stand_slow": "Lever de chaise lent",
+        "hips": "Hanches",
+        "spine": "Colonne",
+        "shoulders": "Épaules"
+      },
+      "progression": {
+        "aerobic_build": "Ajouter 5 minutes par séance toutes les 1–2 semaines si bien toléré, jusqu’à 30 minutes.",
+        "aerobic_150": "Progresser jusqu’à au moins 150 minutes par semaine d’activité modérée.",
+        "aerobic_maintain": "Maintenir le volume et ajouter 1–2 courts intervalles plus intenses en l’absence de contre-indication.",
+        "strength_load": "Quand toutes les répétitions sont faciles (effort inférieur à 5), augmenter la charge ou ajouter une série.",
+        "steps_build": "Augmenter d’environ 1 000 pas par jour chaque semaine jusqu’à l’objectif."
+      },
+      "safety": {
+        "medical_clearance": "Nécessite une évaluation médicale avant d’augmenter l’intensité.",
+        "low_impact": "Privilégier les activités à faible impact (vélo, eau, marche à plat) et éviter les sauts.",
+        "pain_rule": "La douleur à l’effort ne doit pas dépasser 3/10 ni durer plus de 24 h ; sinon, réduis la charge et préviens ton kinésithérapeute.",
+        "stop_symptoms": "Arrête-toi et consulte en cas de douleur thoracique, d’essoufflement inhabituel, de vertige ou de palpitations."
+      },
+      "rationale": {
+        "medical_clearance": "Antécédent cardiovasculaire, tension très élevée ou alertes cliniques : intensité prudente.",
+        "low_impact": "IMC ≥ 35, douleur ≥ 5/10 ou limitations musculosquelettiques : activités à faible impact.",
+        "activity_unknown": "Activité hebdomadaire non renseignée : démarrage à un niveau initial.",
+        "start_gradually": "Activité faible, capacité de marche réduite ou douleur forte : séances courtes avec progression graduelle.",
+        "below_150": "Moins de 150 min/semaine d’activité : programme pour atteindre le minimum recommandé.",
+        "active": "Atteint déjà 150 min/semaine : maintien avec plus de renforcement.",
+        "weak_lower_limbs": "Lever de chaise faible ou marche ralentie : renforcement supplémentaire des jambes.",
+        "weak_grip": "Préhension faible : exercices de préhension et renforcement des bras.",
+        "balance_priority": "Âge ≥ 65 ans ou jambes faibles : équilibre 3 jours par semaine.",
+        "sitting": "Six heures ou plus assis par jour : pauses actives toutes les 30–60 minutes."
+      }
     }
   }
 }

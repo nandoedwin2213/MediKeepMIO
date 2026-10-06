@@ -114,7 +114,8 @@
       "insulinResistance": "Resistenza all'insulina",
       "metabolicRisk": "Rischio metabolico",
       "myMetabolicHealth": "La mia salute metabolica",
-      "professionalDashboard": "Pannello professionale"
+      "professionalDashboard": "Pannello professionale",
+      "metabolicMovement": "Il mio esercizio"
     },
     "sections": {
       "administration": "Amministrazione",
