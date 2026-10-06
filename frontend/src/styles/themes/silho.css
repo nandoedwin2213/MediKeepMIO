@@ -285,3 +285,15 @@ html body .reload-button {
     animation: none;
   }
 }
+
+/* Login: footer sits below the full-height hero, keep it on the dark canvas */
+html body:has([class*='loginContainer']) {
+  background: #050c1c;
+}
+
+html body:has([class*='loginContainer']) .app-footer,
+html body:has([class*='loginContainer']) .app-footer * {
+  color: rgba(229, 207, 149, 0.75) !important;
+  background: transparent !important;
+  border-color: rgba(229, 207, 149, 0.15) !important;
+}
