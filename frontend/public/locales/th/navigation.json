@@ -115,7 +115,8 @@
       "metabolicRisk": "ความเสี่ยงเมตาบอลิก",
       "myMetabolicHealth": "สุขภาพเมตาบอลิกของฉัน",
       "professionalDashboard": "แดชบอร์ดผู้เชี่ยวชาญ",
-      "metabolicMovement": "การออกกำลังกายของฉัน"
+      "metabolicMovement": "การออกกำลังกายของฉัน",
+      "metabolicNutrition": "โภชนาการของฉัน"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

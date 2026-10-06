@@ -62,6 +62,12 @@ class MetabolicProfileBase(BaseModel):
     musculoskeletal_limitations: Optional[str] = Field(None, max_length=2000)
     pain_level: Optional[int] = Field(None, ge=0, le=10)
     goals: Optional[str] = Field(None, max_length=2000)
+    diet_pattern: Optional[
+        Literal["omnivore", "vegetarian", "vegan", "pescatarian", "other"]
+    ] = None
+    food_intolerances: Optional[str] = Field(None, max_length=1000)
+    food_dislikes: Optional[str] = Field(None, max_length=1000)
+    meals_per_day: Optional[int] = Field(None, ge=1, le=8)
 
 
 class MetabolicProfileUpdate(MetabolicProfileBase):

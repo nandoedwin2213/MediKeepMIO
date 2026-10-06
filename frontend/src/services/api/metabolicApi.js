@@ -24,6 +24,29 @@ const metabolicApi = {
     apiService.post(`/metabolic/patients/${patientId}/functional`, data),
   deleteFunctional: (patientId, id) =>
     apiService.delete(`/metabolic/patients/${patientId}/functional/${id}`),
+  getNutritionPlans: (patientId, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/nutrition-plans`, {
+      signal,
+    }),
+  generateNutritionPlan: patientId =>
+    apiService.post(
+      `/metabolic/patients/${patientId}/nutrition-plans/generate`
+    ),
+  createNutritionPlan: (patientId, body) =>
+    apiService.post(`/metabolic/patients/${patientId}/nutrition-plans`, body),
+  updateNutritionPlan: (patientId, planId, body) =>
+    apiService.put(
+      `/metabolic/patients/${patientId}/nutrition-plans/${planId}`,
+      body
+    ),
+  approveNutritionPlan: (patientId, planId) =>
+    apiService.post(
+      `/metabolic/patients/${patientId}/nutrition-plans/${planId}/approve`
+    ),
+  deleteNutritionPlan: (patientId, planId) =>
+    apiService.delete(
+      `/metabolic/patients/${patientId}/nutrition-plans/${planId}`
+    ),
   getExercisePlans: (patientId, signal) =>
     apiService.get(`/metabolic/patients/${patientId}/exercise-plans`, {
       signal,

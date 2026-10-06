@@ -78,6 +78,7 @@ import MetabolicHealth from './pages/medical/MetabolicHealth';
 import MetabolicDashboard from './pages/professional/MetabolicDashboard';
 import MetabolicProfile from './pages/medical/MetabolicProfile';
 import MetabolicMovement from './pages/medical/MetabolicMovement';
+import MetabolicNutrition from './pages/medical/MetabolicNutrition';
 import MetabolicSettings from './pages/admin/MetabolicSettings';
 import Injuries from './pages/medical/Injuries';
 import MedicalEquipment from './pages/medical/MedicalEquipment';
@@ -525,6 +526,14 @@ function App() {
                             element={
                               <ProtectedRoute>
                                 <MetabolicMovement />
+                              </ProtectedRoute>
+                            }
+                          />
+                          <Route
+                            path="/metabolic-nutrition"
+                            element={
+                              <ProtectedRoute>
+                                <MetabolicNutrition />
                               </ProtectedRoute>
                             }
                           />

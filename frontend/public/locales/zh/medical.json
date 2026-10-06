@@ -1896,7 +1896,11 @@
         "smoking": "烟草",
         "musculoskeletal_limitations": "疼痛、损伤或身体限制",
         "pain_level": "平时疼痛程度（0-10）",
-        "goals": "你希望达到什么目标？"
+        "goals": "你希望达到什么目标？",
+        "diet_pattern": "饮食类型",
+        "meals_per_day": "每天正餐数",
+        "food_intolerances": "食物不耐受（如乳糖、麸质）",
+        "food_dislikes": "不喜欢或回避的食物"
       },
       "options": {
         "alcohol": {
@@ -1909,6 +1913,13 @@
           "never": "从不吸烟",
           "former": "以前吸烟",
           "current": "吸烟"
+        },
+        "diet_pattern": {
+          "omnivore": "什么都吃",
+          "vegetarian": "素食（蛋奶素）",
+          "vegan": "纯素",
+          "pescatarian": "鱼素",
+          "other": "其他"
         }
       }
     },
@@ -2180,6 +2191,148 @@
         "weak_grip": "握力低：增加握力和上肢力量训练。",
         "balance_priority": "年龄 ≥ 65 岁或下肢力量弱：每周3天平衡训练。",
         "sitting": "每天久坐6小时以上：每30–60分钟进行一次活动休息。"
+      }
+    },
+    "nutrition": {
+      "title": "我的营养",
+      "subtitle": "你的个性化营养计划（METABOLIC NUTRITION），由营养专业人员制定并批准。",
+      "disclaimer": "这些是参考目标，而非严格节食。未经专业人员指示，请勿调整药物或采用极端限制的饮食。",
+      "loadError": "无法加载数据。",
+      "error": "无法完成该操作。",
+      "plate": {
+        "vegetables": "½ 蔬菜",
+        "protein": "¼ 蛋白质",
+        "carbs": "¼ 全谷物",
+        "help": "餐盘法：一半蔬菜，四分之一蛋白质，四分之一全谷物或薯类。"
+      },
+      "plan": {
+        "why": "为什么是这个计划",
+        "title": "营养计划",
+        "subtitlePro": "生成草稿，调整后批准，患者即可看到。",
+        "generate": "生成草稿",
+        "noneProfessional": "尚无营养计划。可根据代谢评估生成草稿。",
+        "status": {
+          "draft": "草稿",
+          "approved": "已批准",
+          "archived": "已归档"
+        },
+        "approvedOn": "批准于 {{date}}",
+        "draftNotice": "草稿：在你批准前患者看不到。请检查并调整每项目标。",
+        "notes": "给患者的备注",
+        "delete": "删除草稿",
+        "save": "保存草稿",
+        "approve": "批准并发布",
+        "newVersion": "基于此计划新建版本",
+        "titlePatient": "你的营养计划",
+        "none": "你的专业人员尚未发布营养计划。",
+        "generated": "草稿已生成",
+        "deleted": "草稿已删除",
+        "saved": "草稿已保存",
+        "approved": "计划已批准并发布给患者",
+        "copied": "已基于计划创建新草稿"
+      },
+      "sections": {
+        "energy": "每日能量",
+        "macros": "营养素",
+        "meals": "餐次",
+        "prioritize": "多吃",
+        "limit": "少吃",
+        "avoid": "避免（过敏和不耐受）",
+        "targets": "习惯目标",
+        "safety": "安全提示"
+      },
+      "fields": {
+        "perDay": "每天",
+        "deficit": "热量缺口",
+        "tdee": "估计消耗",
+        "noEnergy": "缺少体重、身高、年龄或性别，无法估算热量。请遵循下方的饮食建议。",
+        "protein": "蛋白质",
+        "carbs": "碳水化合物",
+        "fat": "脂肪",
+        "fiber": "膳食纤维",
+        "sugar": "添加糖",
+        "saturated": "饱和脂肪",
+        "sodium": "钠（盐）",
+        "hydration": "饮水",
+        "mealsSummary": "正餐：{{meals}} 顿 · 加餐：{{snacks}} 次",
+        "protein_each_meal": "每餐都有蛋白质来源",
+        "regular_schedule": "规律进餐，不跳餐",
+        "plate_model": "餐盘法",
+        "dislikes": "不喜欢的食物",
+        "kcal": "热量（千卡/天）",
+        "proteinKgMin": "蛋白质下限（g/kg）",
+        "proteinKgMax": "蛋白质上限（g/kg）",
+        "proteinGMin": "蛋白质下限（g/天）",
+        "proteinGMax": "蛋白质上限（g/天）",
+        "carbsMin": "碳水下限（%）",
+        "carbsMax": "碳水上限（%）",
+        "fatMin": "脂肪下限（%）",
+        "fatMax": "脂肪上限（%）",
+        "meals_per_day": "每天正餐数",
+        "snacks_per_day": "每天加餐数",
+        "avoidHelp": "病历中的活动性过敏和不耐受会自动加入。按回车可添加更多。"
+      },
+      "rationale": {
+        "weight_loss": "BMI或腰围高于目标：适度热量缺口以减轻体重和腹部脂肪。",
+        "maintenance": "BMI和腰围达标：维持体重所需能量。",
+        "missing_anthropometry": "缺少体重、身高、年龄或性别：未估算热量。",
+        "renal_review": "肌酐升高：蛋白质暂定0.8 g/kg，待医生/肾科评估。",
+        "glycemic": "血糖、HbA1c或病史提示血糖异常：减少并优化碳水化合物，分散到全天。",
+        "triglycerides": "甘油三酯高：限制糖和酒精。",
+        "lipids": "血脂异常或心血管病史：减少饱和脂肪，多吃鱼、纤维和不饱和脂肪。",
+        "blood_pressure": "血压高于目标或高血压：减少钠摄入。",
+        "uric_acid": "尿酸高：限制含果糖饮料、动物内脏和酒精。",
+        "liver": "脂肪肝或肝酶升高：避免酒精和含糖饮料。",
+        "allergies": "已记录过敏或不耐受：列出需排除的食物。"
+      },
+      "options": {
+        "prioritize": {
+          "vegetables": "蔬菜",
+          "legumes": "豆类（菜豆、扁豆、鹰嘴豆）",
+          "whole_grains": "全谷物和薯类",
+          "fruit_whole": "完整水果（非果汁）",
+          "oily_fish": "富含脂肪的鱼（ω-3）每周2次",
+          "fish": "鱼",
+          "poultry": "去皮禽肉",
+          "eggs": "鸡蛋",
+          "low_fat_dairy": "低脂奶制品",
+          "legumes_protein": "豆类作为蛋白质来源",
+          "tofu_tempeh": "豆腐或天贝",
+          "nuts_seeds": "坚果和种子（一小把）",
+          "olive_oil": "橄榄油或牛油果",
+          "water": "以水为主要饮品"
+        },
+        "limit": {
+          "sugary_drinks": "含糖饮料和汽水",
+          "ultraprocessed": "超加工食品",
+          "refined_flours": "白面包和精制面粉",
+          "fried_foods": "油炸食品",
+          "processed_meat": "加工肉类（香肠、冷切肉）",
+          "fruit_juice": "果汁",
+          "sweets": "甜食和甜点",
+          "alcohol": "酒精饮料",
+          "saturated_fats": "饱和脂肪（肥肉、黄油、猪油）",
+          "added_salt": "额外添加的盐和浓汤块",
+          "salty_snacks": "咸味零食",
+          "fructose_drinks": "含果糖或糖浆的饮料",
+          "organ_meats": "过量的动物内脏和海鲜"
+        },
+        "targets": {
+          "sugary_drinks_zero": "用水代替含糖饮料",
+          "fruit_veg_5": "每天5份蔬果",
+          "ultraprocessed_down": "超加工食品每周不超过3次",
+          "weight_5pct": "3–6个月内减重5%",
+          "waist_down": "减小腰围",
+          "water_daily": "每天喝足推荐的水量"
+        },
+        "safety": {
+          "professional_review": "专业人员会在每次随访时调整目标。",
+          "no_extreme_diets": "避免极低热量或极端饮食。",
+          "diabetes_meds": "如在服用降糖药，调整碳水可能导致低血糖：请监测并咨询。",
+          "renal_review": "增加蛋白质前需评估肾功能。",
+          "allergy_check": "查看标签：加工食品中可能隐藏过敏原。",
+          "b12_review": "纯素饮食：需评估维生素B12补充。"
+        }
       }
     }
   }

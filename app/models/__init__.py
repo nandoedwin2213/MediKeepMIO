@@ -56,6 +56,7 @@ from .metabolic import (
     ExercisePlan,
     FunctionalAssessment,
     MetabolicAssessment,
+    NutritionPlan,
     MetabolicEngineConfig,
     MetabolicProfile,
 )
@@ -101,6 +102,7 @@ __all__ = [
     "ExercisePlan",
     "FunctionalAssessment",
     "MetabolicAssessment",
+    "NutritionPlan",
     "MetabolicEngineConfig",
     "MetabolicProfile",
     "Base",

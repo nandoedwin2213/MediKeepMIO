@@ -64,6 +64,14 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.metabolicNutrition',
+        name: 'My nutrition',
+        path: '/metabolic-nutrition',
+        icon: '🥗',
+        id: 'metabolic-nutrition',
+        featured: true,
+      },
+      {
         nameKey: 'sidebarNav.items.professionalDashboard',
         name: 'Professional dashboard',
         path: '/professional/metabolic-dashboard',

@@ -1900,7 +1900,11 @@
         "smoking": "Tabacco",
         "musculoskeletal_limitations": "Dolore, lesioni o limitazioni fisiche",
         "pain_level": "Livello di dolore abituale (0-10)",
-        "goals": "Cosa vorresti ottenere?"
+        "goals": "Cosa vorresti ottenere?",
+        "diet_pattern": "Tipo di alimentazione",
+        "meals_per_day": "Pasti principali al giorno",
+        "food_intolerances": "Intolleranze alimentari (es. lattosio, glutine)",
+        "food_dislikes": "Alimenti che non ti piacciono o eviti"
       },
       "options": {
         "alcohol": {
@@ -1913,6 +1917,13 @@
           "never": "Non ho mai fumato",
           "former": "Fumavo",
           "current": "Fumo"
+        },
+        "diet_pattern": {
+          "omnivore": "Mangio di tutto",
+          "vegetarian": "Vegetariana",
+          "vegan": "Vegana",
+          "pescatarian": "Pescetariana",
+          "other": "Altro"
         }
       }
     },
@@ -2184,6 +2195,148 @@
         "weak_grip": "Presa bassa: esercizi di presa e forza delle braccia.",
         "balance_priority": "Età ≥ 65 o gambe deboli: equilibrio 3 giorni a settimana.",
         "sitting": "Sei o più ore seduti al giorno: pause attive ogni 30–60 minuti."
+      }
+    },
+    "nutrition": {
+      "title": "La mia alimentazione",
+      "subtitle": "Il tuo piano alimentare personalizzato (METABOLIC NUTRITION), preparato e approvato dal tuo professionista della nutrizione.",
+      "disclaimer": "Sono obiettivi indicativi, non una dieta rigida. Non cambiare i farmaci né seguire diete molto restrittive senza l’indicazione del tuo professionista.",
+      "loadError": "Impossibile caricare i dati.",
+      "error": "Impossibile completare l’azione.",
+      "plate": {
+        "vegetables": "½ verdure",
+        "protein": "¼ proteine",
+        "carbs": "¼ cereali integrali",
+        "help": "Metodo del piatto: metà verdure, un quarto proteine e un quarto cereali integrali o tuberi."
+      },
+      "plan": {
+        "why": "Perché questo piano",
+        "title": "Piano nutrizionale",
+        "subtitlePro": "Genera una bozza, modificala e approvala perché il paziente la veda.",
+        "generate": "Genera bozza",
+        "noneProfessional": "Nessun piano nutrizionale. Genera una bozza dalla valutazione metabolica.",
+        "status": {
+          "draft": "Bozza",
+          "approved": "Approvato",
+          "archived": "Archiviato"
+        },
+        "approvedOn": "Approvato il {{date}}",
+        "draftNotice": "Bozza: il paziente non la vedrà finché non la approvi. Rivedi e regola ogni obiettivo.",
+        "notes": "Note per il paziente",
+        "delete": "Elimina bozza",
+        "save": "Salva bozza",
+        "approve": "Approva e pubblica",
+        "newVersion": "Nuova versione da questo piano",
+        "titlePatient": "Il tuo piano alimentare",
+        "none": "Il tuo professionista non ha ancora pubblicato un piano alimentare.",
+        "generated": "Bozza generata",
+        "deleted": "Bozza eliminata",
+        "saved": "Bozza salvata",
+        "approved": "Piano approvato e pubblicato per il paziente",
+        "copied": "Nuova bozza creata dal piano"
+      },
+      "sections": {
+        "energy": "Energia giornaliera",
+        "macros": "Nutrienti",
+        "meals": "Pasti",
+        "prioritize": "Da preferire",
+        "limit": "Da limitare",
+        "avoid": "Da evitare (allergie e intolleranze)",
+        "targets": "Obiettivi di abitudini",
+        "safety": "Note di sicurezza"
+      },
+      "fields": {
+        "perDay": "al giorno",
+        "deficit": "Deficit calorico",
+        "tdee": "Dispendio stimato",
+        "noEnergy": "Le calorie non sono stimate perché mancano peso, altezza, età o sesso. Segui le indicazioni sugli alimenti.",
+        "protein": "Proteine",
+        "carbs": "Carboidrati",
+        "fat": "Grassi",
+        "fiber": "Fibre alimentari",
+        "sugar": "Zuccheri aggiunti",
+        "saturated": "Grassi saturi",
+        "sodium": "Sodio (sale)",
+        "hydration": "Acqua",
+        "mealsSummary": "Pasti principali: {{meals}} · Spuntini: {{snacks}}",
+        "protein_each_meal": "Una fonte di proteine a ogni pasto",
+        "regular_schedule": "Orari regolari, senza saltare i pasti",
+        "plate_model": "Metodo del piatto",
+        "dislikes": "Alimenti non graditi",
+        "kcal": "Calorie (kcal/giorno)",
+        "proteinKgMin": "Proteine min (g/kg)",
+        "proteinKgMax": "Proteine max (g/kg)",
+        "proteinGMin": "Proteine min (g/giorno)",
+        "proteinGMax": "Proteine max (g/giorno)",
+        "carbsMin": "Carboidrati min (%)",
+        "carbsMax": "Carboidrati max (%)",
+        "fatMin": "Grassi min (%)",
+        "fatMax": "Grassi max (%)",
+        "meals_per_day": "Pasti principali al giorno",
+        "snacks_per_day": "Spuntini al giorno",
+        "avoidHelp": "Allergie attive e intolleranze della cartella vengono aggiunte automaticamente. Premi Invio per aggiungerne altre."
+      },
+      "rationale": {
+        "weight_loss": "IMC o vita sopra l’obiettivo: deficit calorico moderato per ridurre peso e grasso addominale.",
+        "maintenance": "IMC e vita nell’obiettivo: energia per mantenere il peso.",
+        "missing_anthropometry": "Mancano peso, altezza, età o sesso: calorie non stimate.",
+        "renal_review": "Creatinina elevata: proteine a 0,8 g/kg in attesa di valutazione medica/renale.",
+        "glycemic": "Glicemia, HbA1c o anamnesi compatibili con glicemia alterata: meno carboidrati e di qualità migliore, distribuiti nella giornata.",
+        "triglycerides": "Trigliceridi alti: limitare zuccheri e alcol.",
+        "lipids": "Profilo lipidico alterato o anamnesi cardiovascolare: meno grassi saturi, più pesce, fibre e grassi insaturi.",
+        "blood_pressure": "Pressione sopra l’obiettivo o ipertensione: meno sodio.",
+        "uric_acid": "Acido urico alto: limitare bevande con fruttosio, frattaglie e alcol.",
+        "liver": "Fegato grasso o enzimi epatici alti: evitare alcol e bevande zuccherate.",
+        "allergies": "Allergie o intolleranze registrate: sono elencati gli alimenti da escludere."
+      },
+      "options": {
+        "prioritize": {
+          "vegetables": "Verdure",
+          "legumes": "Legumi (fagioli, lenticchie, ceci)",
+          "whole_grains": "Cereali integrali e tuberi",
+          "fruit_whole": "Frutta intera (non succo)",
+          "oily_fish": "Pesce azzurro (omega-3) 2 volte/settimana",
+          "fish": "Pesce",
+          "poultry": "Pollame senza pelle",
+          "eggs": "Uova",
+          "low_fat_dairy": "Latticini magri",
+          "legumes_protein": "Legumi come fonte proteica",
+          "tofu_tempeh": "Tofu o tempeh",
+          "nuts_seeds": "Frutta secca e semi (una manciata)",
+          "olive_oil": "Olio d’oliva o avocado",
+          "water": "Acqua come bevanda principale"
+        },
+        "limit": {
+          "sugary_drinks": "Bevande zuccherate e bibite",
+          "ultraprocessed": "Alimenti ultraprocessati",
+          "refined_flours": "Pane bianco e farine raffinate",
+          "fried_foods": "Fritture",
+          "processed_meat": "Salumi e carni lavorate",
+          "fruit_juice": "Succhi di frutta",
+          "sweets": "Dolci e dessert",
+          "alcohol": "Bevande alcoliche",
+          "saturated_fats": "Grassi saturi (carni grasse, burro, strutto)",
+          "added_salt": "Sale aggiunto e dadi da brodo",
+          "salty_snacks": "Snack salati",
+          "fructose_drinks": "Bevande con fruttosio o sciroppo",
+          "organ_meats": "Frattaglie e frutti di mare in eccesso"
+        },
+        "targets": {
+          "sugary_drinks_zero": "Sostituire le bevande zuccherate con acqua",
+          "fruit_veg_5": "5 porzioni di frutta e verdura al giorno",
+          "ultraprocessed_down": "Ultraprocessati al massimo 3 volte a settimana",
+          "weight_5pct": "Perdere il 5% del peso in 3–6 mesi",
+          "waist_down": "Ridurre la circonferenza vita",
+          "water_daily": "Bere l’acqua consigliata ogni giorno"
+        },
+        "safety": {
+          "professional_review": "Il tuo professionista adatta gli obiettivi a ogni controllo.",
+          "no_extreme_diets": "Evita diete ipocaloriche estreme.",
+          "diabetes_meds": "Se assumi farmaci per il diabete, cambiare i carboidrati può abbassare la glicemia: controlla e consulta.",
+          "renal_review": "Verificare la funzione renale prima di aumentare le proteine.",
+          "allergy_check": "Controlla le etichette: gli allergeni possono essere nascosti nei prodotti lavorati.",
+          "b12_review": "Dieta vegana: valutare l’integrazione di vitamina B12."
+        }
       }
     }
   }

@@ -1900,7 +1900,11 @@
         "smoking": "Tytoń",
         "musculoskeletal_limitations": "Ból, urazy lub ograniczenia fizyczne",
         "pain_level": "Zwykły poziom bólu (0-10)",
-        "goals": "Co chcesz osiągnąć?"
+        "goals": "Co chcesz osiągnąć?",
+        "diet_pattern": "Sposób odżywiania",
+        "meals_per_day": "Główne posiłki dziennie",
+        "food_intolerances": "Nietolerancje pokarmowe (np. laktoza, gluten)",
+        "food_dislikes": "Produkty, których nie lubisz lub unikasz"
       },
       "options": {
         "alcohol": {
@@ -1913,6 +1917,13 @@
           "never": "Nigdy nie paliłem",
           "former": "Paliłem wcześniej",
           "current": "Palę"
+        },
+        "diet_pattern": {
+          "omnivore": "Jem wszystko",
+          "vegetarian": "Wegetariańska",
+          "vegan": "Wegańska",
+          "pescatarian": "Peskatariańska",
+          "other": "Inna"
         }
       }
     },
@@ -2184,6 +2195,148 @@
         "weak_grip": "Słaby chwyt: ćwiczenia chwytu i siły ramion.",
         "balance_priority": "Wiek ≥ 65 lub słabe nogi: równowaga 3 dni w tygodniu.",
         "sitting": "Sześć lub więcej godzin siedzenia dziennie: aktywne przerwy co 30–60 minut."
+      }
+    },
+    "nutrition": {
+      "title": "Moje odżywianie",
+      "subtitle": "Twój spersonalizowany plan żywieniowy (METABOLIC NUTRITION), przygotowany i zatwierdzony przez dietetyka.",
+      "disclaimer": "To orientacyjne cele, a nie ścisła dieta. Nie zmieniaj leków ani nie stosuj bardzo restrykcyjnych diet bez zalecenia specjalisty.",
+      "loadError": "Nie udało się wczytać danych.",
+      "error": "Nie udało się wykonać działania.",
+      "plate": {
+        "vegetables": "½ warzywa",
+        "protein": "¼ białko",
+        "carbs": "¼ pełne ziarna",
+        "help": "Metoda talerza: połowa warzywa, ćwierć białko i ćwierć pełne ziarna lub bulwy."
+      },
+      "plan": {
+        "why": "Dlaczego ten plan",
+        "title": "Plan żywieniowy",
+        "subtitlePro": "Wygeneruj szkic, dostosuj go i zatwierdź, aby pacjent go zobaczył.",
+        "generate": "Generuj szkic",
+        "noneProfessional": "Brak planów żywieniowych. Wygeneruj szkic na podstawie oceny metabolicznej.",
+        "status": {
+          "draft": "Szkic",
+          "approved": "Zatwierdzony",
+          "archived": "Zarchiwizowany"
+        },
+        "approvedOn": "Zatwierdzono {{date}}",
+        "draftNotice": "Szkic: pacjent zobaczy go dopiero po zatwierdzeniu. Sprawdź i dostosuj każdy cel.",
+        "notes": "Uwagi dla pacjenta",
+        "delete": "Usuń szkic",
+        "save": "Zapisz szkic",
+        "approve": "Zatwierdź i opublikuj",
+        "newVersion": "Nowa wersja z tego planu",
+        "titlePatient": "Twój plan żywieniowy",
+        "none": "Specjalista nie opublikował jeszcze planu żywieniowego.",
+        "generated": "Szkic wygenerowany",
+        "deleted": "Szkic usunięty",
+        "saved": "Szkic zapisany",
+        "approved": "Plan zatwierdzony i opublikowany dla pacjenta",
+        "copied": "Utworzono nowy szkic z planu"
+      },
+      "sections": {
+        "energy": "Dzienna energia",
+        "macros": "Składniki odżywcze",
+        "meals": "Posiłki",
+        "prioritize": "Jedz częściej",
+        "limit": "Ograniczaj",
+        "avoid": "Unikaj (alergie i nietolerancje)",
+        "targets": "Cele nawyków",
+        "safety": "Uwagi dotyczące bezpieczeństwa"
+      },
+      "fields": {
+        "perDay": "dziennie",
+        "deficit": "Deficyt",
+        "tdee": "Szacowany wydatek",
+        "noEnergy": "Kalorie nie są szacowane, bo brakuje masy, wzrostu, wieku lub płci. Stosuj się do zaleceń żywieniowych.",
+        "protein": "Białko",
+        "carbs": "Węglowodany",
+        "fat": "Tłuszcze",
+        "fiber": "Błonnik",
+        "sugar": "Cukry dodane",
+        "saturated": "Tłuszcze nasycone",
+        "sodium": "Sód (sól)",
+        "hydration": "Woda",
+        "mealsSummary": "Główne posiłki: {{meals}} · Przekąski: {{snacks}}",
+        "protein_each_meal": "Źródło białka w każdym posiłku",
+        "regular_schedule": "Regularne pory posiłków, bez pomijania",
+        "plate_model": "Metoda talerza",
+        "dislikes": "Nielubiane produkty",
+        "kcal": "Kalorie (kcal/dzień)",
+        "proteinKgMin": "Białko min (g/kg)",
+        "proteinKgMax": "Białko maks (g/kg)",
+        "proteinGMin": "Białko min (g/dzień)",
+        "proteinGMax": "Białko maks (g/dzień)",
+        "carbsMin": "Węglowodany min (%)",
+        "carbsMax": "Węglowodany maks (%)",
+        "fatMin": "Tłuszcze min (%)",
+        "fatMax": "Tłuszcze maks (%)",
+        "meals_per_day": "Główne posiłki dziennie",
+        "snacks_per_day": "Przekąski dziennie",
+        "avoidHelp": "Aktywne alergie i nietolerancje z karty są dodawane automatycznie. Naciśnij Enter, aby dodać więcej."
+      },
+      "rationale": {
+        "weight_loss": "BMI lub talia powyżej celu: umiarkowany deficyt kalorii, by zmniejszyć masę i tłuszcz brzuszny.",
+        "maintenance": "BMI i talia w normie: energia na utrzymanie masy.",
+        "missing_anthropometry": "Brak masy, wzrostu, wieku lub płci: nie oszacowano kalorii.",
+        "renal_review": "Podwyższona kreatynina: białko 0,8 g/kg do oceny lekarskiej/nefrologicznej.",
+        "glycemic": "Glukoza, HbA1c lub wywiad zgodne z zaburzeniem glikemii: mniej i lepszej jakości węglowodanów, rozłożonych na cały dzień.",
+        "triglycerides": "Wysokie triglicerydy: ograniczyć cukry i alkohol.",
+        "lipids": "Nieprawidłowy lipidogram lub choroba sercowo-naczyniowa: mniej tłuszczów nasyconych, więcej ryb, błonnika i tłuszczów nienasyconych.",
+        "blood_pressure": "Ciśnienie powyżej celu lub nadciśnienie: mniej sodu.",
+        "uric_acid": "Wysoki kwas moczowy: ograniczyć napoje z fruktozą, podroby i alkohol.",
+        "liver": "Stłuszczenie wątroby lub wysokie enzymy: unikać alkoholu i słodkich napojów.",
+        "allergies": "Zapisane alergie lub nietolerancje: wymieniono produkty do wykluczenia."
+      },
+      "options": {
+        "prioritize": {
+          "vegetables": "Warzywa",
+          "legumes": "Rośliny strączkowe (fasola, soczewica, ciecierzyca)",
+          "whole_grains": "Pełne ziarna i bulwy",
+          "fruit_whole": "Całe owoce (nie sok)",
+          "oily_fish": "Tłuste ryby (omega-3) 2×/tydz.",
+          "fish": "Ryby",
+          "poultry": "Drób bez skóry",
+          "eggs": "Jajka",
+          "low_fat_dairy": "Chudy nabiał",
+          "legumes_protein": "Strączki jako źródło białka",
+          "tofu_tempeh": "Tofu lub tempeh",
+          "nuts_seeds": "Orzechy i nasiona (garść)",
+          "olive_oil": "Oliwa lub awokado",
+          "water": "Woda jako główny napój"
+        },
+        "limit": {
+          "sugary_drinks": "Słodkie napoje i gazowane",
+          "ultraprocessed": "Żywność ultraprzetworzona",
+          "refined_flours": "Białe pieczywo i rafinowane mąki",
+          "fried_foods": "Smażone potrawy",
+          "processed_meat": "Wędliny i mięso przetworzone",
+          "fruit_juice": "Soki owocowe",
+          "sweets": "Słodycze i desery",
+          "alcohol": "Napoje alkoholowe",
+          "saturated_fats": "Tłuszcze nasycone (tłuste mięso, masło, smalec)",
+          "added_salt": "Dodana sól i kostki rosołowe",
+          "salty_snacks": "Słone przekąski",
+          "fructose_drinks": "Napoje z fruktozą lub syropem",
+          "organ_meats": "Podroby i owoce morza w nadmiarze"
+        },
+        "targets": {
+          "sugary_drinks_zero": "Zastąpić słodkie napoje wodą",
+          "fruit_veg_5": "5 porcji owoców i warzyw dziennie",
+          "ultraprocessed_down": "Ultraprzetworzone najwyżej 3 razy w tygodniu",
+          "weight_5pct": "Schudnąć 5% masy w 3–6 miesięcy",
+          "waist_down": "Zmniejszyć obwód talii",
+          "water_daily": "Pić zalecaną ilość wody codziennie"
+        },
+        "safety": {
+          "professional_review": "Specjalista dostosowuje cele przy każdej kontroli.",
+          "no_extreme_diets": "Unikaj diet bardzo niskokalorycznych lub skrajnych.",
+          "diabetes_meds": "Przy lekach na cukrzycę zmiana węglowodanów może obniżyć glukozę: kontroluj i konsultuj.",
+          "renal_review": "Ocenić funkcję nerek przed zwiększeniem białka.",
+          "allergy_check": "Czytaj etykiety: alergeny mogą być ukryte w produktach przetworzonych.",
+          "b12_review": "Dieta wegańska: rozważyć suplementację witaminy B12."
+        }
       }
     }
   }

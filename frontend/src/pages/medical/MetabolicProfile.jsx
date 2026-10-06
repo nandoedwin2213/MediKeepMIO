@@ -42,11 +42,13 @@ const NUMBER_FIELDS = [
   { key: 'sugary_drinks_per_week', min: 0, max: 100, step: 1 },
   { key: 'ultraprocessed_per_week', min: 0, max: 100, step: 1 },
   { key: 'fruit_veg_servings_day', min: 0, max: 30, step: 1 },
+  { key: 'meals_per_day', min: 1, max: 8, step: 1 },
 ];
 
 const OPTIONS = {
   alcohol: ['none', 'occasional', 'weekly', 'daily'],
   smoking: ['never', 'former', 'current'],
+  diet_pattern: ['omnivore', 'vegetarian', 'vegan', 'pescatarian', 'other'],
 };
 
 const EMPTY = {
@@ -54,6 +56,9 @@ const EMPTY = {
   ...Object.fromEntries(NUMBER_FIELDS.map(f => [f.key, ''])),
   alcohol: null,
   smoking: null,
+  diet_pattern: null,
+  food_intolerances: '',
+  food_dislikes: '',
   musculoskeletal_limitations: '',
   pain_level: '',
   goals: '',
@@ -245,6 +250,30 @@ const MetabolicProfile = () => {
                   onChange={e =>
                     set('musculoskeletal_limitations', e.currentTarget.value)
                   }
+                />
+                <Textarea
+                  label={t(
+                    'metabolic.profile.fields.food_intolerances',
+                    'Food intolerances (e.g. lactose, gluten)'
+                  )}
+                  autosize
+                  minRows={1}
+                  maxLength={1000}
+                  value={form.food_intolerances}
+                  onChange={e =>
+                    set('food_intolerances', e.currentTarget.value)
+                  }
+                />
+                <Textarea
+                  label={t(
+                    'metabolic.profile.fields.food_dislikes',
+                    'Foods you dislike or avoid'
+                  )}
+                  autosize
+                  minRows={1}
+                  maxLength={1000}
+                  value={form.food_dislikes}
+                  onChange={e => set('food_dislikes', e.currentTarget.value)}
                 />
                 <NumberInput
                   label={t(

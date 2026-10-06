@@ -115,7 +115,8 @@
       "metabolicRisk": "Metabol risk",
       "myMetabolicHealth": "Min metabola hälsa",
       "professionalDashboard": "Professionell översikt",
-      "metabolicMovement": "Min träning"
+      "metabolicMovement": "Min träning",
+      "metabolicNutrition": "Min kost"
     },
     "sections": {
       "administration": "Administration",
