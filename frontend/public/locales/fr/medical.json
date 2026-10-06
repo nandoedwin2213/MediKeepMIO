@@ -1957,6 +1957,49 @@
         "title": "Mon évolution",
         "empty": "Le graphique apparaît à partir de deux mesures."
       }
+    },
+    "professional": {
+      "title": "Tableau de bord métabolique professionnel",
+      "subtitle": "Répartition du risque et patients à suivre, recalculée avec la configuration clinique active.",
+      "total": "Patients suivis",
+      "followUp": "{{count}} à suivre",
+      "alertsTitle": "Alertes",
+      "noAlerts": "Aucun patient à suivre pour le moment.",
+      "patientsTitle": "Liste des patients",
+      "open": "Ouvrir",
+      "empty": "Aucun patient pour l'instant. Les patients créés ou partagés avec vous apparaîtront ici.",
+      "loadError": "Impossible de charger le tableau de bord.",
+      "disclaimer": "Indicateur interne de suivi, pas un diagnostic. Les seuils se définissent dans Administration → Configuration clinique.",
+      "levels": {
+        "favorable": "État favorable",
+        "initial": "Risque initial",
+        "moderate": "Risque modéré",
+        "high": "Risque élevé",
+        "unknown": "Pas encore de score"
+      },
+      "alertText": {
+        "high_risk": "patients sont dans le groupe à risque métabolique élevé",
+        "risk_increased": "patients ont vu leur risque métabolique augmenter",
+        "critical": "patients présentent des valeurs nécessitant une évaluation médicale",
+        "hba1c": "patients ont une HbA1c hors de la plage configurée",
+        "stale": "patients sans mesure depuis {{days}} jours",
+        "no_data": "patients sans données de laboratoire ni signes vitaux"
+      },
+      "alertBadge": {
+        "high_risk": "Risque élevé",
+        "risk_increased": "Risque en hausse",
+        "critical": "Évaluation médicale",
+        "hba1c": "HbA1c élevée",
+        "stale": "Données anciennes",
+        "no_data": "Aucune donnée"
+      },
+      "columns": {
+        "patient": "Nom du patient",
+        "score": "Score et niveau",
+        "change": "Évolution",
+        "lastData": "Dernière mesure",
+        "alerts": "Suivi"
+      }
     }
   }
 }

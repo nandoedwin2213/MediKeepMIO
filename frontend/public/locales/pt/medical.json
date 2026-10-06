@@ -1957,6 +1957,49 @@
         "title": "Minha evolução",
         "empty": "O gráfico aparece com duas ou mais medições."
       }
+    },
+    "professional": {
+      "title": "Painel metabólico profissional",
+      "subtitle": "Distribuição do risco e pacientes que precisam de acompanhamento, recalculada com a configuração clínica ativa.",
+      "total": "Pacientes",
+      "followUp": "{{count}} precisam de acompanhamento",
+      "alertsTitle": "Alertas",
+      "noAlerts": "Nenhum paciente precisa de acompanhamento agora.",
+      "patientsTitle": "Lista de pacientes",
+      "open": "Abrir",
+      "empty": "Ainda não há pacientes. Os que você criar ou que forem compartilhados aparecerão aqui.",
+      "loadError": "Não foi possível carregar o painel profissional.",
+      "disclaimer": "Indicador interno de acompanhamento, não um diagnóstico. Os limites são definidos em Administração → Configuração clínica.",
+      "levels": {
+        "favorable": "Estado favorável",
+        "initial": "Risco inicial",
+        "moderate": "Risco moderado",
+        "high": "Risco elevado",
+        "unknown": "Sem score ainda"
+      },
+      "alertText": {
+        "high_risk": "pacientes estão no grupo de risco metabólico elevado",
+        "risk_increased": "pacientes aumentaram seu risco metabólico",
+        "critical": "pacientes têm valores que exigem avaliação médica",
+        "hba1c": "pacientes têm HbA1c fora da faixa configurada",
+        "stale": "pacientes sem medições nos últimos {{days}} dias",
+        "no_data": "pacientes sem dados de laboratório ou sinais vitais"
+      },
+      "alertBadge": {
+        "high_risk": "Risco elevado",
+        "risk_increased": "Risco aumentou",
+        "critical": "Avaliação médica",
+        "hba1c": "HbA1c alta",
+        "stale": "Dados antigos",
+        "no_data": "Sem dados"
+      },
+      "columns": {
+        "patient": "Nome do paciente",
+        "score": "Score e nível",
+        "change": "Mudança",
+        "lastData": "Última medição",
+        "alerts": "Acompanhamento"
+      }
     }
   }
 }

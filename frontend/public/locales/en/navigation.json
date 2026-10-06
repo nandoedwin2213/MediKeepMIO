@@ -113,7 +113,8 @@
       "vitalSigns": "Vital Signs",
       "insulinResistance": "Insulin Resistance",
       "metabolicRisk": "Metabolic risk",
-      "myMetabolicHealth": "My metabolic health"
+      "myMetabolicHealth": "My metabolic health",
+      "professionalDashboard": "Professional dashboard"
     },
     "sections": {
       "administration": "Administration",

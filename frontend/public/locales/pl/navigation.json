@@ -113,7 +113,8 @@
       "vitalSigns": "Podstawowe parametry życiowe",
       "insulinResistance": "Insulinooporność",
       "metabolicRisk": "Ryzyko metaboliczne",
-      "myMetabolicHealth": "Moje zdrowie metaboliczne"
+      "myMetabolicHealth": "Moje zdrowie metaboliczne",
+      "professionalDashboard": "Panel specjalisty"
     },
     "sections": {
       "administration": "Administracja",

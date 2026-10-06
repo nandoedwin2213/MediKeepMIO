@@ -75,6 +75,7 @@ import Symptoms from './pages/medical/Symptoms';
 import InsulinResistance from './pages/medical/InsulinResistance';
 import MetabolicRisk from './pages/medical/MetabolicRisk';
 import MetabolicHealth from './pages/medical/MetabolicHealth';
+import MetabolicDashboard from './pages/professional/MetabolicDashboard';
 import MetabolicProfile from './pages/medical/MetabolicProfile';
 import MetabolicSettings from './pages/admin/MetabolicSettings';
 import Injuries from './pages/medical/Injuries';
@@ -490,6 +491,23 @@ function App() {
                             element={
                               <ProtectedRoute>
                                 <MetabolicHealth />
+                              </ProtectedRoute>
+                            }
+                          />
+                          <Route
+                            path="/professional/metabolic-dashboard"
+                            element={
+                              <ProtectedRoute
+                                requiredRoles={[
+                                  'admin',
+                                  'doctor',
+                                  'nurse',
+                                  'staff',
+                                  'physio',
+                                  'nutritionist',
+                                ]}
+                              >
+                                <MetabolicDashboard />
                               </ProtectedRoute>
                             }
                           />

@@ -3,8 +3,11 @@
  * DebugNavigation - Debug component to test what's rendering
  */
 
-
-const DebugNavigation = ({ currentPath, userInfo, className: _className = '' }) => {
+const DebugNavigation = ({
+  currentPath,
+  userInfo,
+  className: _className = '',
+}) => {
   // Very basic HTML navigation for testing
   return (
     <div

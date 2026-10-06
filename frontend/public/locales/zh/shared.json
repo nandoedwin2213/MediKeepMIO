@@ -315,7 +315,9 @@
     "website": "网站",
     "weekly": "每周",
     "weight": "体重",
-    "zip": "ZIP"
+    "zip": "ZIP",
+    "physio": "物理治疗师",
+    "nutritionist": "营养师"
   },
   "permissions": {
     "viewOnly": "仅查看权限"

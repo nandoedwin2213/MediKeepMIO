@@ -1957,6 +1957,49 @@
         "title": "Mi evolución",
         "empty": "La gráfica aparece con dos o más mediciones."
       }
+    },
+    "professional": {
+      "title": "Panel profesional metabólico",
+      "subtitle": "Distribución del riesgo y pacientes que requieren seguimiento, recalculado con la configuración clínica vigente.",
+      "total": "Pacientes",
+      "followUp": "{{count}} requieren seguimiento",
+      "alertsTitle": "Alertas",
+      "noAlerts": "Ningún paciente requiere seguimiento por ahora.",
+      "patientsTitle": "Pacientes",
+      "open": "Abrir",
+      "empty": "Aún no tienes pacientes. Aquí aparecerán los que crees o los que te compartan.",
+      "loadError": "No se pudo cargar el panel profesional.",
+      "disclaimer": "Indicador interno de seguimiento, no un diagnóstico. Los umbrales se definen en Administración → Configuración clínica.",
+      "levels": {
+        "favorable": "Estado favorable",
+        "initial": "Riesgo inicial",
+        "moderate": "Riesgo moderado",
+        "high": "Riesgo elevado",
+        "unknown": "Sin score aún"
+      },
+      "alertText": {
+        "high_risk": "pacientes están en el grupo de riesgo metabólico elevado",
+        "risk_increased": "pacientes aumentaron su riesgo metabólico",
+        "critical": "pacientes presentan valores que requieren valoración médica",
+        "hba1c": "pacientes presentan HbA1c fuera del rango configurado",
+        "stale": "pacientes sin mediciones en los últimos {{days}} días",
+        "no_data": "pacientes sin datos de laboratorio ni signos vitales"
+      },
+      "alertBadge": {
+        "high_risk": "Riesgo elevado",
+        "risk_increased": "Riesgo aumentó",
+        "critical": "Valoración médica",
+        "hba1c": "HbA1c alta",
+        "stale": "Datos antiguos",
+        "no_data": "Sin datos"
+      },
+      "columns": {
+        "patient": "Nombre del paciente",
+        "score": "Score y nivel",
+        "change": "Cambio",
+        "lastData": "Última medición",
+        "alerts": "Seguimiento"
+      }
     }
   }
 }

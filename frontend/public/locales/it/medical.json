@@ -1957,6 +1957,49 @@
         "title": "La mia evoluzione",
         "empty": "Il grafico compare con due o più misurazioni."
       }
+    },
+    "professional": {
+      "title": "Pannello metabolico professionale",
+      "subtitle": "Distribuzione del rischio e pazienti da seguire, ricalcolata con la configurazione clinica attiva.",
+      "total": "Pazienti",
+      "followUp": "{{count}} da seguire",
+      "alertsTitle": "Avvisi",
+      "noAlerts": "Nessun paziente da seguire al momento.",
+      "patientsTitle": "Elenco pazienti",
+      "open": "Apri",
+      "empty": "Nessun paziente. Qui appariranno i pazienti creati o condivisi con te.",
+      "loadError": "Impossibile caricare il pannello professionale.",
+      "disclaimer": "Indicatore interno di monitoraggio, non una diagnosi. Le soglie si definiscono in Amministrazione → Configurazione clinica.",
+      "levels": {
+        "favorable": "Stato favorevole",
+        "initial": "Rischio iniziale",
+        "moderate": "Rischio moderato",
+        "high": "Rischio elevato",
+        "unknown": "Nessuno score"
+      },
+      "alertText": {
+        "high_risk": "pazienti sono nel gruppo a rischio metabolico elevato",
+        "risk_increased": "pazienti hanno aumentato il rischio metabolico",
+        "critical": "pazienti hanno valori che richiedono valutazione medica",
+        "hba1c": "pazienti hanno HbA1c fuori dall'intervallo configurato",
+        "stale": "pazienti senza misurazioni negli ultimi {{days}} giorni",
+        "no_data": "pazienti senza dati di laboratorio o parametri vitali"
+      },
+      "alertBadge": {
+        "high_risk": "Rischio elevato",
+        "risk_increased": "Rischio aumentato",
+        "critical": "Valutazione medica",
+        "hba1c": "HbA1c alta",
+        "stale": "Dati vecchi",
+        "no_data": "Nessun dato"
+      },
+      "columns": {
+        "patient": "Nome del paziente",
+        "score": "Score e livello",
+        "change": "Variazione",
+        "lastData": "Ultima misurazione",
+        "alerts": "Controllo"
+      }
     }
   }
 }

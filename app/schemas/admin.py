@@ -7,7 +7,16 @@ from typing import Optional
 
 from pydantic import BaseModel, ConfigDict, EmailStr, field_validator
 
-ALLOWED_ROLES = ("admin", "user", "guest", "doctor", "nurse", "staff")
+ALLOWED_ROLES = (
+    "admin",
+    "user",
+    "guest",
+    "doctor",
+    "nurse",
+    "staff",
+    "physio",
+    "nutritionist",
+)
 
 
 def _validate_optional_name(v: Optional[str], field_label: str) -> Optional[str]:

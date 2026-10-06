@@ -2,7 +2,13 @@ import re
 from datetime import datetime
 from typing import Optional
 
-from pydantic import BaseModel, ConfigDict, PositiveInt, field_validator, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    PositiveInt,
+    field_validator,
+    model_validator,
+)
 
 from app.schemas.validators import empty_strings_to_none
 from app.schemas.validators import validate_phone_number as _validate_phone

@@ -21,7 +21,11 @@ const MobileNavigation = ({
   const { t } = useTranslation(['navigation', 'shared']);
   const { viewport } = useViewport();
 
-  const navigationSections = getNavigationSections(viewport, isAdmin);
+  const navigationSections = getNavigationSections(
+    viewport,
+    isAdmin,
+    _user?.role
+  );
 
   const isCurrentPath = path => {
     if (path === '/dashboard') {

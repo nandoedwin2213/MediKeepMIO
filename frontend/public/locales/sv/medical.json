@@ -1957,6 +1957,49 @@
         "title": "Min utveckling",
         "empty": "Diagrammet visas med två eller fler mätningar."
       }
+    },
+    "professional": {
+      "title": "Professionell metabol översikt",
+      "subtitle": "Riskfördelning och patienter som behöver uppföljning, omräknad med den aktiva kliniska konfigurationen.",
+      "total": "Patienter",
+      "followUp": "{{count}} behöver uppföljning",
+      "alertsTitle": "Varningar",
+      "noAlerts": "Ingen patient behöver uppföljning just nu.",
+      "patientsTitle": "Patientlista",
+      "open": "Öppna",
+      "empty": "Inga patienter ännu. Patienter du skapar eller som delas med dig visas här.",
+      "loadError": "Översikten kunde inte laddas.",
+      "disclaimer": "Intern uppföljningsindikator, ingen diagnos. Gränser anges under Administration → Klinisk konfiguration.",
+      "levels": {
+        "favorable": "Gynnsamt läge",
+        "initial": "Begynnande risk",
+        "moderate": "Måttlig risk",
+        "high": "Hög risk",
+        "unknown": "Ingen poäng ännu"
+      },
+      "alertText": {
+        "high_risk": "patienter tillhör gruppen med hög metabol risk",
+        "risk_increased": "patienter fick ökad metabol risk",
+        "critical": "patienter har värden som kräver läkarbedömning",
+        "hba1c": "patienter har HbA1c utanför det inställda intervallet",
+        "stale": "patienter utan mätningar de senaste {{days}} dagarna",
+        "no_data": "patienter utan labb- eller vitaldata"
+      },
+      "alertBadge": {
+        "high_risk": "Hög risk",
+        "risk_increased": "Risken ökade",
+        "critical": "Läkarbedömning",
+        "hba1c": "Högt HbA1c",
+        "stale": "Gamla data",
+        "no_data": "Inga data"
+      },
+      "columns": {
+        "patient": "Patientens namn",
+        "score": "Poäng och nivå",
+        "change": "Förändring",
+        "lastData": "Senaste mätning",
+        "alerts": "Uppföljning"
+      }
     }
   }
 }

@@ -113,7 +113,8 @@
       "vitalSigns": "สัญญาณชีพ",
       "insulinResistance": "ภาวะดื้อต่ออินซูลิน",
       "metabolicRisk": "ความเสี่ยงเมตาบอลิก",
-      "myMetabolicHealth": "สุขภาพเมตาบอลิกของฉัน"
+      "myMetabolicHealth": "สุขภาพเมตาบอลิกของฉัน",
+      "professionalDashboard": "แดชบอร์ดผู้เชี่ยวชาญ"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

@@ -54,6 +54,8 @@ const ROLE_COLORS = {
   doctor: 'green',
   nurse: 'teal',
   staff: 'orange',
+  physio: 'cyan',
+  nutritionist: 'lime',
 };
 
 const PER_PAGE = 20;
@@ -68,6 +70,12 @@ const UserManagement = () => {
       { value: '', label: t('users.roleFilter.all', 'All Roles') },
       { value: 'admin', label: t('shared:labels.admin', 'Admin') },
       { value: 'user', label: t('shared:labels.user', 'User') },
+      { value: 'doctor', label: t('shared:labels.doctor', 'Doctor') },
+      { value: 'physio', label: t('shared:labels.physio', 'Physiotherapist') },
+      {
+        value: 'nutritionist',
+        label: t('shared:labels.nutritionist', 'Nutritionist'),
+      },
     ],
     [t]
   );
@@ -95,6 +103,12 @@ const UserManagement = () => {
     () => [
       { value: 'admin', label: t('shared:labels.admin', 'Admin') },
       { value: 'user', label: t('shared:labels.user', 'User') },
+      { value: 'doctor', label: t('shared:labels.doctor', 'Doctor') },
+      { value: 'physio', label: t('shared:labels.physio', 'Physiotherapist') },
+      {
+        value: 'nutritionist',
+        label: t('shared:labels.nutritionist', 'Nutritionist'),
+      },
     ],
     [t]
   );
@@ -614,7 +628,7 @@ const UserManagement = () => {
                           variant="light"
                           size="sm"
                         >
-                          {u.role}
+                          {t(`shared:labels.${u.role}`, u.role)}
                         </Badge>
                       </Table.Td>
                       <Table.Td>
