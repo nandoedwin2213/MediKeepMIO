@@ -31,7 +31,7 @@ class TestUserPreferencesCRUD:
 
         assert prefs is not None
         assert prefs.user_id == test_user.id
-        assert prefs.unit_system == "imperial"  # Default
+        assert prefs.unit_system == "metric"  # Default
 
     def test_get_or_create_returns_existing(self, db_session: Session, test_user):
         """Test get_or_create returns existing preferences."""
