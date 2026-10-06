@@ -40,6 +40,7 @@ class VitalsBase(BaseModel):
     weight: Optional[float] = None
     height: Optional[float] = None
     waist_circumference: Optional[float] = None
+    hip_circumference: Optional[float] = None
     oxygen_saturation: Optional[float] = None
     respiratory_rate: Optional[int] = None
     blood_glucose: Optional[float] = None
@@ -117,6 +118,15 @@ class VitalsBase(BaseModel):
         if v is not None:
             if v < 15.0 or v > 80.0:
                 raise ValueError("Waist circumference must be between 15-80 inches")
+        return v
+
+    @field_validator("hip_circumference")
+    @classmethod
+    def validate_hip_circumference(cls, v):
+        """Validate hip circumference (stored as inches)"""
+        if v is not None:
+            if v < 15.0 or v > 80.0:
+                raise ValueError("Hip circumference must be between 15-80 inches")
         return v
 
     @field_validator("oxygen_saturation")
@@ -227,6 +237,7 @@ class VitalsUpdate(BaseModel):
     weight: Optional[float] = None
     height: Optional[float] = None
     waist_circumference: Optional[float] = None
+    hip_circumference: Optional[float] = None
     oxygen_saturation: Optional[float] = None
     respiratory_rate: Optional[int] = None
     blood_glucose: Optional[float] = None

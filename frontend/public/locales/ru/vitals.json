@@ -74,9 +74,12 @@
       "weightMax": "Вес не может превышать {{max}} {{unit}}",
       "weightMin": "Вес должен быть не менее {{min}} {{unit}}",
       "waistMin": "Окружность талии должна быть не менее {{min}} {{unit}}",
-      "waistMax": "Окружность талии не может превышать {{max}} {{unit}}"
+      "waistMax": "Окружность талии не может превышать {{max}} {{unit}}",
+      "hipMin": "Окружность бёдер должна быть не менее {{min}} {{unit}}",
+      "hipMax": "Окружность бёдер не может превышать {{max}} {{unit}}"
     },
-    "waistCircumference": "Окружность талии"
+    "waistCircumference": "Окружность талии",
+    "hipCircumference": "Окружность бёдер"
   },
   "glucoseContext": {
     "after_meal": "После еды",

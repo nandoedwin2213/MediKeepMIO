@@ -48,6 +48,14 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.metabolicRisk',
+        name: 'Metabolic risk',
+        path: '/metabolic-risk',
+        icon: '🎯',
+        id: 'metabolic-risk',
+        featured: true,
+      },
+      {
         nameKey: 'sidebarNav.items.insulinResistance',
         name: 'Insulin Resistance',
         path: '/insulin-resistance',

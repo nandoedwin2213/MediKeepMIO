@@ -73,6 +73,9 @@ import Visits from './pages/medical/Visits';
 import Vitals from './pages/medical/Vitals';
 import Symptoms from './pages/medical/Symptoms';
 import InsulinResistance from './pages/medical/InsulinResistance';
+import MetabolicRisk from './pages/medical/MetabolicRisk';
+import MetabolicProfile from './pages/medical/MetabolicProfile';
+import MetabolicSettings from './pages/admin/MetabolicSettings';
 import Injuries from './pages/medical/Injuries';
 import MedicalEquipment from './pages/medical/MedicalEquipment';
 import Practitioners from './pages/medical/Practitioners';
@@ -480,6 +483,23 @@ function App() {
                           />
                           {/* Generated entity routes */}
                           {generateEntityRoutes()}
+                          {/* Metabolic Risk Engine Routes */}
+                          <Route
+                            path="/metabolic-risk"
+                            element={
+                              <ProtectedRoute>
+                                <MetabolicRisk />
+                              </ProtectedRoute>
+                            }
+                          />
+                          <Route
+                            path="/metabolic-profile"
+                            element={
+                              <ProtectedRoute>
+                                <MetabolicProfile />
+                              </ProtectedRoute>
+                            }
+                          />
                           {/* Insulin Resistance Panel Route */}
                           <Route
                             path="/insulin-resistance"
@@ -645,6 +665,14 @@ function App() {
                             element={
                               <AdminRoute>
                                 <SystemHealth />
+                              </AdminRoute>
+                            }
+                          />
+                          <Route
+                            path="/admin/metabolic-settings"
+                            element={
+                              <AdminRoute>
+                                <MetabolicSettings />
                               </AdminRoute>
                             }
                           />

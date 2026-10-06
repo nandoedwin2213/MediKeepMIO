@@ -564,7 +564,8 @@
     "items": {
       "analytics": "Analisi",
       "maintenance": "Manutenzione",
-      "trash": "Cestino"
+      "trash": "Cestino",
+      "metabolicSettings": "Configurazione clinica"
     },
     "sections": {
       "dataManagement": "Gestione dati",
@@ -726,5 +727,37 @@
     "userCount": "{{count}} utenti",
     "userCount_one": "{{count}} utente",
     "userCount_other": "{{count}} utenti"
+  },
+  "metabolicSettings": {
+    "title": "Configurazione clinica",
+    "subtitle": "Intervalli di riferimento, criteri della sindrome metabolica, pesi del punteggio e regole di allerta del motore di rischio metabolico. Ogni salvataggio crea una nuova versione; le valutazioni precedenti mantengono la loro versione.",
+    "version": "Versione attiva: {{version}}",
+    "defaults": "valori predefiniti",
+    "loadError": "Impossibile caricare la configurazione clinica.",
+    "saved": "Salvata come versione {{version}}",
+    "saveError": "Impossibile salvare la configurazione",
+    "indicators": "Intervalli di riferimento",
+    "indicatorsHint": "Ogni intervallo include il valore «da» e arriva al valore «fino a» senza includerlo. Lascia vuoto per nessun limite.",
+    "level": "Livello",
+    "from": "Da (≥)",
+    "to": "Fino a (<)",
+    "remove": "Rimuovi",
+    "addBand": "Aggiungi intervallo",
+    "sex": {
+      "M": "Uomini",
+      "F": "Donne"
+    },
+    "score": "Punteggio metabolico",
+    "weights": "Peso di ogni componente",
+    "points": "Punti per livello (0-100)",
+    "riskBands": "Punteggio da cui inizia ogni livello di rischio",
+    "coverage": "Copertura minima dei dati (%)",
+    "syndrome": "Criteri della sindrome metabolica",
+    "required": "Criteri necessari",
+    "alerts": "Allerte di sicurezza («Richiede valutazione medica»)",
+    "addAlert": "Aggiungi allerta",
+    "notes": "Motivo della modifica (facoltativo)",
+    "reset": "Carica valori predefiniti",
+    "save": "Salva nuova versione"
   }
 }

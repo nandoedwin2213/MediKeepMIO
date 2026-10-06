@@ -1736,5 +1736,175 @@
     "retry": "重试",
     "rangesTitle": "参考范围",
     "waistNoGender": "请填写患者性别以查看腰围参考范围。"
+  },
+  "metabolic": {
+    "title": "代谢风险",
+    "subtitle": "我现在怎么样？什么在增加我的风险？我应该改善什么？",
+    "selectPatient": "请选择患者以查看其代谢风险。",
+    "loadError": "无法计算代谢风险。",
+    "retry": "重试",
+    "scoreTitle": "{{brand}} 代谢评分",
+    "scoreShort": "评分",
+    "insufficient": "数据尚不足",
+    "insufficientHint": "记录腰围、血压、化验结果和代谢病史以计算评分。",
+    "coverage": "评分使用的数据：{{pct}}%",
+    "lastUpdate": "计算于 {{date}}",
+    "versionInfo": "算法 {{algo}} · 配置 v{{config}}",
+    "disclaimer": "内部随访指标，并非经过验证的诊断工具。结果需要专业人员评估。",
+    "risk": {
+      "favorable": "代谢状态良好",
+      "initial": "初期代谢风险",
+      "moderate": "中度代谢风险",
+      "high": "高代谢风险"
+    },
+    "syndrome": {
+      "title": "代谢综合征标准",
+      "count": "符合 {{met}}/{{total}} 项标准（需要 {{required}} 项）",
+      "noData": "无数据",
+      "history": "根据病史",
+      "status": {
+        "compatible": "相符：需要专业评估",
+        "not_compatible": "不相符",
+        "indeterminate": "数据不完整"
+      },
+      "criteria": {
+        "waist": "腰围",
+        "triglycerides": "甘油三酯",
+        "hdl": "HDL 偏低",
+        "blood_pressure": "血压",
+        "glucose": "空腹血糖"
+      }
+    },
+    "alerts": {
+      "title": "需要医生评估",
+      "items": {
+        "glucose_critical": "血糖非常高",
+        "hba1c_critical": "HbA1c 非常高",
+        "systolic_critical": "收缩压非常高",
+        "diastolic_critical": "舒张压非常高",
+        "triglycerides_critical": "甘油三酯非常高",
+        "alt_critical": "ALT 非常高",
+        "creatinine_critical": "肌酐升高"
+      }
+    },
+    "factors": {
+      "title": "什么在影响你的代谢？",
+      "subtitle": "按风险影响从大到小排列，直到处于正常范围的因素。",
+      "empty": "暂无可分析的数据。"
+    },
+    "indices": {
+      "title": "代谢指数",
+      "subtitle": "自动计算。化验指数只组合同一样本中的数值。",
+      "missing": "缺少数据：{{inputs}}"
+    },
+    "indicators": {
+      "homa_ir": "HOMA-IR",
+      "quicki": "QUICKI",
+      "tyg": "TyG 指数",
+      "tyg_bmi": "TyG-BMI",
+      "mets_ir": "METS-IR",
+      "tg_hdl": "TG/HDL 比值",
+      "glucose": "空腹血糖",
+      "insulin": "空腹胰岛素",
+      "hba1c": "HbA1c",
+      "triglycerides": "甘油三酯",
+      "hdl": "HDL 胆固醇",
+      "ldl": "LDL 胆固醇",
+      "total_cholesterol": "总胆固醇",
+      "alt": "ALT",
+      "ast": "AST",
+      "ggt": "GGT",
+      "creatinine": "肌酐",
+      "uric_acid": "尿酸",
+      "bmi": "体重指数",
+      "weight": "体重",
+      "height": "身高",
+      "waist": "腰围",
+      "hip": "臀围",
+      "waist_height": "腰围/身高",
+      "waist_hip": "腰臀比",
+      "systolic": "收缩压",
+      "diastolic": "舒张压",
+      "blood_pressure": "血压",
+      "physical_activity": "身体活动",
+      "sitting": "久坐时长",
+      "sleep": "睡眠",
+      "sugary_drinks": "含糖饮料",
+      "ultraprocessed": "超加工食品",
+      "fruit_veg": "水果和蔬菜",
+      "smoking": "吸烟",
+      "alcohol": "饮酒"
+    },
+    "explain": {
+      "homa_ir": "估计你的身体对胰岛素的反应。",
+      "quicki": "估计胰岛素敏感性：数值越低，反应越差。",
+      "tyg": "结合甘油三酯和血糖来估计代谢风险。",
+      "tyg_bmi": "按体重校正的 TyG 指数。",
+      "mets_ir": "结合血糖、甘油三酯、HDL 和 BMI 来估计胰岛素抵抗。",
+      "tg_hdl": "甘油三酯与好胆固醇之间的关系。",
+      "waist_height": "你的腰围应小于身高的一半。",
+      "waist_hip": "显示腹部脂肪积累的程度。"
+    },
+    "evolution": {
+      "title": "评分变化",
+      "empty": "有两次或以上含新数据的评估后显示变化。"
+    },
+    "actions": {
+      "profile": "代谢病史和习惯",
+      "addLab": "化验结果",
+      "addVitals": "生命体征"
+    },
+    "warnings": {
+      "unknownUnit": "{{variable}}：无法识别单位“{{unit}}”，未使用该值"
+    },
+    "profile": {
+      "title": "代谢病史",
+      "subtitle": "关于你的病史和习惯的简单问题，有助于计算你的代谢风险。",
+      "loadError": "无法加载代谢病史。",
+      "saved": "代谢病史已保存",
+      "saveError": "无法保存代谢病史。",
+      "range": "介于 {{min}} 和 {{max}} 之间",
+      "cancel": "取消",
+      "save": "保存",
+      "sections": {
+        "history": "医生是否告诉过你患有……？",
+        "habits": "你的习惯",
+        "limitations": "限制和目标"
+      },
+      "fields": {
+        "has_diabetes": "糖尿病",
+        "has_prediabetes": "糖尿病前期",
+        "has_hypertension": "高血压",
+        "has_dyslipidemia": "胆固醇或甘油三酯偏高",
+        "has_fatty_liver": "脂肪肝",
+        "has_obesity": "肥胖",
+        "has_cardiovascular_disease": "心脏病或中风",
+        "family_diabetes": "父母或兄弟姐妹患有糖尿病",
+        "physical_activity_minutes_week": "每周中等强度活动分钟数（快走、骑车……）",
+        "sitting_hours_day": "每天久坐小时数",
+        "sleep_hours": "每晚睡眠小时数",
+        "sugary_drinks_per_week": "每周含糖饮料或汽水次数",
+        "ultraprocessed_per_week": "每周超加工食品次数（零食、快餐、甜食）",
+        "fruit_veg_servings_day": "每天水果和蔬菜份数",
+        "alcohol": "饮酒",
+        "smoking": "烟草",
+        "musculoskeletal_limitations": "疼痛、损伤或身体限制",
+        "pain_level": "平时疼痛程度（0-10）",
+        "goals": "你希望达到什么目标？"
+      },
+      "options": {
+        "alcohol": {
+          "none": "不喝酒",
+          "occasional": "偶尔",
+          "weekly": "每周",
+          "daily": "每天"
+        },
+        "smoking": {
+          "never": "从不吸烟",
+          "former": "以前吸烟",
+          "current": "吸烟"
+        }
+      }
+    }
   }
 }

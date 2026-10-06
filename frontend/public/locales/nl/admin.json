@@ -564,7 +564,8 @@
     "items": {
       "analytics": "Analyse",
       "maintenance": "Onderhoud",
-      "trash": "Prullenbak"
+      "trash": "Prullenbak",
+      "metabolicSettings": "Klinische configuratie"
     },
     "sections": {
       "dataManagement": "Gegevensbeheer",
@@ -726,5 +727,37 @@
     "userCount": "{{count}} gebruikers",
     "userCount_one": "{{count}} gebruiker",
     "userCount_other": "{{count}} gebruikers"
+  },
+  "metabolicSettings": {
+    "title": "Klinische configuratie",
+    "subtitle": "Referentiebereiken, criteria voor metabool syndroom, scoregewichten en alarmregels van de metabole risico-engine. Elke opslag maakt een nieuwe versie; eerdere evaluaties behouden hun versie.",
+    "version": "Actieve versie: {{version}}",
+    "defaults": "standaardwaarden",
+    "loadError": "De klinische configuratie kon niet worden geladen.",
+    "saved": "Opgeslagen als versie {{version}}",
+    "saveError": "De configuratie kon niet worden opgeslagen",
+    "indicators": "Referentiebereiken",
+    "indicatorsHint": "Elk bereik omvat de waarde \"vanaf\" en loopt tot de waarde \"tot\", zonder die mee te tellen. Laat leeg voor geen limiet.",
+    "level": "Niveau",
+    "from": "Vanaf (≥)",
+    "to": "Tot (<)",
+    "remove": "Verwijderen",
+    "addBand": "Bereik toevoegen",
+    "sex": {
+      "M": "Mannen",
+      "F": "Vrouwen"
+    },
+    "score": "Metabole score",
+    "weights": "Gewicht van elk onderdeel",
+    "points": "Punten per niveau (0-100)",
+    "riskBands": "Score vanaf waar elk risiconiveau begint",
+    "coverage": "Minimale gegevensdekking (%)",
+    "syndrome": "Criteria metabool syndroom",
+    "required": "Benodigde criteria",
+    "alerts": "Veiligheidsalarmen (\"Vereist medische beoordeling\")",
+    "addAlert": "Alarm toevoegen",
+    "notes": "Reden van de wijziging (optioneel)",
+    "reset": "Standaardwaarden laden",
+    "save": "Nieuwe versie opslaan"
   }
 }

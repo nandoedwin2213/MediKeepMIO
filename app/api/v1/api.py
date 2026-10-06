@@ -24,6 +24,7 @@ from app.api.v1.endpoints import (
     medical_equipment,
     medical_specialty,
     medication,
+    metabolic,
     notifications,
     paperless,
     papra,
@@ -127,6 +128,7 @@ api_router.include_router(
 )
 api_router.include_router(allergy.router, prefix="/allergies", tags=["allergies"])
 api_router.include_router(vitals.router, prefix="/vitals", tags=["vitals"])
+api_router.include_router(metabolic.router, prefix="/metabolic", tags=["metabolic"])
 api_router.include_router(symptom.router, prefix="/symptoms", tags=["symptoms"])
 api_router.include_router(
     injury_type.router, prefix="/injury-types", tags=["injury-types"]

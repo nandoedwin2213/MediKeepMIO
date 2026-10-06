@@ -1740,5 +1740,175 @@
     "retry": "Opnieuw proberen",
     "rangesTitle": "Referentiewaarden",
     "waistNoGender": "Registreer het geslacht van de patiënt om de taillewaarden te zien."
+  },
+  "metabolic": {
+    "title": "Metabool risico",
+    "subtitle": "Hoe gaat het met me? Wat verhoogt mijn risico? Wat moet ik verbeteren?",
+    "selectPatient": "Selecteer een patiënt om het metabole risico te zien.",
+    "loadError": "Het metabole risico kon niet worden berekend.",
+    "retry": "Opnieuw proberen",
+    "scoreTitle": "{{brand}} metabole score",
+    "scoreShort": "Scorewaarde",
+    "insufficient": "Nog niet genoeg gegevens",
+    "insufficientHint": "Registreer taille, bloeddruk, labwaarden en de metabole voorgeschiedenis om de score te berekenen.",
+    "coverage": "Gegevens gebruikt voor de score: {{pct}}%",
+    "lastUpdate": "Berekend op {{date}}",
+    "versionInfo": "algoritme {{algo}} · configuratie v{{config}}",
+    "disclaimer": "Interne opvolgindicator, geen gevalideerd diagnostisch hulpmiddel. Resultaten vereisen professionele beoordeling.",
+    "risk": {
+      "favorable": "Gunstige metabole toestand",
+      "initial": "Beginnend metabool risico",
+      "moderate": "Matig metabool risico",
+      "high": "Hoog metabool risico"
+    },
+    "syndrome": {
+      "title": "Criteria metabool syndroom",
+      "count": "{{met}} van {{total}} criteria aanwezig ({{required}} nodig)",
+      "noData": "geen gegevens",
+      "history": "volgens voorgeschiedenis",
+      "status": {
+        "compatible": "Verenigbaar: vereist professionele beoordeling",
+        "not_compatible": "Niet verenigbaar",
+        "indeterminate": "Onvolledige gegevens"
+      },
+      "criteria": {
+        "waist": "Buikomtrek",
+        "triglycerides": "Triglyceriden",
+        "hdl": "Laag HDL",
+        "blood_pressure": "Bloeddruk",
+        "glucose": "Nuchtere glucose"
+      }
+    },
+    "alerts": {
+      "title": "Vereist medische beoordeling",
+      "items": {
+        "glucose_critical": "Zeer hoge glucose",
+        "hba1c_critical": "Zeer hoog HbA1c",
+        "systolic_critical": "Zeer hoge systolische druk",
+        "diastolic_critical": "Zeer hoge diastolische druk",
+        "triglycerides_critical": "Zeer hoge triglyceriden",
+        "alt_critical": "Zeer hoog ALT",
+        "creatinine_critical": "Verhoogd creatinine"
+      }
+    },
+    "factors": {
+      "title": "Wat beïnvloedt je stofwisseling?",
+      "subtitle": "Gesorteerd van de factor die je risico het meest verhoogt tot de factoren binnen het normale bereik.",
+      "empty": "Er zijn nog geen gegevens om te analyseren."
+    },
+    "indices": {
+      "title": "Metabole indexen",
+      "subtitle": "Automatisch berekend. Labindexen combineren alleen waarden uit hetzelfde monster.",
+      "missing": "Ontbrekende gegevens: {{inputs}}"
+    },
+    "indicators": {
+      "homa_ir": "HOMA-IR",
+      "quicki": "QUICKI",
+      "tyg": "TyG-index",
+      "tyg_bmi": "TyG-BMI",
+      "mets_ir": "METS-IR",
+      "tg_hdl": "TG/HDL-verhouding",
+      "glucose": "Nuchtere glucose",
+      "insulin": "Nuchtere insuline",
+      "hba1c": "HbA1c",
+      "triglycerides": "Triglyceriden",
+      "hdl": "HDL-cholesterol",
+      "ldl": "LDL-cholesterol",
+      "total_cholesterol": "Totaal cholesterol",
+      "alt": "ALAT",
+      "ast": "ASAT",
+      "ggt": "GGT",
+      "creatinine": "Creatinine",
+      "uric_acid": "Urinezuur",
+      "bmi": "BMI",
+      "weight": "Gewicht",
+      "height": "Lengte",
+      "waist": "Taille",
+      "hip": "Heup",
+      "waist_height": "Taille/lengte",
+      "waist_hip": "Taille/heup",
+      "systolic": "Systolische druk",
+      "diastolic": "Diastolische druk",
+      "blood_pressure": "Bloeddruk",
+      "physical_activity": "Lichamelijke activiteit",
+      "sitting": "Uren zitten",
+      "sleep": "Slaap",
+      "sugary_drinks": "Suikerhoudende dranken",
+      "ultraprocessed": "Ultrabewerkt voedsel",
+      "fruit_veg": "Groente en fruit",
+      "smoking": "Roken",
+      "alcohol": "Alcoholgebruik"
+    },
+    "explain": {
+      "homa_ir": "Schat hoe je lichaam reageert op insuline.",
+      "quicki": "Schat de insulinegevoeligheid: hoe lager, hoe slechter de reactie.",
+      "tyg": "Combineert triglyceriden en glucose om het metabole risico te schatten.",
+      "tyg_bmi": "TyG-index aangepast aan lichaamsgewicht.",
+      "mets_ir": "Combineert glucose, triglyceriden, HDL en BMI om insulineresistentie te schatten.",
+      "tg_hdl": "Verhouding tussen triglyceriden en goed cholesterol.",
+      "waist_height": "Je taille zou minder dan de helft van je lengte moeten zijn.",
+      "waist_hip": "Geeft aan hoeveel vet zich rond de buik ophoopt."
+    },
+    "evolution": {
+      "title": "Verloop van de score",
+      "empty": "Het verloop verschijnt na twee of meer evaluaties met nieuwe gegevens."
+    },
+    "actions": {
+      "profile": "Metabole voorgeschiedenis en gewoonten",
+      "addLab": "Labuitslagen",
+      "addVitals": "Vitale functies"
+    },
+    "warnings": {
+      "unknownUnit": "{{variable}}: eenheid \"{{unit}}\" niet herkend, waarde niet gebruikt"
+    },
+    "profile": {
+      "title": "Metabole voorgeschiedenis",
+      "subtitle": "Eenvoudige vragen over je voorgeschiedenis en gewoonten. Ze helpen je metabole risico te berekenen.",
+      "loadError": "De metabole voorgeschiedenis kon niet worden geladen.",
+      "saved": "Metabole voorgeschiedenis opgeslagen",
+      "saveError": "De metabole voorgeschiedenis kon niet worden opgeslagen.",
+      "range": "Tussen {{min}} en {{max}}",
+      "cancel": "Annuleren",
+      "save": "Opslaan",
+      "sections": {
+        "history": "Is bij jou vastgesteld…?",
+        "habits": "Je gewoonten",
+        "limitations": "Beperkingen en doelen"
+      },
+      "fields": {
+        "has_diabetes": "Diabetes",
+        "has_prediabetes": "Prediabetes",
+        "has_hypertension": "Hoge bloeddruk",
+        "has_dyslipidemia": "Hoog cholesterol of hoge triglyceriden",
+        "has_fatty_liver": "Leververvetting",
+        "has_obesity": "Obesitas",
+        "has_cardiovascular_disease": "Hartziekte of beroerte",
+        "family_diabetes": "Ouders of broers/zussen met diabetes",
+        "physical_activity_minutes_week": "Minuten per week matige activiteit (stevig wandelen, fietsen…)",
+        "sitting_hours_day": "Uren zitten per dag",
+        "sleep_hours": "Uren slaap per nacht",
+        "sugary_drinks_per_week": "Suikerhoudende dranken of frisdrank per week",
+        "ultraprocessed_per_week": "Ultrabewerkt voedsel per week (snacks, fastfood, snoep)",
+        "fruit_veg_servings_day": "Porties groente en fruit per dag",
+        "alcohol": "Alcoholgebruik",
+        "smoking": "Tabak",
+        "musculoskeletal_limitations": "Pijn, blessures of lichamelijke beperkingen",
+        "pain_level": "Gebruikelijk pijnniveau (0-10)",
+        "goals": "Wat wil je bereiken?"
+      },
+      "options": {
+        "alcohol": {
+          "none": "Ik drink niet",
+          "occasional": "Af en toe",
+          "weekly": "Elke week",
+          "daily": "Elke dag"
+        },
+        "smoking": {
+          "never": "Ik heb nooit gerookt",
+          "former": "Ik rookte vroeger",
+          "current": "Ik rook"
+        }
+      }
+    }
   }
 }

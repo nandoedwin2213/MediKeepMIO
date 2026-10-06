@@ -26,6 +26,7 @@ import {
   IconSettings,
   IconChevronLeft,
   IconChevronRight,
+  IconAdjustments,
 } from '@tabler/icons-react';
 import './AdminSidebar.css';
 
@@ -93,6 +94,11 @@ const getNavSections = t => [
         label: t('sidebar.items.maintenance', 'Maintenance'),
         icon: IconTool,
         path: '/admin/tools',
+      },
+      {
+        label: t('sidebar.items.metabolicSettings', 'Clinical configuration'),
+        icon: IconAdjustments,
+        path: '/admin/metabolic-settings',
       },
       {
         label: t('shared:labels.settings', 'Settings'),

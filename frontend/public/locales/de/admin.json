@@ -564,7 +564,8 @@
     "items": {
       "analytics": "Analysen",
       "maintenance": "Wartung",
-      "trash": "Papierkorb"
+      "trash": "Papierkorb",
+      "metabolicSettings": "Klinische Konfiguration"
     },
     "sections": {
       "dataManagement": "Datenverwaltung",
@@ -726,5 +727,37 @@
     "userCount": "{{count}} Benutzer",
     "userCount_one": "{{count}} Benutzer",
     "userCount_other": "{{count}} Benutzer"
+  },
+  "metabolicSettings": {
+    "title": "Klinische Konfiguration",
+    "subtitle": "Referenzbereiche, Kriterien des metabolischen Syndroms, Score-Gewichte und Alarmregeln der metabolischen Risiko-Engine. Jedes Speichern erzeugt eine neue Version; frühere Auswertungen behalten ihre Version.",
+    "version": "Aktive Version: {{version}}",
+    "defaults": "Standardwerte",
+    "loadError": "Die klinische Konfiguration konnte nicht geladen werden.",
+    "saved": "Als Version {{version}} gespeichert",
+    "saveError": "Die Konfiguration konnte nicht gespeichert werden",
+    "indicators": "Referenzbereiche",
+    "indicatorsHint": "Jeder Bereich schließt den „Ab“-Wert ein und reicht bis zum „Bis“-Wert, ohne ihn einzuschließen. Leer lassen für keine Grenze.",
+    "level": "Stufe",
+    "from": "Ab (≥)",
+    "to": "Bis (<)",
+    "remove": "Entfernen",
+    "addBand": "Bereich hinzufügen",
+    "sex": {
+      "M": "Männer",
+      "F": "Frauen"
+    },
+    "score": "Metabolischer Score",
+    "weights": "Gewicht jeder Komponente",
+    "points": "Punkte pro Stufe (0-100)",
+    "riskBands": "Score, ab dem jede Risikostufe beginnt",
+    "coverage": "Minimale Datenabdeckung (%)",
+    "syndrome": "Kriterien des metabolischen Syndroms",
+    "required": "Erforderliche Kriterien",
+    "alerts": "Sicherheitsalarme („Ärztliche Beurteilung erforderlich“)",
+    "addAlert": "Alarm hinzufügen",
+    "notes": "Grund der Änderung (optional)",
+    "reset": "Standardwerte laden",
+    "save": "Neue Version speichern"
   }
 }

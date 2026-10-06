@@ -111,7 +111,8 @@
       "treatments": "Leczenie",
       "visitHistory": "Historia wizyt",
       "vitalSigns": "Podstawowe parametry życiowe",
-      "insulinResistance": "Insulinooporność"
+      "insulinResistance": "Insulinooporność",
+      "metabolicRisk": "Ryzyko metaboliczne"
     },
     "sections": {
       "administration": "Administracja",

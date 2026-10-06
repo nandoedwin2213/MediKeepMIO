@@ -74,9 +74,12 @@
       "weightMax": "น้ำหนักไม่สามารถเกิน {{max}} {{unit}}",
       "weightMin": "น้ำหนักต้องอย่างน้อย {{min}} {{unit}}",
       "waistMin": "รอบเอวต้องไม่น้อยกว่า {{min}} {{unit}}",
-      "waistMax": "รอบเอวต้องไม่เกิน {{max}} {{unit}}"
+      "waistMax": "รอบเอวต้องไม่เกิน {{max}} {{unit}}",
+      "hipMin": "สะโพกต้องมีอย่างน้อย {{min}} {{unit}}",
+      "hipMax": "สะโพกต้องไม่เกิน {{max}} {{unit}}"
     },
-    "waistCircumference": "รอบเอว"
+    "waistCircumference": "รอบเอว",
+    "hipCircumference": "เส้นรอบสะโพก"
   },
   "glucoseContext": {
     "after_meal": "หลังอาหาร",

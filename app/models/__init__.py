@@ -52,6 +52,11 @@ from .labs import (
     LabTestComponent,
     StandardizedTest,
 )
+from .metabolic import (
+    MetabolicAssessment,
+    MetabolicEngineConfig,
+    MetabolicProfile,
+)
 from .notifications import (
     NotificationChannel,
     NotificationHistory,
@@ -91,6 +96,9 @@ from .user import (
 )
 
 __all__ = [
+    "MetabolicAssessment",
+    "MetabolicEngineConfig",
+    "MetabolicProfile",
     "Base",
     "get_utc_now",
     "ActivityLog",

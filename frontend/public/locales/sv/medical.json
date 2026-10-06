@@ -1740,5 +1740,175 @@
     "retry": "Försök igen",
     "rangesTitle": "Referensintervall",
     "waistNoGender": "Registrera patientens kön för att se midjeintervallen."
+  },
+  "metabolic": {
+    "title": "Metabol risk",
+    "subtitle": "Hur mår jag? Vad ökar min risk? Vad bör jag förbättra?",
+    "selectPatient": "Välj en patient för att se den metabola risken.",
+    "loadError": "Det gick inte att beräkna den metabola risken.",
+    "retry": "Försök igen",
+    "scoreTitle": "{{brand}} metabol poäng",
+    "scoreShort": "Poäng",
+    "insufficient": "Inte tillräckligt med data än",
+    "insufficientHint": "Registrera midjemått, blodtryck, labbvärden och metabol anamnes för att beräkna poängen.",
+    "coverage": "Data som använts för poängen: {{pct}} %",
+    "lastUpdate": "Beräknad {{date}}",
+    "versionInfo": "algoritm {{algo}} · konfiguration v{{config}}",
+    "disclaimer": "Intern uppföljningsindikator, inte ett validerat diagnostiskt verktyg. Resultaten kräver professionell bedömning.",
+    "risk": {
+      "favorable": "Gynnsamt metabolt tillstånd",
+      "initial": "Begynnande metabol risk",
+      "moderate": "Måttlig metabol risk",
+      "high": "Hög metabol risk"
+    },
+    "syndrome": {
+      "title": "Kriterier för metabolt syndrom",
+      "count": "{{met}} av {{total}} kriterier uppfyllda ({{required}} krävs)",
+      "noData": "inga data",
+      "history": "enligt anamnes",
+      "status": {
+        "compatible": "Förenligt: kräver professionell bedömning",
+        "not_compatible": "Inte förenligt",
+        "indeterminate": "Ofullständiga data"
+      },
+      "criteria": {
+        "waist": "Midjemått",
+        "triglycerides": "Triglycerider",
+        "hdl": "Lågt HDL",
+        "blood_pressure": "Blodtryck",
+        "glucose": "Fasteglukos"
+      }
+    },
+    "alerts": {
+      "title": "Kräver medicinsk bedömning",
+      "items": {
+        "glucose_critical": "Mycket högt glukos",
+        "hba1c_critical": "Mycket högt HbA1c",
+        "systolic_critical": "Mycket högt systoliskt tryck",
+        "diastolic_critical": "Mycket högt diastoliskt tryck",
+        "triglycerides_critical": "Mycket höga triglycerider",
+        "alt_critical": "Mycket högt ALAT",
+        "creatinine_critical": "Förhöjt kreatinin"
+      }
+    },
+    "factors": {
+      "title": "Vad påverkar din ämnesomsättning?",
+      "subtitle": "Sorterade från den faktor som ökar din risk mest till dem som ligger inom normalintervallet.",
+      "empty": "Det finns inga data att analysera än."
+    },
+    "indices": {
+      "title": "Metabola index",
+      "subtitle": "Beräknas automatiskt. Labbindex kombinerar endast värden från samma prov.",
+      "missing": "Data saknas: {{inputs}}"
+    },
+    "indicators": {
+      "homa_ir": "HOMA-IR",
+      "quicki": "QUICKI",
+      "tyg": "TyG-index",
+      "tyg_bmi": "TyG-BMI",
+      "mets_ir": "METS-IR",
+      "tg_hdl": "TG/HDL-kvot",
+      "glucose": "Fasteglukos",
+      "insulin": "Fasteinsulin",
+      "hba1c": "HbA1c",
+      "triglycerides": "Triglycerider",
+      "hdl": "HDL-kolesterol",
+      "ldl": "LDL-kolesterol",
+      "total_cholesterol": "Totalkolesterol",
+      "alt": "ALAT",
+      "ast": "ASAT",
+      "ggt": "GT",
+      "creatinine": "Kreatinin",
+      "uric_acid": "Urinsyra",
+      "bmi": "BMI",
+      "weight": "Vikt",
+      "height": "Längd",
+      "waist": "Midja",
+      "hip": "Höft",
+      "waist_height": "Midja/längd",
+      "waist_hip": "Midja/höft",
+      "systolic": "Systoliskt tryck",
+      "diastolic": "Diastoliskt tryck",
+      "blood_pressure": "Blodtryck",
+      "physical_activity": "Fysisk aktivitet",
+      "sitting": "Timmar sittande",
+      "sleep": "Sömn",
+      "sugary_drinks": "Söta drycker",
+      "ultraprocessed": "Ultraprocessad mat",
+      "fruit_veg": "Frukt och grönsaker",
+      "smoking": "Rökning",
+      "alcohol": "Alkoholvanor"
+    },
+    "explain": {
+      "homa_ir": "Uppskattar hur din kropp svarar på insulin.",
+      "quicki": "Uppskattar insulinkänsligheten: ju lägre, desto sämre svar.",
+      "tyg": "Kombinerar triglycerider och glukos för att uppskatta metabol risk.",
+      "tyg_bmi": "TyG-index justerat för kroppsvikt.",
+      "mets_ir": "Kombinerar glukos, triglycerider, HDL och BMI för att uppskatta insulinresistens.",
+      "tg_hdl": "Förhållandet mellan triglycerider och det goda kolesterolet.",
+      "waist_height": "Ditt midjemått bör vara mindre än halva din längd.",
+      "waist_hip": "Visar hur mycket fett som samlas runt magen."
+    },
+    "evolution": {
+      "title": "Poängens utveckling",
+      "empty": "Utvecklingen visas efter två eller fler bedömningar med nya data."
+    },
+    "actions": {
+      "profile": "Metabol anamnes och vanor",
+      "addLab": "Labbresultat",
+      "addVitals": "Vitalparametrar"
+    },
+    "warnings": {
+      "unknownUnit": "{{variable}}: enheten \"{{unit}}\" känns inte igen, värdet användes inte"
+    },
+    "profile": {
+      "title": "Metabol anamnes",
+      "subtitle": "Enkla frågor om din bakgrund och dina vanor. De hjälper till att beräkna din metabola risk.",
+      "loadError": "Det gick inte att läsa in den metabola anamnesen.",
+      "saved": "Metabol anamnes sparad",
+      "saveError": "Det gick inte att spara den metabola anamnesen.",
+      "range": "Mellan {{min}} och {{max}}",
+      "cancel": "Avbryt",
+      "save": "Spara",
+      "sections": {
+        "history": "Har du fått veta att du har…?",
+        "habits": "Dina vanor",
+        "limitations": "Begränsningar och mål"
+      },
+      "fields": {
+        "has_diabetes": "Diabetes",
+        "has_prediabetes": "Prediabetes",
+        "has_hypertension": "Högt blodtryck",
+        "has_dyslipidemia": "Högt kolesterol eller höga triglycerider",
+        "has_fatty_liver": "Fettlever",
+        "has_obesity": "Fetma",
+        "has_cardiovascular_disease": "Hjärtsjukdom eller stroke",
+        "family_diabetes": "Föräldrar eller syskon med diabetes",
+        "physical_activity_minutes_week": "Minuter per vecka med måttlig aktivitet (rask promenad, cykling…)",
+        "sitting_hours_day": "Timmar sittande per dag",
+        "sleep_hours": "Timmar sömn per natt",
+        "sugary_drinks_per_week": "Söta drycker eller läsk per vecka",
+        "ultraprocessed_per_week": "Ultraprocessad mat per vecka (snacks, snabbmat, godis)",
+        "fruit_veg_servings_day": "Portioner frukt och grönsaker per dag",
+        "alcohol": "Alkoholvanor",
+        "smoking": "Tobak",
+        "musculoskeletal_limitations": "Smärta, skador eller fysiska begränsningar",
+        "pain_level": "Vanlig smärtnivå (0-10)",
+        "goals": "Vad vill du uppnå?"
+      },
+      "options": {
+        "alcohol": {
+          "none": "Jag dricker inte",
+          "occasional": "Ibland",
+          "weekly": "Varje vecka",
+          "daily": "Varje dag"
+        },
+        "smoking": {
+          "never": "Jag har aldrig rökt",
+          "former": "Jag rökte tidigare",
+          "current": "Jag röker"
+        }
+      }
+    }
   }
 }

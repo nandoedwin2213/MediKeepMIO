@@ -74,9 +74,12 @@
       "weightMax": "Il peso non può superare {{max}} {{unit}}",
       "weightMin": "Il peso deve essere almeno {{min}} {{unit}}",
       "waistMin": "La circonferenza vita deve essere almeno {{min}} {{unit}}",
-      "waistMax": "La circonferenza vita non può superare {{max}} {{unit}}"
+      "waistMax": "La circonferenza vita non può superare {{max}} {{unit}}",
+      "hipMin": "I fianchi devono essere almeno {{min}} {{unit}}",
+      "hipMax": "I fianchi non possono superare {{max}} {{unit}}"
     },
-    "waistCircumference": "Circonferenza vita"
+    "waistCircumference": "Circonferenza vita",
+    "hipCircumference": "Circonferenza fianchi"
   },
   "glucoseContext": {
     "after_meal": "Dopo il pasto",

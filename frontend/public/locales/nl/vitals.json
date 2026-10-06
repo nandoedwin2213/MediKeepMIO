@@ -74,9 +74,12 @@
       "weightMax": "Gewicht mag niet hoger zijn dan {{max}} {{unit}}",
       "weightMin": "Gewicht moet minimaal {{min}} {{unit}} zijn",
       "waistMin": "Tailleomtrek moet minimaal {{min}} {{unit}} zijn",
-      "waistMax": "Tailleomtrek mag niet meer zijn dan {{max}} {{unit}}"
+      "waistMax": "Tailleomtrek mag niet meer zijn dan {{max}} {{unit}}",
+      "hipMin": "Heupomtrek moet minimaal {{min}} {{unit}} zijn",
+      "hipMax": "Heupomtrek mag niet meer dan {{max}} {{unit}} zijn"
     },
-    "waistCircumference": "Tailleomtrek"
+    "waistCircumference": "Tailleomtrek",
+    "hipCircumference": "Heupomtrek"
   },
   "glucoseContext": {
     "after_meal": "Na de maaltijd",

@@ -74,9 +74,12 @@
       "weightMax": "Weight cannot exceed {{max}} {{unit}}",
       "weightMin": "Weight must be at least {{min}} {{unit}}",
       "waistMin": "Waist must be at least {{min}} {{unit}}",
-      "waistMax": "Waist cannot exceed {{max}} {{unit}}"
+      "waistMax": "Waist cannot exceed {{max}} {{unit}}",
+      "hipMin": "Hip must be at least {{min}} {{unit}}",
+      "hipMax": "Hip cannot exceed {{max}} {{unit}}"
     },
-    "waistCircumference": "Waist circumference"
+    "waistCircumference": "Waist circumference",
+    "hipCircumference": "Hip circumference"
   },
   "glucoseContext": {
     "after_meal": "After Meal",

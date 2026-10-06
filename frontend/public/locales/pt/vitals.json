@@ -74,9 +74,12 @@
       "weightMax": "Peso não pode exceder {{max}} {{unit}}",
       "weightMin": "Peso deve ser pelo menos {{min}} {{unit}}",
       "waistMin": "A cintura deve ter pelo menos {{min}} {{unit}}",
-      "waistMax": "A cintura não pode exceder {{max}} {{unit}}"
+      "waistMax": "A cintura não pode exceder {{max}} {{unit}}",
+      "hipMin": "O quadril deve ter pelo menos {{min}} {{unit}}",
+      "hipMax": "O quadril não pode exceder {{max}} {{unit}}"
     },
-    "waistCircumference": "Circunferência da cintura"
+    "waistCircumference": "Circunferência da cintura",
+    "hipCircumference": "Circunferência do quadril"
   },
   "glucoseContext": {
     "after_meal": "Pós-prandial",

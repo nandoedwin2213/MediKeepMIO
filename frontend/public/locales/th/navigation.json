@@ -111,7 +111,8 @@
       "treatments": "การรักษา",
       "visitHistory": "ประวัติการรับบริการ",
       "vitalSigns": "สัญญาณชีพ",
-      "insulinResistance": "ภาวะดื้อต่ออินซูลิน"
+      "insulinResistance": "ภาวะดื้อต่ออินซูลิน",
+      "metabolicRisk": "ความเสี่ยงเมตาบอลิก"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

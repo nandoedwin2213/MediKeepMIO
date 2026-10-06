@@ -1740,5 +1740,175 @@
     "retry": "Erneut versuchen",
     "rangesTitle": "Referenzbereiche",
     "waistNoGender": "Geschlecht des Patienten erfassen, um die Taillen-Grenzwerte zu sehen."
+  },
+  "metabolic": {
+    "title": "Metabolisches Risiko",
+    "subtitle": "Wie geht es mir? Was erhöht mein Risiko? Was sollte ich verbessern?",
+    "selectPatient": "Wählen Sie einen Patienten, um sein metabolisches Risiko zu sehen.",
+    "loadError": "Das metabolische Risiko konnte nicht berechnet werden.",
+    "retry": "Erneut versuchen",
+    "scoreTitle": "{{brand}} Metabolischer Score",
+    "scoreShort": "Score",
+    "insufficient": "Noch nicht genügend Daten",
+    "insufficientHint": "Erfassen Sie Taille, Blutdruck, Laborwerte und die metabolische Anamnese, um den Score zu berechnen.",
+    "coverage": "Für den Score verwendete Daten: {{pct}} %",
+    "lastUpdate": "Berechnet am {{date}}",
+    "versionInfo": "Algorithmus {{algo}} · Konfiguration v{{config}}",
+    "disclaimer": "Interner Verlaufsindikator, kein validiertes Diagnoseinstrument. Ergebnisse erfordern eine fachliche Beurteilung.",
+    "risk": {
+      "favorable": "Günstiger Stoffwechselzustand",
+      "initial": "Beginnendes metabolisches Risiko",
+      "moderate": "Mäßiges metabolisches Risiko",
+      "high": "Hohes metabolisches Risiko"
+    },
+    "syndrome": {
+      "title": "Kriterien des metabolischen Syndroms",
+      "count": "{{met}} von {{total}} Kriterien erfüllt ({{required}} erforderlich)",
+      "noData": "keine Daten",
+      "history": "laut Anamnese",
+      "status": {
+        "compatible": "Vereinbar: erfordert fachliche Beurteilung",
+        "not_compatible": "Nicht vereinbar",
+        "indeterminate": "Unvollständige Daten"
+      },
+      "criteria": {
+        "waist": "Bauchumfang",
+        "triglycerides": "Triglyceride",
+        "hdl": "Niedriges HDL",
+        "blood_pressure": "Blutdruck",
+        "glucose": "Nüchternglukose"
+      }
+    },
+    "alerts": {
+      "title": "Ärztliche Beurteilung erforderlich",
+      "items": {
+        "glucose_critical": "Sehr hohe Glukose",
+        "hba1c_critical": "Sehr hoher HbA1c",
+        "systolic_critical": "Sehr hoher systolischer Druck",
+        "diastolic_critical": "Sehr hoher diastolischer Druck",
+        "triglycerides_critical": "Sehr hohe Triglyceride",
+        "alt_critical": "Sehr hohe ALT",
+        "creatinine_critical": "Erhöhtes Kreatinin"
+      }
+    },
+    "factors": {
+      "title": "Was beeinflusst Ihren Stoffwechsel?",
+      "subtitle": "Sortiert vom Faktor, der Ihr Risiko am stärksten erhöht, bis zu denen im Normbereich.",
+      "empty": "Es gibt noch keine Daten zur Analyse."
+    },
+    "indices": {
+      "title": "Metabolische Indizes",
+      "subtitle": "Automatisch berechnet. Laborindizes kombinieren nur Werte derselben Probe.",
+      "missing": "Fehlende Daten: {{inputs}}"
+    },
+    "indicators": {
+      "homa_ir": "HOMA-IR",
+      "quicki": "QUICKI",
+      "tyg": "TyG-Index",
+      "tyg_bmi": "TyG-BMI",
+      "mets_ir": "METS-IR",
+      "tg_hdl": "TG/HDL-Verhältnis",
+      "glucose": "Nüchternglukose",
+      "insulin": "Nüchterninsulin",
+      "hba1c": "HbA1c",
+      "triglycerides": "Triglyceride",
+      "hdl": "HDL-Cholesterin",
+      "ldl": "LDL-Cholesterin",
+      "total_cholesterol": "Gesamtcholesterin",
+      "alt": "ALT",
+      "ast": "AST",
+      "ggt": "GGT",
+      "creatinine": "Kreatinin",
+      "uric_acid": "Harnsäure",
+      "bmi": "BMI",
+      "weight": "Gewicht",
+      "height": "Größe",
+      "waist": "Taille",
+      "hip": "Hüfte",
+      "waist_height": "Taille/Größe",
+      "waist_hip": "Taille/Hüfte",
+      "systolic": "Systolischer Druck",
+      "diastolic": "Diastolischer Druck",
+      "blood_pressure": "Blutdruck",
+      "physical_activity": "Körperliche Aktivität",
+      "sitting": "Sitzstunden",
+      "sleep": "Schlaf",
+      "sugary_drinks": "Zuckerhaltige Getränke",
+      "ultraprocessed": "Hochverarbeitete Lebensmittel",
+      "fruit_veg": "Obst und Gemüse",
+      "smoking": "Rauchen",
+      "alcohol": "Alkohol"
+    },
+    "explain": {
+      "homa_ir": "Schätzt, wie Ihr Körper auf Insulin reagiert.",
+      "quicki": "Schätzt die Insulinempfindlichkeit: je niedriger, desto schlechter.",
+      "tyg": "Kombiniert Triglyceride und Glukose zur Abschätzung des metabolischen Risikos.",
+      "tyg_bmi": "TyG-Index angepasst an das Körpergewicht.",
+      "mets_ir": "Kombiniert Glukose, Triglyceride, HDL und BMI zur Abschätzung der Insulinresistenz.",
+      "tg_hdl": "Verhältnis von Triglyceriden zu gutem Cholesterin.",
+      "waist_height": "Ihre Taille sollte weniger als die Hälfte Ihrer Größe messen.",
+      "waist_hip": "Zeigt, wie viel Fett sich am Bauch ansammelt."
+    },
+    "evolution": {
+      "title": "Verlauf des Scores",
+      "empty": "Der Verlauf erscheint ab zwei Auswertungen mit neuen Daten."
+    },
+    "actions": {
+      "profile": "Metabolische Anamnese und Gewohnheiten",
+      "addLab": "Laborwerte",
+      "addVitals": "Vitalwerte"
+    },
+    "warnings": {
+      "unknownUnit": "{{variable}}: Einheit „{{unit}}“ nicht erkannt, Wert nicht verwendet"
+    },
+    "profile": {
+      "title": "Metabolische Anamnese",
+      "subtitle": "Einfache Fragen zu Vorgeschichte und Gewohnheiten. Sie helfen, Ihr metabolisches Risiko zu berechnen.",
+      "loadError": "Die metabolische Anamnese konnte nicht geladen werden.",
+      "saved": "Metabolische Anamnese gespeichert",
+      "saveError": "Die metabolische Anamnese konnte nicht gespeichert werden.",
+      "range": "Zwischen {{min}} und {{max}}",
+      "cancel": "Abbrechen",
+      "save": "Speichern",
+      "sections": {
+        "history": "Wurde bei Ihnen festgestellt…?",
+        "habits": "Ihre Gewohnheiten",
+        "limitations": "Einschränkungen und Ziele"
+      },
+      "fields": {
+        "has_diabetes": "Diabetes",
+        "has_prediabetes": "Prädiabetes",
+        "has_hypertension": "Bluthochdruck",
+        "has_dyslipidemia": "Hohes Cholesterin oder hohe Triglyceride",
+        "has_fatty_liver": "Fettleber",
+        "has_obesity": "Adipositas",
+        "has_cardiovascular_disease": "Herzerkrankung oder Schlaganfall",
+        "family_diabetes": "Eltern oder Geschwister mit Diabetes",
+        "physical_activity_minutes_week": "Minuten pro Woche mit mäßiger Aktivität (zügiges Gehen, Radfahren…)",
+        "sitting_hours_day": "Sitzstunden pro Tag",
+        "sleep_hours": "Schlafstunden pro Nacht",
+        "sugary_drinks_per_week": "Zuckerhaltige Getränke oder Limonaden pro Woche",
+        "ultraprocessed_per_week": "Hochverarbeitete Lebensmittel pro Woche (Snacks, Fast Food, Süßes)",
+        "fruit_veg_servings_day": "Portionen Obst und Gemüse pro Tag",
+        "alcohol": "Alkohol",
+        "smoking": "Tabak",
+        "musculoskeletal_limitations": "Schmerzen, Verletzungen oder körperliche Einschränkungen",
+        "pain_level": "Übliches Schmerzniveau (0-10)",
+        "goals": "Was möchten Sie erreichen?"
+      },
+      "options": {
+        "alcohol": {
+          "none": "Ich trinke nicht",
+          "occasional": "Gelegentlich",
+          "weekly": "Jede Woche",
+          "daily": "Täglich"
+        },
+        "smoking": {
+          "never": "Ich habe nie geraucht",
+          "former": "Ich habe früher geraucht",
+          "current": "Ich rauche"
+        }
+      }
+    }
   }
 }
