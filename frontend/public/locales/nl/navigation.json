@@ -116,7 +116,8 @@
       "myMetabolicHealth": "Mijn metabole gezondheid",
       "professionalDashboard": "Professionele weergave",
       "metabolicMovement": "Mijn beweging",
-      "metabolicNutrition": "Mijn voeding"
+      "metabolicNutrition": "Mijn voeding",
+      "metabolicRecipes": "Mijn recepten"
     },
     "sections": {
       "administration": "Beheer",

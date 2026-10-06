@@ -2243,7 +2243,8 @@
         "limit": "Begränsa",
         "avoid": "Undvik (allergier och intoleranser)",
         "targets": "Vanemål",
-        "safety": "Säkerhetsanvisningar"
+        "safety": "Säkerhetsanvisningar",
+        "recipes": "Tilldelade recept"
       },
       "fields": {
         "perDay": "per dag",
@@ -2274,7 +2275,8 @@
         "fatMax": "Fett max (%)",
         "meals_per_day": "Huvudmål per dag",
         "snacks_per_day": "Mellanmål per dag",
-        "avoidHelp": "Aktiva allergier och intoleranser från journalen läggs till automatiskt. Tryck Enter för att lägga till fler."
+        "avoidHelp": "Aktiva allergier och intoleranser från journalen läggs till automatiskt. Tryck Enter för att lägga till fler.",
+        "recipesHelp": "De visas först under «Mina recept» för patienten."
       },
       "rationale": {
         "weight_loss": "BMI eller midja över målet: måttligt kaloriunderskott för att minska vikt och bukfett.",
@@ -2337,6 +2339,118 @@
           "allergy_check": "Läs etiketter: allergener kan döljas i processad mat.",
           "b12_review": "Vegansk kost: se över tillskott av vitamin B12."
         }
+      }
+    },
+    "recipes": {
+      "title": "Mina recept",
+      "subtitle": "Hälsosamma recept med ingredienser, tillagning och näringsvärden per portion. De som passar din plan bäst visas först.",
+      "disclaimer": "Näringsvärdena är uppskattningar per portion. Rekommendationerna är informativa och ersätter inte din dietists råd.",
+      "loadError": "Kunde inte läsa in recepten.",
+      "error": "Åtgärden kunde inte slutföras.",
+      "saved": "Receptet har sparats.",
+      "hidden": "Receptet är dolt för patienter.",
+      "deleted": "Receptet har raderats.",
+      "recommended": {
+        "title": "Rekommenderade recept för dig",
+        "basis": {
+          "approved_plan": "Valda utifrån din godkända kostplan, din kost, allergier och de faktorer som påverkar din ämnesomsättning.",
+          "draft_plan": "Förhandsvisning utifrån det aktuella utkastet (patienten ser rekommendationer från den godkända planen).",
+          "profile": "Valda utifrån din kost, allergier och de faktorer som påverkar din ämnesomsättning. De förfinas när din dietist godkänner din kostplan."
+        },
+        "none": "Inget recept passar dina nuvarande begränsningar. Be din dietist lägga till alternativ.",
+        "assigned": "Från din dietist",
+        "conflict": "Kontrollera: {{items}}",
+        "conflicts": {
+          "diet": "kosttyp",
+          "dislike": "livsmedel du inte gillar"
+        },
+        "excluded": "{{count}} recept visas inte på grund av din kost, allergier, intoleranser eller preferenser."
+      },
+      "library": {
+        "title": "Receptbibliotek",
+        "search": "Sök på namn eller ingrediens",
+        "all": "Alla",
+        "empty": "Inga recept matchar sökningen.",
+        "hiddenBadge": "Dold",
+        "languageNote": "Recepttexterna är skrivna på spanska."
+      },
+      "categories": {
+        "breakfast": "Frukost",
+        "lunch": "Lunch",
+        "dinner": "Middag",
+        "snack": "Mellanmål",
+        "drink": "Drycker"
+      },
+      "card": {
+        "kcal": "{{kcal}} kcal",
+        "minutes": "{{minutes}} min"
+      },
+      "macros": {
+        "kcal": "Kalorier",
+        "protein": "Protein",
+        "carbs": "Kolhydrater",
+        "fat": "Fett",
+        "fiber": "Fibrer"
+      },
+      "detail": {
+        "perServing": "Per portion · Portioner: {{servings}}",
+        "ingredients": "Ingredienser",
+        "steps": "Tillagning",
+        "photo": "Foto:",
+        "suitable": "Passar för:",
+        "contains": "Innehåller:",
+        "edit": "Redigera",
+        "hide": "Dölj för patienter",
+        "delete": "Radera"
+      },
+      "editor": {
+        "newTitle": "Nytt recept",
+        "editTitle": "Redigera recept",
+        "name": "Namn",
+        "category": "Kategori",
+        "description": "Kort beskrivning",
+        "servings": "Portioner",
+        "prepMinutes": "Tid (min)",
+        "perServingHelp": "Ange kalorier och näringsämnen per portion.",
+        "diets": "Lämpliga koster",
+        "allergens": "Allergener",
+        "tags": "Egenskaper",
+        "ingredients": "Ingredienser (en per rad)",
+        "steps": "Steg (ett per rad)",
+        "imageUrl": "Foto-URL",
+        "imageCredit": "Fotograf och licens",
+        "imageSource": "Fotots källsida",
+        "active": "Synlig för patienter",
+        "save": "Spara recept",
+        "cancel": "Avbryt"
+      },
+      "diets": {
+        "omnivore": "Allätare",
+        "pescatarian": "Pescetarisk",
+        "vegetarian": "Vegetarisk",
+        "vegan": "Vegansk",
+        "other": "Annan"
+      },
+      "allergens": {
+        "gluten": "Gluten",
+        "lactose": "Mjölk/laktos",
+        "egg": "Ägg",
+        "fish": "Fisk",
+        "shellfish": "Skaldjur",
+        "nuts": "Nötter",
+        "peanut": "Jordnöt",
+        "soy": "Soja",
+        "sesame": "Sesam"
+      },
+      "tags": {
+        "high_fiber": "Fiberrik",
+        "high_protein": "Proteinrik",
+        "low_gi": "Låg glykemisk påverkan",
+        "omega3": "Rik på omega-3",
+        "low_sodium": "Saltsnål",
+        "no_added_sugar": "Utan tillsatt socker",
+        "low_fat": "Fettsnål",
+        "quick": "Snabb"
       }
     }
   }

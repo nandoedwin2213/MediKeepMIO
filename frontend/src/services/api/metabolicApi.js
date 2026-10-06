@@ -68,6 +68,17 @@ const metabolicApi = {
     apiService.delete(
       `/metabolic/patients/${patientId}/exercise-plans/${planId}`
     ),
+  getRecipes: (params, signal) =>
+    apiService.get('/metabolic/recipes', { params, signal }),
+  createRecipe: body => apiService.post('/metabolic/recipes', body),
+  updateRecipe: (recipeId, body) =>
+    apiService.put(`/metabolic/recipes/${recipeId}`, body),
+  deleteRecipe: recipeId => apiService.delete(`/metabolic/recipes/${recipeId}`),
+  getRecommendedRecipes: (patientId, params, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/recipes/recommended`, {
+      params,
+      signal,
+    }),
   getProfessionalDashboard: signal =>
     apiService.get('/metabolic/professional/dashboard', { signal }),
 };

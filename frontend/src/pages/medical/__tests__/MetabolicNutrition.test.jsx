@@ -11,6 +11,7 @@ const { api, auth } = vi.hoisted(() => ({
     updateNutritionPlan: vi.fn(),
     approveNutritionPlan: vi.fn(),
     deleteNutritionPlan: vi.fn(),
+    getRecipes: vi.fn(),
   },
   auth: { role: 'user' },
 }));
@@ -74,6 +75,7 @@ const plan = (id, status) => ({
 beforeEach(() => {
   vi.clearAllMocks();
   auth.role = 'user';
+  api.getRecipes.mockResolvedValue([]);
 });
 
 describe('MetabolicNutrition', () => {

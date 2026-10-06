@@ -174,3 +174,38 @@ class NutritionPlan(Base):
     updated_at = Column(
         DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
     )
+
+
+class Recipe(Base):
+    """Recipe library entry; nutrition values are per serving."""
+
+    __tablename__ = "recipes"
+
+    id = Column(Integer, primary_key=True)
+    slug = Column(String(80), unique=True, nullable=False, index=True)
+    name = Column(String(150), nullable=False)
+    category = Column(String(20), nullable=False, index=True)
+    description = Column(Text, nullable=True)
+    servings = Column(Integer, default=1, nullable=False)
+    prep_minutes = Column(Integer, nullable=True)
+    kcal = Column(Float, nullable=True)
+    protein_g = Column(Float, nullable=True)
+    carbs_g = Column(Float, nullable=True)
+    fat_g = Column(Float, nullable=True)
+    fiber_g = Column(Float, nullable=True)
+    diets = Column(JSON, nullable=False, default=list)
+    allergens = Column(JSON, nullable=False, default=list)
+    tags = Column(JSON, nullable=False, default=list)
+    ingredients = Column(JSON, nullable=False, default=list)
+    steps = Column(JSON, nullable=False, default=list)
+    image_url = Column(String(500), nullable=True)
+    image_credit = Column(String(300), nullable=True)
+    image_source_url = Column(String(500), nullable=True)
+    language = Column(String(10), default="es", nullable=False)
+    is_library = Column(Boolean, default=False, nullable=False)
+    is_active = Column(Boolean, default=True, nullable=False)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    created_at = Column(DateTime, default=get_utc_now, nullable=False)
+    updated_at = Column(
+        DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
+    )

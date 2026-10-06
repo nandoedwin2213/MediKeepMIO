@@ -116,7 +116,8 @@
       "myMetabolicHealth": "Ma santé métabolique",
       "professionalDashboard": "Tableau professionnel",
       "metabolicMovement": "Mon activité physique",
-      "metabolicNutrition": "Mon alimentation"
+      "metabolicNutrition": "Mon alimentation",
+      "metabolicRecipes": "Mes recettes"
     },
     "sections": {
       "administration": "Administration",

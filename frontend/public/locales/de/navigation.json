@@ -116,7 +116,8 @@
       "myMetabolicHealth": "Meine Stoffwechselgesundheit",
       "professionalDashboard": "Fach-Dashboard",
       "metabolicMovement": "Meine Bewegung",
-      "metabolicNutrition": "Meine Ernährung"
+      "metabolicNutrition": "Meine Ernährung",
+      "metabolicRecipes": "Meine Rezepte"
     },
     "sections": {
       "administration": "Administration",

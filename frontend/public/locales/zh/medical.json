@@ -2239,7 +2239,8 @@
         "limit": "少吃",
         "avoid": "避免（过敏和不耐受）",
         "targets": "习惯目标",
-        "safety": "安全提示"
+        "safety": "安全提示",
+        "recipes": "指定食谱"
       },
       "fields": {
         "perDay": "每天",
@@ -2270,7 +2271,8 @@
         "fatMax": "脂肪上限（%）",
         "meals_per_day": "每天正餐数",
         "snacks_per_day": "每天加餐数",
-        "avoidHelp": "病历中的活动性过敏和不耐受会自动加入。按回车可添加更多。"
+        "avoidHelp": "病历中的活动性过敏和不耐受会自动加入。按回车可添加更多。",
+        "recipesHelp": "将优先显示在患者的“我的食谱”中。"
       },
       "rationale": {
         "weight_loss": "BMI或腰围高于目标：适度热量缺口以减轻体重和腹部脂肪。",
@@ -2333,6 +2335,118 @@
           "allergy_check": "查看标签：加工食品中可能隐藏过敏原。",
           "b12_review": "纯素饮食：需评估维生素B12补充。"
         }
+      }
+    },
+    "recipes": {
+      "title": "我的食谱",
+      "subtitle": "健康食谱，包含食材、做法和每份营养数据。最适合你计划的食谱排在前面。",
+      "disclaimer": "营养数据为每份估算值。推荐仅供参考，不能替代营养专业人员的指导。",
+      "loadError": "无法加载食谱。",
+      "error": "无法完成该操作。",
+      "saved": "食谱已保存。",
+      "hidden": "已对患者隐藏该食谱。",
+      "deleted": "食谱已删除。",
+      "recommended": {
+        "title": "为你推荐的食谱",
+        "basis": {
+          "approved_plan": "根据你已批准的营养计划、饮食方式、过敏情况以及影响代谢的因素挑选。",
+          "draft_plan": "基于当前草稿的预览（患者看到的是已批准计划的推荐）。",
+          "profile": "根据你的饮食方式、过敏情况以及影响代谢的因素挑选。专业人员批准营养计划后会进一步优化。"
+        },
+        "none": "没有符合你当前限制的食谱。请让营养专业人员添加选项。",
+        "assigned": "营养师推荐",
+        "conflict": "请核对：{{items}}",
+        "conflicts": {
+          "diet": "饮食类型",
+          "dislike": "不喜欢的食物"
+        },
+        "excluded": "因饮食方式、过敏、不耐受或口味，有 {{count}} 个食谱未显示。"
+      },
+      "library": {
+        "title": "食谱库",
+        "search": "按名称或食材搜索",
+        "all": "全部",
+        "empty": "没有符合搜索的食谱。",
+        "hiddenBadge": "已隐藏",
+        "languageNote": "食谱内容为西班牙语。"
+      },
+      "categories": {
+        "breakfast": "早餐",
+        "lunch": "午餐",
+        "dinner": "晚餐",
+        "snack": "加餐",
+        "drink": "饮品"
+      },
+      "card": {
+        "kcal": "{{kcal}} 千卡",
+        "minutes": "{{minutes}} 分钟"
+      },
+      "macros": {
+        "kcal": "热量",
+        "protein": "蛋白质",
+        "carbs": "碳水",
+        "fat": "脂肪",
+        "fiber": "膳食纤维"
+      },
+      "detail": {
+        "perServing": "每份 · 份数：{{servings}}",
+        "ingredients": "食材",
+        "steps": "做法",
+        "photo": "图片：",
+        "suitable": "适合：",
+        "contains": "含有：",
+        "edit": "编辑",
+        "hide": "对患者隐藏",
+        "delete": "删除"
+      },
+      "editor": {
+        "newTitle": "新建食谱",
+        "editTitle": "编辑食谱",
+        "name": "名称",
+        "category": "类别",
+        "description": "简短描述",
+        "servings": "份数",
+        "prepMinutes": "时间（分钟）",
+        "perServingHelp": "请填写每份的热量和营养素。",
+        "diets": "适合的饮食",
+        "allergens": "过敏原",
+        "tags": "特点",
+        "ingredients": "食材（每行一个）",
+        "steps": "步骤（每行一步）",
+        "imageUrl": "图片网址",
+        "imageCredit": "图片作者与许可",
+        "imageSource": "图片来源页面",
+        "active": "对患者可见",
+        "save": "保存食谱",
+        "cancel": "取消"
+      },
+      "diets": {
+        "omnivore": "杂食",
+        "pescatarian": "鱼素",
+        "vegetarian": "素食",
+        "vegan": "纯素",
+        "other": "其他"
+      },
+      "allergens": {
+        "gluten": "麸质",
+        "lactose": "乳制品/乳糖",
+        "egg": "鸡蛋",
+        "fish": "鱼",
+        "shellfish": "贝类",
+        "nuts": "坚果",
+        "peanut": "花生",
+        "soy": "大豆",
+        "sesame": "芝麻"
+      },
+      "tags": {
+        "high_fiber": "高纤维",
+        "high_protein": "高蛋白",
+        "low_gi": "低升糖影响",
+        "omega3": "富含Omega-3",
+        "low_sodium": "低盐",
+        "no_added_sugar": "无添加糖",
+        "low_fat": "低脂",
+        "quick": "快手"
       }
     }
   }
