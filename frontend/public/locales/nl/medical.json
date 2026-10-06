@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Vervolginstructies",
       "priority": "Prioriteit"
     }
+  },
+  "insulinResistance": {
+    "title": "Insulineresistentie",
+    "noData": "Nog geen gegevens",
+    "loadError": "De gegevens konden niet worden geladen.",
+    "selectPatient": "Selecteer een patiënt om het paneel te zien.",
+    "homaTitle": "HOMA-IR-index",
+    "formula": "Automatisch: nuchtere glucose (mg/dL) × nuchtere insuline (µU/mL) ÷ 405",
+    "lastSample": "Laatste monster",
+    "homaMissing": "Registreer nuchtere glucose en insuline uit hetzelfde monster om dit te berekenen.",
+    "emptyState": "Er zijn nog geen resultaten. Voeg een labuitslag (glucose, insuline, HbA1c, lipiden) of vitale functies toe om de opvolging te starten.",
+    "addLab": "Labuitslag toevoegen",
+    "addVitals": "Vitale functies toevoegen",
+    "disclaimer": "De bereiken zijn indicatief (HOMA-IR ≥ 2,5, HbA1c ≥ 5,7 %, nuchtere glucose ≥ 100 mg/dL, TG/HDL ≥ 2). Afkapwaarden verschillen per populatie en laboratorium; de interpretatie is aan de behandelend arts.",
+    "levels": {
+      "normal": "Optimaal",
+      "borderline": "Opletten",
+      "high": "Verhoogd"
+    },
+    "metrics": {
+      "glucose": "Nuchtere glucose",
+      "insulin": "Nuchtere insuline",
+      "tgHdl": "Triglyceriden/HDL",
+      "weight": "Gewicht",
+      "bmi": "Queteletindex",
+      "bloodPressure": "Bloeddruk"
+    },
+    "charts": {
+      "homaIr": "Verloop van HOMA-IR",
+      "glucoseInsulin": "Glucose en insuline",
+      "hba1cTgHdl": "HbA1c en triglyceriden/HDL",
+      "body": "Gewicht en queteletindex",
+      "systolic": "Systolisch",
+      "diastolic": "Diastolisch"
+    }
   }
 }

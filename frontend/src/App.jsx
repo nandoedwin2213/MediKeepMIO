@@ -72,6 +72,7 @@ import Conditions from './pages/medical/Conditions';
 import Visits from './pages/medical/Visits';
 import Vitals from './pages/medical/Vitals';
 import Symptoms from './pages/medical/Symptoms';
+import InsulinResistance from './pages/medical/InsulinResistance';
 import Injuries from './pages/medical/Injuries';
 import MedicalEquipment from './pages/medical/MedicalEquipment';
 import Practitioners from './pages/medical/Practitioners';
@@ -479,6 +480,15 @@ function App() {
                           />
                           {/* Generated entity routes */}
                           {generateEntityRoutes()}
+                          {/* Insulin Resistance Panel Route */}
+                          <Route
+                            path="/insulin-resistance"
+                            element={
+                              <ProtectedRoute>
+                                <InsulinResistance />
+                              </ProtectedRoute>
+                            }
+                          />
                           {/* Symptom Diary Route */}
                           <Route
                             path="/symptoms"

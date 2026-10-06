@@ -110,7 +110,8 @@
       "theme": "主题",
       "treatments": "治疗",
       "visitHistory": "就诊历史",
-      "vitalSigns": "生命体征"
+      "vitalSigns": "生命体征",
+      "insulinResistance": "胰岛素抵抗"
     },
     "sections": {
       "administration": "管理",

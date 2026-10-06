@@ -110,7 +110,8 @@
       "theme": "Тема",
       "treatments": "Лечение",
       "visitHistory": "История визитов",
-      "vitalSigns": "Жизненные показатели"
+      "vitalSigns": "Жизненные показатели",
+      "insulinResistance": "Инсулинорезистентность"
     },
     "sections": {
       "administration": "Администрирование",

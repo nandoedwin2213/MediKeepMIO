@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Zalecenia kontrolne",
       "priority": "Pilność"
     }
+  },
+  "insulinResistance": {
+    "title": "Insulinooporność",
+    "noData": "Brak danych",
+    "loadError": "Nie udało się wczytać danych.",
+    "selectPatient": "Wybierz pacjenta, aby zobaczyć panel.",
+    "homaTitle": "Wskaźnik HOMA-IR",
+    "formula": "Automatycznie: glukoza na czczo (mg/dL) × insulina na czczo (µU/mL) ÷ 405",
+    "lastSample": "Ostatnia próbka",
+    "homaMissing": "Wprowadź glukozę i insulinę na czczo z tej samej próbki, aby go obliczyć.",
+    "emptyState": "Brak wyników. Dodaj badanie laboratoryjne (glukoza, insulina, HbA1c, lipidy) lub parametry życiowe, aby rozpocząć obserwację.",
+    "addLab": "Dodaj badanie",
+    "addVitals": "Dodaj parametry życiowe",
+    "disclaimer": "Zakresy są orientacyjne (HOMA-IR ≥ 2,5, HbA1c ≥ 5,7 %, glukoza na czczo ≥ 100 mg/dL, TG/HDL ≥ 2). Progi zależą od populacji i laboratorium; interpretacja należy do lekarza prowadzącego.",
+    "levels": {
+      "normal": "Optymalny",
+      "borderline": "Do obserwacji",
+      "high": "Podwyższony"
+    },
+    "metrics": {
+      "glucose": "Glukoza na czczo",
+      "insulin": "Insulina na czczo",
+      "tgHdl": "Triglicerydy/HDL",
+      "weight": "Waga",
+      "bmi": "Wskaźnik BMI",
+      "bloodPressure": "Ciśnienie krwi"
+    },
+    "charts": {
+      "homaIr": "Przebieg HOMA-IR",
+      "glucoseInsulin": "Glukoza i insulina",
+      "hba1cTgHdl": "HbA1c i triglicerydy/HDL",
+      "body": "Waga i BMI",
+      "systolic": "Skurczowe",
+      "diastolic": "Rozkurczowe"
+    }
   }
 }

@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Istruzioni di follow-up",
       "priority": "Priorità"
     }
+  },
+  "insulinResistance": {
+    "title": "Resistenza all'insulina",
+    "noData": "Ancora nessun dato",
+    "loadError": "Impossibile caricare i dati.",
+    "selectPatient": "Seleziona un paziente per vedere il pannello.",
+    "homaTitle": "Indice HOMA-IR",
+    "formula": "Automatico: glicemia a digiuno (mg/dL) × insulina a digiuno (µU/mL) ÷ 405",
+    "lastSample": "Ultimo campione",
+    "homaMissing": "Registra glicemia e insulina a digiuno dello stesso campione per calcolarlo.",
+    "emptyState": "Non ci sono ancora risultati. Aggiungi un esame (glicemia, insulina, HbA1c, lipidi) o i parametri vitali per iniziare il monitoraggio.",
+    "addLab": "Aggiungi esame",
+    "addVitals": "Aggiungi parametri vitali",
+    "disclaimer": "Gli intervalli sono indicativi (HOMA-IR ≥ 2,5, HbA1c ≥ 5,7 %, glicemia a digiuno ≥ 100 mg/dL, TG/HDL ≥ 2). I valori soglia variano per popolazione e laboratorio; l'interpretazione spetta al medico curante.",
+    "levels": {
+      "normal": "Ottimale",
+      "borderline": "Da monitorare",
+      "high": "Elevato"
+    },
+    "metrics": {
+      "glucose": "Glicemia a digiuno",
+      "insulin": "Insulina a digiuno",
+      "tgHdl": "Trigliceridi/HDL",
+      "weight": "Peso",
+      "bmi": "IMC",
+      "bloodPressure": "Pressione arteriosa"
+    },
+    "charts": {
+      "homaIr": "Andamento dell'HOMA-IR",
+      "glucoseInsulin": "Glicemia e insulina",
+      "hba1cTgHdl": "HbA1c e trigliceridi/HDL",
+      "body": "Peso e IMC",
+      "systolic": "Sistolica",
+      "diastolic": "Diastolica"
+    }
   }
 }

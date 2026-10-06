@@ -48,6 +48,14 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.insulinResistance',
+        name: 'Insulin Resistance',
+        path: '/insulin-resistance',
+        icon: '🧬',
+        id: 'insulin-resistance',
+        featured: true,
+      },
+      {
         nameKey: 'sidebarNav.items.conditions',
         name: 'Conditions',
         path: buildEntityUrl(ENTITY_TYPES.CONDITION),

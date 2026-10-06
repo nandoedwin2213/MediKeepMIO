@@ -1694,5 +1694,40 @@
       "followUpInstructions": "随访指导",
       "priority": "优先级"
     }
+  },
+  "insulinResistance": {
+    "title": "胰岛素抵抗",
+    "noData": "暂无数据",
+    "loadError": "无法加载数据。",
+    "selectPatient": "请选择患者以查看面板。",
+    "homaTitle": "HOMA-IR 指数",
+    "formula": "自动计算：空腹血糖 (mg/dL) × 空腹胰岛素 (µU/mL) ÷ 405",
+    "lastSample": "最近样本",
+    "homaMissing": "请录入同一样本的空腹血糖和胰岛素以进行计算。",
+    "emptyState": "暂无结果。添加化验结果（血糖、胰岛素、HbA1c、血脂）或生命体征记录以开始随访。",
+    "addLab": "添加化验结果",
+    "addVitals": "添加生命体征",
+    "disclaimer": "参考范围仅供参考（HOMA-IR ≥ 2.5，HbA1c ≥ 5.7 %，空腹血糖 ≥ 100 mg/dL，TG/HDL ≥ 2）。切点因人群和实验室而异；结果解读由主治医生负责。",
+    "levels": {
+      "normal": "理想",
+      "borderline": "需关注",
+      "high": "偏高"
+    },
+    "metrics": {
+      "glucose": "空腹血糖",
+      "insulin": "空腹胰岛素",
+      "tgHdl": "甘油三酯/HDL",
+      "weight": "体重",
+      "bmi": "体重指数",
+      "bloodPressure": "血压"
+    },
+    "charts": {
+      "homaIr": "HOMA-IR 变化",
+      "glucoseInsulin": "血糖与胰岛素",
+      "hba1cTgHdl": "HbA1c 与甘油三酯/HDL",
+      "body": "体重与体重指数",
+      "systolic": "收缩压",
+      "diastolic": "舒张压"
+    }
   }
 }
