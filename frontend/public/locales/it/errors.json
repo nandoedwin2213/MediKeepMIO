@@ -23,6 +23,7 @@
     "deleteFailed": "Eliminazione del file non riuscita. Riprovare.",
     "downloadFailed": "Download del file non riuscito. Riprovare.",
     "notFound": "File non trovato.",
+    "popupBlocked": "La finestra di stampa è stata bloccata dal browser. Consenti i pop-up per questo sito e riprova.",
     "viewFailed": "Apertura del file per la visualizzazione non riuscita. Riprovare."
   },
   "form": {
@@ -43,6 +44,7 @@
     "submissionFailed": "Salvataggio del modulo non riuscito. Verificare i dati inseriti e riprovare."
   },
   "general": {
+    "incorrectCredentials": "Credenziali non corrette.",
     "maintenanceMode": "Il sistema è attualmente in manutenzione. Riprovare più tardi.",
     "permissionDenied": "Non si dispone dell'autorizzazione per eseguire questa azione.",
     "rateLimitExceeded": "Troppe richieste. Attendere un momento e riprovare.",
@@ -85,10 +87,26 @@
     "fetchFailed": "Caricamento delle relazioni non riuscito",
     "updateFailed": "Aggiornamento della relazione non riuscito"
   },
+  "submission": {
+    "completeMessage": "Modulo e file salvati con successo.",
+    "failedMessage": "Invio del modulo non riuscito.",
+    "failedShortTitle": "Non riuscito",
+    "failedTitle": "Invio non riuscito",
+    "partialCompleteMessage": "Modulo salvato, ma alcuni file non sono stati caricati.",
+    "partialCompleteTitle": "Parzialmente completato",
+    "partialMessage": "Modulo salvato, ma {{failed}} file non sono stati caricati. {{completed}} file caricati con successo.",
+    "partialTitle": "Parzialmente riuscito",
+    "savingMessage": "Attendi mentre le tue informazioni vengono salvate.",
+    "savingTitle": "Salvataggio del modulo...",
+    "successTitle": "Operazione riuscita!",
+    "uploadingMessage": "Il modulo è stato salvato, caricamento dei file in corso...",
+    "uploadingTitle": "Caricamento dei file..."
+  },
   "success": {
     "batchUploadSuccess": "Tutti i file sono stati caricati con successo!",
     "fileDeleted": "File eliminato con successo.",
     "formSaved": "Modulo salvato con successo!",
+    "formSavedWithFiles": "Modulo salvato e {{count}} file caricati con successo!",
     "paperlessSyncSuccess": "Sincronizzazione con il sistema di gestione documenti Paperless completata con successo.",
     "uploadMultipleSuccess": "Tutti i file sono stati caricati con successo!",
     "uploadSuccess": "File caricato con successo!"
@@ -98,10 +116,15 @@
     "batchUploadFailed": "Alcuni file non sono stati caricati. Verificare gli errori dei singoli file.",
     "connectionError": "Errore di connessione. Verificare la rete e riprovare.",
     "duplicateFile": "Questo file è già stato caricato.",
+    "duplicateFileNamed": "Il file \"{{name}}\" è già stato caricato.",
     "failed": "Caricamento del file non riuscito. Riprovare.",
+    "failedNamed": "Impossibile caricare \"{{name}}\". Riprova.",
     "fileProcessingFailed": "Elaborazione del file non riuscita. Provare con un file diverso.",
+    "fileProcessingFailedNamed": "Impossibile elaborare \"{{name}}\". Prova con un altro file.",
     "fileTooLarge": "La dimensione del file supera il limite massimo.",
+    "fileTooLargeNamed": "Il file \"{{name}}\" supera la dimensione massima consentita.",
     "invalidFileType": "Tipo di file non supportato.",
+    "invalidFileTypeNamed": "Il tipo di file di \"{{name}}\" non è supportato.",
     "partialUploadSuccess": "Caricamento completato con alcuni errori. Verificare i file falliti."
   },
   "warnings": {

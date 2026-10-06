@@ -23,6 +23,7 @@
     "deleteFailed": "删除文件失败。请重试。",
     "downloadFailed": "下载文件失败。请重试。",
     "notFound": "文件未找到。",
+    "popupBlocked": "打印窗口被浏览器拦截。请允许此网站的弹出窗口后重试。",
     "viewFailed": "打开文件查看失败。请重试。"
   },
   "form": {
@@ -43,6 +44,7 @@
     "submissionFailed": "保存表单失败。请检查您的输入并重试。"
   },
   "general": {
+    "incorrectCredentials": "凭据不正确。",
     "maintenanceMode": "系统当前正在维护中。请稍后重试。",
     "permissionDenied": "您没有执行此操作的权限。",
     "rateLimitExceeded": "请求过于频繁。请稍候再试。",
@@ -85,10 +87,26 @@
     "fetchFailed": "加载关联失败",
     "updateFailed": "更新关联失败"
   },
+  "submission": {
+    "completeMessage": "表单和文件已成功保存。",
+    "failedMessage": "表单提交失败。",
+    "failedShortTitle": "失败",
+    "failedTitle": "提交失败",
+    "partialCompleteMessage": "表单已保存，但部分文件上传失败。",
+    "partialCompleteTitle": "部分完成",
+    "partialMessage": "表单已保存，但有 {{failed}} 个文件上传失败。已成功上传 {{completed}} 个文件。",
+    "partialTitle": "部分成功",
+    "savingMessage": "正在保存您的信息，请稍候。",
+    "savingTitle": "正在保存表单...",
+    "successTitle": "成功！",
+    "uploadingMessage": "表单已保存，正在上传文件...",
+    "uploadingTitle": "正在上传文件..."
+  },
   "success": {
     "batchUploadSuccess": "所有文件上传成功！",
     "fileDeleted": "文件删除成功。",
     "formSaved": "表单保存成功！",
+    "formSavedWithFiles": "表单已保存，成功上传 {{count}} 个文件！",
     "paperlessSyncSuccess": "与Paperless文档管理系统同步成功。",
     "uploadMultipleSuccess": "所有文件上传成功！",
     "uploadSuccess": "文件上传成功！"
@@ -98,10 +116,15 @@
     "batchUploadFailed": "部分文件上传失败。请查看具体文件错误。",
     "connectionError": "连接错误。请检查您的网络并重试。",
     "duplicateFile": "此文件已经上传过。",
+    "duplicateFileNamed": "文件“{{name}}”已上传过。",
     "failed": "文件上传失败。请重试。",
+    "failedNamed": "上传“{{name}}”失败，请重试。",
     "fileProcessingFailed": "文件处理失败。请尝试其他文件。",
+    "fileProcessingFailedNamed": "处理“{{name}}”失败，请尝试其他文件。",
     "fileTooLarge": "文件大小超过最大限制。",
+    "fileTooLargeNamed": "文件“{{name}}”超过最大大小限制。",
     "invalidFileType": "不支持的文件类型。",
+    "invalidFileTypeNamed": "不支持“{{name}}”的文件类型。",
     "partialUploadSuccess": "上传完成，但有部分错误。请检查失败的文件。"
   },
   "warnings": {

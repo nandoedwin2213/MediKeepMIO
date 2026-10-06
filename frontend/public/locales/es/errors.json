@@ -23,6 +23,7 @@
     "deleteFailed": "Error al eliminar el archivo. Por favor, inténtelo de nuevo.",
     "downloadFailed": "Error al descargar el archivo. Por favor, inténtelo de nuevo.",
     "notFound": "Archivo no encontrado.",
+    "popupBlocked": "El navegador bloqueó la ventana de impresión. Permita las ventanas emergentes para este sitio e inténtelo de nuevo.",
     "viewFailed": "Error al abrir el archivo para visualizarlo. Por favor, inténtelo de nuevo."
   },
   "form": {
@@ -43,6 +44,7 @@
     "submissionFailed": "Error al guardar el formulario. Por favor, verifique su entrada y vuelva a intentarlo."
   },
   "general": {
+    "incorrectCredentials": "Credenciales incorrectas.",
     "maintenanceMode": "El sistema está actualmente en mantenimiento. Por favor, inténtelo de nuevo más tarde.",
     "permissionDenied": "No tiene permiso para realizar esta acción.",
     "rateLimitExceeded": "Demasiadas solicitudes. Por favor, espere un momento y vuelva a intentarlo.",
@@ -85,10 +87,26 @@
     "fetchFailed": "Error al cargar las relaciones",
     "updateFailed": "Error al actualizar la relación"
   },
+  "submission": {
+    "completeMessage": "Formulario y archivos guardados con éxito.",
+    "failedMessage": "No se pudo enviar el formulario.",
+    "failedShortTitle": "Error",
+    "failedTitle": "Envío fallido",
+    "partialCompleteMessage": "Formulario guardado, pero algunos archivos no se pudieron subir.",
+    "partialCompleteTitle": "Completado parcialmente",
+    "partialMessage": "Formulario guardado con éxito, pero {{failed}} archivo(s) no se pudieron subir. {{completed}} archivo(s) subido(s) con éxito.",
+    "partialTitle": "Éxito parcial",
+    "savingMessage": "Espere mientras se guarda su información.",
+    "savingTitle": "Guardando formulario...",
+    "successTitle": "¡Éxito!",
+    "uploadingMessage": "Su formulario se guardó; ahora se están subiendo los archivos...",
+    "uploadingTitle": "Subiendo archivos..."
+  },
   "success": {
     "batchUploadSuccess": "¡Todos los archivos se subieron exitosamente!",
     "fileDeleted": "Archivo eliminado exitosamente.",
     "formSaved": "¡Formulario guardado exitosamente!",
+    "formSavedWithFiles": "¡Formulario guardado y {{count}} archivo(s) subido(s) con éxito!",
     "paperlessSyncSuccess": "Sincronización exitosa con la gestión de documentos Paperless.",
     "uploadMultipleSuccess": "¡Todos los archivos se subieron exitosamente!",
     "uploadSuccess": "¡Archivo subido exitosamente!"
@@ -98,10 +116,15 @@
     "batchUploadFailed": "Algunos archivos no se pudieron subir. Por favor, revise los errores de archivos individuales.",
     "connectionError": "Error de conexión. Por favor, verifique su red e inténtelo de nuevo.",
     "duplicateFile": "Este archivo ya ha sido subido.",
+    "duplicateFileNamed": "El archivo \"{{name}}\" ya se había subido.",
     "failed": "Error al subir el archivo. Por favor, inténtelo de nuevo.",
+    "failedNamed": "No se pudo subir \"{{name}}\". Inténtelo de nuevo.",
     "fileProcessingFailed": "Error al procesar el archivo. Por favor, intente con un archivo diferente.",
+    "fileProcessingFailedNamed": "No se pudo procesar \"{{name}}\". Pruebe con otro archivo.",
     "fileTooLarge": "El tamaño del archivo excede el límite máximo.",
+    "fileTooLargeNamed": "El archivo \"{{name}}\" supera el tamaño máximo permitido.",
     "invalidFileType": "Tipo de archivo no compatible.",
+    "invalidFileTypeNamed": "El tipo de archivo de \"{{name}}\" no es compatible.",
     "partialUploadSuccess": "Subida completada con algunos errores. Por favor, revise los archivos que fallaron."
   },
   "warnings": {

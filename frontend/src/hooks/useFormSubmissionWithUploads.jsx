@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
+import i18n from '../i18n/config';
 import { notifications } from '@mantine/notifications';
 import { IconCheck, IconX, IconExclamationMark } from '@tabler/icons-react';
 import logger from '../services/logger';
@@ -12,6 +13,10 @@ import {
  * Hook for handling form submissions that include file uploads
  * Manages the complete flow from form submission to file upload completion
  */
+
+const tSubmission = (key, defaultValue, vars = {}) =>
+  i18n.t(`errors:submission.${key}`, { defaultValue, ...vars });
+
 export const useFormSubmissionWithUploads = ({
   entityType,
   onSuccess,
@@ -137,10 +142,14 @@ export const useFormSubmissionWithUploads = ({
         // Show appropriate notifications based on overall success
         if (currentOverallSuccess && failedCount === 0) {
           notifications.show({
-            title: 'Success!',
+            title: tSubmission('successTitle', 'Success!'),
             message:
               completedCount > 0
-                ? `${SUCCESS_MESSAGES.FORM_SAVED.replace('successfully!', 'and')} ${completedCount} file(s) uploaded successfully!`
+                ? i18n.t('errors:success.formSavedWithFiles', {
+                    defaultValue:
+                      'Form saved and {{count}} file(s) uploaded successfully!',
+                    count: completedCount,
+                  })
                 : SUCCESS_MESSAGES.FORM_SAVED,
             color: 'green',
             icon: <IconCheck size={16} />,
@@ -148,15 +157,19 @@ export const useFormSubmissionWithUploads = ({
           });
         } else if (prev.submitSuccess && failedCount > 0) {
           notifications.show({
-            title: 'Partially Successful',
-            message: `Form saved successfully, but ${failedCount} file(s) failed to upload. ${completedCount} file(s) uploaded successfully.`,
+            title: tSubmission('partialTitle', 'Partially Successful'),
+            message: tSubmission(
+              'partialMessage',
+              'Form saved successfully, but {{failed}} file(s) failed to upload. {{completed}} file(s) uploaded successfully.',
+              { failed: failedCount, completed: completedCount }
+            ),
             color: 'orange',
             icon: <IconExclamationMark size={16} />,
             autoClose: 7000,
           });
         } else if (!prev.submitSuccess) {
           notifications.show({
-            title: 'Submission Failed',
+            title: tSubmission('failedTitle', 'Submission Failed'),
             message: ERROR_MESSAGES.FORM_SUBMISSION_FAILED,
             color: 'red',
             icon: <IconX size={16} />,
@@ -248,16 +261,16 @@ export const useFormSubmissionWithUploads = ({
   const getStatusMessage = useCallback(() => {
     if (submissionState.isSubmitting && !submissionState.isUploading) {
       return {
-        title: 'Saving Form...',
-        message: 'Please wait while your information is being saved.',
+        title: tSubmission('savingTitle', 'Saving Form...'),
+        message: tSubmission('savingMessage', 'Please wait while your information is being saved.'),
         type: 'loading',
       };
     }
 
     if (submissionState.isUploading) {
       return {
-        title: 'Uploading Files...',
-        message: 'Your form has been saved, now uploading files...',
+        title: tSubmission('uploadingTitle', 'Uploading Files...'),
+        message: tSubmission('uploadingMessage', 'Your form has been saved, now uploading files...'),
         type: 'loading',
       };
     }
@@ -265,8 +278,8 @@ export const useFormSubmissionWithUploads = ({
     if (submissionState.isCompleted) {
       if (submissionState.submitSuccess && submissionState.uploadSuccess) {
         return {
-          title: 'Success!',
-          message: 'Form and files saved successfully.',
+          title: tSubmission('successTitle', 'Success!'),
+          message: tSubmission('completeMessage', 'Form and files saved successfully.'),
           type: 'success',
         };
       } else if (
@@ -274,14 +287,14 @@ export const useFormSubmissionWithUploads = ({
         !submissionState.uploadSuccess
       ) {
         return {
-          title: 'Partially Complete',
-          message: 'Form saved, but some files failed to upload.',
+          title: tSubmission('partialCompleteTitle', 'Partially Complete'),
+          message: tSubmission('partialCompleteMessage', 'Form saved, but some files failed to upload.'),
           type: 'warning',
         };
       } else {
         return {
-          title: 'Failed',
-          message: 'Form submission failed.',
+          title: tSubmission('failedShortTitle', 'Failed'),
+          message: tSubmission('failedMessage', 'Form submission failed.'),
           type: 'error',
         };
       }

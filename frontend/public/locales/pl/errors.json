@@ -23,6 +23,7 @@
     "deleteFailed": "Nie udało się usunąć pliku. Proszę spróbować ponownie.",
     "downloadFailed": "Nie udało się pobrać pliku. Proszę spróbować ponownie.",
     "notFound": "Nie znaleziono pliku.",
+    "popupBlocked": "Okno drukowania zostało zablokowane przez przeglądarkę. Zezwól na wyskakujące okna dla tej witryny i spróbuj ponownie.",
     "viewFailed": "Nie udało się otworzyć pliku do podglądu. Proszę spróbować ponownie."
   },
   "form": {
@@ -43,6 +44,7 @@
     "submissionFailed": "Nie udało się zapisać formularza. Proszę sprawdzić wprowadzone dane i spróbować ponownie."
   },
   "general": {
+    "incorrectCredentials": "Nieprawidłowe dane logowania.",
     "maintenanceMode": "System jest obecnie w trakcie konserwacji. Proszę spróbować ponownie później.",
     "permissionDenied": "Nie masz uprawnień do wykonania tej akcji.",
     "rateLimitExceeded": "Zbyt wiele żądań. Proszę poczekać chwilę i spróbować ponownie.",
@@ -85,10 +87,26 @@
     "fetchFailed": "Nie udało się załadować powiązań",
     "updateFailed": "Nie udało się zaktualizować powiązania"
   },
+  "submission": {
+    "completeMessage": "Formularz i pliki zapisano pomyślnie.",
+    "failedMessage": "Nie udało się wysłać formularza.",
+    "failedShortTitle": "Niepowodzenie",
+    "failedTitle": "Wysyłanie nie powiodło się",
+    "partialCompleteMessage": "Formularz zapisany, ale niektórych plików nie udało się przesłać.",
+    "partialCompleteTitle": "Częściowo ukończono",
+    "partialMessage": "Formularz zapisany, ale nie przesłano plików: {{failed}}. Przesłano pomyślnie: {{completed}}.",
+    "partialTitle": "Częściowy sukces",
+    "savingMessage": "Poczekaj, aż Twoje dane zostaną zapisane.",
+    "savingTitle": "Zapisywanie formularza...",
+    "successTitle": "Sukces!",
+    "uploadingMessage": "Formularz został zapisany, trwa przesyłanie plików...",
+    "uploadingTitle": "Przesyłanie plików..."
+  },
   "success": {
     "batchUploadSuccess": "Wszystkie pliki zostały przesłane pomyślnie!",
     "fileDeleted": "Plik został usunięty pomyślnie.",
     "formSaved": "Formularz został zapisany pomyślnie!",
+    "formSavedWithFiles": "Formularz zapisany, przesłano plików: {{count}}!",
     "paperlessSyncSuccess": "Pomyślnie zsynchronizowano z systemem zarządzania dokumentami Paperless.",
     "uploadMultipleSuccess": "Wszystkie pliki zostały przesłane pomyślnie!",
     "uploadSuccess": "Plik został przesłany pomyślnie!"
@@ -98,10 +116,15 @@
     "batchUploadFailed": "Niektóre pliki nie zostały przesłane. Proszę sprawdzić błędy poszczególnych plików.",
     "connectionError": "Błąd połączenia. Proszę sprawdzić sieć i spróbować ponownie.",
     "duplicateFile": "Ten plik został już przesłany.",
+    "duplicateFileNamed": "Plik „{{name}}” został już przesłany.",
     "failed": "Nie udało się przesłać pliku. Proszę spróbować ponownie.",
+    "failedNamed": "Nie udało się przesłać „{{name}}”. Spróbuj ponownie.",
     "fileProcessingFailed": "Nie udało się przetworzyć pliku. Proszę spróbować z innym plikiem.",
+    "fileProcessingFailedNamed": "Nie udało się przetworzyć „{{name}}”. Spróbuj innego pliku.",
     "fileTooLarge": "Rozmiar pliku przekracza maksymalny limit.",
+    "fileTooLargeNamed": "Plik „{{name}}” przekracza maksymalny rozmiar.",
     "invalidFileType": "Typ pliku nie jest obsługiwany.",
+    "invalidFileTypeNamed": "Typ pliku „{{name}}” nie jest obsługiwany.",
     "partialUploadSuccess": "Przesyłanie zostało zakończone z pewnymi błędami. Proszę przejrzeć pliki, których przesłanie się nie powiodło."
   },
   "warnings": {
