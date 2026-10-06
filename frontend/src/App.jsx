@@ -117,6 +117,7 @@ import { apiClient } from './services/apiClient';
 
 import { useReleaseNotes } from './hooks/useReleaseNotes';
 import WhatsNewModal from './components/settings/WhatsNewModal';
+import { BRAND } from './config/brand';
 import './App.css';
 
 // Entity to component mapping for dynamic route generation
@@ -411,7 +412,7 @@ function App() {
                     }
                   >
                     <NavigationTracker />
-                    <WhatsNewTrigger />
+                    {BRAND.showReleaseNotes && <WhatsNewTrigger />}
                     {/* <ActivityTracker /> */}
                     <div className="App">
                       <div style={{ flex: 1 }}>

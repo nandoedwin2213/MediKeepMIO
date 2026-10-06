@@ -362,9 +362,13 @@ const Login = () => {
             <img
               src={BRAND.logo}
               alt=""
-              width={40}
-              height={40}
-              style={{ verticalAlign: 'middle', marginRight: '8px' }}
+              width={56}
+              height={56}
+              style={{
+                verticalAlign: 'middle',
+                marginRight: '12px',
+                filter: 'drop-shadow(0 6px 16px rgba(11, 26, 51, 0.35))',
+              }}
             />
             {BRAND.name}
           </h1>
