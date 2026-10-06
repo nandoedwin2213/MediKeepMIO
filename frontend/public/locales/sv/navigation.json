@@ -110,7 +110,8 @@
       "theme": "Tema",
       "treatments": "Behandlingar",
       "visitHistory": "Besökshistorik",
-      "vitalSigns": "Vitalparametrar"
+      "vitalSigns": "Vitalparametrar",
+      "insulinResistance": "Insulinresistens"
     },
     "sections": {
       "administration": "Administration",

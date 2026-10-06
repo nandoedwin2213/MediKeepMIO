@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Follow-up Instructions",
       "priority": "Priority"
     }
+  },
+  "insulinResistance": {
+    "title": "Insulin resistance",
+    "noData": "No data yet",
+    "loadError": "Could not load the data.",
+    "selectPatient": "Select a patient to see the panel.",
+    "homaTitle": "HOMA-IR index",
+    "formula": "Automatic: fasting glucose (mg/dL) × fasting insulin (µU/mL) ÷ 405",
+    "lastSample": "Last sample",
+    "homaMissing": "Record fasting glucose and insulin from the same sample to calculate it.",
+    "emptyState": "There are no results yet. Add a lab result (glucose, insulin, HbA1c, lipids) or a vital signs record to start the follow-up.",
+    "addLab": "Add lab result",
+    "addVitals": "Add vital signs",
+    "disclaimer": "Reference ranges are orientative (HOMA-IR ≥ 2.5, HbA1c ≥ 5.7 %, fasting glucose ≥ 100 mg/dL, TG/HDL ≥ 2). Cut-offs vary by population and laboratory; interpretation belongs to the treating physician.",
+    "levels": {
+      "normal": "Optimal",
+      "borderline": "Watch",
+      "high": "High"
+    },
+    "metrics": {
+      "glucose": "Fasting glucose",
+      "insulin": "Fasting insulin",
+      "tgHdl": "Triglycerides/HDL",
+      "weight": "Weight",
+      "bmi": "BMI",
+      "bloodPressure": "Blood pressure"
+    },
+    "charts": {
+      "homaIr": "HOMA-IR evolution",
+      "glucoseInsulin": "Glucose and insulin",
+      "hba1cTgHdl": "HbA1c and triglycerides/HDL",
+      "body": "Weight and BMI",
+      "systolic": "Systolic",
+      "diastolic": "Diastolic"
+    }
   }
 }

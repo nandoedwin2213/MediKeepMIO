@@ -38,7 +38,7 @@
       "activeMedications": "Actieve medicatie"
     },
     "subtitle": "Beheer uw gezondheidsinformatie veilig",
-    "title": "SILHO Dashboard"
+    "title": "SILHO Overzicht"
   },
   "invitations": {
     "acceptButton": "Uitnodiging accepteren",
@@ -110,7 +110,8 @@
       "theme": "Thema",
       "treatments": "Behandelingen",
       "visitHistory": "Bezoekgeschiedenis",
-      "vitalSigns": "Vitale functies"
+      "vitalSigns": "Vitale functies",
+      "insulinResistance": "Insulineresistentie"
     },
     "sections": {
       "administration": "Beheer",

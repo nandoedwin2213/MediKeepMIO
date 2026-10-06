@@ -110,7 +110,8 @@
       "theme": "Θέμα",
       "treatments": "Θεραπείες",
       "visitHistory": "Ιστορικό Επισκέψεων",
-      "vitalSigns": "Ζωτικά Σημεία"
+      "vitalSigns": "Ζωτικά Σημεία",
+      "insulinResistance": "Αντίσταση στην ινσουλίνη"
     },
     "sections": {
       "administration": "Διαχείριση",

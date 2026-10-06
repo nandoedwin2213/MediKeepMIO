@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Nachsorgeanweisungen",
       "priority": "Priorität"
     }
+  },
+  "insulinResistance": {
+    "title": "Insulinresistenz",
+    "noData": "Noch keine Daten",
+    "loadError": "Die Daten konnten nicht geladen werden.",
+    "selectPatient": "Wählen Sie einen Patienten, um das Panel zu sehen.",
+    "homaTitle": "HOMA-IR-Index",
+    "formula": "Automatisch: Nüchternglukose (mg/dL) × Nüchterninsulin (µU/mL) ÷ 405",
+    "lastSample": "Letzte Probe",
+    "homaMissing": "Erfassen Sie Nüchternglukose und -insulin aus derselben Probe, um ihn zu berechnen.",
+    "emptyState": "Noch keine Ergebnisse. Fügen Sie einen Laborbefund (Glukose, Insulin, HbA1c, Lipide) oder Vitalwerte hinzu, um die Verlaufskontrolle zu starten.",
+    "addLab": "Laborbefund hinzufügen",
+    "addVitals": "Vitalwerte hinzufügen",
+    "disclaimer": "Die Bereiche sind Orientierungswerte (HOMA-IR ≥ 2,5, HbA1c ≥ 5,7 %, Nüchternglukose ≥ 100 mg/dL, TG/HDL ≥ 2). Grenzwerte variieren je nach Population und Labor; die Bewertung obliegt dem behandelnden Arzt.",
+    "levels": {
+      "normal": "Gut",
+      "borderline": "Beobachten",
+      "high": "Erhöht"
+    },
+    "metrics": {
+      "glucose": "Nüchternglukose",
+      "insulin": "Nüchterninsulin",
+      "tgHdl": "Triglyceride/HDL",
+      "weight": "Gewicht",
+      "bmi": "Körpermasseindex",
+      "bloodPressure": "Blutdruck"
+    },
+    "charts": {
+      "homaIr": "Verlauf des HOMA-IR",
+      "glucoseInsulin": "Glukose und Insulin",
+      "hba1cTgHdl": "HbA1c und Triglyceride/HDL",
+      "body": "Gewicht und BMI-Wert",
+      "systolic": "Systolisch",
+      "diastolic": "Diastolisch"
+    }
   }
 }

@@ -25,6 +25,7 @@ import {
   IconFlask,
   IconPill,
   IconHeartbeat,
+  IconChartLine,
   IconVaccine,
   IconClipboardList,
   IconAlertTriangle,
@@ -275,6 +276,15 @@ const Dashboard = () => {
 
   // Core medical modules - organized in 2x2 grid sections like the schematic
   const coreModules = [
+    {
+      title: t(
+        'navigation:sidebarNav.items.insulinResistance',
+        'Insulin Resistance'
+      ),
+      icon: IconChartLine,
+      color: 'yellow',
+      link: '/insulin-resistance',
+    },
     {
       title: t('shared:labels.patientInformation', 'Patient Information'),
       icon: IconUser,
@@ -857,7 +867,7 @@ const Dashboard = () => {
                     'Core Medical Information'
                   )}
                 </Text>
-                <SimpleGrid cols={{ base: 2, sm: 3 }} spacing={12}>
+                <SimpleGrid cols={{ base: 2, md: 4 }} spacing={12}>
                   {coreModules
                     .filter(module => !isModuleHidden(module.link))
                     .map((module, index) => (

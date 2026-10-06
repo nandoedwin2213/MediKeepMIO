@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Uppföljningsinstruktioner",
       "priority": "Prioritet"
     }
+  },
+  "insulinResistance": {
+    "title": "Insulinresistens",
+    "noData": "Inga data ännu",
+    "loadError": "Det gick inte att läsa in data.",
+    "selectPatient": "Välj en patient för att se panelen.",
+    "homaTitle": "HOMA-IR-index",
+    "formula": "Automatiskt: fasteglukos (mg/dL) × fasteinsulin (µU/mL) ÷ 405",
+    "lastSample": "Senaste prov",
+    "homaMissing": "Registrera fasteglukos och fasteinsulin från samma prov för att beräkna det.",
+    "emptyState": "Det finns inga resultat ännu. Lägg till ett labbresultat (glukos, insulin, HbA1c, blodfetter) eller vitalparametrar för att starta uppföljningen.",
+    "addLab": "Lägg till labbresultat",
+    "addVitals": "Lägg till vitalparametrar",
+    "disclaimer": "Intervallen är vägledande (HOMA-IR ≥ 2,5, HbA1c ≥ 5,7 %, fasteglukos ≥ 100 mg/dL, TG/HDL ≥ 2). Gränsvärden varierar mellan populationer och laboratorier; tolkningen görs av behandlande läkare.",
+    "levels": {
+      "normal": "Optimalt",
+      "borderline": "Bevaka",
+      "high": "Förhöjt"
+    },
+    "metrics": {
+      "glucose": "Fasteglukos",
+      "insulin": "Fasteinsulin",
+      "tgHdl": "Triglycerider/HDL",
+      "weight": "Vikt",
+      "bmi": "Kroppsmasseindex",
+      "bloodPressure": "Blodtryck"
+    },
+    "charts": {
+      "homaIr": "Utveckling av HOMA-IR",
+      "glucoseInsulin": "Glukos och insulin",
+      "hba1cTgHdl": "HbA1c och triglycerider/HDL",
+      "body": "Vikt och kroppsmasseindex",
+      "systolic": "Systoliskt",
+      "diastolic": "Diastoliskt"
+    }
   }
 }

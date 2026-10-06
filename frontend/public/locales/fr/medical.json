@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Instructions de suivi",
       "priority": "Priorité"
     }
+  },
+  "insulinResistance": {
+    "title": "Résistance à l'insuline",
+    "noData": "Pas encore de données",
+    "loadError": "Impossible de charger les données.",
+    "selectPatient": "Sélectionnez un patient pour voir le tableau.",
+    "homaTitle": "Indice HOMA-IR",
+    "formula": "Automatique : glycémie à jeun (mg/dL) × insuline à jeun (µU/mL) ÷ 405",
+    "lastSample": "Dernier prélèvement",
+    "homaMissing": "Enregistrez la glycémie et l'insuline à jeun du même prélèvement pour le calculer.",
+    "emptyState": "Aucun résultat pour l'instant. Ajoutez un bilan (glycémie, insuline, HbA1c, lipides) ou des signes vitaux pour commencer le suivi.",
+    "addLab": "Ajouter un bilan",
+    "addVitals": "Ajouter des signes vitaux",
+    "disclaimer": "Les valeurs de référence sont indicatives (HOMA-IR ≥ 2,5, HbA1c ≥ 5,7 %, glycémie à jeun ≥ 100 mg/dL, TG/HDL ≥ 2). Les seuils varient selon la population et le laboratoire ; l'interprétation revient au médecin traitant.",
+    "levels": {
+      "normal": "Optimale",
+      "borderline": "À surveiller",
+      "high": "Élevé"
+    },
+    "metrics": {
+      "glucose": "Glycémie à jeun",
+      "insulin": "Insuline à jeun",
+      "tgHdl": "Triglycérides/HDL",
+      "weight": "Poids",
+      "bmi": "IMC",
+      "bloodPressure": "Tension artérielle"
+    },
+    "charts": {
+      "homaIr": "Évolution du HOMA-IR",
+      "glucoseInsulin": "Glycémie et insuline",
+      "hba1cTgHdl": "HbA1c et triglycérides/HDL",
+      "body": "Poids et IMC",
+      "systolic": "Systolique",
+      "diastolic": "Diastolique"
+    }
   }
 }

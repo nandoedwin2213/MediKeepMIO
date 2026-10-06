@@ -110,7 +110,8 @@
       "theme": "Motyw",
       "treatments": "Leczenie",
       "visitHistory": "Historia wizyt",
-      "vitalSigns": "Podstawowe parametry życiowe"
+      "vitalSigns": "Podstawowe parametry życiowe",
+      "insulinResistance": "Insulinooporność"
     },
     "sections": {
       "administration": "Administracja",

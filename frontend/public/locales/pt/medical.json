@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Instruções de Acompanhamento",
       "priority": "Prioridade"
     }
+  },
+  "insulinResistance": {
+    "title": "Resistência à insulina",
+    "noData": "Ainda sem dados",
+    "loadError": "Não foi possível carregar os dados.",
+    "selectPatient": "Selecione um paciente para ver o painel.",
+    "homaTitle": "Índice HOMA-IR",
+    "formula": "Automático: glicose em jejum (mg/dL) × insulina em jejum (µU/mL) ÷ 405",
+    "lastSample": "Última amostra",
+    "homaMissing": "Registre glicose e insulina em jejum da mesma amostra para calculá-lo.",
+    "emptyState": "Ainda não há resultados. Adicione um exame (glicose, insulina, HbA1c, lipídios) ou sinais vitais para iniciar o acompanhamento.",
+    "addLab": "Adicionar exame",
+    "addVitals": "Adicionar sinais vitais",
+    "disclaimer": "Os intervalos são orientativos (HOMA-IR ≥ 2,5, HbA1c ≥ 5,7 %, glicose em jejum ≥ 100 mg/dL, TG/HDL ≥ 2). Os pontos de corte variam conforme a população e o laboratório; a interpretação cabe ao médico assistente.",
+    "levels": {
+      "normal": "Ótimo",
+      "borderline": "Atenção",
+      "high": "Elevado"
+    },
+    "metrics": {
+      "glucose": "Glicose em jejum",
+      "insulin": "Insulina em jejum",
+      "tgHdl": "Triglicerídeos/HDL",
+      "weight": "Peso",
+      "bmi": "IMC",
+      "bloodPressure": "Pressão arterial"
+    },
+    "charts": {
+      "homaIr": "Evolução do HOMA-IR",
+      "glucoseInsulin": "Glicose e insulina",
+      "hba1cTgHdl": "HbA1c e triglicerídeos/HDL",
+      "body": "Peso e IMC",
+      "systolic": "Sistólica",
+      "diastolic": "Diastólica"
+    }
   }
 }

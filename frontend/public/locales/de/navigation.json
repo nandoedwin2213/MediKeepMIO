@@ -38,7 +38,7 @@
       "activeMedications": "Aktive Medikamente"
     },
     "subtitle": "Verwalten Sie Ihre Gesundheitsinformationen sicher",
-    "title": "SILHO Dashboard"
+    "title": "SILHO Übersicht"
   },
   "invitations": {
     "acceptButton": "Einladung annehmen",
@@ -110,7 +110,8 @@
       "theme": "Design",
       "treatments": "Behandlungen",
       "visitHistory": "Besuchsverlauf",
-      "vitalSigns": "Vitalzeichen"
+      "vitalSigns": "Vitalzeichen",
+      "insulinResistance": "Insulinresistenz"
     },
     "sections": {
       "administration": "Administration",

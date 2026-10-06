@@ -1698,5 +1698,40 @@
       "followUpInstructions": "Instrucciones de Seguimiento",
       "priority": "Prioridad"
     }
+  },
+  "insulinResistance": {
+    "title": "Resistencia a la insulina",
+    "noData": "Sin datos todavía",
+    "loadError": "No se pudieron cargar los datos.",
+    "selectPatient": "Selecciona un paciente para ver el panel.",
+    "homaTitle": "Índice HOMA-IR",
+    "formula": "Automático: glucosa en ayunas (mg/dL) × insulina en ayunas (µU/mL) ÷ 405",
+    "lastSample": "Última muestra",
+    "homaMissing": "Registra glucosa e insulina en ayunas de la misma muestra para calcularlo.",
+    "emptyState": "Todavía no hay resultados. Agrega un laboratorio (glucosa, insulina, HbA1c, lípidos) o un registro de signos vitales para empezar el seguimiento.",
+    "addLab": "Agregar laboratorio",
+    "addVitals": "Agregar signos vitales",
+    "disclaimer": "Los rangos son orientativos (HOMA-IR ≥ 2,5; HbA1c ≥ 5,7 %; glucosa en ayunas ≥ 100 mg/dL; TG/HDL ≥ 2). Los puntos de corte varían según la población y el laboratorio; la interpretación corresponde al médico tratante.",
+    "levels": {
+      "normal": "En rango",
+      "borderline": "Vigilar",
+      "high": "Elevado"
+    },
+    "metrics": {
+      "glucose": "Glucosa en ayunas",
+      "insulin": "Insulina en ayunas",
+      "tgHdl": "Triglicéridos/HDL",
+      "weight": "Peso",
+      "bmi": "IMC",
+      "bloodPressure": "Presión arterial"
+    },
+    "charts": {
+      "homaIr": "Evolución del HOMA-IR",
+      "glucoseInsulin": "Glucosa e insulina",
+      "hba1cTgHdl": "HbA1c y triglicéridos/HDL",
+      "body": "Peso e IMC",
+      "systolic": "Sistólica",
+      "diastolic": "Diastólica"
+    }
   }
 }

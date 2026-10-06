@@ -110,7 +110,8 @@
       "theme": "Tema",
       "treatments": "Tratamentos",
       "visitHistory": "Histórico de Consultas",
-      "vitalSigns": "Sinais Vitais"
+      "vitalSigns": "Sinais Vitais",
+      "insulinResistance": "Resistência à insulina"
     },
     "sections": {
       "administration": "Administração",
