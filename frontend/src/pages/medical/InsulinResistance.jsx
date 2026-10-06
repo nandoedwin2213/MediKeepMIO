@@ -72,6 +72,20 @@ const GOLD = '#C9A45C';
 const CYAN = '#4FD8F0';
 const NAVY = '#2B4A85';
 const NAVY_LIGHT = '#8FB0F0';
+const CYAN_LINE = '#1FA9C4';
+
+// IDF cut-offs for South/Central American populations: ≥90 cm men, ≥80 cm women.
+const classifyWaist = (waistCm, gender) => {
+  if (waistCm === null || waistCm === undefined) return null;
+  const g = String(gender || '')
+    .trim()
+    .toLowerCase();
+  let cutoff = null;
+  if (['m', 'male', 'masculino', 'hombre'].includes(g)) cutoff = 90;
+  if (['f', 'female', 'femenino', 'mujer'].includes(g)) cutoff = 80;
+  if (cutoff === null) return null;
+  return waistCm >= cutoff ? 'high' : 'normal';
+};
 
 const fetchTrendWithRetry = async (patientId, name, signal) => {
   for (let attempt = 0; attempt < 2; attempt += 1) {
@@ -368,9 +382,21 @@ const InsulinResistance = () => {
           ? round(v.bmi, 1)
           : calculateBmiImperial(v.weight, v.height || patientHeight)
       ),
+      waist: vitalSeries(vitals, v =>
+        v.waist_circumference
+          ? round(
+              convertForDisplay(v.waist_circumference, 'waist', unitSystem),
+              1
+            )
+          : null
+      ),
+      waistCm: vitalSeries(vitals, v =>
+        v.waist_circumference ? round(v.waist_circumference * 2.54, 1) : null
+      ),
       systolic: vitalSeries(vitals, v => v.systolic_bp ?? null),
       diastolic: vitalSeries(vitals, v => v.diastolic_bp ?? null),
       weightUnit,
+      waistUnit: unitSystem === 'metric' ? 'cm' : 'in',
     };
   }, [labs, vitals, unitSystem, patientHeight]);
 
@@ -387,6 +413,7 @@ const InsulinResistance = () => {
       tgHdl: summarizeSeries(series.tgHdl),
       weight: summarizeSeries(series.weight),
       bmi: summarizeSeries(series.bmi),
+      waist: summarizeSeries(series.waist),
       systolic: summarizeSeries(series.systolic),
     }),
     [series]
@@ -414,6 +441,10 @@ const InsulinResistance = () => {
   }
 
   const homa = summaries.homaIr;
+  const waistLevel = classifyWaist(
+    series.waistCm[series.waistCm.length - 1]?.value,
+    currentPatient?.gender
+  );
   const homaLevel = classify('homaIr', homa?.latest);
   const bp = summaries.systolic
     ? `${summaries.systolic.latest}/${series.diastolic[series.diastolic.length - 1]?.value ?? '–'}`
@@ -424,6 +455,7 @@ const InsulinResistance = () => {
     series.hba1c.length ||
     series.tgHdl.length ||
     series.weight.length ||
+    series.waist.length ||
     series.systolic.length;
 
   return (
@@ -599,6 +631,14 @@ const InsulinResistance = () => {
               formatDate={fmt}
             />
             <MetricCard
+              label={t('insulinResistance.metrics.waist', 'Waist')}
+              unit={series.waistUnit}
+              summary={summaries.waist}
+              level={waistLevel}
+              levelLabel={levelLabel(waistLevel)}
+              formatDate={fmt}
+            />
+            <MetricCard
               label={t('insulinResistance.metrics.bmi', 'BMI')}
               unit="kg/m²"
               summary={summaries.bmi}
@@ -721,6 +761,13 @@ const InsulinResistance = () => {
                   unit: series.weightUnit,
                   color: NAVY,
                   series: series.weight,
+                },
+                {
+                  key: 'waist',
+                  label: t('insulinResistance.metrics.waist', 'Waist'),
+                  unit: series.waistUnit,
+                  color: CYAN_LINE,
+                  series: series.waist,
                 },
                 {
                   key: 'bmi',

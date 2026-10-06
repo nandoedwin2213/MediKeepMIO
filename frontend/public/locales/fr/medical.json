@@ -1723,7 +1723,8 @@
       "tgHdl": "Triglycérides/HDL",
       "weight": "Poids",
       "bmi": "IMC",
-      "bloodPressure": "Tension artérielle"
+      "bloodPressure": "Tension artérielle",
+      "waist": "Tour de taille"
     },
     "charts": {
       "homaIr": "Évolution du HOMA-IR",

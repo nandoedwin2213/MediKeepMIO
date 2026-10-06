@@ -1723,7 +1723,8 @@
       "tgHdl": "Triglycerider/HDL",
       "weight": "Vikt",
       "bmi": "Kroppsmasseindex",
-      "bloodPressure": "Blodtryck"
+      "bloodPressure": "Blodtryck",
+      "waist": "Midja"
     },
     "charts": {
       "homaIr": "Utveckling av HOMA-IR",

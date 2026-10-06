@@ -1719,7 +1719,8 @@
       "tgHdl": "ไตรกลีเซอไรด์/HDL",
       "weight": "น้ำหนัก",
       "bmi": "ดัชนีมวลกาย",
-      "bloodPressure": "ความดันโลหิต"
+      "bloodPressure": "ความดันโลหิต",
+      "waist": "รอบเอว"
     },
     "charts": {
       "homaIr": "แนวโน้ม HOMA-IR",

@@ -28,6 +28,7 @@ import {
   IconCalendar,
   IconHeart,
   IconWeight,
+  IconRuler,
   IconActivity,
   IconThermometer,
   IconLungs,
@@ -232,6 +233,34 @@ const VitalsForm = ({
               'vitals.form.validation.weightMax',
               'Weight cannot exceed {{max}} {{unit}}',
               { max: ranges.weight.max, unit: labels.weight }
+            ),
+          },
+        },
+      },
+      waist_circumference: {
+        label: t('vitals:form.waistCircumference', 'Waist circumference'),
+        type: 'number',
+        unit: labels.waist,
+        placeholder: unitSystem === 'imperial' ? '36' : '92',
+        icon: IconRuler,
+        min: ranges.waist.min,
+        max: ranges.waist.max,
+        step: 0.1,
+        validation: {
+          min: {
+            value: ranges.waist.min,
+            message: t(
+              'vitals:form.validation.waistMin',
+              'Waist must be at least {{min}} {{unit}}',
+              { min: ranges.waist.min, unit: labels.waist }
+            ),
+          },
+          max: {
+            value: ranges.waist.max,
+            message: t(
+              'vitals:form.validation.waistMax',
+              'Waist cannot exceed {{max}} {{unit}}',
+              { max: ranges.waist.max, unit: labels.waist }
             ),
           },
         },
@@ -449,6 +478,7 @@ const VitalsForm = ({
     heart_rate: '',
     temperature: '',
     weight: '',
+    waist_circumference: '',
     respiratory_rate: '',
     oxygen_saturation: '',
     blood_glucose: '',
@@ -505,6 +535,15 @@ const VitalsForm = ({
         weight: vitals.weight
           ? convertForDisplay(vitals.weight, 'weight', unitSystem)
           : '',
+        waist_circumference: vitals.waist_circumference
+          ? Math.round(
+              convertForDisplay(
+                vitals.waist_circumference,
+                'waist',
+                unitSystem
+              ) * 10
+            ) / 10
+          : '',
         respiratory_rate: vitals.respiratory_rate || '',
         oxygen_saturation: vitals.oxygen_saturation || '',
         blood_glucose: vitals.blood_glucose || '',
@@ -546,45 +585,48 @@ const VitalsForm = ({
   }, [formData.weight, patientHeight, unitSystem]);
 
   // Field validation
-  const validateField = useCallback((fieldName, value) => {
-    const config = FIELD_CONFIGS[fieldName];
-    if (!config || !config.validation) return null;
+  const validateField = useCallback(
+    (fieldName, value) => {
+      const config = FIELD_CONFIGS[fieldName];
+      if (!config || !config.validation) return null;
 
-    const validation = config.validation;
+      const validation = config.validation;
 
-    // Required validation
-    if (validation.required && (!value || value.toString().trim() === '')) {
-      return validation.required;
-    }
-
-    // Skip other validations if field is empty (and not required)
-    if (!value || value.toString().trim() === '') return null;
-
-    // Numeric validations
-    if (config.type === 'number') {
-      const numValue = parseFloat(value);
-      if (isNaN(numValue)) return t('errors:form.mustBeValidNumber');
-
-      if (validation.min && numValue < validation.min.value) {
-        return validation.min.message;
+      // Required validation
+      if (validation.required && (!value || value.toString().trim() === '')) {
+        return validation.required;
       }
-      if (validation.max && numValue > validation.max.value) {
-        return validation.max.message;
+
+      // Skip other validations if field is empty (and not required)
+      if (!value || value.toString().trim() === '') return null;
+
+      // Numeric validations
+      if (config.type === 'number') {
+        const numValue = parseFloat(value);
+        if (isNaN(numValue)) return t('errors:form.mustBeValidNumber');
+
+        if (validation.min && numValue < validation.min.value) {
+          return validation.min.message;
+        }
+        if (validation.max && numValue > validation.max.value) {
+          return validation.max.message;
+        }
       }
-    }
 
-    // Text length validations
-    if (validation.maxLength && value.length > validation.maxLength.value) {
-      return validation.maxLength.message;
-    }
+      // Text length validations
+      if (validation.maxLength && value.length > validation.maxLength.value) {
+        return validation.maxLength.message;
+      }
 
-    // Custom validation
-    if (validation.custom) {
-      return validation.custom(value);
-    }
+      // Custom validation
+      if (validation.custom) {
+        return validation.custom(value);
+      }
 
-    return null;
-  }, [FIELD_CONFIGS, t]);
+      return null;
+    },
+    [FIELD_CONFIGS, t]
+  );
 
   // Real-time validation
   const validateForm = useCallback(() => {
@@ -728,6 +770,13 @@ const VitalsForm = ({
           : null,
         weight: formData.weight
           ? convertForStorage(parseFloat(formData.weight), 'weight', unitSystem)
+          : null,
+        waist_circumference: formData.waist_circumference
+          ? convertForStorage(
+              parseFloat(formData.waist_circumference),
+              'waist',
+              unitSystem
+            )
           : null,
         respiratory_rate: formData.respiratory_rate
           ? parseInt(formData.respiratory_rate)
@@ -1098,6 +1147,9 @@ const VitalsForm = ({
                   </Grid.Col>
                   <Grid.Col span={6}>{renderField('pain_scale')}</Grid.Col>
                   <Grid.Col span={6}>{renderField('weight')}</Grid.Col>
+                  <Grid.Col span={6}>
+                    {renderField('waist_circumference')}
+                  </Grid.Col>
                 </Grid>
                 {patientHeight ? (
                   <Alert

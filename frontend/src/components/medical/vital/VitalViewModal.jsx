@@ -162,6 +162,18 @@ const VitalViewModal = ({
           unit: vital.weight ? unitLabels[unitSystem].weight : '',
         },
         {
+          label: t('vitals:form.waistCircumference', 'Waist circumference'),
+          value: vital.waist_circumference
+            ? (convertForDisplay(
+                vital.waist_circumference,
+                'waist',
+                unitSystem
+              )?.toFixed(1) ?? vital.waist_circumference)
+            : t('labels.notAvailable', 'N/A'),
+          icon: IconWeight,
+          unit: vital.waist_circumference ? unitLabels[unitSystem].waist : '',
+        },
+        {
           label: t('shared:labels.height', 'Height'),
           value: vital.height
             ? ((unitSystem === 'imperial'

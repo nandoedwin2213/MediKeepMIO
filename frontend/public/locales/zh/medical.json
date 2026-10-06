@@ -1719,7 +1719,8 @@
       "tgHdl": "甘油三酯/HDL",
       "weight": "体重",
       "bmi": "体重指数",
-      "bloodPressure": "血压"
+      "bloodPressure": "血压",
+      "waist": "腰围"
     },
     "charts": {
       "homaIr": "HOMA-IR 变化",

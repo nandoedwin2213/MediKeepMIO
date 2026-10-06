@@ -72,8 +72,11 @@
       "timeInFuture": "Geselecteerde tijd mag niet in de toekomst liggen",
       "usernameLength": "Gebruikersnaam moet minimaal 3 tekens lang zijn",
       "weightMax": "Gewicht mag niet hoger zijn dan {{max}} {{unit}}",
-      "weightMin": "Gewicht moet minimaal {{min}} {{unit}} zijn"
-    }
+      "weightMin": "Gewicht moet minimaal {{min}} {{unit}} zijn",
+      "waistMin": "Tailleomtrek moet minimaal {{min}} {{unit}} zijn",
+      "waistMax": "Tailleomtrek mag niet meer zijn dan {{max}} {{unit}}"
+    },
+    "waistCircumference": "Tailleomtrek"
   },
   "glucoseContext": {
     "after_meal": "Na de maaltijd",
