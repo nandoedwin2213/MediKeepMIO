@@ -26,9 +26,9 @@ def fa(**kw):
 
 
 def test_sts_threshold_by_age_and_sex():
-    assert sts_threshold(45, "male") == 14
-    assert sts_threshold(72, "female") == 10
-    assert sts_threshold(88, "male") == 8
+    assert sts_threshold(45, "M") == 14
+    assert sts_threshold(72, "F") == 10
+    assert sts_threshold(88, "M") == 8
     assert sts_threshold(70, None) is None
 
 
@@ -36,31 +36,31 @@ def test_functional_levels():
     ind = functional_indicators(
         fa(sit_to_stand_30s=9, grip_strength_kg=30, gait_speed_m_s=0.9, rpe=4),
         70,
-        "male",
+        "M",
     )
     assert ind["sit_to_stand"]["level"] == "low"
     assert ind["grip"]["level"] == "adequate"
     assert ind["gait_speed"]["level"] == "reduced"
     assert ind["rpe"]["level"] == "moderate"
-    female = functional_indicators(fa(grip_strength_kg=15), 50, "female")
+    female = functional_indicators(fa(grip_strength_kg=15), 50, "F")
     assert female["grip"]["level"] == "low"
     unknown = functional_indicators(fa(grip_strength_kg=15), 50, None)
     assert unknown["grip"]["level"] is None and unknown["grip"]["bands"] == []
 
 
 def test_six_minute_walk_percent_predicted():
-    predicted = predicted_walk_m(60, "male", 175, 80)
+    predicted = predicted_walk_m(60, "M", 175, 80)
     assert predicted == round(7.57 * 175 - 5.02 * 60 - 1.76 * 80 - 309)
-    ind = functional_indicators(fa(walk_test_m=predicted * 0.7), 60, "male", 175, 80)
+    ind = functional_indicators(fa(walk_test_m=predicted * 0.7), 60, "M", 175, 80)
     assert ind["walk_test"]["percent_predicted"] == 70
     assert ind["walk_test"]["level"] == "reduced"
-    no_anthro = functional_indicators(fa(walk_test_m=400), 60, "male")
+    no_anthro = functional_indicators(fa(walk_test_m=400), 60, "M")
     assert no_anthro["walk_test"]["level"] is None
 
 
 def result(**indicators):
     return {
-        "patient": {"age": indicators.pop("age", 50), "sex": "male"},
+        "patient": {"age": indicators.pop("age", 50), "sex": "M"},
         "indicators": {k: {"value": v} for k, v in indicators.items()},
         "inputs": {},
         "alerts": [],
@@ -124,7 +124,10 @@ def test_functional_crud(authenticated_client, test_patient):
         },
     )
     assert r.status_code == 200, r.text
-    assert r.json()["indicators"]["gait_speed"]["level"] == "adequate"
+    indicators = r.json()["indicators"]
+    assert indicators["gait_speed"]["level"] == "adequate"
+    assert indicators["sit_to_stand"]["level"] == "low"
+    assert indicators["sit_to_stand"]["bands"]
     listing = authenticated_client.get(url).json()
     assert len(listing["items"]) == 1 and listing["references_version"]
     fid = listing["items"][0]["id"]

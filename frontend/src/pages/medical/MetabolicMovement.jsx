@@ -205,7 +205,7 @@ function TestCard({ testKey, indicator }) {
       <Group justify="space-between" align="flex-start" wrap="nowrap">
         <Text fw={600}>{m(`tests.${testKey}.name`)}</Text>
         {indicator.level && (
-          <Badge color={color} variant="light">
+          <Badge color={color} variant="light" style={{ flexShrink: 0 }}>
             {m(`levels.${indicator.level}`)}
           </Badge>
         )}
@@ -1240,7 +1240,7 @@ export default function MetabolicMovement() {
   const { patient } = usePatientWithStaticData();
   const { user } = useAuth();
   const { formatDate } = useDateFormat();
-  const patientId = patient?.id;
+  const patientId = patient?.patient?.id;
   const professional = PRO_ROLES.includes(user?.role);
 
   return (

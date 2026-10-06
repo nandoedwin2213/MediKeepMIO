@@ -24,7 +24,10 @@ vi.mock('../../../contexts/AuthContext', async importOriginal => ({
   useAuth: () => ({ user: { id: 1, role: auth.role } }),
 }));
 vi.mock('../../../hooks/useGlobalData', () => ({
-  usePatientWithStaticData: () => ({ patient: { id: 7 }, loading: false }),
+  usePatientWithStaticData: () => ({
+    patient: { patient: { id: 7 } },
+    loading: false,
+  }),
 }));
 
 const PLAN = {

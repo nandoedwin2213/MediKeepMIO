@@ -12,11 +12,11 @@ REFERENCES_VERSION = "functional-refs-0.1.0"
 # 30-second chair stand, "below average" thresholds (CDC STEADI, ages 60-94).
 # Below 60 years the 60-64 threshold is used as a conservative minimum.
 STS_BELOW_AVERAGE = {
-    "male": ((60, 14), (65, 12), (70, 12), (75, 11), (80, 10), (85, 8), (90, 7)),
-    "female": ((60, 12), (65, 11), (70, 10), (75, 10), (80, 9), (85, 8), (90, 4)),
+    "M": ((60, 14), (65, 12), (70, 12), (75, 11), (80, 10), (85, 8), (90, 7)),
+    "F": ((60, 12), (65, 11), (70, 10), (75, 10), (80, 9), (85, 8), (90, 4)),
 }
 # Low grip strength (EWGSOP2).
-GRIP_LOW = {"male": 27.0, "female": 16.0}
+GRIP_LOW = {"M": 27.0, "F": 16.0}
 # Usual gait speed (EWGSOP2 severity <= 0.8 m/s; < 1.0 m/s as reduced).
 GAIT_LOW, GAIT_REDUCED = 0.8, 1.0
 # Six-minute walk as % of predicted (Enright & Sherrill 1998).
@@ -55,9 +55,9 @@ def predicted_walk_m(
     height_cm: Optional[float],
     weight_kg: Optional[float],
 ) -> Optional[float]:
-    if None in (age, height_cm, weight_kg) or sex not in ("male", "female"):
+    if None in (age, height_cm, weight_kg) or sex not in ("M", "F"):
         return None
-    if sex == "male":
+    if sex == "M":
         value = 7.57 * height_cm - 5.02 * age - 1.76 * weight_kg - 309
     else:
         value = 2.11 * height_cm - 2.29 * weight_kg - 5.78 * age + 667
