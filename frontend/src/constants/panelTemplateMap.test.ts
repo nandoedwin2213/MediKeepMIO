@@ -182,4 +182,17 @@ describe('PANEL_TEMPLATES', () => {
   it('no template has id custom_entry', () => {
     expect(PANEL_TEMPLATES.find(t => t.id === 'custom_entry')).toBeUndefined();
   });
+
+  it('returns the insulin resistance panel with the HOMA-IR inputs', () => {
+    const rows = getTemplateRowsForPanel('Insulin Resistance Panel');
+    expect(rows).not.toBeNull();
+    expect(rows!.map(r => r.test_name)).toEqual([
+      'Fasting Glucose',
+      'Fasting Insulin',
+      'Hemoglobin A1c',
+      'Triglycerides',
+      'HDL Cholesterol',
+    ]);
+    rows!.forEach(r => expect(r.category).toBe('endocrinology'));
+  });
 });

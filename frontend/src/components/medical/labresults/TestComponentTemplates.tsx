@@ -185,6 +185,9 @@ function TestComponentTemplates({
     const matchesSearch =
       searchQuery === '' ||
       template.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      getTemplateDisplayName(template.id)
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase()) ||
       template.tests.some(
         test =>
           test.test_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -284,8 +287,11 @@ function TestComponentTemplates({
       );
 
       notifications.show({
-        title: 'Success!',
-        message: `Successfully added ${response.created_count} test component${response.created_count !== 1 ? 's' : ''} from ${getTemplateDisplayName(selectedTemplate?.id || '')}`,
+        title: t('labresults:templates.addedTitle'),
+        message: t('labresults:templates.addedMessage', {
+          count: response.created_count,
+          name: getTemplateDisplayName(selectedTemplate?.id || ''),
+        }),
         color: 'green',
         autoClose: 4000,
       });
@@ -300,8 +306,8 @@ function TestComponentTemplates({
     } catch (error) {
       handleError(error as Error, 'submit_template');
       notifications.show({
-        title: 'Error',
-        message: 'Failed to add test components. Please try again.',
+        title: t('labresults:templates.addFailedTitle'),
+        message: t('labresults:templates.addFailedMessage'),
         color: 'red',
       });
     } finally {
@@ -314,26 +320,16 @@ function TestComponentTemplates({
     onComponentsAdded,
     handleError,
     validateForm,
+    t,
   ]);
 
   const getTemplateDisplayName = (templateId: string): string => {
-    const templateNames: Record<string, string> = {
-      custom_entry: 'Custom Entry',
-      basic_metabolic_panel: 'Basic Metabolic Panel (BMP)',
-      comprehensive_metabolic_panel: 'Comprehensive Metabolic Panel (CMP)',
-      complete_blood_count: 'Complete Blood Count (CBC)',
-      lipid_panel: 'Lipid Panel',
-      thyroid_function: 'Thyroid Function Tests',
-      liver_function: 'Liver Function Panel',
-      kidney_function: 'Kidney Function Panel',
-      infectious_disease_panel: 'Infectious Disease Panel',
-      autoimmune_panel: 'Autoimmune Panel',
-      viral_serology_panel: 'Viral Serology Panel',
-    };
-    return (
-      templateNames[templateId] ||
-      templateId.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
-    );
+    if (templateId === 'custom_entry') return t('labresults:templates.customEntry');
+    return t(`labresults:templates.names.${templateId}`, {
+      defaultValue: templateId
+        .replace(/_/g, ' ')
+        .replace(/\b\w/g, l => l.toUpperCase()),
+    });
   };
 
   return (
