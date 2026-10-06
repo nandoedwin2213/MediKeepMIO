@@ -418,8 +418,12 @@
       "deleteFailed": "Kunde inte ta bort vitalparametrar",
       "deleteSuccess": "Vitalparametrar har tagits bort",
       "formErrors": "Vänligen rätta till formulärfelen",
+      "recordFailed": "Det gick inte att spara vitalparametrar",
+      "recordedSuccess": "Vitalparametrar registrerade!",
+      "saveFailed": "Kunde inte {{action}} vitalparametrar",
       "savedSuccess": "Vitalparametrar har {{action}}!",
-      "saveFailed": "Kunde inte {{action}} vitalparametrar"
+      "updateFailed": "Det gick inte att uppdatera vitalparametrar",
+      "updatedSuccess": "Vitalparametrar uppdaterade!"
     }
   },
   "validation": {

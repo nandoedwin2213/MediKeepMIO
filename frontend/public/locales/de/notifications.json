@@ -418,8 +418,12 @@
       "deleteFailed": "Vitalwerte-Eintrag konnte nicht gelöscht werden",
       "deleteSuccess": "Vitalwerte-Eintrag erfolgreich gelöscht",
       "formErrors": "Bitte korrigieren Sie die Formularfehler",
+      "recordFailed": "Vitalwerte konnten nicht gespeichert werden",
+      "recordedSuccess": "Vitalwerte erfolgreich erfasst!",
+      "saveFailed": "Vitalwerte konnten nicht {{action}} werden",
       "savedSuccess": "Vitalwerte erfolgreich {{action}}!",
-      "saveFailed": "Vitalwerte konnten nicht {{action}} werden"
+      "updateFailed": "Vitalwerte konnten nicht aktualisiert werden",
+      "updatedSuccess": "Vitalwerte erfolgreich aktualisiert!"
     }
   },
   "validation": {

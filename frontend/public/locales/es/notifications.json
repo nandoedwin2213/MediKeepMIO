@@ -418,8 +418,12 @@
       "deleteFailed": "Error al eliminar el registro de signos vitales",
       "deleteSuccess": "Registro de signos vitales eliminado con éxito",
       "formErrors": "Por favor, corrija los errores del formulario",
+      "recordFailed": "Error al guardar los signos vitales",
+      "recordedSuccess": "¡Signos vitales registrados con éxito!",
+      "saveFailed": "Error al {{action}} los signos vitales",
       "savedSuccess": "¡Signos vitales {{action}} con éxito!",
-      "saveFailed": "Error al {{action}} los signos vitales"
+      "updateFailed": "Error al actualizar los signos vitales",
+      "updatedSuccess": "¡Signos vitales actualizados con éxito!"
     }
   },
   "validation": {

@@ -418,8 +418,12 @@
       "deleteFailed": "Echec de la suppression des signes vitaux",
       "deleteSuccess": "Signes vitaux supprimés avec succès",
       "formErrors": "Veuillez corriger les erreurs de formulation",
+      "recordFailed": "Échec de l'enregistrement des signes vitaux",
+      "recordedSuccess": "Signes vitaux enregistrés avec succès !",
+      "saveFailed": "Echec : {{action}} des signes vitaux",
       "savedSuccess": "Signes vitaux {{action}} avec succès !",
-      "saveFailed": "Echec : {{action}} des signes vitaux"
+      "updateFailed": "Échec de la mise à jour des signes vitaux",
+      "updatedSuccess": "Signes vitaux mis à jour avec succès !"
     }
   },
   "validation": {

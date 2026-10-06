@@ -418,8 +418,12 @@
       "deleteFailed": "Failed to delete vitals record",
       "deleteSuccess": "Vitals record deleted successfully",
       "formErrors": "Please correct the form errors",
+      "recordFailed": "Failed to save vital signs",
+      "recordedSuccess": "Vital signs recorded successfully!",
+      "saveFailed": "Failed to {{action}} vitals",
       "savedSuccess": "Vitals {{action}} successfully!",
-      "saveFailed": "Failed to {{action}} vitals"
+      "updateFailed": "Failed to update vital signs",
+      "updatedSuccess": "Vital signs updated successfully!"
     }
   },
   "validation": {

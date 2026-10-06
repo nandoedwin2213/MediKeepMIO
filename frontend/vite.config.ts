@@ -6,8 +6,13 @@ import path from 'path';
 import fs from 'fs';
 import crypto from 'crypto';
 
+const BUILD_ID = Date.now().toString(36);
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    __BUILD_ID__: JSON.stringify(BUILD_ID),
+  },
   plugins: [
     react({
       // Enable JSX in .js files for gradual migration from CRA

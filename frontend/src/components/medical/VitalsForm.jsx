@@ -68,7 +68,7 @@ const VitalsForm = ({
   onCancel,
   isEdit = false,
 }) => {
-  const { t } = useTranslation(['common', 'errors', 'shared']);
+  const { t } = useTranslation(['common', 'errors', 'shared', 'vitals']);
   // Fields locked from editing (e.g., glucose when editing a day with imported CGM data)
   const lockedFields = vitals?._lockedFields || [];
   useTimezone();
@@ -810,14 +810,18 @@ const VitalsForm = ({
       });
 
       await onSave(processedData);
-      notifySuccess('notifications:toasts.vitals.savedSuccess', {
-        interpolation: { action: isEdit ? 'updated' : 'recorded' },
-      });
+      notifySuccess(
+        isEdit
+          ? 'notifications:toasts.vitals.updatedSuccess'
+          : 'notifications:toasts.vitals.recordedSuccess'
+      );
     } catch (error) {
       logger.error('Error saving vitals:', error);
-      notifyError('notifications:toasts.vitals.saveFailed', {
-        interpolation: { action: isEdit ? 'update' : 'save' },
-      });
+      notifyError(
+        isEdit
+          ? 'notifications:toasts.vitals.updateFailed'
+          : 'notifications:toasts.vitals.recordFailed'
+      );
     } finally {
       setIsLoading(false);
     }
@@ -974,6 +978,7 @@ const VitalsForm = ({
           }
           min={config.min}
           max={config.max}
+          clampBehavior="none"
           step={config.step}
           precision={config.step < 1 ? 1 : 0}
           required={config.required}

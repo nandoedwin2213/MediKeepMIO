@@ -418,8 +418,12 @@
       "deleteFailed": "Falha ao excluir registro de sinais vitais",
       "deleteSuccess": "Registro de sinais vitais excluído com sucesso",
       "formErrors": "Por favor, corrija os erros do formulário",
+      "recordFailed": "Falha ao salvar os sinais vitais",
+      "recordedSuccess": "Sinais vitais registrados com sucesso!",
+      "saveFailed": "Falha ao {{action}} sinais vitais",
       "savedSuccess": "Sinais vitais {{action}} com sucesso!",
-      "saveFailed": "Falha ao {{action}} sinais vitais"
+      "updateFailed": "Falha ao atualizar os sinais vitais",
+      "updatedSuccess": "Sinais vitais atualizados com sucesso!"
     }
   },
   "validation": {

@@ -376,13 +376,14 @@ const Vitals = () => {
           success = await createItem(formData);
         }
 
-        if (success) {
-          setShowForm(false);
-          setEditingVitals(null);
-          // Refresh the vitals data list and stats
-          await refreshData();
-          await loadStats();
+        if (!success) {
+          throw new Error('Vitals save failed');
         }
+        setShowForm(false);
+        setEditingVitals(null);
+        // Refresh the vitals data list and stats
+        await refreshData();
+        await loadStats();
       } catch (error) {
         logger.error('Error saving vitals:', error);
         throw error; // Let the form handle the error display
