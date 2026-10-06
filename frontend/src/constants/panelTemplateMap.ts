@@ -17,6 +17,17 @@ export interface TestTemplate {
 
 export const PANEL_TEMPLATES: TestTemplate[] = [
   {
+    id: 'insulin_resistance',
+    category: 'endocrinology',
+    tests: [
+      { test_name: 'Fasting Glucose', abbreviation: 'GLUC', test_code: '1558-6', unit: 'mg/dL', default_display_order: 1 },
+      { test_name: 'Fasting Insulin', abbreviation: 'INS', test_code: '20448-7', unit: 'µIU/mL', default_display_order: 2 },
+      { test_name: 'Hemoglobin A1c', abbreviation: 'HbA1c', test_code: '4548-4', unit: '%', default_display_order: 3 },
+      { test_name: 'Triglycerides', abbreviation: 'TRIG', test_code: '2571-8', unit: 'mg/dL', default_display_order: 4 },
+      { test_name: 'HDL Cholesterol', abbreviation: 'HDL', test_code: '2085-9', unit: 'mg/dL', default_display_order: 5 },
+    ],
+  },
+  {
     id: 'basic_metabolic_panel',
     category: 'chemistry',
     tests: [
@@ -450,6 +461,7 @@ const PANEL_NAME_TO_TEMPLATE_ID: Readonly<Record<string, string>> = {
   'Cardiac Enzyme Panel': 'cardiac_enzymes',
   'Coagulation Panel': 'coagulation',
   'Diabetes Monitoring Panel': 'diabetes_monitoring',
+  'Insulin Resistance Panel': 'insulin_resistance',
   'Drug Levels Panel': 'drug_levels',
   'Electrolytes Panel': 'electrolytes',
   'Glucose Tolerance Test': 'glucose_tolerance',
