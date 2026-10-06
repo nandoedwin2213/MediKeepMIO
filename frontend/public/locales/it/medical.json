@@ -2000,6 +2000,191 @@
         "lastData": "Ultima misurazione",
         "alerts": "Controllo"
       }
+    },
+    "movement": {
+      "title": "Il mio esercizio",
+      "subtitle": "Test funzionali e il tuo piano di esercizio supervisionato (METABOLIC MOVEMENT).",
+      "disclaimer": "Il piano è preparato e approvato dal tuo professionista sanitario. Non iniziare né aumentare l’intensità senza la sua indicazione e fermati in caso di dolore al petto, fiato corto o capogiri.",
+      "loadError": "Impossibile caricare i dati.",
+      "error": "Impossibile completare l’azione.",
+      "units": {
+        "reps": "ripetizioni"
+      },
+      "functional": {
+        "title": "Valutazione funzionale",
+        "subtitle": "Test semplici di forza, cammino e resistenza. Ripetili per vedere i progressi.",
+        "add": "Registra test",
+        "save": "Salva test",
+        "saved": "Test funzionali salvati",
+        "saveError": "Impossibile salvare i test.",
+        "deleted": "Registrazione eliminata",
+        "delete": "Elimina registrazione",
+        "date": "Data dei test",
+        "latest": "Ultimi risultati ({{date}})",
+        "history": "Storico",
+        "empty": "Nessun test funzionale registrato.",
+        "noReference": "Nessun intervallo di riferimento: registra il sesso (e altezza/peso per il test del cammino).",
+        "percentPredicted": "{{pct}}% del previsto ({{predicted}} m)",
+        "atLeastOne": "Inserisci almeno un risultato"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "Alzata dalla sedia 30 s",
+          "short": "Alzate",
+          "help": "Quante volte ti alzi dalla sedia in 30 secondi. Riflette la forza delle gambe.",
+          "how": "Braccia incrociate, alzate complete in 30 s"
+        },
+        "grip": {
+          "name": "Forza di presa",
+          "short": "Presa",
+          "help": "Forza di stretta al dinamometro. Indicatore della forza muscolare generale.",
+          "how": "Miglior tentativo con la mano dominante"
+        },
+        "gait_speed": {
+          "name": "Velocità del cammino",
+          "short": "Cammino",
+          "help": "Velocità di cammino abituale su breve distanza. Una velocità bassa è legata a minore capacità fisica.",
+          "how": "Passo abituale su 4 m: distanza ÷ secondi"
+        },
+        "walk_test": {
+          "name": "Test del cammino 6 minuti",
+          "short": "Cammino 6 min",
+          "help": "Distanza percorsa in 6 minuti, confrontata con il valore atteso per età, sesso, altezza e peso.",
+          "how": "Metri percorsi in 6 minuti"
+        },
+        "rpe": {
+          "name": "Sforzo percepito (Borg CR10)",
+          "short": "Sforzo",
+          "help": "Quanto è stato duro lo sforzo, da 0 (riposo) a 10 (massimo). Serve a dosare l’intensità.",
+          "how": "Sforzo alla fine del test del cammino (0–10)"
+        }
+      },
+      "levels": {
+        "low": "Basso",
+        "reduced": "Ridotto",
+        "adequate": "Adeguato",
+        "light": "Leggero",
+        "moderate": "Moderato",
+        "vigorous": "Vigoroso",
+        "very_hard": "Molto duro"
+      },
+      "intensity": {
+        "light": "Leggera",
+        "light_moderate": "Da leggera a moderata",
+        "moderate": "Moderata",
+        "moderate_vigorous": "Da moderata a vigorosa",
+        "vigorous": "Vigorosa"
+      },
+      "plan": {
+        "title": "Prescrizione di esercizio",
+        "titlePatient": "Il mio piano di esercizio",
+        "subtitlePro": "Genera una bozza da rischio metabolico, anamnesi e test funzionali, modificala e approvala perché il paziente la veda.",
+        "generate": "Genera bozza",
+        "generated": "Bozza creata",
+        "save": "Salva bozza",
+        "saved": "Bozza salvata",
+        "approve": "Approva e pubblica",
+        "approved": "Piano approvato: ora il paziente può vederlo",
+        "delete": "Elimina bozza",
+        "deleted": "Bozza eliminata",
+        "newVersion": "Nuova versione da questo piano",
+        "copied": "Nuova bozza creata dal piano",
+        "none": "Il tuo professionista non ha ancora approvato un piano.",
+        "noneProfessional": "Nessun piano. Registra i test funzionali e l’anamnesi metabolica, poi genera una bozza.",
+        "draftNotice": "Proposta in bozza: il paziente non la vedrà finché non la approvi. Rivedi e modifica ogni sezione.",
+        "notes": "Indicazioni per il paziente",
+        "approvedOn": "Approvato dal tuo professionista il {{date}}",
+        "why": "Perché questa proposta",
+        "status": {
+          "draft": "Bozza",
+          "approved": "Approvato",
+          "archived": "Archiviato"
+        }
+      },
+      "sections": {
+        "aerobic": "Esercizio aerobico",
+        "strength": "Esercizio di forza",
+        "mobility": "Mobilità",
+        "balance": "Equilibrio",
+        "daily": "Attività quotidiana",
+        "progression": "Progressione",
+        "safety": "Sicurezza"
+      },
+      "fields": {
+        "days": "Giorni/settimana",
+        "minutes": "Minuti",
+        "intensity": "Intensità",
+        "rpeMin": "Sforzo min. (0–10)",
+        "rpeMax": "Sforzo max. (0–10)",
+        "rpeRange": "Sforzo {{min}}–{{max}} su 10",
+        "types": "Tipo di attività",
+        "setsMin": "Serie min.",
+        "setsMax": "Serie max.",
+        "repsMin": "Ripetizioni min.",
+        "repsMax": "Ripetizioni max.",
+        "muscleGroups": "Gruppi muscolari",
+        "exercises": "Esercizi",
+        "focus": "Zone di lavoro",
+        "stepsStart": "Passi/giorno iniziali",
+        "stepsTarget": "Obiettivo passi/giorno",
+        "walkAfterMealsText": "Camminare 10 minuti dopo i pasti principali",
+        "breakSittingText": "Alzarsi e muoversi 2–3 minuti ogni 30–60 minuti seduti",
+        "notes": "Note",
+        "summaryDays": "{{days}} giorni/settimana · {{minutes}} min",
+        "summaryStrength": "{{days}} giorni/settimana · {{sets}} serie × {{reps}} ripetizioni",
+        "summarySteps": "{{start}} → {{target}} passi/giorno"
+      },
+      "options": {
+        "brisk_walking": "Camminata veloce",
+        "walking_flat": "Camminata in piano",
+        "cycling": "Bicicletta",
+        "stationary_bike": "Cyclette",
+        "aquatic": "Esercizio in acqua",
+        "dancing": "Ballo",
+        "intervals": "Intervalli",
+        "lower_limbs": "Arti inferiori",
+        "upper_limbs": "Arti superiori",
+        "core": "Core (addome e schiena)",
+        "grip": "Presa",
+        "sit_to_stand": "Alzarsi dalla sedia",
+        "wall_pushups": "Piegamenti al muro",
+        "band_rows": "Rematore con elastico",
+        "glute_bridge": "Ponte glutei",
+        "calf_raises": "Sollevamenti sulle punte",
+        "step_ups": "Salite sul gradino",
+        "grip_squeeze": "Stringere una pallina",
+        "single_leg_stance": "Appoggio su una gamba",
+        "tandem_walk": "Camminata tallone-punta",
+        "sit_to_stand_slow": "Alzata lenta dalla sedia",
+        "hips": "Anche",
+        "spine": "Colonna",
+        "shoulders": "Spalle"
+      },
+      "progression": {
+        "aerobic_build": "Aggiungere 5 minuti a sessione ogni 1–2 settimane se ben tollerato, fino a 30 minuti.",
+        "aerobic_150": "Arrivare ad almeno 150 minuti settimanali di attività moderata.",
+        "aerobic_maintain": "Mantenere il volume e aggiungere 1–2 brevi intervalli più intensi se non ci sono controindicazioni.",
+        "strength_load": "Quando tutte le ripetizioni risultano facili (sforzo sotto 5), aumentare il carico o una serie.",
+        "steps_build": "Aumentare di circa 1.000 passi al giorno ogni settimana fino all’obiettivo."
+      },
+      "safety": {
+        "medical_clearance": "Richiede valutazione medica prima di aumentare l’intensità.",
+        "low_impact": "Preferire attività a basso impatto (bici, acqua, cammino in piano) ed evitare salti.",
+        "pain_rule": "Il dolore durante l’esercizio non deve superare 3/10 né durare più di 24 h; altrimenti riduci il carico e avvisa il fisioterapista.",
+        "stop_symptoms": "Fermati e consulta se senti dolore al petto, fiato corto insolito, capogiri o palpitazioni."
+      },
+      "rationale": {
+        "medical_clearance": "Anamnesi cardiovascolare, pressione molto alta o allerte cliniche: intensità prudente.",
+        "low_impact": "IMC ≥ 35, dolore ≥ 5/10 o limitazioni muscoloscheletriche: attività a basso impatto.",
+        "activity_unknown": "Attività settimanale non registrata: si parte da un livello iniziale.",
+        "start_gradually": "Attività bassa, scarsa capacità di cammino o dolore elevato: sessioni brevi con progressione graduale.",
+        "below_150": "Meno di 150 min/settimana di attività: piano per raggiungere il minimo raccomandato.",
+        "active": "Raggiunge già 150 min/settimana: mantenimento con più lavoro di forza.",
+        "weak_lower_limbs": "Alzate dalla sedia basse o cammino ridotto: più forza per le gambe.",
+        "weak_grip": "Presa bassa: esercizi di presa e forza delle braccia.",
+        "balance_priority": "Età ≥ 65 o gambe deboli: equilibrio 3 giorni a settimana.",
+        "sitting": "Sei o più ore seduti al giorno: pause attive ogni 30–60 minuti."
+      }
     }
   }
 }

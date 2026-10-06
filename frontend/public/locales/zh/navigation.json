@@ -114,7 +114,8 @@
       "insulinResistance": "胰岛素抵抗",
       "metabolicRisk": "代谢风险",
       "myMetabolicHealth": "我的代谢健康",
-      "professionalDashboard": "专业人员面板"
+      "professionalDashboard": "专业人员面板",
+      "metabolicMovement": "我的运动"
     },
     "sections": {
       "administration": "管理",

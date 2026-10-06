@@ -114,7 +114,8 @@
       "insulinResistance": "Αντίσταση στην ινσουλίνη",
       "metabolicRisk": "Μεταβολικός κίνδυνος",
       "myMetabolicHealth": "Η μεταβολική μου υγεία",
-      "professionalDashboard": "Πίνακας επαγγελματία"
+      "professionalDashboard": "Πίνακας επαγγελματία",
+      "metabolicMovement": "Η άσκησή μου"
     },
     "sections": {
       "administration": "Διαχείριση",

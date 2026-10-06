@@ -56,6 +56,14 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.metabolicMovement',
+        name: 'My exercise',
+        path: '/metabolic-movement',
+        icon: '🏃',
+        id: 'metabolic-movement',
+        featured: true,
+      },
+      {
         nameKey: 'sidebarNav.items.professionalDashboard',
         name: 'Professional dashboard',
         path: '/professional/metabolic-dashboard',

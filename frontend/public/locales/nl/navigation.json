@@ -114,7 +114,8 @@
       "insulinResistance": "Insulineresistentie",
       "metabolicRisk": "Metabool risico",
       "myMetabolicHealth": "Mijn metabole gezondheid",
-      "professionalDashboard": "Professionele weergave"
+      "professionalDashboard": "Professionele weergave",
+      "metabolicMovement": "Mijn beweging"
     },
     "sections": {
       "administration": "Beheer",

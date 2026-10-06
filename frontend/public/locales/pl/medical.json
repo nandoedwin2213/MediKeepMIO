@@ -2000,6 +2000,191 @@
         "lastData": "Ostatni pomiar",
         "alerts": "Kontrola"
       }
+    },
+    "movement": {
+      "title": "Moje ćwiczenia",
+      "subtitle": "Testy funkcjonalne i Twój nadzorowany plan ćwiczeń (METABOLIC MOVEMENT).",
+      "disclaimer": "Plan przygotowuje i zatwierdza Twój specjalista. Nie zaczynaj ani nie zwiększaj intensywności bez jego zalecenia i przerwij przy bólu w klatce piersiowej, duszności lub zawrotach głowy.",
+      "loadError": "Nie udało się wczytać danych.",
+      "error": "Nie udało się wykonać działania.",
+      "units": {
+        "reps": "powt."
+      },
+      "functional": {
+        "title": "Ocena funkcjonalna",
+        "subtitle": "Proste testy siły, chodu i wytrzymałości. Powtarzaj je, aby widzieć postępy.",
+        "add": "Zapisz testy",
+        "save": "Zapisz",
+        "saved": "Zapisano testy funkcjonalne",
+        "saveError": "Nie udało się zapisać testów.",
+        "deleted": "Usunięto wpis",
+        "delete": "Usuń wpis",
+        "date": "Data testów",
+        "latest": "Ostatnie wyniki ({{date}})",
+        "history": "Historia",
+        "empty": "Brak zapisanych testów funkcjonalnych.",
+        "noReference": "Brak zakresu referencyjnego: podaj płeć (oraz wzrost/masę dla testu marszu).",
+        "percentPredicted": "{{pct}}% wartości należnej ({{predicted}} m)",
+        "atLeastOne": "Wpisz co najmniej jeden wynik"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "Wstawanie z krzesła 30 s",
+          "short": "Wstawanie",
+          "help": "Ile razy wstaniesz z krzesła w 30 sekund. Odzwierciedla siłę nóg.",
+          "how": "Ręce skrzyżowane, pełne wstania w 30 s"
+        },
+        "grip": {
+          "name": "Siła chwytu",
+          "short": "Chwyt",
+          "help": "Siła ściskania dynamometru. Wskaźnik ogólnej siły mięśni.",
+          "how": "Najlepsza próba ręką dominującą"
+        },
+        "gait_speed": {
+          "name": "Prędkość chodu",
+          "short": "Chód",
+          "help": "Zwykła prędkość chodu na krótkim odcinku. Niska prędkość wiąże się z mniejszą wydolnością.",
+          "how": "Zwykłe tempo na 4 m: dystans ÷ sekundy"
+        },
+        "walk_test": {
+          "name": "Test 6-minutowego marszu",
+          "short": "Marsz 6 min",
+          "help": "Dystans pokonany w 6 minut w porównaniu z wartością należną dla wieku, płci, wzrostu i masy.",
+          "how": "Metry w 6 minut"
+        },
+        "rpe": {
+          "name": "Odczuwany wysiłek (Borg CR10)",
+          "short": "Wysiłek",
+          "help": "Jak ciężki był wysiłek, od 0 (spoczynek) do 10 (maksimum). Służy do dawkowania intensywności.",
+          "how": "Wysiłek na końcu testu marszu (0–10)"
+        }
+      },
+      "levels": {
+        "low": "Niski",
+        "reduced": "Obniżony",
+        "adequate": "Prawidłowy",
+        "light": "Lekki",
+        "moderate": "Umiarkowany",
+        "vigorous": "Intensywny",
+        "very_hard": "Bardzo ciężki"
+      },
+      "intensity": {
+        "light": "Lekka",
+        "light_moderate": "Lekka do umiarkowanej",
+        "moderate": "Umiarkowana",
+        "moderate_vigorous": "Umiarkowana do intensywnej",
+        "vigorous": "Intensywna"
+      },
+      "plan": {
+        "title": "Recepta na ćwiczenia",
+        "titlePatient": "Mój plan ćwiczeń",
+        "subtitlePro": "Wygeneruj szkic na podstawie ryzyka metabolicznego, wywiadu i testów, dostosuj go i zatwierdź, aby pacjent go zobaczył.",
+        "generate": "Generuj szkic",
+        "generated": "Utworzono szkic",
+        "save": "Zapisz szkic",
+        "saved": "Zapisano szkic",
+        "approve": "Zatwierdź i opublikuj",
+        "approved": "Plan zatwierdzony: pacjent może go zobaczyć",
+        "delete": "Usuń szkic",
+        "deleted": "Usunięto szkic",
+        "newVersion": "Nowa wersja na podstawie tego planu",
+        "copied": "Utworzono nowy szkic z planu",
+        "none": "Twój specjalista nie zatwierdził jeszcze planu ćwiczeń.",
+        "noneProfessional": "Brak planów. Zapisz testy funkcjonalne i wywiad metaboliczny, a potem wygeneruj szkic.",
+        "draftNotice": "Szkic propozycji: pacjent zobaczy go dopiero po zatwierdzeniu. Sprawdź i dostosuj każdą sekcję.",
+        "notes": "Zalecenia dla pacjenta",
+        "approvedOn": "Zatwierdzony przez specjalistę {{date}}",
+        "why": "Dlaczego ta propozycja",
+        "status": {
+          "draft": "Szkic",
+          "approved": "Zatwierdzony",
+          "archived": "Zarchiwizowany"
+        }
+      },
+      "sections": {
+        "aerobic": "Ćwiczenia aerobowe",
+        "strength": "Ćwiczenia siłowe",
+        "mobility": "Mobilność",
+        "balance": "Równowaga",
+        "daily": "Aktywność codzienna",
+        "progression": "Progresja",
+        "safety": "Bezpieczeństwo"
+      },
+      "fields": {
+        "days": "Dni/tydzień",
+        "minutes": "Minuty",
+        "intensity": "Intensywność",
+        "rpeMin": "Min. wysiłek (0–10)",
+        "rpeMax": "Maks. wysiłek (0–10)",
+        "rpeRange": "Wysiłek {{min}}–{{max}} na 10",
+        "types": "Rodzaj aktywności",
+        "setsMin": "Min. serii",
+        "setsMax": "Maks. serii",
+        "repsMin": "Min. powt.",
+        "repsMax": "Maks. powt.",
+        "muscleGroups": "Grupy mięśni",
+        "exercises": "Ćwiczenia",
+        "focus": "Obszary",
+        "stepsStart": "Kroki/dzień na start",
+        "stepsTarget": "Cel kroków/dzień",
+        "walkAfterMealsText": "Spacer 10 minut po głównych posiłkach",
+        "breakSittingText": "Co 30–60 minut siedzenia wstań i ruszaj się 2–3 minuty",
+        "notes": "Uwagi",
+        "summaryDays": "{{days}} dni/tydzień · {{minutes}} min",
+        "summaryStrength": "{{days}} dni/tydzień · {{sets}} serii × {{reps}} powt.",
+        "summarySteps": "{{start}} → {{target}} kroków/dzień"
+      },
+      "options": {
+        "brisk_walking": "Szybki marsz",
+        "walking_flat": "Marsz po płaskim terenie",
+        "cycling": "Jazda na rowerze",
+        "stationary_bike": "Rower stacjonarny",
+        "aquatic": "Ćwiczenia w wodzie",
+        "dancing": "Taniec",
+        "intervals": "Interwały",
+        "lower_limbs": "Kończyny dolne",
+        "upper_limbs": "Kończyny górne",
+        "core": "Mięśnie tułowia",
+        "grip": "Chwyt",
+        "sit_to_stand": "Wstawanie z krzesła",
+        "wall_pushups": "Pompki przy ścianie",
+        "band_rows": "Wiosłowanie z taśmą",
+        "glute_bridge": "Mostek biodrowy",
+        "calf_raises": "Wspięcia na palce",
+        "step_ups": "Wchodzenie na stopień",
+        "grip_squeeze": "Ściskanie piłki",
+        "single_leg_stance": "Stanie na jednej nodze",
+        "tandem_walk": "Chód stopa za stopą",
+        "sit_to_stand_slow": "Powolne wstawanie",
+        "hips": "Biodra",
+        "spine": "Kręgosłup",
+        "shoulders": "Barki"
+      },
+      "progression": {
+        "aerobic_build": "Dodawaj 5 minut na sesję co 1–2 tygodnie przy dobrej tolerancji, do 30 minut.",
+        "aerobic_150": "Dojdź do co najmniej 150 minut umiarkowanej aktywności tygodniowo.",
+        "aerobic_maintain": "Utrzymaj objętość i dodaj 1–2 krótkie intensywniejsze interwały, jeśli brak przeciwwskazań.",
+        "strength_load": "Gdy wszystkie powtórzenia są łatwe (wysiłek poniżej 5), zwiększ obciążenie lub dodaj serię.",
+        "steps_build": "Zwiększaj o ok. 1000 kroków dziennie co tydzień aż do celu."
+      },
+      "safety": {
+        "medical_clearance": "Wymaga oceny lekarskiej przed zwiększeniem intensywności.",
+        "low_impact": "Wybieraj aktywności o małym obciążeniu stawów (rower, woda, marsz po płaskim), unikaj skoków.",
+        "pain_rule": "Ból podczas ćwiczeń nie powinien przekraczać 3/10 ani trwać ponad 24 h; jeśli tak, zmniejsz obciążenie i powiedz fizjoterapeucie.",
+        "stop_symptoms": "Przerwij i zgłoś się po pomoc przy bólu w klatce, nietypowej duszności, zawrotach głowy lub kołataniu serca."
+      },
+      "rationale": {
+        "medical_clearance": "Choroba sercowo-naczyniowa, bardzo wysokie ciśnienie lub alerty kliniczne: ostrożna intensywność.",
+        "low_impact": "BMI ≥ 35, ból ≥ 5/10 lub ograniczenia narządu ruchu: aktywności o małym obciążeniu.",
+        "activity_unknown": "Brak danych o aktywności tygodniowej: start od poziomu początkowego.",
+        "start_gradually": "Niska aktywność, słaba wydolność chodu lub silny ból: krótkie sesje ze stopniową progresją.",
+        "below_150": "Poniżej 150 min/tydzień aktywności: plan osiągnięcia zalecanego minimum.",
+        "active": "Już osiąga 150 min/tydzień: utrzymanie z większym naciskiem na siłę.",
+        "weak_lower_limbs": "Słaby wynik wstawania lub wolny chód: dodatkowe ćwiczenia siły nóg.",
+        "weak_grip": "Słaby chwyt: ćwiczenia chwytu i siły ramion.",
+        "balance_priority": "Wiek ≥ 65 lub słabe nogi: równowaga 3 dni w tygodniu.",
+        "sitting": "Sześć lub więcej godzin siedzenia dziennie: aktywne przerwy co 30–60 minut."
+      }
     }
   }
 }

@@ -114,7 +114,8 @@
       "insulinResistance": "Инсулинорезистентность",
       "metabolicRisk": "Метаболический риск",
       "myMetabolicHealth": "Моё метаболическое здоровье",
-      "professionalDashboard": "Панель специалиста"
+      "professionalDashboard": "Панель специалиста",
+      "metabolicMovement": "Мои упражнения"
     },
     "sections": {
       "administration": "Администрирование",

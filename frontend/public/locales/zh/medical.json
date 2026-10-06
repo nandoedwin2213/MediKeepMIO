@@ -1996,6 +1996,191 @@
         "lastData": "最近测量",
         "alerts": "随访"
       }
+    },
+    "movement": {
+      "title": "我的运动",
+      "subtitle": "功能测试和受监督的运动计划（METABOLIC MOVEMENT）。",
+      "disclaimer": "运动计划由你的医疗专业人员制定并批准。未经其指示请勿开始或增加强度；如出现胸痛、气短或头晕，请立即停止。",
+      "loadError": "无法加载数据。",
+      "error": "无法完成该操作。",
+      "units": {
+        "reps": "次"
+      },
+      "functional": {
+        "title": "功能评估",
+        "subtitle": "简单的力量、步行和耐力测试。定期重复以查看进展。",
+        "add": "记录测试",
+        "save": "保存测试",
+        "saved": "功能测试已保存",
+        "saveError": "无法保存测试。",
+        "deleted": "记录已删除",
+        "delete": "删除记录",
+        "date": "测试日期",
+        "latest": "最新结果（{{date}}）",
+        "history": "历史记录",
+        "empty": "尚未记录功能测试。",
+        "noReference": "无参考范围：请填写性别（步行测试还需身高/体重）。",
+        "percentPredicted": "预测值的 {{pct}}%（{{predicted}} 米）",
+        "atLeastOne": "至少填写一项结果"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "30秒坐站测试",
+          "short": "坐站",
+          "help": "30秒内从椅子上站起的次数，反映腿部力量。",
+          "how": "双臂交叉，30秒内完整站起次数"
+        },
+        "grip": {
+          "name": "握力",
+          "short": "握力",
+          "help": "用测力计测得的握力，是整体肌力的指标。",
+          "how": "惯用手的最佳成绩"
+        },
+        "gait_speed": {
+          "name": "步速",
+          "short": "步速",
+          "help": "短距离内的常速步行速度。步速低与体能下降相关。",
+          "how": "常速走4米：距离÷秒数"
+        },
+        "walk_test": {
+          "name": "6分钟步行试验",
+          "short": "6分钟步行",
+          "help": "6分钟步行距离，与按年龄、性别、身高和体重预测的数值比较。",
+          "how": "6分钟步行米数"
+        },
+        "rpe": {
+          "name": "主观疲劳感（Borg CR10）",
+          "short": "疲劳感",
+          "help": "主观感觉的用力程度，0（休息）到10（极限），用于确定运动强度。",
+          "how": "步行测试结束时的疲劳感（0–10）"
+        }
+      },
+      "levels": {
+        "low": "偏低",
+        "reduced": "降低",
+        "adequate": "良好",
+        "light": "轻度",
+        "moderate": "中等",
+        "vigorous": "剧烈",
+        "very_hard": "非常吃力"
+      },
+      "intensity": {
+        "light": "低强度",
+        "light_moderate": "低至中等强度",
+        "moderate": "中等强度",
+        "moderate_vigorous": "中等至高强度",
+        "vigorous": "高强度"
+      },
+      "plan": {
+        "title": "运动处方",
+        "titlePatient": "我的运动计划",
+        "subtitlePro": "根据代谢风险、病史和功能测试生成草稿，调整并批准后患者即可查看。",
+        "generate": "生成草稿",
+        "generated": "草稿已创建",
+        "save": "保存草稿",
+        "saved": "草稿已保存",
+        "approve": "批准并发布",
+        "approved": "计划已批准：患者现在可以查看",
+        "delete": "删除草稿",
+        "deleted": "草稿已删除",
+        "newVersion": "基于此计划创建新版本",
+        "copied": "已基于该计划创建新草稿",
+        "none": "你的专业人员尚未批准运动计划。",
+        "noneProfessional": "尚无计划。请先记录功能测试和代谢病史，再生成草稿。",
+        "draftNotice": "草稿方案：在你批准前患者看不到。请检查并调整每个部分。",
+        "notes": "给患者的说明",
+        "approvedOn": "专业人员于 {{date}} 批准",
+        "why": "为何如此建议",
+        "status": {
+          "draft": "草稿",
+          "approved": "已批准",
+          "archived": "已归档"
+        }
+      },
+      "sections": {
+        "aerobic": "有氧运动",
+        "strength": "力量训练",
+        "mobility": "灵活性",
+        "balance": "平衡",
+        "daily": "日常活动",
+        "progression": "进阶",
+        "safety": "安全"
+      },
+      "fields": {
+        "days": "天/周",
+        "minutes": "分钟",
+        "intensity": "强度",
+        "rpeMin": "最低疲劳感（0–10）",
+        "rpeMax": "最高疲劳感（0–10）",
+        "rpeRange": "疲劳感 {{min}}–{{max}}/10",
+        "types": "活动类型",
+        "setsMin": "最少组数",
+        "setsMax": "最多组数",
+        "repsMin": "最少次数",
+        "repsMax": "最多次数",
+        "muscleGroups": "肌群",
+        "exercises": "动作",
+        "focus": "重点部位",
+        "stepsStart": "起始步数/天",
+        "stepsTarget": "目标步数/天",
+        "walkAfterMealsText": "主餐后步行10分钟",
+        "breakSittingText": "每坐30–60分钟起身活动2–3分钟",
+        "notes": "备注",
+        "summaryDays": "每周 {{days}} 天 · {{minutes}} 分钟",
+        "summaryStrength": "每周 {{days}} 天 · {{sets}} 组 × {{reps}} 次",
+        "summarySteps": "{{start}} → {{target}} 步/天"
+      },
+      "options": {
+        "brisk_walking": "快走",
+        "walking_flat": "平地步行",
+        "cycling": "骑行",
+        "stationary_bike": "动感单车",
+        "aquatic": "水中运动",
+        "dancing": "跳舞",
+        "intervals": "间歇训练",
+        "lower_limbs": "下肢",
+        "upper_limbs": "上肢",
+        "core": "核心",
+        "grip": "握力",
+        "sit_to_stand": "椅子坐站",
+        "wall_pushups": "靠墙俯卧撑",
+        "band_rows": "弹力带划船",
+        "glute_bridge": "臀桥",
+        "calf_raises": "提踵",
+        "step_ups": "登台阶",
+        "grip_squeeze": "捏球",
+        "single_leg_stance": "单腿站立",
+        "tandem_walk": "脚跟对脚尖走",
+        "sit_to_stand_slow": "慢速坐站",
+        "hips": "髋部",
+        "spine": "脊柱",
+        "shoulders": "肩部"
+      },
+      "progression": {
+        "aerobic_build": "耐受良好时每1–2周每次增加5分钟，最多30分钟。",
+        "aerobic_150": "逐步达到每周至少150分钟中等强度活动。",
+        "aerobic_maintain": "保持运动量；如无禁忌，可增加1–2组短时高强度间歇。",
+        "strength_load": "当所有重复都感觉轻松（疲劳感低于5）时，增加负荷或增加一组。",
+        "steps_build": "每周每天增加约1000步，直至达到目标。"
+      },
+      "safety": {
+        "medical_clearance": "增加强度前需医学评估。",
+        "low_impact": "优先选择低冲击活动（骑车、水中运动、平地步行），避免跳跃。",
+        "pain_rule": "运动中疼痛不应超过3/10，也不应持续超过24小时；否则请减轻负荷并告知物理治疗师。",
+        "stop_symptoms": "如出现胸痛、异常气短、头晕或心悸，请停止并就医。"
+      },
+      "rationale": {
+        "medical_clearance": "有心血管病史、血压很高或存在临床警报：采用保守强度。",
+        "low_impact": "BMI ≥ 35、疼痛 ≥ 5/10 或存在肌肉骨骼限制：选择低冲击活动。",
+        "activity_unknown": "未记录每周活动量：从入门水平开始。",
+        "start_gradually": "活动量低、步行能力差或疼痛明显：短时训练，循序渐进。",
+        "below_150": "每周活动少于150分钟：计划达到推荐的最低量。",
+        "active": "已达到每周150分钟：维持并加强力量训练。",
+        "weak_lower_limbs": "坐站次数少或步速降低：增加下肢力量训练。",
+        "weak_grip": "握力低：增加握力和上肢力量训练。",
+        "balance_priority": "年龄 ≥ 65 岁或下肢力量弱：每周3天平衡训练。",
+        "sitting": "每天久坐6小时以上：每30–60分钟进行一次活动休息。"
+      }
     }
   }
 }

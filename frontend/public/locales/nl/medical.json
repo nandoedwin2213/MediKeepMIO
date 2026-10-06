@@ -2000,6 +2000,191 @@
         "lastData": "Laatste meting",
         "alerts": "Opvolging"
       }
+    },
+    "movement": {
+      "title": "Mijn beweging",
+      "subtitle": "Functionele testen en je begeleide bewegingsplan (METABOLIC MOVEMENT).",
+      "disclaimer": "Het plan wordt opgesteld en goedgekeurd door je zorgverlener. Begin niet en verhoog de intensiteit niet zonder diens advies, en stop bij pijn op de borst, kortademigheid of duizeligheid.",
+      "loadError": "Gegevens konden niet worden geladen.",
+      "error": "De actie kon niet worden voltooid.",
+      "units": {
+        "reps": "herhalingen"
+      },
+      "functional": {
+        "title": "Functionele beoordeling",
+        "subtitle": "Eenvoudige testen van kracht, lopen en uithoudingsvermogen. Herhaal ze om je vooruitgang te zien.",
+        "add": "Testen vastleggen",
+        "save": "Testen opslaan",
+        "saved": "Functionele testen opgeslagen",
+        "saveError": "Testen konden niet worden opgeslagen.",
+        "deleted": "Registratie verwijderd",
+        "delete": "Registratie verwijderen",
+        "date": "Testdatum",
+        "latest": "Laatste resultaten ({{date}})",
+        "history": "Geschiedenis",
+        "empty": "Nog geen functionele testen vastgelegd.",
+        "noReference": "Geen referentiebereik: leg het geslacht vast (en lengte/gewicht voor de looptest).",
+        "percentPredicted": "{{pct}}% van voorspeld ({{predicted}} m)",
+        "atLeastOne": "Vul minstens één resultaat in"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "Opstaan uit stoel 30 s",
+          "short": "Opstaan",
+          "help": "Hoe vaak je in 30 seconden uit een stoel opstaat. Laat beenkracht zien.",
+          "how": "Armen gekruist, volledig opstaan in 30 s"
+        },
+        "grip": {
+          "name": "Knijpkracht",
+          "short": "Knijp",
+          "help": "Knijpkracht met een dynamometer. Maat voor de algemene spierkracht.",
+          "how": "Beste poging met de dominante hand"
+        },
+        "gait_speed": {
+          "name": "Loopsnelheid",
+          "short": "Lopen",
+          "help": "Gewone loopsnelheid over een korte afstand. Lage snelheid hangt samen met minder fysieke capaciteit.",
+          "how": "Gewoon tempo over 4 m: afstand ÷ seconden"
+        },
+        "walk_test": {
+          "name": "6-minuten-wandeltest",
+          "short": "6-min wandeltest",
+          "help": "Afstand gelopen in 6 minuten, vergeleken met de verwachte waarde voor leeftijd, geslacht, lengte en gewicht.",
+          "how": "Meters in 6 minuten"
+        },
+        "rpe": {
+          "name": "Ervaren inspanning (Borg CR10)",
+          "short": "Inspanning",
+          "help": "Hoe zwaar het voelde, van 0 (rust) tot 10 (maximaal). Om de intensiteit te doseren.",
+          "how": "Inspanning aan het einde van de looptest (0–10)"
+        }
+      },
+      "levels": {
+        "low": "Laag",
+        "reduced": "Verminderd",
+        "adequate": "Voldoende",
+        "light": "Licht",
+        "moderate": "Matig",
+        "vigorous": "Zwaar",
+        "very_hard": "Zeer zwaar"
+      },
+      "intensity": {
+        "light": "Licht",
+        "light_moderate": "Licht tot matig",
+        "moderate": "Matig",
+        "moderate_vigorous": "Matig tot zwaar",
+        "vigorous": "Zwaar"
+      },
+      "plan": {
+        "title": "Bewegingsvoorschrift",
+        "titlePatient": "Mijn bewegingsplan",
+        "subtitlePro": "Maak een concept op basis van metabool risico, voorgeschiedenis en functionele testen, pas het aan en keur het goed zodat de patiënt het ziet.",
+        "generate": "Concept maken",
+        "generated": "Concept gemaakt",
+        "save": "Concept opslaan",
+        "saved": "Concept opgeslagen",
+        "approve": "Goedkeuren en publiceren",
+        "approved": "Plan goedgekeurd: de patiënt kan het nu zien",
+        "delete": "Concept verwijderen",
+        "deleted": "Concept verwijderd",
+        "newVersion": "Nieuwe versie op basis van dit plan",
+        "copied": "Nieuw concept gemaakt op basis van het plan",
+        "none": "Je zorgverlener heeft nog geen bewegingsplan goedgekeurd.",
+        "noneProfessional": "Nog geen plannen. Leg functionele testen en de metabole voorgeschiedenis vast en maak een concept.",
+        "draftNotice": "Conceptvoorstel: de patiënt ziet het pas na je goedkeuring. Controleer en pas elk onderdeel aan.",
+        "notes": "Aanwijzingen voor de patiënt",
+        "approvedOn": "Goedgekeurd door je zorgverlener op {{date}}",
+        "why": "Waarom dit voorstel",
+        "status": {
+          "draft": "Concept",
+          "approved": "Goedgekeurd",
+          "archived": "Gearchiveerd"
+        }
+      },
+      "sections": {
+        "aerobic": "Duurtraining",
+        "strength": "Krachttraining",
+        "mobility": "Mobiliteit",
+        "balance": "Evenwicht",
+        "daily": "Dagelijkse activiteit",
+        "progression": "Opbouw",
+        "safety": "Veiligheid"
+      },
+      "fields": {
+        "days": "Dagen/week",
+        "minutes": "Minuten",
+        "intensity": "Intensiteit",
+        "rpeMin": "Min. inspanning (0–10)",
+        "rpeMax": "Max. inspanning (0–10)",
+        "rpeRange": "Inspanning {{min}}–{{max}} van 10",
+        "types": "Soort activiteit",
+        "setsMin": "Min. series",
+        "setsMax": "Max. series",
+        "repsMin": "Min. herhalingen",
+        "repsMax": "Max. herhalingen",
+        "muscleGroups": "Spiergroepen",
+        "exercises": "Oefeningen",
+        "focus": "Aandachtsgebieden",
+        "stepsStart": "Stappen/dag bij start",
+        "stepsTarget": "Doel stappen/dag",
+        "walkAfterMealsText": "10 minuten wandelen na de hoofdmaaltijden",
+        "breakSittingText": "Elke 30–60 minuten zitten 2–3 minuten opstaan en bewegen",
+        "notes": "Opmerkingen",
+        "summaryDays": "{{days}} dagen/week · {{minutes}} min",
+        "summaryStrength": "{{days}} dagen/week · {{sets}} sets × {{reps}} herhalingen",
+        "summarySteps": "{{start}} → {{target}} stappen/dag"
+      },
+      "options": {
+        "brisk_walking": "Stevig wandelen",
+        "walking_flat": "Wandelen op vlak terrein",
+        "cycling": "Fietsen",
+        "stationary_bike": "Hometrainer",
+        "aquatic": "Oefenen in water",
+        "dancing": "Dansen",
+        "intervals": "Intervallen",
+        "lower_limbs": "Benen",
+        "upper_limbs": "Armen",
+        "core": "Romp",
+        "grip": "Grijpkracht",
+        "sit_to_stand": "Opstaan uit een stoel",
+        "wall_pushups": "Opdrukken tegen de muur",
+        "band_rows": "Roeien met elastiek",
+        "glute_bridge": "Bilbrug",
+        "calf_raises": "Kuitheffingen",
+        "step_ups": "Opstappen op trede",
+        "grip_squeeze": "Bal of kneedgum knijpen",
+        "single_leg_stance": "Op één been staan",
+        "tandem_walk": "Koorddansersloop",
+        "sit_to_stand_slow": "Langzaam opstaan",
+        "hips": "Heupen",
+        "spine": "Wervelkolom",
+        "shoulders": "Schouders"
+      },
+      "progression": {
+        "aerobic_build": "Elke 1–2 weken 5 minuten per sessie toevoegen als het goed gaat, tot 30 minuten.",
+        "aerobic_150": "Opbouwen naar minstens 150 minuten matige activiteit per week.",
+        "aerobic_maintain": "Volume behouden en 1–2 korte intensievere intervallen toevoegen als er geen contra-indicaties zijn.",
+        "strength_load": "Als alle herhalingen makkelijk voelen (inspanning onder 5), gewicht of een set toevoegen.",
+        "steps_build": "Elke week ongeveer 1.000 stappen per dag meer tot het doel."
+      },
+      "safety": {
+        "medical_clearance": "Vereist medische beoordeling voordat de intensiteit omhoog gaat.",
+        "low_impact": "Kies activiteiten met weinig impact (fiets, water, vlak wandelen) en vermijd sprongen.",
+        "pain_rule": "Pijn tijdens het oefenen mag niet boven 3/10 komen of langer dan 24 uur duren; zo niet, verlaag de belasting en meld het aan je fysiotherapeut.",
+        "stop_symptoms": "Stop en zoek hulp bij pijn op de borst, ongewone kortademigheid, duizeligheid of hartkloppingen."
+      },
+      "rationale": {
+        "medical_clearance": "Cardiovasculaire voorgeschiedenis, zeer hoge bloeddruk of klinische waarschuwingen: voorzichtige intensiteit.",
+        "low_impact": "BMI ≥ 35, pijn ≥ 5/10 of beperkingen van het bewegingsapparaat: activiteiten met weinig impact.",
+        "activity_unknown": "Wekelijkse activiteit niet vastgelegd: start op instapniveau.",
+        "start_gradually": "Weinig activiteit, beperkte loopcapaciteit of veel pijn: korte sessies met geleidelijke opbouw.",
+        "below_150": "Minder dan 150 min/week activiteit: plan om het aanbevolen minimum te halen.",
+        "active": "Haalt al 150 min/week: onderhoud met meer krachttraining.",
+        "weak_lower_limbs": "Weinig keer opstaan of trage gang: extra beenkrachttraining.",
+        "weak_grip": "Lage knijpkracht: grijpoefeningen en armkracht.",
+        "balance_priority": "Leeftijd ≥ 65 of zwakke benen: evenwichtstraining 3 dagen per week.",
+        "sitting": "Zes uur of meer zitten per dag: actieve pauzes elke 30–60 minuten."
+      }
     }
   }
 }

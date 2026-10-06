@@ -2000,6 +2000,191 @@
         "lastData": "Última medição",
         "alerts": "Acompanhamento"
       }
+    },
+    "movement": {
+      "title": "Meu exercício",
+      "subtitle": "Testes funcionais e o seu plano de exercício supervisionado (METABOLIC MOVEMENT).",
+      "disclaimer": "O plano é preparado e aprovado pelo seu profissional de saúde. Não comece nem aumente a intensidade sem a indicação dele e pare se sentir dor no peito, falta de ar ou tontura.",
+      "loadError": "Não foi possível carregar os dados.",
+      "error": "Não foi possível concluir a ação.",
+      "units": {
+        "reps": "repetições"
+      },
+      "functional": {
+        "title": "Avaliação funcional",
+        "subtitle": "Testes simples de força, marcha e resistência. Repita-os para ver o seu progresso.",
+        "add": "Registrar testes",
+        "save": "Salvar testes",
+        "saved": "Testes funcionais salvos",
+        "saveError": "Não foi possível salvar os testes.",
+        "deleted": "Registro excluído",
+        "delete": "Excluir registro",
+        "date": "Data dos testes",
+        "latest": "Últimos resultados ({{date}})",
+        "history": "Histórico",
+        "empty": "Ainda não há testes funcionais registrados.",
+        "noReference": "Sem faixa de referência: registre o sexo (e altura/peso para a caminhada).",
+        "percentPredicted": "{{pct}}% do previsto ({{predicted}} m)",
+        "atLeastOne": "Informe pelo menos um resultado"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "Sentar e levantar 30 s",
+          "short": "Sentar-levantar",
+          "help": "Quantas vezes você se levanta da cadeira em 30 segundos. Reflete a força das pernas.",
+          "how": "Braços cruzados, levantadas completas em 30 s"
+        },
+        "grip": {
+          "name": "Força de preensão",
+          "short": "Preensão",
+          "help": "Força ao apertar um dinamômetro. Marcador da força muscular geral.",
+          "how": "Melhor tentativa com a mão dominante"
+        },
+        "gait_speed": {
+          "name": "Velocidade de marcha",
+          "short": "Marcha",
+          "help": "Velocidade ao caminhar normalmente num trecho curto. Velocidade baixa associa-se a menor capacidade física.",
+          "how": "Passo habitual em 4 m: distância ÷ segundos"
+        },
+        "walk_test": {
+          "name": "Teste de caminhada de 6 minutos",
+          "short": "TC6",
+          "help": "Distância percorrida em 6 minutos, comparada com o esperado para idade, sexo, altura e peso.",
+          "how": "Metros percorridos em 6 minutos"
+        },
+        "rpe": {
+          "name": "Esforço percebido (Borg CR10)",
+          "short": "Esforço",
+          "help": "Quão duro foi o esforço, de 0 (repouso) a 10 (máximo). Serve para dosar a intensidade.",
+          "how": "Esforço ao final da caminhada (0–10)"
+        }
+      },
+      "levels": {
+        "low": "Baixo",
+        "reduced": "Reduzido",
+        "adequate": "Adequado",
+        "light": "Leve",
+        "moderate": "Moderado",
+        "vigorous": "Vigoroso",
+        "very_hard": "Muito duro"
+      },
+      "intensity": {
+        "light": "Leve",
+        "light_moderate": "Leve a moderada",
+        "moderate": "Moderada",
+        "moderate_vigorous": "Moderada a vigorosa",
+        "vigorous": "Vigorosa"
+      },
+      "plan": {
+        "title": "Prescrição de exercício",
+        "titlePatient": "Meu plano de exercício",
+        "subtitlePro": "Gere um rascunho a partir do risco metabólico, histórico e testes funcionais, ajuste-o e aprove-o para que o paciente o veja.",
+        "generate": "Gerar rascunho",
+        "generated": "Rascunho criado",
+        "save": "Salvar rascunho",
+        "saved": "Rascunho salvo",
+        "approve": "Aprovar e publicar",
+        "approved": "Plano aprovado: o paciente já pode vê-lo",
+        "delete": "Excluir rascunho",
+        "deleted": "Rascunho excluído",
+        "newVersion": "Nova versão a partir deste plano",
+        "copied": "Novo rascunho criado a partir do plano",
+        "none": "Seu profissional ainda não aprovou um plano de exercício.",
+        "noneProfessional": "Ainda não há planos. Registre os testes funcionais e o histórico metabólico e gere um rascunho.",
+        "draftNotice": "Proposta em rascunho: o paciente só a verá após sua aprovação. Revise e ajuste cada seção.",
+        "notes": "Orientações para o paciente",
+        "approvedOn": "Aprovado pelo seu profissional em {{date}}",
+        "why": "Por que esta proposta",
+        "status": {
+          "draft": "Rascunho",
+          "approved": "Aprovado",
+          "archived": "Arquivado"
+        }
+      },
+      "sections": {
+        "aerobic": "Exercício aeróbico",
+        "strength": "Exercício de força",
+        "mobility": "Mobilidade",
+        "balance": "Equilíbrio",
+        "daily": "Atividade diária",
+        "progression": "Progressão",
+        "safety": "Segurança"
+      },
+      "fields": {
+        "days": "Dias/semana",
+        "minutes": "Minutos",
+        "intensity": "Intensidade",
+        "rpeMin": "Esforço mín. (0–10)",
+        "rpeMax": "Esforço máx. (0–10)",
+        "rpeRange": "Esforço {{min}}–{{max}} de 10",
+        "types": "Tipo de atividade",
+        "setsMin": "Séries mín.",
+        "setsMax": "Séries máx.",
+        "repsMin": "Repetições mín.",
+        "repsMax": "Repetições máx.",
+        "muscleGroups": "Grupos musculares",
+        "exercises": "Exercícios",
+        "focus": "Áreas de foco",
+        "stepsStart": "Passos/dia no início",
+        "stepsTarget": "Meta de passos/dia",
+        "walkAfterMealsText": "Caminhar 10 minutos após as refeições principais",
+        "breakSittingText": "Levantar e se mexer 2–3 minutos a cada 30–60 minutos sentado",
+        "notes": "Observações",
+        "summaryDays": "{{days}} dias/semana · {{minutes}} min",
+        "summaryStrength": "{{days}} dias/semana · {{sets}} séries × {{reps}} repetições",
+        "summarySteps": "{{start}} → {{target}} passos/dia"
+      },
+      "options": {
+        "brisk_walking": "Caminhada rápida",
+        "walking_flat": "Caminhada em terreno plano",
+        "cycling": "Bicicleta",
+        "stationary_bike": "Bicicleta ergométrica",
+        "aquatic": "Hidroginástica",
+        "dancing": "Dança",
+        "intervals": "Intervalos",
+        "lower_limbs": "Membros inferiores",
+        "upper_limbs": "Membros superiores",
+        "core": "Core (abdômen e costas)",
+        "grip": "Preensão",
+        "sit_to_stand": "Sentar e levantar da cadeira",
+        "wall_pushups": "Flexões na parede",
+        "band_rows": "Remada com elástico",
+        "glute_bridge": "Ponte de glúteos",
+        "calf_raises": "Elevação de panturrilhas",
+        "step_ups": "Subida no degrau",
+        "grip_squeeze": "Apertar bola ou massinha",
+        "single_leg_stance": "Apoio em uma perna",
+        "tandem_walk": "Caminhar em linha calcanhar-ponta",
+        "sit_to_stand_slow": "Sentar e levantar devagar",
+        "hips": "Quadris",
+        "spine": "Coluna",
+        "shoulders": "Ombros"
+      },
+      "progression": {
+        "aerobic_build": "Acrescentar 5 minutos por sessão a cada 1–2 semanas se bem tolerado, até 30 minutos.",
+        "aerobic_150": "Progredir até pelo menos 150 minutos semanais de atividade moderada.",
+        "aerobic_maintain": "Manter o volume e acrescentar 1–2 intervalos curtos mais intensos se não houver contraindicações.",
+        "strength_load": "Quando todas as repetições ficarem fáceis (esforço abaixo de 5), aumentar a carga ou uma série.",
+        "steps_build": "Aumentar cerca de 1.000 passos por dia a cada semana até a meta."
+      },
+      "safety": {
+        "medical_clearance": "Requer avaliação médica antes de aumentar a intensidade.",
+        "low_impact": "Preferir atividades de baixo impacto (bicicleta, água, caminhada no plano) e evitar saltos.",
+        "pain_rule": "A dor durante o exercício não deve passar de 3/10 nem durar mais de 24 h; se ocorrer, reduza a carga e avise seu fisioterapeuta.",
+        "stop_symptoms": "Pare e procure atendimento se sentir dor no peito, falta de ar incomum, tontura ou palpitações."
+      },
+      "rationale": {
+        "medical_clearance": "Antecedente cardiovascular, pressão muito alta ou alertas clínicos: intensidade conservadora.",
+        "low_impact": "IMC ≥ 35, dor ≥ 5/10 ou limitações musculoesqueléticas: atividades de baixo impacto.",
+        "activity_unknown": "Atividade física semanal não registrada: começa em nível inicial.",
+        "start_gradually": "Atividade baixa, pouca capacidade de caminhada ou dor alta: sessões curtas com progressão gradual.",
+        "below_150": "Menos de 150 min/semana de atividade: plano para atingir o mínimo recomendado.",
+        "active": "Já atinge 150 min/semana: manutenção com mais trabalho de força.",
+        "weak_lower_limbs": "Sentar-levantar baixo ou marcha reduzida: mais força de pernas.",
+        "weak_grip": "Preensão baixa: exercícios de pegada e força de braços.",
+        "balance_priority": "Idade ≥ 65 ou pernas fracas: equilíbrio 3 dias por semana.",
+        "sitting": "Seis horas ou mais sentado por dia: pausas ativas a cada 30–60 minutos."
+      }
     }
   }
 }

@@ -114,7 +114,8 @@
       "insulinResistance": "Insulinresistens",
       "metabolicRisk": "Metabol risk",
       "myMetabolicHealth": "Min metabola hälsa",
-      "professionalDashboard": "Professionell översikt"
+      "professionalDashboard": "Professionell översikt",
+      "metabolicMovement": "Min träning"
     },
     "sections": {
       "administration": "Administration",

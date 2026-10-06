@@ -2000,6 +2000,191 @@
         "lastData": "Letzte Messung",
         "alerts": "Nachsorge"
       }
+    },
+    "movement": {
+      "title": "Meine Bewegung",
+      "subtitle": "Funktionstests und dein betreuter Trainingsplan (METABOLIC MOVEMENT).",
+      "disclaimer": "Der Trainingsplan wird von deiner Fachkraft erstellt und freigegeben. Beginne oder steigere die Intensität nicht ohne deren Anweisung und höre auf bei Brustschmerz, Atemnot oder Schwindel.",
+      "loadError": "Daten konnten nicht geladen werden.",
+      "error": "Die Aktion konnte nicht abgeschlossen werden.",
+      "units": {
+        "reps": "Wdh."
+      },
+      "functional": {
+        "title": "Funktionelle Bewertung",
+        "subtitle": "Einfache Tests für Kraft, Gehen und Ausdauer. Wiederhole sie, um Fortschritte zu sehen.",
+        "add": "Tests erfassen",
+        "save": "Tests speichern",
+        "saved": "Funktionstests gespeichert",
+        "saveError": "Tests konnten nicht gespeichert werden.",
+        "deleted": "Eintrag gelöscht",
+        "delete": "Eintrag löschen",
+        "date": "Testdatum",
+        "latest": "Letzte Ergebnisse ({{date}})",
+        "history": "Verlauf",
+        "empty": "Noch keine Funktionstests erfasst.",
+        "noReference": "Kein Referenzbereich: Geschlecht (und für den Gehtest Größe/Gewicht) erfassen.",
+        "percentPredicted": "{{pct}} % des Sollwerts ({{predicted}} m)",
+        "atLeastOne": "Mindestens ein Ergebnis eingeben"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "30-Sekunden-Aufstehtest",
+          "short": "Aufstehen",
+          "help": "Wie oft du in 30 Sekunden vom Stuhl aufstehst. Zeigt die Beinkraft.",
+          "how": "Arme verschränkt, volle Aufsteher in 30 s"
+        },
+        "grip": {
+          "name": "Griffkraft",
+          "short": "Griff",
+          "help": "Druckkraft der Hand am Dynamometer. Marker der allgemeinen Muskelkraft.",
+          "how": "Bester Versuch mit der dominanten Hand"
+        },
+        "gait_speed": {
+          "name": "Ganggeschwindigkeit",
+          "short": "Gang",
+          "help": "Normales Gehtempo auf kurzer Strecke. Niedriges Tempo hängt mit geringerer Belastbarkeit zusammen.",
+          "how": "Normales Tempo über 4 m: Strecke ÷ Sekunden"
+        },
+        "walk_test": {
+          "name": "6-Minuten-Gehtest",
+          "short": "6-Min-Gehtest",
+          "help": "In 6 Minuten zurückgelegte Strecke, verglichen mit dem Sollwert für Alter, Geschlecht, Größe und Gewicht.",
+          "how": "Meter in 6 Minuten"
+        },
+        "rpe": {
+          "name": "Empfundene Anstrengung (Borg CR10)",
+          "short": "Anstrengung",
+          "help": "Wie anstrengend es sich anfühlte, von 0 (Ruhe) bis 10 (maximal). Dient zur Dosierung der Intensität.",
+          "how": "Anstrengung am Ende des Gehtests (0–10)"
+        }
+      },
+      "levels": {
+        "low": "Niedrig",
+        "reduced": "Vermindert",
+        "adequate": "Angemessen",
+        "light": "Leicht",
+        "moderate": "Mäßig",
+        "vigorous": "Intensiv",
+        "very_hard": "Sehr hart"
+      },
+      "intensity": {
+        "light": "Leicht",
+        "light_moderate": "Leicht bis mäßig",
+        "moderate": "Mäßig",
+        "moderate_vigorous": "Mäßig bis intensiv",
+        "vigorous": "Intensiv"
+      },
+      "plan": {
+        "title": "Trainingsverordnung",
+        "titlePatient": "Mein Trainingsplan",
+        "subtitlePro": "Erstelle einen Entwurf aus Stoffwechselrisiko, Anamnese und Funktionstests, passe ihn an und gib ihn frei, damit der Patient ihn sieht.",
+        "generate": "Entwurf erstellen",
+        "generated": "Entwurf erstellt",
+        "save": "Entwurf speichern",
+        "saved": "Entwurf gespeichert",
+        "approve": "Freigeben und veröffentlichen",
+        "approved": "Plan freigegeben: der Patient kann ihn jetzt sehen",
+        "delete": "Entwurf löschen",
+        "deleted": "Entwurf gelöscht",
+        "newVersion": "Neue Version aus diesem Plan",
+        "copied": "Neuer Entwurf aus dem Plan erstellt",
+        "none": "Deine Fachkraft hat noch keinen Trainingsplan freigegeben.",
+        "noneProfessional": "Noch keine Pläne. Erfasse Funktionstests und Stoffwechselanamnese und erstelle dann einen Entwurf.",
+        "draftNotice": "Entwurf: Der Patient sieht ihn erst nach deiner Freigabe. Prüfe und passe jeden Abschnitt an.",
+        "notes": "Hinweise für den Patienten",
+        "approvedOn": "Von deiner Fachkraft am {{date}} freigegeben",
+        "why": "Warum dieser Vorschlag",
+        "status": {
+          "draft": "Entwurf",
+          "approved": "Freigegeben",
+          "archived": "Archiviert"
+        }
+      },
+      "sections": {
+        "aerobic": "Ausdauertraining",
+        "strength": "Krafttraining",
+        "mobility": "Beweglichkeit",
+        "balance": "Gleichgewicht",
+        "daily": "Alltagsaktivität",
+        "progression": "Steigerung",
+        "safety": "Sicherheit"
+      },
+      "fields": {
+        "days": "Tage/Woche",
+        "minutes": "Minuten",
+        "intensity": "Intensität",
+        "rpeMin": "Min. Anstrengung (0–10)",
+        "rpeMax": "Max. Anstrengung (0–10)",
+        "rpeRange": "Anstrengung {{min}}–{{max}} von 10",
+        "types": "Art der Aktivität",
+        "setsMin": "Min. Sätze",
+        "setsMax": "Max. Sätze",
+        "repsMin": "Min. Wdh.",
+        "repsMax": "Max. Wdh.",
+        "muscleGroups": "Muskelgruppen",
+        "exercises": "Übungen",
+        "focus": "Schwerpunkte",
+        "stepsStart": "Schritte/Tag zu Beginn",
+        "stepsTarget": "Ziel Schritte/Tag",
+        "walkAfterMealsText": "Nach den Hauptmahlzeiten 10 Minuten gehen",
+        "breakSittingText": "Alle 30–60 Minuten Sitzen 2–3 Minuten aufstehen und bewegen",
+        "notes": "Notizen",
+        "summaryDays": "{{days}} Tage/Woche · {{minutes}} Min.",
+        "summaryStrength": "{{days}} Tage/Woche · {{sets}} Sätze × {{reps}} Wdh.",
+        "summarySteps": "{{start}} → {{target}} Schritte/Tag"
+      },
+      "options": {
+        "brisk_walking": "Zügiges Gehen",
+        "walking_flat": "Gehen in der Ebene",
+        "cycling": "Radfahren",
+        "stationary_bike": "Heimtrainer",
+        "aquatic": "Wassergymnastik",
+        "dancing": "Tanzen",
+        "intervals": "Intervalle",
+        "lower_limbs": "Beine",
+        "upper_limbs": "Arme",
+        "core": "Rumpf",
+        "grip": "Griffkraft",
+        "sit_to_stand": "Aufstehen vom Stuhl",
+        "wall_pushups": "Liegestütze an der Wand",
+        "band_rows": "Rudern mit Band",
+        "glute_bridge": "Beckenheben",
+        "calf_raises": "Wadenheben",
+        "step_ups": "Step-ups auf Stufe",
+        "grip_squeeze": "Ball oder Knete drücken",
+        "single_leg_stance": "Einbeinstand",
+        "tandem_walk": "Seiltänzergang",
+        "sit_to_stand_slow": "Langsames Aufstehen",
+        "hips": "Hüften",
+        "spine": "Wirbelsäule",
+        "shoulders": "Schultern"
+      },
+      "progression": {
+        "aerobic_build": "Alle 1–2 Wochen 5 Minuten pro Einheit ergänzen, wenn gut vertragen, bis 30 Minuten.",
+        "aerobic_150": "Auf mindestens 150 Minuten mäßige Aktivität pro Woche steigern.",
+        "aerobic_maintain": "Umfang halten und 1–2 kurze intensivere Intervalle ergänzen, wenn keine Gegenanzeigen bestehen.",
+        "strength_load": "Wenn alle Wiederholungen leicht fallen (Anstrengung unter 5), Last oder einen Satz ergänzen.",
+        "steps_build": "Jede Woche etwa 1.000 Schritte pro Tag mehr bis zum Ziel."
+      },
+      "safety": {
+        "medical_clearance": "Vor einer Intensitätssteigerung ist eine ärztliche Abklärung nötig.",
+        "low_impact": "Gelenkschonende Aktivitäten bevorzugen (Rad, Wasser, Gehen in der Ebene), Sprünge vermeiden.",
+        "pain_rule": "Schmerz beim Training sollte 3/10 nicht übersteigen und nicht länger als 24 h anhalten; sonst Last reduzieren und Physiotherapeut informieren.",
+        "stop_symptoms": "Bei Brustschmerz, ungewohnter Atemnot, Schwindel oder Herzrasen abbrechen und Hilfe suchen."
+      },
+      "rationale": {
+        "medical_clearance": "Kardiovaskuläre Vorgeschichte, sehr hoher Blutdruck oder klinische Warnungen: vorsichtige Intensität.",
+        "low_impact": "BMI ≥ 35, Schmerz ≥ 5/10 oder Einschränkungen des Bewegungsapparats: gelenkschonende Aktivitäten.",
+        "activity_unknown": "Wöchentliche Aktivität nicht erfasst: Beginn auf Einstiegsniveau.",
+        "start_gradually": "Geringe Aktivität, geringe Gehleistung oder starke Schmerzen: kurze Einheiten mit langsamer Steigerung.",
+        "below_150": "Unter 150 Min./Woche Aktivität: Plan, um das empfohlene Minimum zu erreichen.",
+        "active": "Erreicht bereits 150 Min./Woche: Erhalt mit mehr Krafttraining.",
+        "weak_lower_limbs": "Wenige Aufsteher oder langsamer Gang: zusätzliches Beinkrafttraining.",
+        "weak_grip": "Geringe Griffkraft: Greifübungen und Armkraft.",
+        "balance_priority": "Alter ≥ 65 oder schwache Beine: Gleichgewichtstraining 3 Tage pro Woche.",
+        "sitting": "Sechs oder mehr Stunden Sitzen pro Tag: aktive Pausen alle 30–60 Minuten."
+      }
     }
   }
 }

@@ -2000,6 +2000,191 @@
         "lastData": "Senaste mätning",
         "alerts": "Uppföljning"
       }
+    },
+    "movement": {
+      "title": "Min träning",
+      "subtitle": "Funktionstester och ditt handledda träningsprogram (METABOLIC MOVEMENT).",
+      "disclaimer": "Programmet tas fram och godkänns av din vårdpersonal. Börja inte och öka inte intensiteten utan deras besked, och avbryt vid bröstsmärta, andnöd eller yrsel.",
+      "loadError": "Kunde inte läsa in data.",
+      "error": "Åtgärden kunde inte slutföras.",
+      "units": {
+        "reps": "reps."
+      },
+      "functional": {
+        "title": "Funktionsbedömning",
+        "subtitle": "Enkla tester av styrka, gång och uthållighet. Upprepa dem för att se dina framsteg.",
+        "add": "Registrera tester",
+        "save": "Spara tester",
+        "saved": "Funktionstester sparade",
+        "saveError": "Kunde inte spara testerna.",
+        "deleted": "Posten raderad",
+        "delete": "Radera posten",
+        "date": "Testdatum",
+        "latest": "Senaste resultat ({{date}})",
+        "history": "Historik",
+        "empty": "Inga funktionstester registrerade ännu.",
+        "noReference": "Inget referensintervall: ange kön (och längd/vikt för gångtestet).",
+        "percentPredicted": "{{pct}} % av förväntat ({{predicted}} m)",
+        "atLeastOne": "Ange minst ett resultat"
+      },
+      "tests": {
+        "sit_to_stand": {
+          "name": "Uppresning från stol 30 s",
+          "short": "Uppresning",
+          "help": "Hur många gånger du reser dig från en stol på 30 sekunder. Speglar benstyrkan.",
+          "how": "Armarna i kors, hela uppresningar på 30 s"
+        },
+        "grip": {
+          "name": "Greppstyrka",
+          "short": "Grepp",
+          "help": "Handens klämkraft med dynamometer. En markör för allmän muskelstyrka.",
+          "how": "Bästa försöket med dominant hand"
+        },
+        "gait_speed": {
+          "name": "Gånghastighet",
+          "short": "Gång",
+          "help": "Vanlig gånghastighet på en kort sträcka. Låg hastighet hänger ihop med lägre fysisk förmåga.",
+          "how": "Vanlig takt över 4 m: sträcka ÷ sekunder"
+        },
+        "walk_test": {
+          "name": "6-minuters gångtest",
+          "short": "6MGT",
+          "help": "Sträcka på 6 minuter jämfört med förväntat värde för ålder, kön, längd och vikt.",
+          "how": "Meter på 6 minuter"
+        },
+        "rpe": {
+          "name": "Upplevd ansträngning (Borg CR10)",
+          "short": "Ansträngning",
+          "help": "Hur tung ansträngningen kändes, från 0 (vila) till 10 (max). Används för att dosera intensiteten.",
+          "how": "Ansträngning i slutet av gångtestet (0–10)"
+        }
+      },
+      "levels": {
+        "low": "Låg",
+        "reduced": "Nedsatt",
+        "adequate": "Tillräcklig",
+        "light": "Lätt",
+        "moderate": "Måttlig",
+        "vigorous": "Hög",
+        "very_hard": "Mycket hård"
+      },
+      "intensity": {
+        "light": "Lätt",
+        "light_moderate": "Lätt till måttlig",
+        "moderate": "Måttlig",
+        "moderate_vigorous": "Måttlig till hög",
+        "vigorous": "Hög"
+      },
+      "plan": {
+        "title": "Träningsordination",
+        "titlePatient": "Mitt träningsprogram",
+        "subtitlePro": "Skapa ett utkast från metabol risk, anamnes och funktionstester, justera och godkänn det så att patienten ser det.",
+        "generate": "Skapa utkast",
+        "generated": "Utkast skapat",
+        "save": "Spara utkast",
+        "saved": "Utkast sparat",
+        "approve": "Godkänn och publicera",
+        "approved": "Programmet godkänt: patienten kan nu se det",
+        "delete": "Radera utkast",
+        "deleted": "Utkast raderat",
+        "newVersion": "Ny version utifrån detta program",
+        "copied": "Nytt utkast skapat från programmet",
+        "none": "Din vårdpersonal har ännu inte godkänt något träningsprogram.",
+        "noneProfessional": "Inga program ännu. Registrera funktionstester och metabol anamnes och skapa sedan ett utkast.",
+        "draftNotice": "Utkast: patienten ser det inte förrän du godkänner det. Granska och justera varje avsnitt.",
+        "notes": "Anvisningar till patienten",
+        "approvedOn": "Godkänt av din vårdpersonal {{date}}",
+        "why": "Varför detta förslag",
+        "status": {
+          "draft": "Utkast",
+          "approved": "Godkänt",
+          "archived": "Arkiverat"
+        }
+      },
+      "sections": {
+        "aerobic": "Konditionsträning",
+        "strength": "Styrketräning",
+        "mobility": "Rörlighet",
+        "balance": "Balans",
+        "daily": "Daglig aktivitet",
+        "progression": "Stegring",
+        "safety": "Säkerhet"
+      },
+      "fields": {
+        "days": "Dagar/vecka",
+        "minutes": "Minuter",
+        "intensity": "Intensitet",
+        "rpeMin": "Min. ansträngning (0–10)",
+        "rpeMax": "Max. ansträngning (0–10)",
+        "rpeRange": "Ansträngning {{min}}–{{max}} av 10",
+        "types": "Typ av aktivitet",
+        "setsMin": "Min. set",
+        "setsMax": "Max. set",
+        "repsMin": "Min. reps.",
+        "repsMax": "Max. reps.",
+        "muscleGroups": "Muskelgrupper",
+        "exercises": "Övningar",
+        "focus": "Fokusområden",
+        "stepsStart": "Steg/dag i början",
+        "stepsTarget": "Mål steg/dag",
+        "walkAfterMealsText": "Promenera 10 minuter efter huvudmåltiderna",
+        "breakSittingText": "Res dig och rör dig 2–3 minuter var 30–60:e minut du sitter",
+        "notes": "Anteckningar",
+        "summaryDays": "{{days}} dagar/vecka · {{minutes}} min",
+        "summaryStrength": "{{days}} dagar/vecka · {{sets}} set × {{reps}} reps.",
+        "summarySteps": "{{start}} → {{target}} steg/dag"
+      },
+      "options": {
+        "brisk_walking": "Rask promenad",
+        "walking_flat": "Promenad på plan mark",
+        "cycling": "Cykling",
+        "stationary_bike": "Motionscykel",
+        "aquatic": "Vattengympa",
+        "dancing": "Dans",
+        "intervals": "Intervaller",
+        "lower_limbs": "Ben",
+        "upper_limbs": "Armar",
+        "core": "Bål",
+        "grip": "Grepp",
+        "sit_to_stand": "Uppresning från stol",
+        "wall_pushups": "Armhävningar mot vägg",
+        "band_rows": "Rodd med gummiband",
+        "glute_bridge": "Höftlyft",
+        "calf_raises": "Tåhävningar",
+        "step_ups": "Uppkliv på steg",
+        "grip_squeeze": "Klämma boll eller lera",
+        "single_leg_stance": "Stå på ett ben",
+        "tandem_walk": "Gå på linje häl mot tå",
+        "sit_to_stand_slow": "Långsam uppresning",
+        "hips": "Höfter",
+        "spine": "Rygg",
+        "shoulders": "Axlar"
+      },
+      "progression": {
+        "aerobic_build": "Lägg till 5 minuter per pass var 1–2 vecka om det tolereras väl, upp till 30 minuter.",
+        "aerobic_150": "Öka till minst 150 minuter måttlig aktivitet per vecka.",
+        "aerobic_maintain": "Behåll volymen och lägg till 1–2 korta intensivare intervaller om inget talar emot.",
+        "strength_load": "När alla repetitioner känns lätta (ansträngning under 5), öka belastningen eller lägg till ett set.",
+        "steps_build": "Öka med cirka 1 000 steg per dag varje vecka tills målet nås."
+      },
+      "safety": {
+        "medical_clearance": "Kräver medicinsk bedömning innan intensiteten ökas.",
+        "low_impact": "Välj skonsamma aktiviteter (cykel, vatten, plan promenad) och undvik hopp.",
+        "pain_rule": "Smärta under träning bör inte överstiga 3/10 eller sitta i mer än 24 h; minska annars belastningen och meddela din fysioterapeut.",
+        "stop_symptoms": "Avbryt och sök vård vid bröstsmärta, ovanlig andnöd, yrsel eller hjärtklappning."
+      },
+      "rationale": {
+        "medical_clearance": "Hjärt-kärlsjukdom, mycket högt blodtryck eller kliniska varningar: försiktig intensitet.",
+        "low_impact": "BMI ≥ 35, smärta ≥ 5/10 eller muskuloskeletala begränsningar: skonsamma aktiviteter.",
+        "activity_unknown": "Veckoaktivitet inte registrerad: börjar på grundnivå.",
+        "start_gradually": "Låg aktivitet, låg gångförmåga eller mycket smärta: korta pass med gradvis ökning.",
+        "below_150": "Under 150 min/vecka aktivitet: program för att nå rekommenderat minimum.",
+        "active": "Når redan 150 min/vecka: underhåll med mer styrketräning.",
+        "weak_lower_limbs": "Få uppresningar eller nedsatt gånghastighet: extra benstyrka.",
+        "weak_grip": "Låg greppstyrka: greppövningar och armstyrka.",
+        "balance_priority": "Ålder ≥ 65 eller svaga ben: balansträning 3 dagar per vecka.",
+        "sitting": "Sex timmar eller mer sittande per dag: aktiva pauser var 30–60:e minut."
+      }
     }
   }
 }
