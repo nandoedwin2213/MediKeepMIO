@@ -564,7 +564,8 @@
     "items": {
       "analytics": "数据分析",
       "maintenance": "维护",
-      "trash": "垃圾箱"
+      "trash": "垃圾箱",
+      "metabolicSettings": "临床配置"
     },
     "sections": {
       "dataManagement": "数据管理",
@@ -726,5 +727,37 @@
     "userCount": "{{count}}个用户",
     "userCount_one": "{{count}}个用户",
     "userCount_other": "{{count}}个用户"
+  },
+  "metabolicSettings": {
+    "title": "临床配置",
+    "subtitle": "代谢风险引擎使用的参考范围、代谢综合征标准、评分权重和警报规则。每次保存都会创建新版本；以前的评估保留其使用的版本。",
+    "version": "当前版本：{{version}}",
+    "defaults": "默认值",
+    "loadError": "无法加载临床配置。",
+    "saved": "已保存为版本 {{version}}",
+    "saveError": "无法保存配置",
+    "indicators": "参考范围",
+    "indicatorsHint": "每个范围包含“起始”值，直到“截至”值（不含）。留空表示无限制。",
+    "level": "级别",
+    "from": "起始 (≥)",
+    "to": "截至 (<)",
+    "remove": "删除",
+    "addBand": "添加范围",
+    "sex": {
+      "M": "男性",
+      "F": "女性"
+    },
+    "score": "代谢评分",
+    "weights": "各组成部分权重",
+    "points": "每级分数（0-100）",
+    "riskBands": "各风险级别的起始评分",
+    "coverage": "最低数据覆盖率（%）",
+    "syndrome": "代谢综合征标准",
+    "required": "所需标准数",
+    "alerts": "安全警报（“需要医生评估”）",
+    "addAlert": "添加警报",
+    "notes": "更改原因（可选）",
+    "reset": "加载默认值",
+    "save": "保存新版本"
   }
 }

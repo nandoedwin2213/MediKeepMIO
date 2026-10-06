@@ -111,7 +111,8 @@
       "treatments": "Лечение",
       "visitHistory": "История визитов",
       "vitalSigns": "Жизненные показатели",
-      "insulinResistance": "Инсулинорезистентность"
+      "insulinResistance": "Инсулинорезистентность",
+      "metabolicRisk": "Метаболический риск"
     },
     "sections": {
       "administration": "Администрирование",

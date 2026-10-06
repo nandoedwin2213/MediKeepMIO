@@ -74,9 +74,12 @@
       "weightMax": "El peso no puede superar {{max}} {{unit}}",
       "weightMin": "El peso debe ser al menos {{min}} {{unit}}",
       "waistMin": "La cintura debe ser al menos {{min}} {{unit}}",
-      "waistMax": "La cintura no puede superar {{max}} {{unit}}"
+      "waistMax": "La cintura no puede superar {{max}} {{unit}}",
+      "hipMin": "La cadera debe ser al menos {{min}} {{unit}}",
+      "hipMax": "La cadera no puede superar {{max}} {{unit}}"
     },
-    "waistCircumference": "Circunferencia de cintura"
+    "waistCircumference": "Circunferencia de cintura",
+    "hipCircumference": "Circunferencia de cadera"
   },
   "glucoseContext": {
     "after_meal": "Después de comer",

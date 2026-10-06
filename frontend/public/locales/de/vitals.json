@@ -74,9 +74,12 @@
       "weightMax": "Gewicht darf {{max}} {{unit}} nicht überschreiten",
       "weightMin": "Gewicht muss mindestens {{min}} {{unit}} betragen",
       "waistMin": "Der Taillenumfang muss mindestens {{min}} {{unit}} betragen",
-      "waistMax": "Der Taillenumfang darf {{max}} {{unit}} nicht überschreiten"
+      "waistMax": "Der Taillenumfang darf {{max}} {{unit}} nicht überschreiten",
+      "hipMin": "Die Hüfte muss mindestens {{min}} {{unit}} betragen",
+      "hipMax": "Die Hüfte darf {{max}} {{unit}} nicht überschreiten"
     },
-    "waistCircumference": "Taillenumfang"
+    "waistCircumference": "Taillenumfang",
+    "hipCircumference": "Hüftumfang"
   },
   "glucoseContext": {
     "after_meal": "Nach dem Essen",

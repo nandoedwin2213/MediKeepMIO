@@ -1740,5 +1740,175 @@
     "retry": "Spróbuj ponownie",
     "rangesTitle": "Zakresy referencyjne",
     "waistNoGender": "Uzupełnij płeć pacjenta, aby zobaczyć zakresy obwodu talii."
+  },
+  "metabolic": {
+    "title": "Ryzyko metaboliczne",
+    "subtitle": "Jak się mam? Co zwiększa moje ryzyko? Co powinienem poprawić?",
+    "selectPatient": "Wybierz pacjenta, aby zobaczyć jego ryzyko metaboliczne.",
+    "loadError": "Nie udało się obliczyć ryzyka metabolicznego.",
+    "retry": "Spróbuj ponownie",
+    "scoreTitle": "Wynik metaboliczny {{brand}}",
+    "scoreShort": "Wynik",
+    "insufficient": "Za mało danych",
+    "insufficientHint": "Zapisz obwód talii, ciśnienie, wyniki badań i wywiad metaboliczny, aby obliczyć wynik.",
+    "coverage": "Dane użyte do wyniku: {{pct}}%",
+    "lastUpdate": "Obliczono {{date}}",
+    "versionInfo": "algorytm {{algo}} · konfiguracja v{{config}}",
+    "disclaimer": "Wewnętrzny wskaźnik monitorowania, nie jest zwalidowanym narzędziem diagnostycznym. Wyniki wymagają oceny specjalisty.",
+    "risk": {
+      "favorable": "Korzystny stan metaboliczny",
+      "initial": "Początkowe ryzyko metaboliczne",
+      "moderate": "Umiarkowane ryzyko metaboliczne",
+      "high": "Wysokie ryzyko metaboliczne"
+    },
+    "syndrome": {
+      "title": "Kryteria zespołu metabolicznego",
+      "count": "Spełnione kryteria: {{met}} z {{total}} (wymagane {{required}})",
+      "noData": "brak danych",
+      "history": "z wywiadu",
+      "status": {
+        "compatible": "Zgodne: wymaga oceny specjalisty",
+        "not_compatible": "Niezgodne",
+        "indeterminate": "Niepełne dane"
+      },
+      "criteria": {
+        "waist": "Obwód talii",
+        "triglycerides": "Triglicerydy",
+        "hdl": "Niski HDL",
+        "blood_pressure": "Ciśnienie tętnicze",
+        "glucose": "Glukoza na czczo"
+      }
+    },
+    "alerts": {
+      "title": "Wymaga oceny lekarskiej",
+      "items": {
+        "glucose_critical": "Bardzo wysoka glukoza",
+        "hba1c_critical": "Bardzo wysokie HbA1c",
+        "systolic_critical": "Bardzo wysokie ciśnienie skurczowe",
+        "diastolic_critical": "Bardzo wysokie ciśnienie rozkurczowe",
+        "triglycerides_critical": "Bardzo wysokie triglicerydy",
+        "alt_critical": "Bardzo wysokie ALT",
+        "creatinine_critical": "Podwyższona kreatynina"
+      }
+    },
+    "factors": {
+      "title": "Co wpływa na Twój metabolizm?",
+      "subtitle": "Uporządkowane od czynnika najbardziej zwiększającego ryzyko do tych w normie.",
+      "empty": "Brak danych do analizy."
+    },
+    "indices": {
+      "title": "Wskaźniki metaboliczne",
+      "subtitle": "Obliczane automatycznie. Wskaźniki laboratoryjne łączą tylko wartości z tej samej próbki.",
+      "missing": "Brakujące dane: {{inputs}}"
+    },
+    "indicators": {
+      "homa_ir": "HOMA-IR",
+      "quicki": "QUICKI",
+      "tyg": "Wskaźnik TyG",
+      "tyg_bmi": "TyG-BMI",
+      "mets_ir": "METS-IR",
+      "tg_hdl": "Stosunek TG/HDL",
+      "glucose": "Glukoza na czczo",
+      "insulin": "Insulina na czczo",
+      "hba1c": "HbA1c",
+      "triglycerides": "Triglicerydy",
+      "hdl": "Cholesterol HDL",
+      "ldl": "Cholesterol LDL",
+      "total_cholesterol": "Cholesterol całkowity",
+      "alt": "ALT",
+      "ast": "AST",
+      "ggt": "GGTP",
+      "creatinine": "Kreatynina",
+      "uric_acid": "Kwas moczowy",
+      "bmi": "Wskaźnik BMI",
+      "weight": "Masa ciała",
+      "height": "Wzrost",
+      "waist": "Talia",
+      "hip": "Biodra",
+      "waist_height": "Talia/wzrost",
+      "waist_hip": "Talia/biodra",
+      "systolic": "Ciśnienie skurczowe",
+      "diastolic": "Ciśnienie rozkurczowe",
+      "blood_pressure": "Ciśnienie tętnicze",
+      "physical_activity": "Aktywność fizyczna",
+      "sitting": "Godziny siedzenia",
+      "sleep": "Sen",
+      "sugary_drinks": "Słodzone napoje",
+      "ultraprocessed": "Żywność wysoko przetworzona",
+      "fruit_veg": "Owoce i warzywa",
+      "smoking": "Palenie",
+      "alcohol": "Alkohol"
+    },
+    "explain": {
+      "homa_ir": "Szacuje, jak Twój organizm reaguje na insulinę.",
+      "quicki": "Szacuje wrażliwość na insulinę: im niższy, tym gorsza odpowiedź.",
+      "tyg": "Łączy triglicerydy i glukozę, aby oszacować ryzyko metaboliczne.",
+      "tyg_bmi": "Wskaźnik TyG skorygowany o masę ciała.",
+      "mets_ir": "Łączy glukozę, triglicerydy, HDL i BMI, aby oszacować insulinooporność.",
+      "tg_hdl": "Stosunek triglicerydów do dobrego cholesterolu.",
+      "waist_height": "Obwód talii powinien być mniejszy niż połowa wzrostu.",
+      "waist_hip": "Pokazuje, ile tłuszczu gromadzi się na brzuchu."
+    },
+    "evolution": {
+      "title": "Zmiany wyniku",
+      "empty": "Zmiany pojawią się po dwóch lub więcej ocenach z nowymi danymi."
+    },
+    "actions": {
+      "profile": "Wywiad metaboliczny i nawyki",
+      "addLab": "Wyniki badań",
+      "addVitals": "Parametry życiowe"
+    },
+    "warnings": {
+      "unknownUnit": "{{variable}}: nierozpoznana jednostka „{{unit}}”, wartość nie została użyta"
+    },
+    "profile": {
+      "title": "Wywiad metaboliczny",
+      "subtitle": "Proste pytania o przebyte choroby i nawyki. Pomagają obliczyć Twoje ryzyko metaboliczne.",
+      "loadError": "Nie udało się wczytać wywiadu metabolicznego.",
+      "saved": "Wywiad metaboliczny zapisany",
+      "saveError": "Nie udało się zapisać wywiadu metabolicznego.",
+      "range": "Od {{min}} do {{max}}",
+      "cancel": "Anuluj",
+      "save": "Zapisz",
+      "sections": {
+        "history": "Czy rozpoznano u Ciebie…?",
+        "habits": "Twoje nawyki",
+        "limitations": "Ograniczenia i cele"
+      },
+      "fields": {
+        "has_diabetes": "Cukrzyca",
+        "has_prediabetes": "Stan przedcukrzycowy",
+        "has_hypertension": "Nadciśnienie",
+        "has_dyslipidemia": "Wysoki cholesterol lub triglicerydy",
+        "has_fatty_liver": "Stłuszczenie wątroby",
+        "has_obesity": "Otyłość",
+        "has_cardiovascular_disease": "Choroba serca lub udar",
+        "family_diabetes": "Rodzice lub rodzeństwo z cukrzycą",
+        "physical_activity_minutes_week": "Minuty umiarkowanej aktywności tygodniowo (szybki marsz, rower…)",
+        "sitting_hours_day": "Godziny siedzenia dziennie",
+        "sleep_hours": "Godziny snu na noc",
+        "sugary_drinks_per_week": "Słodzone napoje tygodniowo",
+        "ultraprocessed_per_week": "Żywność wysoko przetworzona tygodniowo (przekąski, fast food, słodycze)",
+        "fruit_veg_servings_day": "Porcje owoców i warzyw dziennie",
+        "alcohol": "Alkohol",
+        "smoking": "Tytoń",
+        "musculoskeletal_limitations": "Ból, urazy lub ograniczenia fizyczne",
+        "pain_level": "Zwykły poziom bólu (0-10)",
+        "goals": "Co chcesz osiągnąć?"
+      },
+      "options": {
+        "alcohol": {
+          "none": "Nie piję",
+          "occasional": "Okazjonalnie",
+          "weekly": "Co tydzień",
+          "daily": "Codziennie"
+        },
+        "smoking": {
+          "never": "Nigdy nie paliłem",
+          "former": "Paliłem wcześniej",
+          "current": "Palę"
+        }
+      }
+    }
   }
 }

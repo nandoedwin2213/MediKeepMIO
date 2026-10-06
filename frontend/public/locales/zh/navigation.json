@@ -111,7 +111,8 @@
       "treatments": "治疗",
       "visitHistory": "就诊历史",
       "vitalSigns": "生命体征",
-      "insulinResistance": "胰岛素抵抗"
+      "insulinResistance": "胰岛素抵抗",
+      "metabolicRisk": "代谢风险"
     },
     "sections": {
       "administration": "管理",

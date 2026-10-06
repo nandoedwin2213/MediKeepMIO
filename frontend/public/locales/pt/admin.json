@@ -564,7 +564,8 @@
     "items": {
       "analytics": "Análises",
       "maintenance": "Manutenção",
-      "trash": "Lixeira"
+      "trash": "Lixeira",
+      "metabolicSettings": "Configuração clínica"
     },
     "sections": {
       "dataManagement": "Gerenciamento de Dados",
@@ -726,5 +727,37 @@
     "userCount": "{{count}} usuários",
     "userCount_one": "{{count}} usuário",
     "userCount_other": "{{count}} usuários"
+  },
+  "metabolicSettings": {
+    "title": "Configuração clínica",
+    "subtitle": "Faixas de referência, critérios de síndrome metabólica, pesos do score e regras de alerta do motor de risco metabólico. Cada salvamento cria uma nova versão; as avaliações anteriores mantêm sua versão.",
+    "version": "Versão ativa: {{version}}",
+    "defaults": "valores padrão",
+    "loadError": "Não foi possível carregar a configuração clínica.",
+    "saved": "Salva como versão {{version}}",
+    "saveError": "Não foi possível salvar a configuração",
+    "indicators": "Faixas de referência",
+    "indicatorsHint": "Cada faixa inclui o valor «a partir de» e vai até o valor «até» sem incluí-lo. Deixe vazio para sem limite.",
+    "level": "Nível",
+    "from": "A partir de (≥)",
+    "to": "Até (<)",
+    "remove": "Remover",
+    "addBand": "Adicionar faixa",
+    "sex": {
+      "M": "Homens",
+      "F": "Mulheres"
+    },
+    "score": "Score metabólico",
+    "weights": "Peso de cada componente",
+    "points": "Pontos por nível (0-100)",
+    "riskBands": "Score a partir do qual começa cada nível de risco",
+    "coverage": "Cobertura mínima de dados (%)",
+    "syndrome": "Critérios de síndrome metabólica",
+    "required": "Critérios necessários",
+    "alerts": "Alertas de segurança («Requer avaliação médica»)",
+    "addAlert": "Adicionar alerta",
+    "notes": "Motivo da alteração (opcional)",
+    "reset": "Carregar valores padrão",
+    "save": "Salvar nova versão"
   }
 }

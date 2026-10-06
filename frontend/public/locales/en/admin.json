@@ -564,7 +564,8 @@
     "items": {
       "analytics": "Analytics",
       "maintenance": "Maintenance",
-      "trash": "Trash"
+      "trash": "Trash",
+      "metabolicSettings": "Clinical configuration"
     },
     "sections": {
       "dataManagement": "Data Management",
@@ -726,5 +727,37 @@
     "userCount": "{{count}} users",
     "userCount_one": "{{count}} user",
     "userCount_other": "{{count}} users"
+  },
+  "metabolicSettings": {
+    "title": "Clinical configuration",
+    "subtitle": "Reference ranges, metabolic syndrome criteria, score weights and alert rules used by the metabolic risk engine. Each save creates a new version; previous evaluations keep the version they used.",
+    "version": "Active version: {{version}}",
+    "defaults": "defaults",
+    "loadError": "Could not load the clinical configuration.",
+    "saved": "Saved as version {{version}}",
+    "saveError": "Could not save the configuration",
+    "indicators": "Reference ranges",
+    "indicatorsHint": "Each range includes the \"from\" value and goes up to, but not including, the \"up to\" value. Leave a field empty for no limit.",
+    "level": "Level",
+    "from": "From (≥)",
+    "to": "Up to (<)",
+    "remove": "Remove",
+    "addBand": "Add range",
+    "sex": {
+      "M": "Men",
+      "F": "Women"
+    },
+    "score": "Metabolic score",
+    "weights": "Weight of each component",
+    "points": "Points per level (0-100)",
+    "riskBands": "Score from which each risk level starts",
+    "coverage": "Minimum data coverage (%)",
+    "syndrome": "Metabolic syndrome criteria",
+    "required": "Criteria needed",
+    "alerts": "Safety alerts (\"Requires medical assessment\")",
+    "addAlert": "Add alert",
+    "notes": "Reason for the change (optional)",
+    "reset": "Load default values",
+    "save": "Save new version"
   }
 }

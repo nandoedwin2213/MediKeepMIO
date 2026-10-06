@@ -74,9 +74,12 @@
       "weightMax": "Le poids ne peut pas dépasser {{max}} {{unit}}",
       "weightMin": "Le poids doit valoir au moins {{min}} {{unit}}",
       "waistMin": "Le tour de taille doit être d'au moins {{min}} {{unit}}",
-      "waistMax": "Le tour de taille ne peut pas dépasser {{max}} {{unit}}"
+      "waistMax": "Le tour de taille ne peut pas dépasser {{max}} {{unit}}",
+      "hipMin": "Le tour de hanches doit être d'au moins {{min}} {{unit}}",
+      "hipMax": "Le tour de hanches ne peut pas dépasser {{max}} {{unit}}"
     },
-    "waistCircumference": "Tour de taille"
+    "waistCircumference": "Tour de taille",
+    "hipCircumference": "Tour de hanches"
   },
   "glucoseContext": {
     "after_meal": "Après un repas",

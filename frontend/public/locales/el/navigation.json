@@ -111,7 +111,8 @@
       "treatments": "Θεραπείες",
       "visitHistory": "Ιστορικό Επισκέψεων",
       "vitalSigns": "Ζωτικά Σημεία",
-      "insulinResistance": "Αντίσταση στην ινσουλίνη"
+      "insulinResistance": "Αντίσταση στην ινσουλίνη",
+      "metabolicRisk": "Μεταβολικός κίνδυνος"
     },
     "sections": {
       "administration": "Διαχείριση",

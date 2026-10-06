@@ -74,9 +74,12 @@
       "weightMax": "Waga nie może przekraczać {{max}} {{unit}}",
       "weightMin": "Waga musi wynosić co najmniej {{min}} {{unit}}",
       "waistMin": "Obwód talii musi wynosić co najmniej {{min}} {{unit}}",
-      "waistMax": "Obwód talii nie może przekraczać {{max}} {{unit}}"
+      "waistMax": "Obwód talii nie może przekraczać {{max}} {{unit}}",
+      "hipMin": "Obwód bioder musi wynosić co najmniej {{min}} {{unit}}",
+      "hipMax": "Obwód bioder nie może przekraczać {{max}} {{unit}}"
     },
-    "waistCircumference": "Obwód talii"
+    "waistCircumference": "Obwód talii",
+    "hipCircumference": "Obwód bioder"
   },
   "glucoseContext": {
     "after_meal": "Po posiłku",

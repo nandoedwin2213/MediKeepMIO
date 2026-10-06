@@ -564,7 +564,8 @@
     "items": {
       "analytics": "Analityka",
       "maintenance": "Konserwacja",
-      "trash": "Kosz"
+      "trash": "Kosz",
+      "metabolicSettings": "Konfiguracja kliniczna"
     },
     "sections": {
       "dataManagement": "Zarządzanie danymi",
@@ -726,5 +727,37 @@
     "userCount": "{{count}} użytkowników",
     "userCount_one": "{{count}} użytkownik",
     "userCount_other": "{{count}} użytkowników"
+  },
+  "metabolicSettings": {
+    "title": "Konfiguracja kliniczna",
+    "subtitle": "Zakresy referencyjne, kryteria zespołu metabolicznego, wagi wyniku i reguły alertów silnika ryzyka metabolicznego. Każdy zapis tworzy nową wersję; wcześniejsze oceny zachowują swoją wersję.",
+    "version": "Aktywna wersja: {{version}}",
+    "defaults": "wartości domyślne",
+    "loadError": "Nie udało się wczytać konfiguracji klinicznej.",
+    "saved": "Zapisano jako wersję {{version}}",
+    "saveError": "Nie udało się zapisać konfiguracji",
+    "indicators": "Zakresy referencyjne",
+    "indicatorsHint": "Każdy zakres obejmuje wartość „od” i sięga do wartości „do”, bez niej. Zostaw puste, jeśli brak limitu.",
+    "level": "Poziom",
+    "from": "Od (≥)",
+    "to": "Do (<)",
+    "remove": "Usuń",
+    "addBand": "Dodaj zakres",
+    "sex": {
+      "M": "Mężczyźni",
+      "F": "Kobiety"
+    },
+    "score": "Wynik metaboliczny",
+    "weights": "Waga każdego składnika",
+    "points": "Punkty za poziom (0-100)",
+    "riskBands": "Wynik, od którego zaczyna się każdy poziom ryzyka",
+    "coverage": "Minimalne pokrycie danych (%)",
+    "syndrome": "Kryteria zespołu metabolicznego",
+    "required": "Wymagane kryteria",
+    "alerts": "Alerty bezpieczeństwa („Wymaga oceny lekarskiej”)",
+    "addAlert": "Dodaj alert",
+    "notes": "Powód zmiany (opcjonalnie)",
+    "reset": "Wczytaj wartości domyślne",
+    "save": "Zapisz nową wersję"
   }
 }

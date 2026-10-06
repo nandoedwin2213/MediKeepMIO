@@ -44,6 +44,7 @@ import {
   IconShield,
   IconBandage,
   IconDeviceDesktop,
+  IconTarget,
 } from '@tabler/icons-react';
 import { PageHeader } from '../components';
 import { PatientSelector } from '../components/medical';
@@ -276,6 +277,12 @@ const Dashboard = () => {
 
   // Core medical modules - organized in 2x2 grid sections like the schematic
   const coreModules = [
+    {
+      title: t('navigation:sidebarNav.items.metabolicRisk', 'Metabolic risk'),
+      icon: IconTarget,
+      color: 'yellow',
+      link: '/metabolic-risk',
+    },
     {
       title: t(
         'navigation:sidebarNav.items.insulinResistance',

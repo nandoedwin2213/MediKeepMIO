@@ -50,7 +50,8 @@
     "kg",
     "lbs",
     "mmHg",
-    "{{name}} - Details"
+    "{{name}} - Details",
+    "Score"
   ],
   "el": [
     "Email",
@@ -91,7 +92,10 @@
     "kg",
     "lbs",
     "mmHg",
-    "{{count}} Error"
+    "{{count}} Error",
+    "Alcohol",
+    "Prediabetes",
+    "Score"
   ],
   "fr": [
     "1 dose",
@@ -168,7 +172,8 @@
     "{{count}} vaccinations",
     "{{minutes}} minutes",
     "{{size}} total",
-    "📝 Notes"
+    "📝 Notes",
+    "Score"
   ],
   "it": [
     "1 dose",
@@ -247,7 +252,9 @@
     "{{count}} doses",
     "{{count}} test",
     "{{count}} tests",
-    "{{name}} - Details"
+    "{{name}} - Details",
+    "Creatinine",
+    "Prediabetes"
   ],
   "pl": [
     "Administrator",
@@ -350,7 +357,8 @@
     "mmHg",
     "patient",
     "{{count}} patient",
-    "{{count}} test"
+    "{{count}} test",
+    "Prediabetes"
   ],
   "th": [
     "GitHub ID:",

@@ -111,7 +111,8 @@
       "treatments": "Behandlingar",
       "visitHistory": "Besökshistorik",
       "vitalSigns": "Vitalparametrar",
-      "insulinResistance": "Insulinresistens"
+      "insulinResistance": "Insulinresistens",
+      "metabolicRisk": "Metabol risk"
     },
     "sections": {
       "administration": "Administration",

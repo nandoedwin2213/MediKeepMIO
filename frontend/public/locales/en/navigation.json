@@ -111,7 +111,8 @@
       "treatments": "Treatments",
       "visitHistory": "Visit History",
       "vitalSigns": "Vital Signs",
-      "insulinResistance": "Insulin Resistance"
+      "insulinResistance": "Insulin Resistance",
+      "metabolicRisk": "Metabolic risk"
     },
     "sections": {
       "administration": "Administration",

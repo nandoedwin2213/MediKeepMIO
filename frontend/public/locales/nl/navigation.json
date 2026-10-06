@@ -111,7 +111,8 @@
       "treatments": "Behandelingen",
       "visitHistory": "Bezoekgeschiedenis",
       "vitalSigns": "Vitale functies",
-      "insulinResistance": "Insulineresistentie"
+      "insulinResistance": "Insulineresistentie",
+      "metabolicRisk": "Metabool risico"
     },
     "sections": {
       "administration": "Beheer",

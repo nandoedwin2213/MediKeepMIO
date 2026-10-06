@@ -1740,5 +1740,175 @@
     "retry": "Tentar novamente",
     "rangesTitle": "Faixas de referência",
     "waistNoGender": "Registre o sexo do paciente para ver as faixas de cintura."
+  },
+  "metabolic": {
+    "title": "Risco metabólico",
+    "subtitle": "Como estou? O que está aumentando meu risco? O que devo melhorar?",
+    "selectPatient": "Selecione um paciente para ver seu risco metabólico.",
+    "loadError": "Não foi possível calcular o risco metabólico.",
+    "retry": "Tentar novamente",
+    "scoreTitle": "Score Metabólico {{brand}}",
+    "scoreShort": "Pontuação",
+    "insufficient": "Ainda não há dados suficientes",
+    "insufficientHint": "Registre cintura, pressão arterial, exames e o histórico metabólico para calcular o score.",
+    "coverage": "Dados usados no score: {{pct}}%",
+    "lastUpdate": "Calculado em {{date}}",
+    "versionInfo": "algoritmo {{algo}} · configuração v{{config}}",
+    "disclaimer": "Indicador interno de acompanhamento, não é uma ferramenta diagnóstica validada. Os resultados exigem avaliação profissional.",
+    "risk": {
+      "favorable": "Estado metabólico favorável",
+      "initial": "Risco metabólico inicial",
+      "moderate": "Risco metabólico moderado",
+      "high": "Risco metabólico elevado"
+    },
+    "syndrome": {
+      "title": "Critérios de síndrome metabólica",
+      "count": "{{met}} de {{total}} critérios presentes (são necessários {{required}})",
+      "noData": "sem dados",
+      "history": "por antecedente",
+      "status": {
+        "compatible": "Compatível: requer avaliação profissional",
+        "not_compatible": "Não compatível",
+        "indeterminate": "Dados incompletos"
+      },
+      "criteria": {
+        "waist": "Cintura abdominal",
+        "triglycerides": "Triglicerídeos",
+        "hdl": "HDL baixo",
+        "blood_pressure": "Pressão arterial",
+        "glucose": "Glicemia de jejum"
+      }
+    },
+    "alerts": {
+      "title": "Requer avaliação médica",
+      "items": {
+        "glucose_critical": "Glicose muito alta",
+        "hba1c_critical": "HbA1c muito alta",
+        "systolic_critical": "Pressão sistólica muito alta",
+        "diastolic_critical": "Pressão diastólica muito alta",
+        "triglycerides_critical": "Triglicerídeos muito altos",
+        "alt_critical": "ALT muito alta",
+        "creatinine_critical": "Creatinina alta"
+      }
+    },
+    "factors": {
+      "title": "O que está afetando seu metabolismo?",
+      "subtitle": "Ordenados do fator que mais aumenta seu risco até os que estão na faixa normal.",
+      "empty": "Ainda não há dados para analisar."
+    },
+    "indices": {
+      "title": "Índices metabólicos",
+      "subtitle": "Calculados automaticamente. Os índices laboratoriais só combinam valores da mesma amostra.",
+      "missing": "Faltam dados: {{inputs}}"
+    },
+    "indicators": {
+      "homa_ir": "HOMA-IR",
+      "quicki": "QUICKI",
+      "tyg": "Índice TyG",
+      "tyg_bmi": "TyG-IMC",
+      "mets_ir": "METS-IR",
+      "tg_hdl": "Relação TG/HDL",
+      "glucose": "Glicemia de jejum",
+      "insulin": "Insulina de jejum",
+      "hba1c": "HbA1c",
+      "triglycerides": "Triglicerídeos",
+      "hdl": "Colesterol HDL",
+      "ldl": "Colesterol LDL",
+      "total_cholesterol": "Colesterol total",
+      "alt": "ALT",
+      "ast": "AST",
+      "ggt": "GGT",
+      "creatinine": "Creatinina",
+      "uric_acid": "Ácido úrico",
+      "bmi": "IMC",
+      "weight": "Peso",
+      "height": "Altura",
+      "waist": "Cintura",
+      "hip": "Quadril",
+      "waist_height": "Cintura/altura",
+      "waist_hip": "Cintura/quadril",
+      "systolic": "Pressão sistólica",
+      "diastolic": "Pressão diastólica",
+      "blood_pressure": "Pressão arterial",
+      "physical_activity": "Atividade física",
+      "sitting": "Horas sentado",
+      "sleep": "Sono",
+      "sugary_drinks": "Bebidas açucaradas",
+      "ultraprocessed": "Ultraprocessados",
+      "fruit_veg": "Frutas e verduras",
+      "smoking": "Tabagismo",
+      "alcohol": "Álcool"
+    },
+    "explain": {
+      "homa_ir": "Estima como seu organismo está respondendo à insulina.",
+      "quicki": "Estima a sensibilidade à insulina: quanto mais baixo, pior a resposta.",
+      "tyg": "Combina triglicerídeos e glicose para estimar o risco metabólico.",
+      "tyg_bmi": "Índice TyG ajustado ao peso corporal.",
+      "mets_ir": "Combina glicose, triglicerídeos, HDL e IMC para estimar a resistência à insulina.",
+      "tg_hdl": "Relação entre triglicerídeos e colesterol bom.",
+      "waist_height": "Sua cintura deveria medir menos da metade da sua altura.",
+      "waist_hip": "Indica quanta gordura se acumula no abdômen."
+    },
+    "evolution": {
+      "title": "Evolução do score",
+      "empty": "A evolução aparece a partir de duas avaliações com dados novos."
+    },
+    "actions": {
+      "profile": "Histórico metabólico e hábitos",
+      "addLab": "Exames laboratoriais",
+      "addVitals": "Sinais vitais"
+    },
+    "warnings": {
+      "unknownUnit": "{{variable}}: unidade «{{unit}}» não reconhecida, valor não usado"
+    },
+    "profile": {
+      "title": "Histórico metabólico",
+      "subtitle": "Perguntas simples sobre seus antecedentes e hábitos. Ajudam a calcular seu risco metabólico.",
+      "loadError": "Não foi possível carregar o histórico metabólico.",
+      "saved": "Histórico metabólico salvo",
+      "saveError": "Não foi possível salvar o histórico metabólico.",
+      "range": "Entre {{min}} e {{max}}",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "sections": {
+        "history": "Já disseram que você tem…?",
+        "habits": "Seus hábitos",
+        "limitations": "Limitações e objetivos"
+      },
+      "fields": {
+        "has_diabetes": "Diabetes",
+        "has_prediabetes": "Pré-diabetes",
+        "has_hypertension": "Pressão alta",
+        "has_dyslipidemia": "Colesterol ou triglicerídeos altos",
+        "has_fatty_liver": "Fígado gorduroso",
+        "has_obesity": "Obesidade",
+        "has_cardiovascular_disease": "Doença cardíaca ou AVC",
+        "family_diabetes": "Pais ou irmãos com diabetes",
+        "physical_activity_minutes_week": "Minutos por semana de atividade moderada (caminhada rápida, bicicleta…)",
+        "sitting_hours_day": "Horas sentado por dia",
+        "sleep_hours": "Horas de sono por noite",
+        "sugary_drinks_per_week": "Bebidas açucaradas ou refrigerantes por semana",
+        "ultraprocessed_per_week": "Ultraprocessados por semana (salgadinhos, fast food, doces)",
+        "fruit_veg_servings_day": "Porções de frutas e verduras por dia",
+        "alcohol": "Álcool",
+        "smoking": "Tabaco",
+        "musculoskeletal_limitations": "Dor, lesões ou limitações físicas",
+        "pain_level": "Nível de dor habitual (0-10)",
+        "goals": "O que você gostaria de alcançar?"
+      },
+      "options": {
+        "alcohol": {
+          "none": "Não bebo",
+          "occasional": "Ocasionalmente",
+          "weekly": "Toda semana",
+          "daily": "Todos os dias"
+        },
+        "smoking": {
+          "never": "Nunca fumei",
+          "former": "Eu fumava",
+          "current": "Fumo"
+        }
+      }
+    }
   }
 }

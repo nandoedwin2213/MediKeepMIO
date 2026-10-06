@@ -564,7 +564,8 @@
     "items": {
       "analytics": "Analys",
       "maintenance": "Underhåll",
-      "trash": "Papperskorg"
+      "trash": "Papperskorg",
+      "metabolicSettings": "Klinisk konfiguration"
     },
     "sections": {
       "dataManagement": "Datahantering",
@@ -726,5 +727,37 @@
     "userCount": "{{count}} användare",
     "userCount_one": "{{count}} användare",
     "userCount_other": "{{count}} användare"
+  },
+  "metabolicSettings": {
+    "title": "Klinisk konfiguration",
+    "subtitle": "Referensintervall, kriterier för metabolt syndrom, poängvikter och larmregler för den metabola riskmotorn. Varje sparning skapar en ny version; tidigare bedömningar behåller sin version.",
+    "version": "Aktiv version: {{version}}",
+    "defaults": "standardvärden",
+    "loadError": "Det gick inte att läsa in den kliniska konfigurationen.",
+    "saved": "Sparad som version {{version}}",
+    "saveError": "Det gick inte att spara konfigurationen",
+    "indicators": "Referensintervall",
+    "indicatorsHint": "Varje intervall inkluderar värdet \"från\" och går upp till, men inte med, värdet \"till\". Lämna tomt för ingen gräns.",
+    "level": "Nivå",
+    "from": "Från (≥)",
+    "to": "Till (<)",
+    "remove": "Ta bort",
+    "addBand": "Lägg till intervall",
+    "sex": {
+      "M": "Män",
+      "F": "Kvinnor"
+    },
+    "score": "Metabol poäng",
+    "weights": "Vikt för varje komponent",
+    "points": "Poäng per nivå (0-100)",
+    "riskBands": "Poäng där varje risknivå börjar",
+    "coverage": "Minsta datatäckning (%)",
+    "syndrome": "Kriterier för metabolt syndrom",
+    "required": "Kriterier som krävs",
+    "alerts": "Säkerhetslarm (\"Kräver medicinsk bedömning\")",
+    "addAlert": "Lägg till larm",
+    "notes": "Orsak till ändringen (valfritt)",
+    "reset": "Läs in standardvärden",
+    "save": "Spara ny version"
   }
 }

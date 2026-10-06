@@ -1,0 +1,21 @@
+import { apiService } from './index';
+
+const metabolicApi = {
+  getConfig: signal => apiService.get('/metabolic/config', { signal }),
+  getDefaultConfig: signal =>
+    apiService.get('/metabolic/config/default', { signal }),
+  updateConfig: (config, notes) =>
+    apiService.put('/metabolic/config', { config, notes }),
+  evaluate: (patientId, signal) =>
+    apiService.post(`/metabolic/patients/${patientId}/evaluate`, null, {
+      signal,
+    }),
+  getAssessments: (patientId, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/assessments`, { signal }),
+  getProfile: (patientId, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/profile`, { signal }),
+  updateProfile: (patientId, profile) =>
+    apiService.put(`/metabolic/patients/${patientId}/profile`, profile),
+};
+
+export default metabolicApi;

@@ -564,7 +564,8 @@
     "items": {
       "analytics": "Analyse de données",
       "maintenance": "Maintenance",
-      "trash": "Corbeille"
+      "trash": "Corbeille",
+      "metabolicSettings": "Configuration clinique"
     },
     "sections": {
       "dataManagement": "Gestion des données",
@@ -726,5 +727,37 @@
     "userCount": "{{count}} utilisateurs",
     "userCount_one": "{{count}} utilisateur",
     "userCount_other": "{{count}} utilisateurs"
+  },
+  "metabolicSettings": {
+    "title": "Configuration clinique",
+    "subtitle": "Plages de référence, critères du syndrome métabolique, pondérations du score et règles d'alerte du moteur de risque métabolique. Chaque enregistrement crée une nouvelle version ; les évaluations précédentes conservent leur version.",
+    "version": "Version active : {{version}}",
+    "defaults": "valeurs par défaut",
+    "loadError": "Impossible de charger la configuration clinique.",
+    "saved": "Enregistrée comme version {{version}}",
+    "saveError": "Impossible d'enregistrer la configuration",
+    "indicators": "Plages de référence",
+    "indicatorsHint": "Chaque plage inclut la valeur « à partir de » et va jusqu'à la valeur « jusqu'à » sans l'inclure. Laissez vide pour aucune limite.",
+    "level": "Niveau",
+    "from": "À partir de (≥)",
+    "to": "Jusqu'à (<)",
+    "remove": "Retirer",
+    "addBand": "Ajouter une plage",
+    "sex": {
+      "M": "Hommes",
+      "F": "Femmes"
+    },
+    "score": "Score métabolique",
+    "weights": "Poids de chaque composant",
+    "points": "Points par niveau (0-100)",
+    "riskBands": "Score à partir duquel commence chaque niveau de risque",
+    "coverage": "Couverture minimale des données (%)",
+    "syndrome": "Critères du syndrome métabolique",
+    "required": "Critères nécessaires",
+    "alerts": "Alertes de sécurité (« Nécessite une évaluation médicale »)",
+    "addAlert": "Ajouter une alerte",
+    "notes": "Motif du changement (facultatif)",
+    "reset": "Charger les valeurs par défaut",
+    "save": "Enregistrer une nouvelle version"
   }
 }

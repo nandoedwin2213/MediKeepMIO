@@ -15,6 +15,7 @@ const ADMIN_ROUTE_LABELS = {
   '/admin/settings': 'Settings',
   '/admin/create-user': 'Create User',
   '/admin/analytics': 'Analytics',
+  '/admin/metabolic-settings': 'Clinical Configuration',
 };
 
 /**

@@ -111,7 +111,8 @@
       "treatments": "Tratamentos",
       "visitHistory": "Histórico de Consultas",
       "vitalSigns": "Sinais Vitais",
-      "insulinResistance": "Resistência à insulina"
+      "insulinResistance": "Resistência à insulina",
+      "metabolicRisk": "Risco metabólico"
     },
     "sections": {
       "administration": "Administração",

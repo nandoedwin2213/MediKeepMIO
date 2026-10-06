@@ -74,9 +74,12 @@
       "weightMax": "Vikt kan inte överstiga {{max}} {{unit}}",
       "weightMin": "Vikt måste vara minst {{min}} {{unit}}",
       "waistMin": "Midjemåttet måste vara minst {{min}} {{unit}}",
-      "waistMax": "Midjemåttet får inte överstiga {{max}} {{unit}}"
+      "waistMax": "Midjemåttet får inte överstiga {{max}} {{unit}}",
+      "hipMin": "Höftomfånget måste vara minst {{min}} {{unit}}",
+      "hipMax": "Höftomfånget får inte överstiga {{max}} {{unit}}"
     },
-    "waistCircumference": "Midjemått"
+    "waistCircumference": "Midjemått",
+    "hipCircumference": "Höftomfång"
   },
   "glucoseContext": {
     "after_meal": "Efter måltid",

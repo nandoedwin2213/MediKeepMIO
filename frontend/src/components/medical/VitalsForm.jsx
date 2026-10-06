@@ -265,6 +265,34 @@ const VitalsForm = ({
           },
         },
       },
+      hip_circumference: {
+        label: t('vitals:form.hipCircumference', 'Hip circumference'),
+        type: 'number',
+        unit: labels.waist,
+        placeholder: unitSystem === 'imperial' ? '40' : '100',
+        icon: IconRuler,
+        min: ranges.waist.min,
+        max: ranges.waist.max,
+        step: 0.1,
+        validation: {
+          min: {
+            value: ranges.waist.min,
+            message: t(
+              'vitals:form.validation.hipMin',
+              'Hip must be at least {{min}} {{unit}}',
+              { min: ranges.waist.min, unit: labels.waist }
+            ),
+          },
+          max: {
+            value: ranges.waist.max,
+            message: t(
+              'vitals:form.validation.hipMax',
+              'Hip cannot exceed {{max}} {{unit}}',
+              { max: ranges.waist.max, unit: labels.waist }
+            ),
+          },
+        },
+      },
       respiratory_rate: {
         label: t('vitals:modal.respiratoryRate', 'Respiratory Rate'),
         type: 'number',
@@ -479,6 +507,7 @@ const VitalsForm = ({
     temperature: '',
     weight: '',
     waist_circumference: '',
+    hip_circumference: '',
     respiratory_rate: '',
     oxygen_saturation: '',
     blood_glucose: '',
@@ -542,6 +571,12 @@ const VitalsForm = ({
                 'waist',
                 unitSystem
               ) * 10
+            ) / 10
+          : '',
+        hip_circumference: vitals.hip_circumference
+          ? Math.round(
+              convertForDisplay(vitals.hip_circumference, 'waist', unitSystem) *
+                10
             ) / 10
           : '',
         respiratory_rate: vitals.respiratory_rate || '',
@@ -774,6 +809,13 @@ const VitalsForm = ({
         waist_circumference: formData.waist_circumference
           ? convertForStorage(
               parseFloat(formData.waist_circumference),
+              'waist',
+              unitSystem
+            )
+          : null,
+        hip_circumference: formData.hip_circumference
+          ? convertForStorage(
+              parseFloat(formData.hip_circumference),
               'waist',
               unitSystem
             )
@@ -1154,6 +1196,9 @@ const VitalsForm = ({
                   <Grid.Col span={6}>{renderField('weight')}</Grid.Col>
                   <Grid.Col span={6}>
                     {renderField('waist_circumference')}
+                  </Grid.Col>
+                  <Grid.Col span={6}>
+                    {renderField('hip_circumference')}
                   </Grid.Col>
                 </Grid>
                 {patientHeight ? (
