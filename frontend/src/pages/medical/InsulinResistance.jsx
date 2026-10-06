@@ -115,7 +115,7 @@ function MetricCard({
         : change > 0;
   return (
     <Card className="silho-ir-metric" withBorder radius="lg" padding="md">
-      <Group justify="space-between" align="flex-start" wrap="nowrap">
+      <Group justify="space-between" align="flex-start" gap={4}>
         <Text size="sm" fw={600} c="dimmed">
           {label}
         </Text>
@@ -202,7 +202,19 @@ function TrendCard({ title, lines, reference, formatDate }) {
               tickFormatter={formatDate}
               tick={{ fontSize: 11 }}
             />
-            <YAxis tick={{ fontSize: 11 }} domain={['auto', 'auto']} />
+            <YAxis
+              yAxisId="left"
+              tick={{ fontSize: 11 }}
+              domain={['auto', 'auto']}
+            />
+            {lines.some(l => l.axis === 'right') && (
+              <YAxis
+                yAxisId="right"
+                orientation="right"
+                tick={{ fontSize: 11 }}
+                domain={['auto', 'auto']}
+              />
+            )}
             <Tooltip
               labelFormatter={formatDate}
               formatter={(value, name) => {
@@ -212,6 +224,7 @@ function TrendCard({ title, lines, reference, formatDate }) {
             />
             {reference && (
               <ReferenceLine
+                yAxisId="left"
                 y={reference.value}
                 stroke={GOLD}
                 strokeDasharray="6 4"
@@ -229,6 +242,7 @@ function TrendCard({ title, lines, reference, formatDate }) {
                 type="monotone"
                 dataKey={line.key}
                 name={line.key}
+                yAxisId={line.axis || 'left'}
                 stroke={line.color}
                 strokeWidth={2.5}
                 dot={{ r: 3 }}
@@ -598,6 +612,7 @@ const InsulinResistance = () => {
                 },
                 {
                   key: 'insulin',
+                  axis: 'right',
                   label: t(
                     'insulinResistance.metrics.insulin',
                     'Fasting insulin'
@@ -627,6 +642,7 @@ const InsulinResistance = () => {
                 },
                 {
                   key: 'tgHdl',
+                  axis: 'right',
                   label: t(
                     'insulinResistance.metrics.tgHdl',
                     'Triglycerides/HDL'
@@ -650,6 +666,7 @@ const InsulinResistance = () => {
                 },
                 {
                   key: 'bmi',
+                  axis: 'right',
                   label: t('insulinResistance.metrics.bmi', 'BMI'),
                   unit: 'kg/m²',
                   color: GOLD,

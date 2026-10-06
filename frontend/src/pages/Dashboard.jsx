@@ -861,7 +861,7 @@ const Dashboard = () => {
                     'Core Medical Information'
                   )}
                 </Text>
-                <SimpleGrid cols={{ base: 2, sm: 3 }} spacing={12}>
+                <SimpleGrid cols={{ base: 2, md: 4 }} spacing={12}>
                   {coreModules
                     .filter(module => !isModuleHidden(module.link))
                     .map((module, index) => (

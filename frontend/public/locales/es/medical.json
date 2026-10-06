@@ -1713,7 +1713,7 @@
     "addVitals": "Agregar signos vitales",
     "disclaimer": "Los rangos son orientativos (HOMA-IR ≥ 2,5; HbA1c ≥ 5,7 %; glucosa en ayunas ≥ 100 mg/dL; TG/HDL ≥ 2). Los puntos de corte varían según la población y el laboratorio; la interpretación corresponde al médico tratante.",
     "levels": {
-      "normal": "Óptimo",
+      "normal": "En rango",
       "borderline": "Vigilar",
       "high": "Elevado"
     },
