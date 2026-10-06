@@ -72,8 +72,11 @@
       "timeInFuture": "เวลาที่เลือกไม่สามารถเป็นอนาคต",
       "usernameLength": "ชื่อผู้ใช้ต้องมีอย่างน้อย 3 ตัวอักษร",
       "weightMax": "น้ำหนักไม่สามารถเกิน {{max}} {{unit}}",
-      "weightMin": "น้ำหนักต้องอย่างน้อย {{min}} {{unit}}"
-    }
+      "weightMin": "น้ำหนักต้องอย่างน้อย {{min}} {{unit}}",
+      "waistMin": "รอบเอวต้องไม่น้อยกว่า {{min}} {{unit}}",
+      "waistMax": "รอบเอวต้องไม่เกิน {{max}} {{unit}}"
+    },
+    "waistCircumference": "รอบเอว"
   },
   "glucoseContext": {
     "after_meal": "หลังอาหาร",

@@ -1723,7 +1723,8 @@
       "tgHdl": "Триглицериды/ЛПВП",
       "weight": "Вес",
       "bmi": "ИМТ",
-      "bloodPressure": "Артериальное давление"
+      "bloodPressure": "Артериальное давление",
+      "waist": "Талия"
     },
     "charts": {
       "homaIr": "Динамика HOMA-IR",

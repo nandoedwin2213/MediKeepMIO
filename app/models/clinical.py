@@ -448,6 +448,7 @@ class Vitals(Base):
     temperature = Column(Float, nullable=True)  # Body temperature (Fahrenheit)
     weight = Column(Float, nullable=True)  # Weight (lbs)
     height = Column(Float, nullable=True)  # Height (inches)
+    waist_circumference = Column(Float, nullable=True)  # Waist (inches)
     oxygen_saturation = Column(Float, nullable=True)  # SpO2 percentage
     respiratory_rate = Column(Integer, nullable=True)  # Breaths per minute
     blood_glucose = Column(Float, nullable=True)  # Blood glucose (mg/dL)

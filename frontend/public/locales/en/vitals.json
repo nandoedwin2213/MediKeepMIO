@@ -72,8 +72,11 @@
       "timeInFuture": "Selected time cannot be in the future",
       "usernameLength": "Username must be at least 3 characters long",
       "weightMax": "Weight cannot exceed {{max}} {{unit}}",
-      "weightMin": "Weight must be at least {{min}} {{unit}}"
-    }
+      "weightMin": "Weight must be at least {{min}} {{unit}}",
+      "waistMin": "Waist must be at least {{min}} {{unit}}",
+      "waistMax": "Waist cannot exceed {{max}} {{unit}}"
+    },
+    "waistCircumference": "Waist circumference"
   },
   "glucoseContext": {
     "after_meal": "After Meal",

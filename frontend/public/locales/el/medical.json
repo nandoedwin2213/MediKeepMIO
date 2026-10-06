@@ -1723,7 +1723,8 @@
       "tgHdl": "Τριγλυκερίδια/HDL",
       "weight": "Βάρος",
       "bmi": "ΔΜΣ",
-      "bloodPressure": "Αρτηριακή πίεση"
+      "bloodPressure": "Αρτηριακή πίεση",
+      "waist": "Μέση"
     },
     "charts": {
       "homaIr": "Εξέλιξη HOMA-IR",

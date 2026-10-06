@@ -72,8 +72,11 @@
       "timeInFuture": "Ausgewählte Uhrzeit darf nicht in der Zukunft liegen",
       "usernameLength": "Benutzername muss mindestens 3 Zeichen lang sein",
       "weightMax": "Gewicht darf {{max}} {{unit}} nicht überschreiten",
-      "weightMin": "Gewicht muss mindestens {{min}} {{unit}} betragen"
-    }
+      "weightMin": "Gewicht muss mindestens {{min}} {{unit}} betragen",
+      "waistMin": "Der Taillenumfang muss mindestens {{min}} {{unit}} betragen",
+      "waistMax": "Der Taillenumfang darf {{max}} {{unit}} nicht überschreiten"
+    },
+    "waistCircumference": "Taillenumfang"
   },
   "glucoseContext": {
     "after_meal": "Nach dem Essen",

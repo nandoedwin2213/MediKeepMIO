@@ -72,8 +72,11 @@
       "timeInFuture": "Vald tid kan inte ligga i framtiden",
       "usernameLength": "Användarnamn måste vara minst 3 tecken långt",
       "weightMax": "Vikt kan inte överstiga {{max}} {{unit}}",
-      "weightMin": "Vikt måste vara minst {{min}} {{unit}}"
-    }
+      "weightMin": "Vikt måste vara minst {{min}} {{unit}}",
+      "waistMin": "Midjemåttet måste vara minst {{min}} {{unit}}",
+      "waistMax": "Midjemåttet får inte överstiga {{max}} {{unit}}"
+    },
+    "waistCircumference": "Midjemått"
   },
   "glucoseContext": {
     "after_meal": "Efter måltid",

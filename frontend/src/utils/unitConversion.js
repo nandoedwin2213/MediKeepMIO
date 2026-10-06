@@ -82,6 +82,7 @@ export const unitLabels = {
     weightLong: 'pounds',
     height: 'inches',
     heightLong: 'inches',
+    waist: 'in',
     temperature: '°F',
     temperatureLong: 'Fahrenheit',
   },
@@ -90,6 +91,7 @@ export const unitLabels = {
     weightLong: 'kilograms',
     height: 'cm',
     heightLong: 'centimeters',
+    waist: 'cm',
     temperature: '°C',
     temperatureLong: 'Celsius',
   },
@@ -100,6 +102,7 @@ export const validationRanges = {
   imperial: {
     weight: { min: 1, max: 992 }, // pounds (equivalent to 0.5-450 kg)
     height: { min: 12, max: 108 }, // inches (1 foot to 9 feet)
+    waist: { min: 15, max: 80 }, // inches
     temperature: { min: 80, max: 115 }, // Fahrenheit - medically accurate range
     systolic_bp: { min: 60, max: 250 }, // mmHg (same for both systems)
     diastolic_bp: { min: 30, max: 150 }, // mmHg
@@ -111,6 +114,7 @@ export const validationRanges = {
   metric: {
     weight: { min: 0.5, max: 450 }, // kilograms (equivalent to 1-992 lbs)
     height: { min: 30, max: 274 }, // centimeters (equivalent to 12-108 inches)
+    waist: { min: 38, max: 203 }, // centimeters (equivalent to 15-80 inches)
     temperature: { min: 27, max: 46 }, // Celsius - medically accurate range
     systolic_bp: { min: 60, max: 250 }, // mmHg (same for both systems)
     diastolic_bp: { min: 30, max: 150 }, // mmHg
@@ -145,6 +149,7 @@ export const convertForDisplay = (value, measurementType, unitSystem) => {
     case 'weight':
       return convertWeight.lbsToKg(numValue);
     case 'height':
+    case 'waist':
       return convertHeight.inchesToCm(numValue);
     case 'temperature':
       return convertTemperature.fToC(numValue);
@@ -177,6 +182,7 @@ export const convertForStorage = (value, measurementType, unitSystem) => {
     case 'weight':
       return convertWeight.kgToLbs(numValue);
     case 'height':
+    case 'waist':
       return convertHeight.cmToInches(numValue);
     case 'temperature':
       return convertTemperature.cToF(numValue);

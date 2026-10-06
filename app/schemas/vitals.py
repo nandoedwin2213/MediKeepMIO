@@ -39,6 +39,7 @@ class VitalsBase(BaseModel):
     temperature: Optional[float] = None
     weight: Optional[float] = None
     height: Optional[float] = None
+    waist_circumference: Optional[float] = None
     oxygen_saturation: Optional[float] = None
     respiratory_rate: Optional[int] = None
     blood_glucose: Optional[float] = None
@@ -107,6 +108,15 @@ class VitalsBase(BaseModel):
             # Allow up to 2 decimal places for precision from metric conversion
             if v < 12.0 or v > 108.0:
                 raise ValueError("Height must be between 12-108 inches")
+        return v
+
+    @field_validator("waist_circumference")
+    @classmethod
+    def validate_waist_circumference(cls, v):
+        """Validate waist circumference (stored as inches)"""
+        if v is not None:
+            if v < 15.0 or v > 80.0:
+                raise ValueError("Waist circumference must be between 15-80 inches")
         return v
 
     @field_validator("oxygen_saturation")
@@ -216,6 +226,7 @@ class VitalsUpdate(BaseModel):
     temperature: Optional[float] = None
     weight: Optional[float] = None
     height: Optional[float] = None
+    waist_circumference: Optional[float] = None
     oxygen_saturation: Optional[float] = None
     respiratory_rate: Optional[int] = None
     blood_glucose: Optional[float] = None

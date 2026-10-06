@@ -1723,7 +1723,8 @@
       "tgHdl": "Triglicéridos/HDL",
       "weight": "Peso",
       "bmi": "IMC",
-      "bloodPressure": "Presión arterial"
+      "bloodPressure": "Presión arterial",
+      "waist": "Cintura"
     },
     "charts": {
       "homaIr": "Evolución del HOMA-IR",

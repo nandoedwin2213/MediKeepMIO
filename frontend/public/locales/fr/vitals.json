@@ -72,8 +72,11 @@
       "timeInFuture": "L'heure sélectionnée ne peut se situer dans le futur",
       "usernameLength": "Le nom d'utilisateur doit contenir au moins 3 caractères",
       "weightMax": "Le poids ne peut pas dépasser {{max}} {{unit}}",
-      "weightMin": "Le poids doit valoir au moins {{min}} {{unit}}"
-    }
+      "weightMin": "Le poids doit valoir au moins {{min}} {{unit}}",
+      "waistMin": "Le tour de taille doit être d'au moins {{min}} {{unit}}",
+      "waistMax": "Le tour de taille ne peut pas dépasser {{max}} {{unit}}"
+    },
+    "waistCircumference": "Tour de taille"
   },
   "glucoseContext": {
     "after_meal": "Après un repas",

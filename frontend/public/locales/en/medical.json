@@ -1723,7 +1723,8 @@
       "tgHdl": "Triglycerides/HDL",
       "weight": "Weight",
       "bmi": "BMI",
-      "bloodPressure": "Blood pressure"
+      "bloodPressure": "Blood pressure",
+      "waist": "Waist"
     },
     "charts": {
       "homaIr": "HOMA-IR evolution",
