@@ -1,3 +1,4 @@
+/* global __BUILD_ID__ */
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import HttpBackend from 'i18next-http-backend';
@@ -107,7 +108,8 @@ i18n
     },
 
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      // Bust the browser cache (max-age=3600) on every deploy.
+      loadPath: `/locales/{{lng}}/{{ns}}.json?v=${typeof __BUILD_ID__ !== 'undefined' ? __BUILD_ID__ : 'dev'}`,
     },
 
     // Provisional until login: UserPreferencesContext overrides this with the

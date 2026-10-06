@@ -418,8 +418,12 @@
       "deleteFailed": "Impossibile eliminare la registrazione dei parametri vitali",
       "deleteSuccess": "Registrazione parametri vitali eliminata con successo",
       "formErrors": "Correggi gli errori nel modulo",
+      "recordFailed": "Impossibile salvare i parametri vitali",
+      "recordedSuccess": "Parametri vitali registrati con successo!",
+      "saveFailed": "Impossibile {{action}} i parametri vitali",
       "savedSuccess": "Parametri vitali {{action}} con successo!",
-      "saveFailed": "Impossibile {{action}} i parametri vitali"
+      "updateFailed": "Impossibile aggiornare i parametri vitali",
+      "updatedSuccess": "Parametri vitali aggiornati con successo!"
     }
   },
   "validation": {

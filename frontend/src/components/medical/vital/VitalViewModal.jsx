@@ -53,7 +53,7 @@ const VitalViewModal = ({
   disableEdit = false,
   disableEditTooltip,
 }) => {
-  const { t } = useTranslation(['common', 'shared']);
+  const { t } = useTranslation(['common', 'shared', 'vitals']);
   const { formatDate, formatDateTime } = useDateFormat();
   const { unitSystem } = useUserPreferences();
 

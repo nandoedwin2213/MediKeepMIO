@@ -418,8 +418,12 @@
       "deleteFailed": "Meting verwijderen mislukt",
       "deleteSuccess": "Meting succesvol verwijderd",
       "formErrors": "Corrigeer de formulierfouten",
+      "recordFailed": "Opslaan van vitale functies mislukt",
+      "recordedSuccess": "Vitale functies succesvol vastgelegd!",
+      "saveFailed": "Meting {{action}} mislukt",
       "savedSuccess": "Meting succesvol {{action}}!",
-      "saveFailed": "Meting {{action}} mislukt"
+      "updateFailed": "Bijwerken van vitale functies mislukt",
+      "updatedSuccess": "Vitale functies succesvol bijgewerkt!"
     }
   },
   "validation": {

@@ -114,7 +114,7 @@ export const validationRanges = {
   metric: {
     weight: { min: 0.5, max: 450 }, // kilograms (equivalent to 1-992 lbs)
     height: { min: 30, max: 274 }, // centimeters (equivalent to 12-108 inches)
-    waist: { min: 38, max: 203 }, // centimeters (equivalent to 15-80 inches)
+    waist: { min: 39, max: 203 }, // centimeters (equivalent to 15-80 inches)
     temperature: { min: 27, max: 46 }, // Celsius - medically accurate range
     systolic_bp: { min: 60, max: 250 }, // mmHg (same for both systems)
     diastolic_bp: { min: 30, max: 150 }, // mmHg

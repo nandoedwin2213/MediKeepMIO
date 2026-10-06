@@ -418,8 +418,12 @@
       "deleteFailed": "Nie udało się usunąć rekordu parametrów życiowych",
       "deleteSuccess": "Rekord parametrów życiowych usunięty pomyślnie",
       "formErrors": "Popraw błędy w formularzu",
+      "recordFailed": "Nie udało się zapisać parametrów życiowych",
+      "recordedSuccess": "Parametry życiowe zapisane pomyślnie!",
+      "saveFailed": "Nie udało się {{action}} parametrów życiowych",
       "savedSuccess": "Parametry życiowe {{action}} pomyślnie!",
-      "saveFailed": "Nie udało się {{action}} parametrów życiowych"
+      "updateFailed": "Nie udało się zaktualizować parametrów życiowych",
+      "updatedSuccess": "Parametry życiowe zaktualizowane pomyślnie!"
     }
   },
   "validation": {

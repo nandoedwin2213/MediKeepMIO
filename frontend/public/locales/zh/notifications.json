@@ -418,8 +418,12 @@
       "deleteFailed": "删除生命体征记录失败",
       "deleteSuccess": "生命体征记录删除成功",
       "formErrors": "请修正表单错误",
+      "recordFailed": "保存生命体征失败",
+      "recordedSuccess": "生命体征记录成功！",
+      "saveFailed": "{{action}}生命体征失败",
       "savedSuccess": "生命体征{{action}}成功！",
-      "saveFailed": "{{action}}生命体征失败"
+      "updateFailed": "更新生命体征失败",
+      "updatedSuccess": "生命体征更新成功！"
     }
   },
   "validation": {
