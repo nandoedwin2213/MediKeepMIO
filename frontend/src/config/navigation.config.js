@@ -72,6 +72,14 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.metabolicRecipes',
+        name: 'My recipes',
+        path: '/metabolic-recipes',
+        icon: '🍲',
+        id: 'metabolic-recipes',
+        featured: true,
+      },
+      {
         nameKey: 'sidebarNav.items.professionalDashboard',
         name: 'Professional dashboard',
         path: '/professional/metabolic-dashboard',

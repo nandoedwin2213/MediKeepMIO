@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import {
   Alert,
+  Anchor,
   Badge,
   Box,
   Button,
@@ -35,6 +37,7 @@ import {
   IconSalad,
   IconSparkles,
   IconTarget,
+  IconChefHat,
   IconToolsKitchen2,
   IconTrash,
 } from '@tabler/icons-react';
@@ -205,6 +208,46 @@ function Rationale({ keys }) {
         ))}
       </List>
     </Card>
+  );
+}
+
+function useRecipeOptions(enabled) {
+  const [recipes, setRecipes] = useState([]);
+  useEffect(() => {
+    if (!enabled) return undefined;
+    const controller = new AbortController();
+    metabolicApi
+      .getRecipes({}, controller.signal)
+      .then(res => setRecipes(res || []))
+      .catch(err => {
+        if (!controller.signal.aborted) {
+          logger.error('nutrition_recipes_load_failed', {
+            error: err?.message,
+          });
+        }
+      });
+    return () => controller.abort();
+  }, [enabled]);
+  return recipes;
+}
+
+function AssignedRecipes({ ids }) {
+  const { n } = useNutritionT();
+  const recipes = useRecipeOptions(ids.length > 0);
+  const assigned = recipes.filter(r => ids.includes(r.id));
+  if (!assigned.length) return null;
+  return (
+    <SectionCard icon={IconChefHat} color="grape" title={n('sections.recipes')}>
+      <List size="sm" spacing={4}>
+        {assigned.map(r => (
+          <List.Item key={r.id}>
+            <Anchor component={Link} to={`/metabolic-recipes?recipe=${r.id}`}>
+              {r.name}
+            </Anchor>
+          </List.Item>
+        ))}
+      </List>
+    </SectionCard>
   );
 }
 
@@ -384,6 +427,7 @@ function PlanView({ plan, rationale }) {
           </List>
         </SectionCard>
       )}
+      <AssignedRecipes ids={plan.recipe_ids || []} />
       <Rationale keys={rationale} />
     </Stack>
   );
@@ -424,6 +468,7 @@ function OptionSelect({ label, group, value, onChange }) {
 
 function PlanEditor({ value, onChange }) {
   const { n } = useNutritionT();
+  const recipes = useRecipeOptions(true);
   const set = (section, key, v) =>
     onChange({ ...value, [section]: { ...value[section], [key]: v } });
   const setTop = (key, v) => onChange({ ...value, [key]: v });
@@ -617,6 +662,16 @@ function PlanEditor({ value, onChange }) {
           group="safety"
           value={value.safety}
           onChange={v => setTop('safety', v)}
+        />
+        <MultiSelect
+          label={n('sections.recipes')}
+          description={n('fields.recipesHelp')}
+          data={recipes.map(r => ({ value: String(r.id), label: r.name }))}
+          value={(value.recipe_ids || []).map(String)}
+          onChange={v => setTop('recipe_ids', v.map(Number))}
+          searchable
+          clearable
+          maxValues={40}
         />
       </SimpleGrid>
     </Stack>

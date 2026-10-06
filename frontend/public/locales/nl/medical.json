@@ -2243,7 +2243,8 @@
         "limit": "Beperken",
         "avoid": "Vermijden (allergieën en intoleranties)",
         "targets": "Gewoontedoelen",
-        "safety": "Veiligheidsopmerkingen"
+        "safety": "Veiligheidsopmerkingen",
+        "recipes": "Toegewezen recepten"
       },
       "fields": {
         "perDay": "per dag",
@@ -2274,7 +2275,8 @@
         "fatMax": "Vet max (%)",
         "meals_per_day": "Hoofdmaaltijden per dag",
         "snacks_per_day": "Tussendoortjes per dag",
-        "avoidHelp": "Actieve allergieën en intoleranties uit het dossier worden automatisch toegevoegd. Druk op Enter om meer toe te voegen."
+        "avoidHelp": "Actieve allergieën en intoleranties uit het dossier worden automatisch toegevoegd. Druk op Enter om meer toe te voegen.",
+        "recipesHelp": "Ze verschijnen bovenaan in «Mijn recepten» van de patiënt."
       },
       "rationale": {
         "weight_loss": "BMI of taille boven doel: matig calorietekort om gewicht en buikvet te verminderen.",
@@ -2337,6 +2339,118 @@
           "allergy_check": "Controleer etiketten: allergenen kunnen verborgen zitten in bewerkt voedsel.",
           "b12_review": "Veganistisch dieet: suppletie van vitamine B12 nagaan."
         }
+      }
+    },
+    "recipes": {
+      "title": "Mijn recepten",
+      "subtitle": "Gezonde recepten met ingrediënten, bereiding en voedingswaarden per portie. De recepten die het best bij je plan passen staan bovenaan.",
+      "disclaimer": "Voedingswaarden zijn schattingen per portie. De aanbevelingen zijn educatief en vervangen het advies van je voedingsdeskundige niet.",
+      "loadError": "Recepten konden niet worden geladen.",
+      "error": "De actie kon niet worden voltooid.",
+      "saved": "Recept opgeslagen.",
+      "hidden": "Recept verborgen voor patiënten.",
+      "deleted": "Recept verwijderd.",
+      "recommended": {
+        "title": "Aanbevolen recepten voor jou",
+        "basis": {
+          "approved_plan": "Gekozen op basis van je goedgekeurde voedingsplan, je eetpatroon, allergieën en de factoren die je stofwisseling beïnvloeden.",
+          "draft_plan": "Voorbeeld op basis van het huidige concept (de patiënt ziet aanbevelingen uit het goedgekeurde plan).",
+          "profile": "Gekozen op basis van je eetpatroon, allergieën en de factoren die je stofwisseling beïnvloeden. Ze worden verfijnd zodra je zorgverlener je voedingsplan goedkeurt."
+        },
+        "none": "Geen recept past bij je huidige beperkingen. Vraag je voedingsdeskundige om opties toe te voegen.",
+        "assigned": "Van je diëtist",
+        "conflict": "Controleren: {{items}}",
+        "conflicts": {
+          "diet": "eetpatroon",
+          "dislike": "voedsel dat je niet lust"
+        },
+        "excluded": "{{count}} recepten worden niet getoond vanwege je eetpatroon, allergieën, intoleranties of voorkeuren."
+      },
+      "library": {
+        "title": "Receptenbibliotheek",
+        "search": "Zoeken op naam of ingrediënt",
+        "all": "Alle",
+        "empty": "Geen recepten gevonden.",
+        "hiddenBadge": "Verborgen",
+        "languageNote": "De recepten zijn in het Spaans geschreven."
+      },
+      "categories": {
+        "breakfast": "Ontbijt",
+        "lunch": "Lunch",
+        "dinner": "Diner",
+        "snack": "Tussendoortjes",
+        "drink": "Dranken"
+      },
+      "card": {
+        "kcal": "{{kcal}} kcal",
+        "minutes": "{{minutes}} min"
+      },
+      "macros": {
+        "kcal": "Calorieën",
+        "protein": "Eiwit",
+        "carbs": "Koolhydraten",
+        "fat": "Vet",
+        "fiber": "Vezels"
+      },
+      "detail": {
+        "perServing": "Per portie · Porties: {{servings}}",
+        "ingredients": "Ingrediënten",
+        "steps": "Bereiding",
+        "photo": "Foto:",
+        "suitable": "Geschikt voor:",
+        "contains": "Bevat:",
+        "edit": "Bewerken",
+        "hide": "Verbergen voor patiënten",
+        "delete": "Verwijderen"
+      },
+      "editor": {
+        "newTitle": "Nieuw recept",
+        "editTitle": "Recept bewerken",
+        "name": "Naam",
+        "category": "Categorie",
+        "description": "Korte beschrijving",
+        "servings": "Porties",
+        "prepMinutes": "Tijd (min)",
+        "perServingHelp": "Vul calorieën en voedingsstoffen per portie in.",
+        "diets": "Geschikte eetpatronen",
+        "allergens": "Allergenen",
+        "tags": "Kenmerken",
+        "ingredients": "Ingrediënten (één per regel)",
+        "steps": "Stappen (één per regel)",
+        "imageUrl": "Foto-URL",
+        "imageCredit": "Fotograaf en licentie",
+        "imageSource": "Bronpagina van de foto",
+        "active": "Zichtbaar voor patiënten",
+        "save": "Recept opslaan",
+        "cancel": "Annuleren"
+      },
+      "diets": {
+        "omnivore": "Alleseter",
+        "pescatarian": "Pescotarisch",
+        "vegetarian": "Vegetarisch",
+        "vegan": "Veganistisch",
+        "other": "Anders"
+      },
+      "allergens": {
+        "gluten": "Gluten",
+        "lactose": "Zuivel/lactose",
+        "egg": "Ei",
+        "fish": "Vis",
+        "shellfish": "Schaaldieren",
+        "nuts": "Noten",
+        "peanut": "Pinda",
+        "soy": "Soja",
+        "sesame": "Sesam"
+      },
+      "tags": {
+        "high_fiber": "Vezelrijk",
+        "high_protein": "Eiwitrijk",
+        "low_gi": "Lage glykemische impact",
+        "omega3": "Rijk aan omega-3",
+        "low_sodium": "Zoutarm",
+        "no_added_sugar": "Zonder toegevoegde suiker",
+        "low_fat": "Vetarm",
+        "quick": "Snel"
       }
     }
   }

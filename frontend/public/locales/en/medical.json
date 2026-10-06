@@ -2243,7 +2243,8 @@
         "limit": "Limit",
         "avoid": "Avoid (allergies and intolerances)",
         "targets": "Habit goals",
-        "safety": "Safety notes"
+        "safety": "Safety notes",
+        "recipes": "Assigned recipes"
       },
       "fields": {
         "perDay": "per day",
@@ -2274,7 +2275,8 @@
         "fatMax": "Fat max (%)",
         "meals_per_day": "Main meals per day",
         "snacks_per_day": "Snacks per day",
-        "avoidHelp": "Active allergies and intolerances from the record are added automatically. Press Enter to add more."
+        "avoidHelp": "Active allergies and intolerances from the record are added automatically. Press Enter to add more.",
+        "recipesHelp": "They will appear first in the patient’s «My recipes»."
       },
       "rationale": {
         "weight_loss": "BMI or waist above target: moderate calorie deficit to reduce weight and abdominal fat.",
@@ -2337,6 +2339,118 @@
           "allergy_check": "Check labels: allergens can be hidden in processed foods.",
           "b12_review": "Vegan diet: vitamin B12 supplementation to be reviewed."
         }
+      }
+    },
+    "recipes": {
+      "title": "My recipes",
+      "subtitle": "Healthy recipes with ingredients, preparation and nutrition values per serving. The ones that best fit your plan appear first.",
+      "disclaimer": "Nutrition values are estimates per serving. Recommendations are educational and do not replace the indications of your nutrition professional.",
+      "loadError": "Could not load the recipes.",
+      "error": "The action could not be completed.",
+      "saved": "Recipe saved.",
+      "hidden": "Recipe hidden from patients.",
+      "deleted": "Recipe deleted.",
+      "recommended": {
+        "title": "Recommended recipes for you",
+        "basis": {
+          "approved_plan": "Chosen according to your approved nutrition plan, your diet, allergies and the factors that affect your metabolism.",
+          "draft_plan": "Preview based on the current draft plan (the patient sees recommendations from the approved plan).",
+          "profile": "Chosen according to your diet, allergies and the factors that affect your metabolism. They will be refined when your professional approves your nutrition plan."
+        },
+        "none": "No recipe fits your current restrictions. Ask your nutrition professional to add options.",
+        "assigned": "From your nutritionist",
+        "conflict": "Check: {{items}}",
+        "conflicts": {
+          "diet": "diet type",
+          "dislike": "food you dislike"
+        },
+        "excluded": "{{count}} recipes are not shown because of your diet, allergies, intolerances or dislikes."
+      },
+      "library": {
+        "title": "Recipe library",
+        "search": "Search by name or ingredient",
+        "all": "All",
+        "empty": "No recipes match the search.",
+        "hiddenBadge": "Hidden",
+        "languageNote": "Recipe texts are written in Spanish."
+      },
+      "categories": {
+        "breakfast": "Breakfast",
+        "lunch": "Lunch",
+        "dinner": "Dinner",
+        "snack": "Snacks",
+        "drink": "Drinks"
+      },
+      "card": {
+        "kcal": "{{kcal}} kcal",
+        "minutes": "{{minutes}} min"
+      },
+      "macros": {
+        "kcal": "Calories",
+        "protein": "Protein",
+        "carbs": "Carbs",
+        "fat": "Fat",
+        "fiber": "Fiber"
+      },
+      "detail": {
+        "perServing": "Per serving · Servings: {{servings}}",
+        "ingredients": "Ingredients",
+        "steps": "Preparation",
+        "photo": "Photo:",
+        "suitable": "Suitable for:",
+        "contains": "Contains:",
+        "edit": "Edit",
+        "hide": "Hide from patients",
+        "delete": "Delete"
+      },
+      "editor": {
+        "newTitle": "New recipe",
+        "editTitle": "Edit recipe",
+        "name": "Name",
+        "category": "Category",
+        "description": "Short description",
+        "servings": "Servings",
+        "prepMinutes": "Time (min)",
+        "perServingHelp": "Enter calories and nutrients per serving.",
+        "diets": "Suitable diets",
+        "allergens": "Allergens",
+        "tags": "Features",
+        "ingredients": "Ingredients (one per line)",
+        "steps": "Steps (one per line)",
+        "imageUrl": "Photo URL",
+        "imageCredit": "Photo credit and license",
+        "imageSource": "Photo source page",
+        "active": "Visible to patients",
+        "save": "Save recipe",
+        "cancel": "Cancel"
+      },
+      "diets": {
+        "omnivore": "Omnivore",
+        "pescatarian": "Pescatarian",
+        "vegetarian": "Vegetarian",
+        "vegan": "Vegan",
+        "other": "Other"
+      },
+      "allergens": {
+        "gluten": "Gluten",
+        "lactose": "Dairy/lactose",
+        "egg": "Egg",
+        "fish": "Fish",
+        "shellfish": "Shellfish",
+        "nuts": "Tree nuts",
+        "peanut": "Peanut",
+        "soy": "Soy",
+        "sesame": "Sesame"
+      },
+      "tags": {
+        "high_fiber": "High fiber",
+        "high_protein": "High protein",
+        "low_gi": "Low glycemic impact",
+        "omega3": "Omega-3",
+        "low_sodium": "Low salt",
+        "no_added_sugar": "No added sugar",
+        "low_fat": "Low fat",
+        "quick": "Quick"
       }
     }
   }

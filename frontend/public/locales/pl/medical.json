@@ -2243,7 +2243,8 @@
         "limit": "Ograniczaj",
         "avoid": "Unikaj (alergie i nietolerancje)",
         "targets": "Cele nawyków",
-        "safety": "Uwagi dotyczące bezpieczeństwa"
+        "safety": "Uwagi dotyczące bezpieczeństwa",
+        "recipes": "Przypisane przepisy"
       },
       "fields": {
         "perDay": "dziennie",
@@ -2274,7 +2275,8 @@
         "fatMax": "Tłuszcze maks (%)",
         "meals_per_day": "Główne posiłki dziennie",
         "snacks_per_day": "Przekąski dziennie",
-        "avoidHelp": "Aktywne alergie i nietolerancje z karty są dodawane automatycznie. Naciśnij Enter, aby dodać więcej."
+        "avoidHelp": "Aktywne alergie i nietolerancje z karty są dodawane automatycznie. Naciśnij Enter, aby dodać więcej.",
+        "recipesHelp": "Pojawią się na początku w «Moje przepisy» pacjenta."
       },
       "rationale": {
         "weight_loss": "BMI lub talia powyżej celu: umiarkowany deficyt kalorii, by zmniejszyć masę i tłuszcz brzuszny.",
@@ -2337,6 +2339,118 @@
           "allergy_check": "Czytaj etykiety: alergeny mogą być ukryte w produktach przetworzonych.",
           "b12_review": "Dieta wegańska: rozważyć suplementację witaminy B12."
         }
+      }
+    },
+    "recipes": {
+      "title": "Moje przepisy",
+      "subtitle": "Zdrowe przepisy ze składnikami, przygotowaniem i wartościami odżywczymi na porcję. Najpierw pojawiają się te, które najlepiej pasują do Twojego planu.",
+      "disclaimer": "Wartości odżywcze są szacunkowe na porcję. Rekomendacje mają charakter edukacyjny i nie zastępują zaleceń dietetyka.",
+      "loadError": "Nie udało się wczytać przepisów.",
+      "error": "Nie udało się wykonać działania.",
+      "saved": "Przepis zapisany.",
+      "hidden": "Przepis ukryty przed pacjentami.",
+      "deleted": "Przepis usunięty.",
+      "recommended": {
+        "title": "Polecane przepisy dla Ciebie",
+        "basis": {
+          "approved_plan": "Wybrane na podstawie zatwierdzonego planu żywieniowego, Twojej diety, alergii i czynników wpływających na metabolizm.",
+          "draft_plan": "Podgląd na podstawie bieżącego szkicu (pacjent widzi rekomendacje z zatwierdzonego planu).",
+          "profile": "Wybrane na podstawie Twojej diety, alergii i czynników wpływających na metabolizm. Zostaną dopracowane, gdy specjalista zatwierdzi plan żywieniowy."
+        },
+        "none": "Żaden przepis nie pasuje do Twoich obecnych ograniczeń. Poproś dietetyka o dodanie opcji.",
+        "assigned": "Od dietetyka",
+        "conflict": "Sprawdź: {{items}}",
+        "conflicts": {
+          "diet": "rodzaj diety",
+          "dislike": "nielubiany produkt"
+        },
+        "excluded": "Liczba przepisów niewyświetlanych z powodu diety, alergii, nietolerancji lub upodobań: {{count}}."
+      },
+      "library": {
+        "title": "Biblioteka przepisów",
+        "search": "Szukaj po nazwie lub składniku",
+        "all": "Wszystkie",
+        "empty": "Brak przepisów pasujących do wyszukiwania.",
+        "hiddenBadge": "Ukryty",
+        "languageNote": "Teksty przepisów są napisane po hiszpańsku."
+      },
+      "categories": {
+        "breakfast": "Śniadania",
+        "lunch": "Obiady",
+        "dinner": "Kolacje",
+        "snack": "Przekąski",
+        "drink": "Napoje"
+      },
+      "card": {
+        "kcal": "{{kcal}} kcal",
+        "minutes": "{{minutes}} min"
+      },
+      "macros": {
+        "kcal": "Kalorie",
+        "protein": "Białko",
+        "carbs": "Węglowodany",
+        "fat": "Tłuszcze",
+        "fiber": "Błonnik"
+      },
+      "detail": {
+        "perServing": "Na porcję · Porcje: {{servings}}",
+        "ingredients": "Składniki",
+        "steps": "Przygotowanie",
+        "photo": "Zdjęcie:",
+        "suitable": "Odpowiednia dla:",
+        "contains": "Zawiera:",
+        "edit": "Edytuj",
+        "hide": "Ukryj przed pacjentami",
+        "delete": "Usuń"
+      },
+      "editor": {
+        "newTitle": "Nowy przepis",
+        "editTitle": "Edytuj przepis",
+        "name": "Nazwa",
+        "category": "Kategoria",
+        "description": "Krótki opis",
+        "servings": "Porcje",
+        "prepMinutes": "Czas (min)",
+        "perServingHelp": "Podaj kalorie i składniki odżywcze na porcję.",
+        "diets": "Odpowiednie diety",
+        "allergens": "Alergeny",
+        "tags": "Cechy",
+        "ingredients": "Składniki (jeden w wierszu)",
+        "steps": "Kroki (jeden w wierszu)",
+        "imageUrl": "Adres URL zdjęcia",
+        "imageCredit": "Autor i licencja zdjęcia",
+        "imageSource": "Strona źródłowa zdjęcia",
+        "active": "Widoczny dla pacjentów",
+        "save": "Zapisz przepis",
+        "cancel": "Anuluj"
+      },
+      "diets": {
+        "omnivore": "Wszystkożerna",
+        "pescatarian": "Peskatariańska",
+        "vegetarian": "Wegetariańska",
+        "vegan": "Wegańska",
+        "other": "Inna"
+      },
+      "allergens": {
+        "gluten": "Gluten",
+        "lactose": "Nabiał/laktoza",
+        "egg": "Jajko",
+        "fish": "Ryba",
+        "shellfish": "Owoce morza",
+        "nuts": "Orzechy",
+        "peanut": "Orzeszki ziemne",
+        "soy": "Soja",
+        "sesame": "Sezam"
+      },
+      "tags": {
+        "high_fiber": "Bogata w błonnik",
+        "high_protein": "Bogata w białko",
+        "low_gi": "Niski wpływ glikemiczny",
+        "omega3": "Bogata w omega-3",
+        "low_sodium": "Mało soli",
+        "no_added_sugar": "Bez dodatku cukru",
+        "low_fat": "Mało tłuszczu",
+        "quick": "Szybka"
       }
     }
   }

@@ -2243,7 +2243,8 @@
         "limit": "À limiter",
         "avoid": "À éviter (allergies et intolérances)",
         "targets": "Objectifs d’habitudes",
-        "safety": "Consignes de sécurité"
+        "safety": "Consignes de sécurité",
+        "recipes": "Recettes attribuées"
       },
       "fields": {
         "perDay": "par jour",
@@ -2274,7 +2275,8 @@
         "fatMax": "Lipides max (%)",
         "meals_per_day": "Repas principaux par jour",
         "snacks_per_day": "Collations par jour",
-        "avoidHelp": "Les allergies actives et intolérances du dossier sont ajoutées automatiquement. Appuie sur Entrée pour en ajouter."
+        "avoidHelp": "Les allergies actives et intolérances du dossier sont ajoutées automatiquement. Appuie sur Entrée pour en ajouter.",
+        "recipesHelp": "Elles apparaîtront en premier dans « Mes recettes » du patient."
       },
       "rationale": {
         "weight_loss": "IMC ou tour de taille au-dessus de l’objectif : déficit calorique modéré pour réduire le poids et la graisse abdominale.",
@@ -2337,6 +2339,118 @@
           "allergy_check": "Vérifie les étiquettes : des allergènes peuvent se cacher dans les produits transformés.",
           "b12_review": "Alimentation végétalienne : vérifier la supplémentation en vitamine B12."
         }
+      }
+    },
+    "recipes": {
+      "title": "Mes recettes",
+      "subtitle": "Recettes saines avec ingrédients, préparation et valeurs nutritionnelles par portion. Celles qui conviennent le mieux à ton plan apparaissent en premier.",
+      "disclaimer": "Les valeurs nutritionnelles sont estimées par portion. Les recommandations sont éducatives et ne remplacent pas les indications de ton professionnel de la nutrition.",
+      "loadError": "Impossible de charger les recettes.",
+      "error": "L’action n’a pas pu être effectuée.",
+      "saved": "Recette enregistrée.",
+      "hidden": "Recette masquée pour les patients.",
+      "deleted": "Recette supprimée.",
+      "recommended": {
+        "title": "Recettes recommandées pour toi",
+        "basis": {
+          "approved_plan": "Choisies selon ton plan nutritionnel validé, ton régime, tes allergies et les facteurs qui affectent ton métabolisme.",
+          "draft_plan": "Aperçu basé sur le brouillon actuel (le patient voit les recommandations du plan validé).",
+          "profile": "Choisies selon ton régime, tes allergies et les facteurs qui affectent ton métabolisme. Elles seront affinées quand ton professionnel validera ton plan nutritionnel."
+        },
+        "none": "Aucune recette ne correspond à tes restrictions actuelles. Demande à ton professionnel de la nutrition d’ajouter des options.",
+        "assigned": "De ton nutritionniste",
+        "conflict": "À vérifier : {{items}}",
+        "conflicts": {
+          "diet": "type de régime",
+          "dislike": "aliment que tu n’aimes pas"
+        },
+        "excluded": "{{count}} recettes ne sont pas affichées en raison de ton régime, de tes allergies, intolérances ou goûts."
+      },
+      "library": {
+        "title": "Bibliothèque de recettes",
+        "search": "Rechercher par nom ou ingrédient",
+        "all": "Toutes",
+        "empty": "Aucune recette ne correspond à la recherche.",
+        "hiddenBadge": "Masquée",
+        "languageNote": "Les textes des recettes sont rédigés en espagnol."
+      },
+      "categories": {
+        "breakfast": "Petits-déjeuners",
+        "lunch": "Déjeuners",
+        "dinner": "Dîners",
+        "snack": "En-cas",
+        "drink": "Boissons"
+      },
+      "card": {
+        "kcal": "{{kcal}} kcal",
+        "minutes": "{{minutes}} min"
+      },
+      "macros": {
+        "kcal": "Calories",
+        "protein": "Protéines",
+        "carbs": "Glucides",
+        "fat": "Lipides",
+        "fiber": "Fibres"
+      },
+      "detail": {
+        "perServing": "Par portion · Portions : {{servings}}",
+        "ingredients": "Ingrédients",
+        "steps": "Préparation",
+        "photo": "Photo :",
+        "suitable": "Convient à :",
+        "contains": "Contient :",
+        "edit": "Modifier",
+        "hide": "Masquer aux patients",
+        "delete": "Supprimer"
+      },
+      "editor": {
+        "newTitle": "Nouvelle recette",
+        "editTitle": "Modifier la recette",
+        "name": "Nom",
+        "category": "Catégorie",
+        "description": "Description courte",
+        "servings": "Portions",
+        "prepMinutes": "Temps (min)",
+        "perServingHelp": "Saisis les calories et nutriments par portion.",
+        "diets": "Régimes compatibles",
+        "allergens": "Allergènes",
+        "tags": "Caractéristiques",
+        "ingredients": "Ingrédients (un par ligne)",
+        "steps": "Étapes (une par ligne)",
+        "imageUrl": "URL de la photo",
+        "imageCredit": "Crédit et licence de la photo",
+        "imageSource": "Page source de la photo",
+        "active": "Visible par les patients",
+        "save": "Enregistrer la recette",
+        "cancel": "Annuler"
+      },
+      "diets": {
+        "omnivore": "Omnivore",
+        "pescatarian": "Pescétarienne",
+        "vegetarian": "Végétarienne",
+        "vegan": "Végane",
+        "other": "Autre"
+      },
+      "allergens": {
+        "gluten": "Gluten",
+        "lactose": "Lait/lactose",
+        "egg": "Œuf",
+        "fish": "Poisson",
+        "shellfish": "Fruits de mer",
+        "nuts": "Fruits à coque",
+        "peanut": "Arachide",
+        "soy": "Soja",
+        "sesame": "Sésame"
+      },
+      "tags": {
+        "high_fiber": "Riche en fibres",
+        "high_protein": "Riche en protéines",
+        "low_gi": "Faible impact glycémique",
+        "omega3": "Riche en oméga-3",
+        "low_sodium": "Pauvre en sel",
+        "no_added_sugar": "Sans sucre ajouté",
+        "low_fat": "Pauvre en graisses",
+        "quick": "Rapide"
       }
     }
   }

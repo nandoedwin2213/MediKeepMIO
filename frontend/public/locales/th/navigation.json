@@ -116,7 +116,8 @@
       "myMetabolicHealth": "สุขภาพเมตาบอลิกของฉัน",
       "professionalDashboard": "แดชบอร์ดผู้เชี่ยวชาญ",
       "metabolicMovement": "การออกกำลังกายของฉัน",
-      "metabolicNutrition": "โภชนาการของฉัน"
+      "metabolicNutrition": "โภชนาการของฉัน",
+      "metabolicRecipes": "สูตรอาหารของฉัน"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

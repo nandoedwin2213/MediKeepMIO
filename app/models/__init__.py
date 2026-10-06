@@ -58,6 +58,7 @@ from .metabolic import (
     MetabolicAssessment,
     NutritionPlan,
     MetabolicEngineConfig,
+    Recipe,
     MetabolicProfile,
 )
 from .notifications import (
@@ -103,6 +104,7 @@ __all__ = [
     "FunctionalAssessment",
     "MetabolicAssessment",
     "NutritionPlan",
+    "Recipe",
     "MetabolicEngineConfig",
     "MetabolicProfile",
     "Base",

@@ -116,7 +116,8 @@
       "myMetabolicHealth": "Η μεταβολική μου υγεία",
       "professionalDashboard": "Πίνακας επαγγελματία",
       "metabolicMovement": "Η άσκησή μου",
-      "metabolicNutrition": "Η διατροφή μου"
+      "metabolicNutrition": "Η διατροφή μου",
+      "metabolicRecipes": "Οι συνταγές μου"
     },
     "sections": {
       "administration": "Διαχείριση",

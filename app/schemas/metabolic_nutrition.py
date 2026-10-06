@@ -60,6 +60,7 @@ class NutritionPlanContent(BaseModel):
     dislikes: List[FreeText] = Field(default_factory=list, max_length=30)
     targets: ShortList = Field(default_factory=list, max_length=12)
     safety: ShortList = Field(default_factory=list, max_length=12)
+    recipe_ids: List[int] = Field(default_factory=list, max_length=40)
 
 
 class NutritionPlanWrite(BaseModel):

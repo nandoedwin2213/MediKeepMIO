@@ -116,7 +116,8 @@
       "myMetabolicHealth": "Моё метаболическое здоровье",
       "professionalDashboard": "Панель специалиста",
       "metabolicMovement": "Мои упражнения",
-      "metabolicNutrition": "Моё питание"
+      "metabolicNutrition": "Моё питание",
+      "metabolicRecipes": "Мои рецепты"
     },
     "sections": {
       "administration": "Администрирование",

@@ -116,7 +116,8 @@
       "myMetabolicHealth": "Min metabola hälsa",
       "professionalDashboard": "Professionell översikt",
       "metabolicMovement": "Min träning",
-      "metabolicNutrition": "Min kost"
+      "metabolicNutrition": "Min kost",
+      "metabolicRecipes": "Mina recept"
     },
     "sections": {
       "administration": "Administration",
