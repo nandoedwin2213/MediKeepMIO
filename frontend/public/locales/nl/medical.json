@@ -1900,7 +1900,11 @@
         "smoking": "Tabak",
         "musculoskeletal_limitations": "Pijn, blessures of lichamelijke beperkingen",
         "pain_level": "Gebruikelijk pijnniveau (0-10)",
-        "goals": "Wat wil je bereiken?"
+        "goals": "Wat wil je bereiken?",
+        "diet_pattern": "Eetpatroon",
+        "meals_per_day": "Hoofdmaaltijden per dag",
+        "food_intolerances": "Voedselintoleranties (bijv. lactose, gluten)",
+        "food_dislikes": "Voedsel dat je niet lust of vermijdt"
       },
       "options": {
         "alcohol": {
@@ -1913,6 +1917,13 @@
           "never": "Ik heb nooit gerookt",
           "former": "Ik rookte vroeger",
           "current": "Ik rook"
+        },
+        "diet_pattern": {
+          "omnivore": "Ik eet alles",
+          "vegetarian": "Vegetarisch",
+          "vegan": "Veganistisch",
+          "pescatarian": "Pescotariër",
+          "other": "Anders"
         }
       }
     },
@@ -2184,6 +2195,148 @@
         "weak_grip": "Lage knijpkracht: grijpoefeningen en armkracht.",
         "balance_priority": "Leeftijd ≥ 65 of zwakke benen: evenwichtstraining 3 dagen per week.",
         "sitting": "Zes uur of meer zitten per dag: actieve pauzes elke 30–60 minuten."
+      }
+    },
+    "nutrition": {
+      "title": "Mijn voeding",
+      "subtitle": "Je persoonlijke voedingsplan (METABOLIC NUTRITION), opgesteld en goedgekeurd door je voedingsdeskundige.",
+      "disclaimer": "Dit zijn richtwaarden, geen strikt dieet. Verander geen medicatie en volg geen zeer strenge diëten zonder advies van je zorgverlener.",
+      "loadError": "Gegevens konden niet worden geladen.",
+      "error": "De actie kon niet worden voltooid.",
+      "plate": {
+        "vegetables": "½ groente",
+        "protein": "¼ eiwit",
+        "carbs": "¼ volkoren",
+        "help": "Bordmethode: de helft groente, een kwart eiwit en een kwart volkoren of knollen."
+      },
+      "plan": {
+        "why": "Waarom dit plan",
+        "title": "Voedingsplan",
+        "subtitlePro": "Maak een concept, pas het aan en keur het goed zodat de patiënt het ziet.",
+        "generate": "Concept maken",
+        "noneProfessional": "Nog geen voedingsplannen. Maak een concept op basis van de metabole beoordeling.",
+        "status": {
+          "draft": "Concept",
+          "approved": "Goedgekeurd",
+          "archived": "Gearchiveerd"
+        },
+        "approvedOn": "Goedgekeurd op {{date}}",
+        "draftNotice": "Concept: de patiënt ziet het pas na jouw goedkeuring. Controleer en pas elk doel aan.",
+        "notes": "Notities voor de patiënt",
+        "delete": "Concept verwijderen",
+        "save": "Concept opslaan",
+        "approve": "Goedkeuren en publiceren",
+        "newVersion": "Nieuwe versie van dit plan",
+        "titlePatient": "Jouw voedingsplan",
+        "none": "Je zorgverlener heeft nog geen voedingsplan gepubliceerd.",
+        "generated": "Concept gemaakt",
+        "deleted": "Concept verwijderd",
+        "saved": "Concept opgeslagen",
+        "approved": "Plan goedgekeurd en gepubliceerd voor de patiënt",
+        "copied": "Nieuw concept gemaakt van het plan"
+      },
+      "sections": {
+        "energy": "Dagelijkse energie",
+        "macros": "Voedingsstoffen",
+        "meals": "Maaltijden",
+        "prioritize": "Vaker eten",
+        "limit": "Beperken",
+        "avoid": "Vermijden (allergieën en intoleranties)",
+        "targets": "Gewoontedoelen",
+        "safety": "Veiligheidsopmerkingen"
+      },
+      "fields": {
+        "perDay": "per dag",
+        "deficit": "Tekort",
+        "tdee": "Geschat verbruik",
+        "noEnergy": "Calorieën worden niet geschat omdat gewicht, lengte, leeftijd of geslacht ontbreekt. Volg de voedingsadviezen.",
+        "protein": "Eiwit",
+        "carbs": "Koolhydraten",
+        "fat": "Vet",
+        "fiber": "Vezels",
+        "sugar": "Toegevoegde suiker",
+        "saturated": "Verzadigd vet",
+        "sodium": "Natrium (zout)",
+        "hydration": "Drinkwater",
+        "mealsSummary": "Hoofdmaaltijden: {{meals}} · Tussendoortjes: {{snacks}}",
+        "protein_each_meal": "Bij elke maaltijd een eiwitbron",
+        "regular_schedule": "Vaste eettijden, geen maaltijden overslaan",
+        "plate_model": "Bordmethode",
+        "dislikes": "Voedsel dat de patiënt niet lust",
+        "kcal": "Calorieën (kcal/dag)",
+        "proteinKgMin": "Eiwit min (g/kg)",
+        "proteinKgMax": "Eiwit max (g/kg)",
+        "proteinGMin": "Eiwit min (g/dag)",
+        "proteinGMax": "Eiwit max (g/dag)",
+        "carbsMin": "Koolhydraten min (%)",
+        "carbsMax": "Koolhydraten max (%)",
+        "fatMin": "Vet min (%)",
+        "fatMax": "Vet max (%)",
+        "meals_per_day": "Hoofdmaaltijden per dag",
+        "snacks_per_day": "Tussendoortjes per dag",
+        "avoidHelp": "Actieve allergieën en intoleranties uit het dossier worden automatisch toegevoegd. Druk op Enter om meer toe te voegen."
+      },
+      "rationale": {
+        "weight_loss": "BMI of taille boven doel: matig calorietekort om gewicht en buikvet te verminderen.",
+        "maintenance": "BMI en taille binnen doel: energie om gewicht te behouden.",
+        "missing_anthropometry": "Gewicht, lengte, leeftijd of geslacht ontbreekt: geen caloriëschatting.",
+        "renal_review": "Verhoogd creatinine: eiwit op 0,8 g/kg tot medische/nierbeoordeling.",
+        "glycemic": "Glucose, HbA1c of voorgeschiedenis passend bij verstoorde suiker: minder en betere koolhydraten, verdeeld over de dag.",
+        "triglycerides": "Hoge triglyceriden: suikers en alcohol beperken.",
+        "lipids": "Afwijkend lipidenprofiel of hart- en vaatziekte: minder verzadigd vet, meer vis, vezels en onverzadigde vetten.",
+        "blood_pressure": "Bloeddruk boven doel of hypertensie: minder natrium.",
+        "uric_acid": "Hoog urinezuur: fructosedranken, orgaanvlees en alcohol beperken.",
+        "liver": "Leververvetting of verhoogde leverwaarden: alcohol en suikerhoudende dranken vermijden.",
+        "allergies": "Allergieën of intoleranties geregistreerd: uit te sluiten voedingsmiddelen staan vermeld."
+      },
+      "options": {
+        "prioritize": {
+          "vegetables": "Groenten",
+          "legumes": "Peulvruchten (bonen, linzen, kikkererwten)",
+          "whole_grains": "Volkoren en knollen",
+          "fruit_whole": "Heel fruit (geen sap)",
+          "oily_fish": "Vette vis (omega-3) 2×/week",
+          "fish": "Vis",
+          "poultry": "Gevogelte zonder vel",
+          "eggs": "Eieren",
+          "low_fat_dairy": "Magere zuivel",
+          "legumes_protein": "Peulvruchten als eiwitbron",
+          "tofu_tempeh": "Tofu of tempeh",
+          "nuts_seeds": "Noten en zaden (een handje)",
+          "olive_oil": "Olijfolie of avocado",
+          "water": "Water als hoofddrank"
+        },
+        "limit": {
+          "sugary_drinks": "Suikerhoudende dranken en frisdrank",
+          "ultraprocessed": "Ultrabewerkt voedsel",
+          "refined_flours": "Witbrood en geraffineerd meel",
+          "fried_foods": "Gefrituurd eten",
+          "processed_meat": "Vleeswaren en bewerkt vlees",
+          "fruit_juice": "Vruchtensappen",
+          "sweets": "Snoep en desserts",
+          "alcohol": "Alcoholische dranken",
+          "saturated_fats": "Verzadigde vetten (vet vlees, boter, reuzel)",
+          "added_salt": "Toegevoegd zout en bouillonblokjes",
+          "salty_snacks": "Zoute snacks",
+          "fructose_drinks": "Dranken met fructose of siroop",
+          "organ_meats": "Orgaanvlees en schaaldieren in overmaat"
+        },
+        "targets": {
+          "sugary_drinks_zero": "Suikerhoudende dranken vervangen door water",
+          "fruit_veg_5": "5 porties groente en fruit per dag",
+          "ultraprocessed_down": "Ultrabewerkt hooguit 3 keer per week",
+          "weight_5pct": "5% gewicht verliezen in 3–6 maanden",
+          "waist_down": "Tailleomtrek verminderen",
+          "water_daily": "Elke dag de aanbevolen hoeveelheid water drinken"
+        },
+        "safety": {
+          "professional_review": "Je zorgverlener past de doelen bij elke controle aan.",
+          "no_extreme_diets": "Vermijd zeer caloriearme of extreme diëten.",
+          "diabetes_meds": "Bij diabetesmedicatie kan minder koolhydraten tot een lage suiker leiden: meet en overleg.",
+          "renal_review": "Nierfunctie controleren voordat eiwit wordt verhoogd.",
+          "allergy_check": "Controleer etiketten: allergenen kunnen verborgen zitten in bewerkt voedsel.",
+          "b12_review": "Veganistisch dieet: suppletie van vitamine B12 nagaan."
+        }
       }
     }
   }

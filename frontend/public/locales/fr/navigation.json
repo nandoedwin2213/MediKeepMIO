@@ -115,7 +115,8 @@
       "metabolicRisk": "Risque métabolique",
       "myMetabolicHealth": "Ma santé métabolique",
       "professionalDashboard": "Tableau professionnel",
-      "metabolicMovement": "Mon activité physique"
+      "metabolicMovement": "Mon activité physique",
+      "metabolicNutrition": "Mon alimentation"
     },
     "sections": {
       "administration": "Administration",

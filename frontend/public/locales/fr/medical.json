@@ -1900,7 +1900,11 @@
         "smoking": "Tabac",
         "musculoskeletal_limitations": "Douleurs, blessures ou limitations physiques",
         "pain_level": "Niveau de douleur habituel (0-10)",
-        "goals": "Qu'aimeriez-vous atteindre ?"
+        "goals": "Qu'aimeriez-vous atteindre ?",
+        "diet_pattern": "Type d’alimentation",
+        "meals_per_day": "Repas principaux par jour",
+        "food_intolerances": "Intolérances alimentaires (ex. lactose, gluten)",
+        "food_dislikes": "Aliments que tu n’aimes pas ou évites"
       },
       "options": {
         "alcohol": {
@@ -1913,6 +1917,13 @@
           "never": "Je n'ai jamais fumé",
           "former": "Je fumais avant",
           "current": "Je fume"
+        },
+        "diet_pattern": {
+          "omnivore": "Je mange de tout",
+          "vegetarian": "Végétarienne",
+          "vegan": "Végétalienne",
+          "pescatarian": "Pescétarienne",
+          "other": "Autre"
         }
       }
     },
@@ -2184,6 +2195,148 @@
         "weak_grip": "Préhension faible : exercices de préhension et renforcement des bras.",
         "balance_priority": "Âge ≥ 65 ans ou jambes faibles : équilibre 3 jours par semaine.",
         "sitting": "Six heures ou plus assis par jour : pauses actives toutes les 30–60 minutes."
+      }
+    },
+    "nutrition": {
+      "title": "Mon alimentation",
+      "subtitle": "Ton plan alimentaire personnalisé (METABOLIC NUTRITION), préparé et validé par ton professionnel de la nutrition.",
+      "disclaimer": "Ce sont des objectifs indicatifs, pas un régime strict. Ne modifie pas ton traitement et ne suis pas de régime très restrictif sans l’avis de ton professionnel.",
+      "loadError": "Impossible de charger les données.",
+      "error": "L’action n’a pas pu être effectuée.",
+      "plate": {
+        "vegetables": "½ légumes",
+        "protein": "¼ protéines",
+        "carbs": "¼ céréales complètes",
+        "help": "Méthode de l’assiette : moitié légumes, un quart protéines et un quart céréales complètes ou tubercules."
+      },
+      "plan": {
+        "why": "Pourquoi ce plan",
+        "title": "Plan nutritionnel",
+        "subtitlePro": "Génère un brouillon, ajuste-le et valide-le pour que le patient le voie.",
+        "generate": "Générer un brouillon",
+        "noneProfessional": "Aucun plan nutritionnel pour l’instant. Génère un brouillon à partir de l’évaluation métabolique.",
+        "status": {
+          "draft": "Brouillon",
+          "approved": "Validé",
+          "archived": "Archivé"
+        },
+        "approvedOn": "Validé le {{date}}",
+        "draftNotice": "Brouillon : le patient ne le verra qu’après ta validation. Vérifie et ajuste chaque objectif.",
+        "notes": "Notes pour le patient",
+        "delete": "Supprimer le brouillon",
+        "save": "Enregistrer le brouillon",
+        "approve": "Valider et publier",
+        "newVersion": "Nouvelle version à partir de ce plan",
+        "titlePatient": "Ton plan alimentaire",
+        "none": "Ton professionnel n’a pas encore publié de plan alimentaire.",
+        "generated": "Brouillon généré",
+        "deleted": "Brouillon supprimé",
+        "saved": "Brouillon enregistré",
+        "approved": "Plan validé et publié pour le patient",
+        "copied": "Nouveau brouillon créé à partir du plan"
+      },
+      "sections": {
+        "energy": "Énergie quotidienne",
+        "macros": "Nutriments",
+        "meals": "Repas",
+        "prioritize": "À privilégier",
+        "limit": "À limiter",
+        "avoid": "À éviter (allergies et intolérances)",
+        "targets": "Objectifs d’habitudes",
+        "safety": "Consignes de sécurité"
+      },
+      "fields": {
+        "perDay": "par jour",
+        "deficit": "Déficit",
+        "tdee": "Dépense estimée",
+        "noEnergy": "Les calories ne sont pas estimées car il manque le poids, la taille, l’âge ou le sexe. Suis les conseils alimentaires.",
+        "protein": "Protéines",
+        "carbs": "Glucides",
+        "fat": "Lipides",
+        "fiber": "Fibres",
+        "sugar": "Sucres ajoutés",
+        "saturated": "Graisses saturées",
+        "sodium": "Sel (sodium)",
+        "hydration": "Eau",
+        "mealsSummary": "Repas principaux : {{meals}} · Collations : {{snacks}}",
+        "protein_each_meal": "Une source de protéines à chaque repas",
+        "regular_schedule": "Horaires réguliers, sans sauter de repas",
+        "plate_model": "Méthode de l’assiette",
+        "dislikes": "Aliments non appréciés",
+        "kcal": "Calories (kcal/jour)",
+        "proteinKgMin": "Protéines min (g/kg)",
+        "proteinKgMax": "Protéines max (g/kg)",
+        "proteinGMin": "Protéines min (g/jour)",
+        "proteinGMax": "Protéines max (g/jour)",
+        "carbsMin": "Glucides min (%)",
+        "carbsMax": "Glucides max (%)",
+        "fatMin": "Lipides min (%)",
+        "fatMax": "Lipides max (%)",
+        "meals_per_day": "Repas principaux par jour",
+        "snacks_per_day": "Collations par jour",
+        "avoidHelp": "Les allergies actives et intolérances du dossier sont ajoutées automatiquement. Appuie sur Entrée pour en ajouter."
+      },
+      "rationale": {
+        "weight_loss": "IMC ou tour de taille au-dessus de l’objectif : déficit calorique modéré pour réduire le poids et la graisse abdominale.",
+        "maintenance": "IMC et tour de taille dans l’objectif : énergie pour maintenir le poids.",
+        "missing_anthropometry": "Poids, taille, âge ou sexe manquant : calories non estimées.",
+        "renal_review": "Créatinine élevée : protéines à 0,8 g/kg en attente d’avis médical/rénal.",
+        "glycemic": "Glycémie, HbA1c ou antécédents compatibles avec une glycémie altérée : moins de glucides, de meilleure qualité, répartis dans la journée.",
+        "triglycerides": "Triglycérides élevés : limiter sucres et alcool.",
+        "lipids": "Bilan lipidique altéré ou antécédent cardiovasculaire : moins de graisses saturées, plus de poisson, de fibres et de graisses insaturées.",
+        "blood_pressure": "Tension au-dessus de l’objectif ou hypertension : moins de sel.",
+        "uric_acid": "Acide urique élevé : limiter boissons au fructose, abats et alcool.",
+        "liver": "Foie gras ou enzymes hépatiques élevées : éviter alcool et boissons sucrées.",
+        "allergies": "Allergies ou intolérances enregistrées : les aliments à exclure sont listés."
+      },
+      "options": {
+        "prioritize": {
+          "vegetables": "Légumes",
+          "legumes": "Légumineuses (haricots, lentilles, pois chiches)",
+          "whole_grains": "Céréales complètes et tubercules",
+          "fruit_whole": "Fruits entiers (pas de jus)",
+          "oily_fish": "Poissons gras (oméga-3) 2×/semaine",
+          "fish": "Poisson",
+          "poultry": "Volaille sans peau",
+          "eggs": "Œufs",
+          "low_fat_dairy": "Produits laitiers allégés",
+          "legumes_protein": "Légumineuses comme source de protéines",
+          "tofu_tempeh": "Tofu ou tempeh",
+          "nuts_seeds": "Noix et graines (une poignée)",
+          "olive_oil": "Huile d’olive ou avocat",
+          "water": "Eau comme boisson principale"
+        },
+        "limit": {
+          "sugary_drinks": "Boissons sucrées et sodas",
+          "ultraprocessed": "Aliments ultra-transformés",
+          "refined_flours": "Pain blanc et farines raffinées",
+          "fried_foods": "Fritures",
+          "processed_meat": "Charcuterie et viandes transformées",
+          "fruit_juice": "Jus de fruits",
+          "sweets": "Sucreries et desserts",
+          "alcohol": "Boissons alcoolisées",
+          "saturated_fats": "Graisses saturées (viandes grasses, beurre, saindoux)",
+          "added_salt": "Sel ajouté et bouillons cubes",
+          "salty_snacks": "Grignotages salés",
+          "fructose_drinks": "Boissons au fructose ou sirop",
+          "organ_meats": "Abats et fruits de mer en excès"
+        },
+        "targets": {
+          "sugary_drinks_zero": "Remplacer les boissons sucrées par de l’eau",
+          "fruit_veg_5": "5 portions de fruits et légumes par jour",
+          "ultraprocessed_down": "Ultra-transformés au maximum 3 fois par semaine",
+          "weight_5pct": "Perdre 5 % du poids en 3 à 6 mois",
+          "waist_down": "Réduire le tour de taille",
+          "water_daily": "Boire l’eau recommandée chaque jour"
+        },
+        "safety": {
+          "professional_review": "Ton professionnel ajuste les objectifs à chaque suivi.",
+          "no_extreme_diets": "Évite les régimes très hypocaloriques ou extrêmes.",
+          "diabetes_meds": "Si tu prends un traitement du diabète, modifier les glucides peut provoquer une hypoglycémie : surveille et consulte.",
+          "renal_review": "Vérifier la fonction rénale avant d’augmenter les protéines.",
+          "allergy_check": "Vérifie les étiquettes : des allergènes peuvent se cacher dans les produits transformés.",
+          "b12_review": "Alimentation végétalienne : vérifier la supplémentation en vitamine B12."
+        }
       }
     }
   }

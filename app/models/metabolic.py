@@ -87,6 +87,10 @@ class MetabolicProfile(Base):
     musculoskeletal_limitations = Column(Text, nullable=True)
     pain_level = Column(Integer, nullable=True)  # 0-10
     goals = Column(Text, nullable=True)
+    diet_pattern = Column(String(20), nullable=True)  # omnivore, vegetarian, ...
+    food_intolerances = Column(Text, nullable=True)
+    food_dislikes = Column(Text, nullable=True)
+    meals_per_day = Column(Integer, nullable=True)
 
     updated_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     created_at = Column(DateTime, default=get_utc_now, nullable=False)
@@ -133,6 +137,32 @@ class ExercisePlan(Base):
     status = Column(
         String(20), default="draft", nullable=False
     )  # draft/approved/archived
+    plan = Column(JSON, nullable=False)
+    rationale = Column(JSON, nullable=True)
+    generator_version = Column(String(30), nullable=True)
+    notes = Column(Text, nullable=True)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    approved_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    approved_at = Column(DateTime, nullable=True)
+    created_at = Column(DateTime, default=get_utc_now, nullable=False)
+    updated_at = Column(
+        DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
+    )
+
+
+class NutritionPlan(Base):
+    """Structured nutrition plan; patients only see it once a professional approves it."""
+
+    __tablename__ = "nutrition_plans"
+
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(
+        Integer,
+        ForeignKey("patients.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    status = Column(String(20), default="draft", nullable=False)
     plan = Column(JSON, nullable=False)
     rationale = Column(JSON, nullable=True)
     generator_version = Column(String(30), nullable=True)

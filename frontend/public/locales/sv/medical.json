@@ -1900,7 +1900,11 @@
         "smoking": "Tobak",
         "musculoskeletal_limitations": "Smärta, skador eller fysiska begränsningar",
         "pain_level": "Vanlig smärtnivå (0-10)",
-        "goals": "Vad vill du uppnå?"
+        "goals": "Vad vill du uppnå?",
+        "diet_pattern": "Kosthållning",
+        "meals_per_day": "Huvudmål per dag",
+        "food_intolerances": "Födoämnesintoleranser (t.ex. laktos, gluten)",
+        "food_dislikes": "Livsmedel du ogillar eller undviker"
       },
       "options": {
         "alcohol": {
@@ -1913,6 +1917,13 @@
           "never": "Jag har aldrig rökt",
           "former": "Jag rökte tidigare",
           "current": "Jag röker"
+        },
+        "diet_pattern": {
+          "omnivore": "Jag äter allt",
+          "vegetarian": "Vegetarisk",
+          "vegan": "Vegansk",
+          "pescatarian": "Pescetarian",
+          "other": "Annan"
         }
       }
     },
@@ -2184,6 +2195,148 @@
         "weak_grip": "Låg greppstyrka: greppövningar och armstyrka.",
         "balance_priority": "Ålder ≥ 65 eller svaga ben: balansträning 3 dagar per vecka.",
         "sitting": "Sex timmar eller mer sittande per dag: aktiva pauser var 30–60:e minut."
+      }
+    },
+    "nutrition": {
+      "title": "Min kost",
+      "subtitle": "Din personliga kostplan (METABOLIC NUTRITION), framtagen och godkänd av din dietist.",
+      "disclaimer": "Detta är riktvärden, ingen strikt diet. Ändra inte medicinering och följ inga mycket strikta dieter utan besked från din vårdpersonal.",
+      "loadError": "Kunde inte läsa in data.",
+      "error": "Åtgärden kunde inte slutföras.",
+      "plate": {
+        "vegetables": "½ grönsaker",
+        "protein": "¼ proteiner",
+        "carbs": "¼ fullkorn",
+        "help": "Tallriksmodellen: hälften grönsaker, en fjärdedel protein och en fjärdedel fullkorn eller rotfrukter."
+      },
+      "plan": {
+        "why": "Varför denna plan",
+        "title": "Kostplan",
+        "subtitlePro": "Skapa ett utkast, justera det och godkänn det så att patienten ser det.",
+        "generate": "Skapa utkast",
+        "noneProfessional": "Inga kostplaner ännu. Skapa ett utkast utifrån den metabola bedömningen.",
+        "status": {
+          "draft": "Utkast",
+          "approved": "Godkänd",
+          "archived": "Arkiverad"
+        },
+        "approvedOn": "Godkänd {{date}}",
+        "draftNotice": "Utkast: patienten ser det först när du godkänt det. Granska och justera varje mål.",
+        "notes": "Anteckningar till patienten",
+        "delete": "Radera utkast",
+        "save": "Spara utkast",
+        "approve": "Godkänn och publicera",
+        "newVersion": "Ny version från denna plan",
+        "titlePatient": "Din kostplan",
+        "none": "Din vårdpersonal har inte publicerat någon kostplan ännu.",
+        "generated": "Utkast skapat",
+        "deleted": "Utkast raderat",
+        "saved": "Utkast sparat",
+        "approved": "Planen godkänd och publicerad för patienten",
+        "copied": "Nytt utkast skapat från planen"
+      },
+      "sections": {
+        "energy": "Daglig energi",
+        "macros": "Näringsämnen",
+        "meals": "Måltider",
+        "prioritize": "Ät oftare",
+        "limit": "Begränsa",
+        "avoid": "Undvik (allergier och intoleranser)",
+        "targets": "Vanemål",
+        "safety": "Säkerhetsanvisningar"
+      },
+      "fields": {
+        "perDay": "per dag",
+        "deficit": "Underskott",
+        "tdee": "Beräknad förbrukning",
+        "noEnergy": "Kalorier beräknas inte eftersom vikt, längd, ålder eller kön saknas. Följ kostråden.",
+        "protein": "Proteiner",
+        "carbs": "Kolhydrater",
+        "fat": "Fett",
+        "fiber": "Fibrer",
+        "sugar": "Tillsatt socker",
+        "saturated": "Mättat fett",
+        "sodium": "Natrium (salt)",
+        "hydration": "Vatten",
+        "mealsSummary": "Huvudmål: {{meals}} · Mellanmål: {{snacks}}",
+        "protein_each_meal": "En proteinkälla vid varje måltid",
+        "regular_schedule": "Regelbundna måltider, hoppa inte över mål",
+        "plate_model": "Tallriksmodellen",
+        "dislikes": "Livsmedel patienten ogillar",
+        "kcal": "Kalorier (kcal/dag)",
+        "proteinKgMin": "Proteiner min (g/kg)",
+        "proteinKgMax": "Proteiner max (g/kg)",
+        "proteinGMin": "Protein min (g/dag)",
+        "proteinGMax": "Protein max (g/dag)",
+        "carbsMin": "Kolhydrater min (%)",
+        "carbsMax": "Kolhydrater max (%)",
+        "fatMin": "Fett min (%)",
+        "fatMax": "Fett max (%)",
+        "meals_per_day": "Huvudmål per dag",
+        "snacks_per_day": "Mellanmål per dag",
+        "avoidHelp": "Aktiva allergier och intoleranser från journalen läggs till automatiskt. Tryck Enter för att lägga till fler."
+      },
+      "rationale": {
+        "weight_loss": "BMI eller midja över målet: måttligt kaloriunderskott för att minska vikt och bukfett.",
+        "maintenance": "BMI och midja inom målet: energi för att behålla vikten.",
+        "missing_anthropometry": "Vikt, längd, ålder eller kön saknas: kalorier beräknades inte.",
+        "renal_review": "Förhöjt kreatinin: protein 0,8 g/kg i väntan på medicinsk/njurbedömning.",
+        "glycemic": "Glukos, HbA1c eller anamnes förenlig med störd glukos: färre och bättre kolhydrater fördelade över dagen.",
+        "triglycerides": "Höga triglycerider: begränsa socker och alkohol.",
+        "lipids": "Avvikande blodfetter eller hjärt-kärlsjukdom: mindre mättat fett, mer fisk, fibrer och omättade fetter.",
+        "blood_pressure": "Blodtryck över målet eller hypertoni: mindre natrium.",
+        "uric_acid": "Hög urinsyra: begränsa fruktosdrycker, inälvsmat och alkohol.",
+        "liver": "Fettlever eller förhöjda levervärden: undvik alkohol och söta drycker.",
+        "allergies": "Allergier eller intoleranser registrerade: livsmedel att utesluta listas."
+      },
+      "options": {
+        "prioritize": {
+          "vegetables": "Grönsaker",
+          "legumes": "Baljväxter (bönor, linser, kikärtor)",
+          "whole_grains": "Fullkorn och rotfrukter",
+          "fruit_whole": "Hel frukt (inte juice)",
+          "oily_fish": "Fet fisk (omega-3) 2 ggr/vecka",
+          "fish": "Fisk",
+          "poultry": "Fågel utan skinn",
+          "eggs": "Ägg",
+          "low_fat_dairy": "Magra mejeriprodukter",
+          "legumes_protein": "Baljväxter som proteinkälla",
+          "tofu_tempeh": "Tofu eller tempeh",
+          "nuts_seeds": "Nötter och frön (en näve)",
+          "olive_oil": "Olivolja eller avokado",
+          "water": "Vatten som huvuddryck"
+        },
+        "limit": {
+          "sugary_drinks": "Söta drycker och läsk",
+          "ultraprocessed": "Ultraprocessad mat",
+          "refined_flours": "Vitt bröd och vitt mjöl",
+          "fried_foods": "Friterad mat",
+          "processed_meat": "Chark och processat kött",
+          "fruit_juice": "Fruktjuicer",
+          "sweets": "Godis och efterrätter",
+          "alcohol": "Alkoholhaltiga drycker",
+          "saturated_fats": "Mättade fetter (fett kött, smör, ister)",
+          "added_salt": "Tillsatt salt och buljongtärningar",
+          "salty_snacks": "Salta snacks",
+          "fructose_drinks": "Drycker med fruktos eller sirap",
+          "organ_meats": "Inälvsmat och skaldjur i överflöd"
+        },
+        "targets": {
+          "sugary_drinks_zero": "Byt söta drycker mot vatten",
+          "fruit_veg_5": "5 portioner frukt och grönt per dag",
+          "ultraprocessed_down": "Ultraprocessat högst 3 gånger i veckan",
+          "weight_5pct": "Gå ned 5 % i vikt på 3–6 månader",
+          "waist_down": "Minska midjemåttet",
+          "water_daily": "Drick rekommenderad mängd vatten varje dag"
+        },
+        "safety": {
+          "professional_review": "Din vårdpersonal justerar målen vid varje uppföljning.",
+          "no_extreme_diets": "Undvik mycket kalorisnåla eller extrema dieter.",
+          "diabetes_meds": "Om du tar diabetesmedicin kan ändrade kolhydrater ge lågt blodsocker: mät och rådgör.",
+          "renal_review": "Granska njurfunktionen innan proteinet ökas.",
+          "allergy_check": "Läs etiketter: allergener kan döljas i processad mat.",
+          "b12_review": "Vegansk kost: se över tillskott av vitamin B12."
+        }
       }
     }
   }

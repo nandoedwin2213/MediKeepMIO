@@ -1900,7 +1900,11 @@
         "smoking": "Tabak",
         "musculoskeletal_limitations": "Schmerzen, Verletzungen oder körperliche Einschränkungen",
         "pain_level": "Übliches Schmerzniveau (0-10)",
-        "goals": "Was möchten Sie erreichen?"
+        "goals": "Was möchten Sie erreichen?",
+        "diet_pattern": "Ernährungsweise",
+        "meals_per_day": "Hauptmahlzeiten pro Tag",
+        "food_intolerances": "Nahrungsmittelunverträglichkeiten (z. B. Laktose, Gluten)",
+        "food_dislikes": "Lebensmittel, die du nicht magst oder meidest"
       },
       "options": {
         "alcohol": {
@@ -1913,6 +1917,13 @@
           "never": "Ich habe nie geraucht",
           "former": "Ich habe früher geraucht",
           "current": "Ich rauche"
+        },
+        "diet_pattern": {
+          "omnivore": "Ich esse alles",
+          "vegetarian": "Vegetarisch",
+          "vegan": "Vegan (rein pflanzlich)",
+          "pescatarian": "Pescetarisch",
+          "other": "Andere"
         }
       }
     },
@@ -2184,6 +2195,148 @@
         "weak_grip": "Geringe Griffkraft: Greifübungen und Armkraft.",
         "balance_priority": "Alter ≥ 65 oder schwache Beine: Gleichgewichtstraining 3 Tage pro Woche.",
         "sitting": "Sechs oder mehr Stunden Sitzen pro Tag: aktive Pausen alle 30–60 Minuten."
+      }
+    },
+    "nutrition": {
+      "title": "Meine Ernährung",
+      "subtitle": "Dein persönlicher Ernährungsplan (METABOLIC NUTRITION), erstellt und freigegeben von deiner Ernährungsfachkraft.",
+      "disclaimer": "Dies sind Orientierungswerte, keine strenge Diät. Ändere keine Medikamente und mache keine sehr strengen Diäten ohne Anweisung deiner Fachkraft.",
+      "loadError": "Daten konnten nicht geladen werden.",
+      "error": "Die Aktion konnte nicht abgeschlossen werden.",
+      "plate": {
+        "vegetables": "½ Gemüse",
+        "protein": "¼ Eiweiß",
+        "carbs": "¼ Vollkorn",
+        "help": "Tellermethode: halb Gemüse, ein Viertel Eiweiß und ein Viertel Vollkorn oder Knollen."
+      },
+      "plan": {
+        "why": "Warum dieser Plan",
+        "title": "Ernährungsplan",
+        "subtitlePro": "Erstelle einen Entwurf, passe ihn an und gib ihn frei, damit der Patient ihn sieht.",
+        "generate": "Entwurf erstellen",
+        "noneProfessional": "Noch keine Ernährungspläne. Erstelle einen Entwurf aus der metabolischen Bewertung.",
+        "status": {
+          "draft": "Entwurf",
+          "approved": "Freigegeben",
+          "archived": "Archiviert"
+        },
+        "approvedOn": "Freigegeben am {{date}}",
+        "draftNotice": "Entwurf: Der Patient sieht ihn erst nach deiner Freigabe. Prüfe und passe jedes Ziel an.",
+        "notes": "Hinweise für den Patienten",
+        "delete": "Entwurf löschen",
+        "save": "Entwurf speichern",
+        "approve": "Freigeben und veröffentlichen",
+        "newVersion": "Neue Version aus diesem Plan",
+        "titlePatient": "Dein Ernährungsplan",
+        "none": "Deine Fachkraft hat noch keinen Ernährungsplan veröffentlicht.",
+        "generated": "Entwurf erstellt",
+        "deleted": "Entwurf gelöscht",
+        "saved": "Entwurf gespeichert",
+        "approved": "Plan freigegeben und für den Patienten veröffentlicht",
+        "copied": "Neuer Entwurf aus dem Plan erstellt"
+      },
+      "sections": {
+        "energy": "Tägliche Energie",
+        "macros": "Nährstoffe",
+        "meals": "Mahlzeiten",
+        "prioritize": "Öfter essen",
+        "limit": "Einschränken",
+        "avoid": "Meiden (Allergien und Unverträglichkeiten)",
+        "targets": "Gewohnheitsziele",
+        "safety": "Sicherheitshinweise"
+      },
+      "fields": {
+        "perDay": "pro Tag",
+        "deficit": "Defizit",
+        "tdee": "Geschätzter Verbrauch",
+        "noEnergy": "Kalorien werden nicht geschätzt, weil Gewicht, Größe, Alter oder Geschlecht fehlen. Folge den Lebensmittelhinweisen.",
+        "protein": "Eiweiß",
+        "carbs": "Kohlenhydrate",
+        "fat": "Fett",
+        "fiber": "Ballaststoffe",
+        "sugar": "Zugesetzter Zucker",
+        "saturated": "Gesättigte Fette",
+        "sodium": "Natrium (Salz)",
+        "hydration": "Wasser",
+        "mealsSummary": "Hauptmahlzeiten: {{meals}} · Zwischenmahlzeiten: {{snacks}}",
+        "protein_each_meal": "Zu jeder Mahlzeit eine Eiweißquelle",
+        "regular_schedule": "Regelmäßige Essenszeiten, keine Mahlzeiten auslassen",
+        "plate_model": "Tellermethode",
+        "dislikes": "Abgelehnte Lebensmittel",
+        "kcal": "Kalorien (kcal/Tag)",
+        "proteinKgMin": "Eiweiß min. (g/kg)",
+        "proteinKgMax": "Eiweiß max. (g/kg)",
+        "proteinGMin": "Eiweiß min. (g/Tag)",
+        "proteinGMax": "Eiweiß max. (g/Tag)",
+        "carbsMin": "Kohlenhydrate min. (%)",
+        "carbsMax": "Kohlenhydrate max. (%)",
+        "fatMin": "Fett min. (%)",
+        "fatMax": "Fett max. (%)",
+        "meals_per_day": "Hauptmahlzeiten pro Tag",
+        "snacks_per_day": "Zwischenmahlzeiten pro Tag",
+        "avoidHelp": "Aktive Allergien und Unverträglichkeiten aus der Akte werden automatisch ergänzt. Enter drücken, um mehr hinzuzufügen."
+      },
+      "rationale": {
+        "weight_loss": "BMI oder Taille über dem Ziel: moderates Kaloriendefizit zur Reduktion von Gewicht und Bauchfett.",
+        "maintenance": "BMI und Taille im Zielbereich: Energie zum Gewichtserhalt.",
+        "missing_anthropometry": "Gewicht, Größe, Alter oder Geschlecht fehlen: keine Kalorienschätzung.",
+        "renal_review": "Erhöhtes Kreatinin: Eiweiß bei 0,8 g/kg bis zur ärztlichen/renalen Abklärung.",
+        "glycemic": "Glukose, HbA1c oder Vorgeschichte passend zu gestörtem Zucker: weniger und hochwertigere Kohlenhydrate, über den Tag verteilt.",
+        "triglycerides": "Hohe Triglyceride: Zucker und Alkohol einschränken.",
+        "lipids": "Veränderte Blutfette oder kardiovaskuläre Vorgeschichte: weniger gesättigte Fette, mehr Fisch, Ballaststoffe und ungesättigte Fette.",
+        "blood_pressure": "Blutdruck über Ziel oder Hypertonie: weniger Natrium.",
+        "uric_acid": "Hohe Harnsäure: Fruktosegetränke, Innereien und Alkohol einschränken.",
+        "liver": "Fettleber oder erhöhte Leberwerte: Alkohol und zuckerhaltige Getränke meiden.",
+        "allergies": "Allergien oder Unverträglichkeiten erfasst: auszuschließende Lebensmittel sind aufgeführt."
+      },
+      "options": {
+        "prioritize": {
+          "vegetables": "Gemüse",
+          "legumes": "Hülsenfrüchte (Bohnen, Linsen, Kichererbsen)",
+          "whole_grains": "Vollkorn und Knollen",
+          "fruit_whole": "Ganzes Obst (kein Saft)",
+          "oily_fish": "Fetter Fisch (Omega-3) 2×/Woche",
+          "fish": "Fisch",
+          "poultry": "Geflügel ohne Haut",
+          "eggs": "Eier",
+          "low_fat_dairy": "Fettarme Milchprodukte",
+          "legumes_protein": "Hülsenfrüchte als Eiweißquelle",
+          "tofu_tempeh": "Tofu oder Tempeh",
+          "nuts_seeds": "Nüsse und Samen (eine Handvoll)",
+          "olive_oil": "Olivenöl oder Avocado",
+          "water": "Wasser als Hauptgetränk"
+        },
+        "limit": {
+          "sugary_drinks": "Zuckerhaltige Getränke und Limonaden",
+          "ultraprocessed": "Hochverarbeitete Lebensmittel",
+          "refined_flours": "Weißbrot und Auszugsmehle",
+          "fried_foods": "Frittiertes",
+          "processed_meat": "Wurst und verarbeitetes Fleisch",
+          "fruit_juice": "Fruchtsäfte",
+          "sweets": "Süßigkeiten und Desserts",
+          "alcohol": "Alkoholische Getränke",
+          "saturated_fats": "Gesättigte Fette (fettes Fleisch, Butter, Schmalz)",
+          "added_salt": "Zugesetztes Salz und Brühwürfel",
+          "salty_snacks": "Salzige Knabbereien",
+          "fructose_drinks": "Getränke mit Fruktose oder Sirup",
+          "organ_meats": "Innereien und Meeresfrüchte im Übermaß"
+        },
+        "targets": {
+          "sugary_drinks_zero": "Zuckerhaltige Getränke durch Wasser ersetzen",
+          "fruit_veg_5": "5 Portionen Obst und Gemüse pro Tag",
+          "ultraprocessed_down": "Hochverarbeitetes höchstens 3-mal pro Woche",
+          "weight_5pct": "5 % des Körpergewichts in 3–6 Monaten verlieren",
+          "waist_down": "Taillenumfang verringern",
+          "water_daily": "Täglich die empfohlene Wassermenge trinken"
+        },
+        "safety": {
+          "professional_review": "Deine Fachkraft passt die Ziele bei jeder Kontrolle an.",
+          "no_extreme_diets": "Vermeide sehr kalorienarme oder extreme Diäten.",
+          "diabetes_meds": "Bei Diabetesmedikamenten können geänderte Kohlenhydrate zu Unterzucker führen: messen und Rücksprache halten.",
+          "renal_review": "Nierenfunktion vor Eiweißerhöhung prüfen.",
+          "allergy_check": "Etiketten prüfen: Allergene können in verarbeiteten Lebensmitteln versteckt sein.",
+          "b12_review": "Vegane Ernährung: Vitamin-B12-Ergänzung prüfen."
+        }
       }
     }
   }

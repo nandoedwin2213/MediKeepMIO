@@ -1900,7 +1900,11 @@
         "smoking": "Tobacco",
         "musculoskeletal_limitations": "Pain, injuries or physical limitations",
         "pain_level": "Usual pain level (0-10)",
-        "goals": "What would you like to achieve?"
+        "goals": "What would you like to achieve?",
+        "diet_pattern": "Eating pattern",
+        "meals_per_day": "Main meals per day",
+        "food_intolerances": "Food intolerances (e.g. lactose, gluten)",
+        "food_dislikes": "Foods you dislike or avoid"
       },
       "options": {
         "alcohol": {
@@ -1913,6 +1917,13 @@
           "never": "I have never smoked",
           "former": "I used to smoke",
           "current": "I smoke"
+        },
+        "diet_pattern": {
+          "omnivore": "I eat everything",
+          "vegetarian": "Vegetarian",
+          "vegan": "Vegan",
+          "pescatarian": "Pescatarian",
+          "other": "Other"
         }
       }
     },
@@ -2184,6 +2195,148 @@
         "weak_grip": "Low grip strength: grip exercises and upper-limb strength.",
         "balance_priority": "Age ≥ 65 or weak lower limbs: balance work 3 days a week.",
         "sitting": "Six or more hours sitting per day: active breaks every 30–60 minutes."
+      }
+    },
+    "nutrition": {
+      "title": "My nutrition",
+      "subtitle": "Your personalised nutrition plan (METABOLIC NUTRITION), prepared and approved by your nutrition professional.",
+      "disclaimer": "These are guidance targets, not a strict diet. Do not change medication or follow very restrictive diets without your professional's indication.",
+      "loadError": "Could not load the data.",
+      "error": "The action could not be completed.",
+      "plate": {
+        "vegetables": "½ vegetables",
+        "protein": "¼ protein",
+        "carbs": "¼ whole grains",
+        "help": "Plate method: half vegetables, a quarter protein and a quarter whole grains or tubers."
+      },
+      "plan": {
+        "why": "Why this plan",
+        "title": "Nutrition plan",
+        "subtitlePro": "Generate a draft, adjust it and approve it so the patient can see it.",
+        "generate": "Generate draft",
+        "noneProfessional": "No nutrition plans yet. Generate a draft from the metabolic assessment.",
+        "status": {
+          "draft": "Draft",
+          "approved": "Approved",
+          "archived": "Archived"
+        },
+        "approvedOn": "Approved on {{date}}",
+        "draftNotice": "Draft: the patient cannot see it until you approve it. Review and adjust every target.",
+        "notes": "Notes for the patient",
+        "delete": "Delete draft",
+        "save": "Save draft",
+        "approve": "Approve and publish",
+        "newVersion": "New version from this plan",
+        "titlePatient": "Your nutrition plan",
+        "none": "Your professional has not published a nutrition plan yet.",
+        "generated": "Draft generated",
+        "deleted": "Draft deleted",
+        "saved": "Draft saved",
+        "approved": "Plan approved and published to the patient",
+        "copied": "New draft created from the plan"
+      },
+      "sections": {
+        "energy": "Daily energy",
+        "macros": "Nutrients",
+        "meals": "Meals",
+        "prioritize": "Eat more often",
+        "limit": "Limit",
+        "avoid": "Avoid (allergies and intolerances)",
+        "targets": "Habit goals",
+        "safety": "Safety notes"
+      },
+      "fields": {
+        "perDay": "per day",
+        "deficit": "Deficit",
+        "tdee": "Estimated expenditure",
+        "noEnergy": "Calories are not estimated because weight, height, age or sex are missing. Follow the food guidance below.",
+        "protein": "Protein",
+        "carbs": "Carbohydrates",
+        "fat": "Fat",
+        "fiber": "Fibre",
+        "sugar": "Added sugar",
+        "saturated": "Saturated fat",
+        "sodium": "Sodium (salt)",
+        "hydration": "Water",
+        "mealsSummary": "Main meals: {{meals}} · Snacks: {{snacks}}",
+        "protein_each_meal": "Include a protein source in every meal",
+        "regular_schedule": "Regular meal times, without skipping meals",
+        "plate_model": "Plate method",
+        "dislikes": "Foods the patient dislikes",
+        "kcal": "Calories (kcal/day)",
+        "proteinKgMin": "Protein min (g/kg)",
+        "proteinKgMax": "Protein max (g/kg)",
+        "proteinGMin": "Protein min (g/day)",
+        "proteinGMax": "Protein max (g/day)",
+        "carbsMin": "Carbohydrates min (%)",
+        "carbsMax": "Carbohydrates max (%)",
+        "fatMin": "Fat min (%)",
+        "fatMax": "Fat max (%)",
+        "meals_per_day": "Main meals per day",
+        "snacks_per_day": "Snacks per day",
+        "avoidHelp": "Active allergies and intolerances from the record are added automatically. Press Enter to add more."
+      },
+      "rationale": {
+        "weight_loss": "BMI or waist above target: moderate calorie deficit to reduce weight and abdominal fat.",
+        "maintenance": "BMI and waist within target: energy to maintain weight.",
+        "missing_anthropometry": "Weight, height, age or sex missing: calories were not estimated.",
+        "renal_review": "Elevated creatinine: protein kept at 0.8 g/kg pending medical/renal review.",
+        "glycemic": "Glucose, HbA1c or history compatible with altered glucose: fewer and better-quality carbohydrates, spread through the day.",
+        "triglycerides": "High triglycerides: limit sugars and alcohol.",
+        "lipids": "Altered lipid profile or cardiovascular history: less saturated fat, more fish, fibre and unsaturated fats.",
+        "blood_pressure": "Blood pressure above target or hypertension: lower sodium.",
+        "uric_acid": "High uric acid: limit fructose drinks, organ meats and alcohol.",
+        "liver": "Fatty liver or high liver enzymes: avoid alcohol and sugary drinks.",
+        "allergies": "Allergies or intolerances recorded: excluded foods are listed."
+      },
+      "options": {
+        "prioritize": {
+          "vegetables": "Vegetables",
+          "legumes": "Legumes (beans, lentils, chickpeas)",
+          "whole_grains": "Whole grains and tubers",
+          "fruit_whole": "Whole fruit (not juice)",
+          "oily_fish": "Oily fish (omega-3) 2×/week",
+          "fish": "Fish",
+          "poultry": "Skinless poultry",
+          "eggs": "Eggs",
+          "low_fat_dairy": "Low-fat dairy",
+          "legumes_protein": "Legumes as a protein source",
+          "tofu_tempeh": "Tofu or tempeh",
+          "nuts_seeds": "Nuts and seeds (a handful)",
+          "olive_oil": "Olive oil or avocado",
+          "water": "Water as the main drink"
+        },
+        "limit": {
+          "sugary_drinks": "Sugary drinks and soft drinks",
+          "ultraprocessed": "Ultra-processed foods",
+          "refined_flours": "White bread and refined flours",
+          "fried_foods": "Fried foods",
+          "processed_meat": "Processed meats (sausages, cold cuts)",
+          "fruit_juice": "Fruit juices",
+          "sweets": "Sweets and desserts",
+          "alcohol": "Alcoholic drinks",
+          "saturated_fats": "Saturated fats (fatty meat, butter, lard)",
+          "added_salt": "Added salt and stock cubes",
+          "salty_snacks": "Salty snacks",
+          "fructose_drinks": "Drinks with fructose or syrup",
+          "organ_meats": "Organ meats and seafood in excess"
+        },
+        "targets": {
+          "sugary_drinks_zero": "Replace sugary drinks with water",
+          "fruit_veg_5": "5 servings of fruit and vegetables a day",
+          "ultraprocessed_down": "Ultra-processed foods at most 3 times a week",
+          "weight_5pct": "Lose 5% of body weight in 3–6 months",
+          "waist_down": "Reduce waist circumference",
+          "water_daily": "Drink the recommended water every day"
+        },
+        "safety": {
+          "professional_review": "Targets are adjusted by your professional at each follow-up.",
+          "no_extreme_diets": "Avoid very low-calorie or extreme diets.",
+          "diabetes_meds": "If you take medication for diabetes, changes in carbohydrates may cause low glucose: monitor and consult.",
+          "renal_review": "Kidney function to be reviewed before increasing protein.",
+          "allergy_check": "Check labels: allergens can be hidden in processed foods.",
+          "b12_review": "Vegan diet: vitamin B12 supplementation to be reviewed."
+        }
       }
     }
   }
