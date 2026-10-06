@@ -1,6 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SILHO">
-  <rect width="512" height="512" rx="112" fill="#0B1A33"/>
-  <circle cx="256" cy="256" r="178" fill="none" stroke="#C9A45C" stroke-width="14"/>
-  <path d="M318 184c-14-30-44-46-80-46-46 0-80 26-80 64 0 36 26 52 82 66 46 12 66 24 66 50 0 28-28 48-68 48-38 0-66-18-78-50" fill="none" stroke="#E5CF95" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M384 92c0 0-26 30-26 48a26 26 0 0 0 52 0c0-18-26-48-26-48z" fill="#C9A45C"/>
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="22%" r="95%">
+      <stop offset="0" stop-color="#1D3566"/>
+      <stop offset="0.55" stop-color="#0B1A33"/>
+      <stop offset="1" stop-color="#050C1C"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6E7B8"/>
+      <stop offset="0.5" stop-color="#C9A45C"/>
+      <stop offset="1" stop-color="#8E6B2E"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7DF9FF"/>
+      <stop offset="1" stop-color="#2BB3E0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+  <polygon points="256,62 424,159 424,353 256,450 88,353 88,159" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linejoin="round" opacity="0.95"/>
+  <polygon points="256,96 394,176 394,336 256,416 118,336 118,176" fill="none" stroke="#C9A45C" stroke-width="2" opacity="0.35"/>
+  <path d="M328 196c-12-30-40-46-74-46-42 0-72 23-72 56 0 30 22 45 72 57 44 11 66 25 66 54 0 33-30 55-72 55-36 0-64-16-76-46" fill="none" stroke="url(#gold)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#glow)">
+    <circle cx="424" cy="159" r="16" fill="url(#cyan)"/>
+    <circle cx="88" cy="353" r="11" fill="url(#cyan)" opacity="0.85"/>
+  </g>
+  <circle cx="256" cy="62" r="7" fill="#F6E7B8"/>
+  <circle cx="256" cy="450" r="7" fill="#F6E7B8"/>
 </svg>

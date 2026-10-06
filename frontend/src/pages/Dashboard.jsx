@@ -709,9 +709,9 @@ const Dashboard = () => {
         {/* Welcome Section */}
         {showWelcomeBox && (
           <Paper
+            className="silho-hero"
             p="14px 20px"
             radius="md"
-            bg="var(--mantine-primary-color-filled)"
             c="white"
             pos="relative"
           >
@@ -761,7 +761,7 @@ const Dashboard = () => {
               </div>
               {authUser && (
                 <Badge
-                  bg="rgba(255,255,255,0.2)"
+                  className="silho-hero-badge"
                   variant="filled"
                   size="lg"
                   radius="xl"

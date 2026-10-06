@@ -21,6 +21,9 @@
 /* Import Print Styles */
 @import './styles/print.css';
 
+/* SILHO brand layer (must stay last) */
+@import './styles/themes/silho.css';
+
 body {
   margin: 0;
   font-family: var(

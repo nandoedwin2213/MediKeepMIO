@@ -1,0 +1,287 @@
+/* SILHO brand layer: navy + gold, glass surfaces. Loaded after all other styles. */
+
+:root {
+  --silho-navy: #0b1a33;
+  --silho-navy-2: #152b55;
+  --silho-navy-3: #2b4a85;
+  --silho-gold: #c9a45c;
+  --silho-gold-light: #e5cf95;
+  --silho-cyan: #4fd8f0;
+  --silho-hero-gradient:
+    radial-gradient(
+      120% 140% at 0% 0%,
+      rgba(79, 216, 240, 0.18) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      90% 120% at 100% 100%,
+      rgba(201, 164, 92, 0.28) 0%,
+      transparent 50%
+    ),
+    linear-gradient(120deg, #050c1c 0%, #0b1a33 45%, #1d3566 100%);
+  --silho-gold-gradient: linear-gradient(
+    135deg,
+    #f6e7b8 0%,
+    #c9a45c 55%,
+    #8e6b2e 100%
+  );
+}
+
+body {
+  background:
+    radial-gradient(
+      60% 40% at 100% 0%,
+      rgba(201, 164, 92, 0.08) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      50% 40% at 0% 100%,
+      rgba(43, 74, 133, 0.08) 0%,
+      transparent 70%
+    ),
+    var(--color-bg-secondary, #f4f6fb);
+  background-attachment: fixed;
+}
+
+/* Header */
+html body .dashboard-header,
+html body .medical-page-header {
+  position: relative;
+  overflow: hidden;
+  background: var(--silho-hero-gradient) !important;
+  border: 1px solid rgba(201, 164, 92, 0.35) !important;
+  box-shadow:
+    0 10px 30px rgba(5, 12, 28, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  border-radius: 16px !important;
+}
+
+html body .dashboard-header {
+  padding: 14px 24px !important;
+}
+
+html body .dashboard-header::before,
+html body .medical-page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(229, 207, 149, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(229, 207, 149, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 30%,
+    #000 70%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+html body .dashboard-header::after,
+html body .medical-page-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--silho-gold),
+    var(--silho-cyan),
+    var(--silho-gold),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: silho-sheen 6s linear infinite;
+  pointer-events: none;
+}
+
+html body .dashboard-header > *,
+html body .medical-page-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+html body .dashboard-header .page-title,
+html body .medical-page-header .page-title {
+  letter-spacing: 0.18em;
+  font-weight: 800 !important;
+  background: var(--silho-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html body .dashboard-header .title-icon {
+  background: transparent !important;
+  filter: drop-shadow(0 0 10px rgba(79, 216, 240, 0.35));
+  margin-right: 6px;
+}
+
+/* Navigation bar */
+html body .desktop-nav-bar {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-bottom: 1px solid rgba(201, 164, 92, 0.25) !important;
+  box-shadow: 0 6px 20px rgba(11, 26, 51, 0.06) !important;
+}
+
+html[data-theme='dark'] body .desktop-nav-bar {
+  background: rgba(11, 26, 51, 0.72) !important;
+}
+
+html body .nav-dropdown-trigger {
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+}
+
+html body .nav-dropdown-trigger:hover,
+html body .nav-dropdown-trigger[aria-expanded='true'] {
+  background: rgba(201, 164, 92, 0.12) !important;
+  color: var(--silho-navy-3) !important;
+  border-color: rgba(201, 164, 92, 0.4) !important;
+}
+
+/* Dashboard hero */
+html body .silho-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--silho-hero-gradient) !important;
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  border-radius: 18px !important;
+  padding: 22px 26px !important;
+  box-shadow: 0 14px 40px rgba(5, 12, 28, 0.28);
+}
+
+html body .silho-hero::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -80px;
+  top: -160px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 207, 149, 0.25);
+  box-shadow:
+    0 0 0 40px rgba(229, 207, 149, 0.04),
+    0 0 0 80px rgba(229, 207, 149, 0.03);
+  pointer-events: none;
+}
+
+html body .silho-hero h2 {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em;
+}
+
+html body .silho-hero .silho-hero-badge {
+  background: rgba(201, 164, 92, 0.18) !important;
+  color: var(--silho-gold-light) !important;
+  border: 1px solid rgba(229, 207, 149, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+/* Module cards */
+html body .dashboard-module-card {
+  border-radius: 16px !important;
+  border: 1px solid rgba(11, 26, 51, 0.08) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(248, 250, 253, 0.9)
+  ) !important;
+  box-shadow: 0 2px 10px rgba(11, 26, 51, 0.05);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease !important;
+}
+
+html[data-theme='dark'] body .dashboard-module-card {
+  background: linear-gradient(
+    180deg,
+    rgba(21, 43, 85, 0.6),
+    rgba(11, 26, 51, 0.6)
+  ) !important;
+  border-color: rgba(229, 207, 149, 0.15) !important;
+}
+
+html body .dashboard-module-card::before {
+  width: 100% !important;
+  height: 3px !important;
+  bottom: auto !important;
+  border-radius: 0 !important;
+  background: linear-gradient(
+    90deg,
+    var(--silho-gold),
+    var(--silho-cyan)
+  ) !important;
+}
+
+@media (hover: hover) {
+  html body .dashboard-module-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(201, 164, 92, 0.55) !important;
+    box-shadow:
+      0 14px 30px rgba(11, 26, 51, 0.14),
+      0 0 0 4px rgba(201, 164, 92, 0.08) !important;
+  }
+}
+
+html body .dashboard-module-card .icon-circle,
+html body .dashboard-resource-icon {
+  background: linear-gradient(135deg, #1d3566 0%, #0b1a33 100%) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(229, 207, 149, 0.35),
+    0 4px 12px rgba(11, 26, 51, 0.2);
+}
+
+html body .dashboard-module-card .icon-circle {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+}
+
+html body .dashboard-module-card .icon-circle svg,
+html body .dashboard-resource-icon svg {
+  stroke: var(--silho-gold-light) !important;
+}
+
+html body .dashboard-stat-card::before {
+  background: linear-gradient(
+    90deg,
+    var(--silho-gold),
+    var(--silho-cyan)
+  ) !important;
+}
+
+html body .dashboard-resource-item:hover {
+  border-color: rgba(201, 164, 92, 0.5) !important;
+}
+
+/* Buttons */
+html body .reload-button {
+  background: var(--silho-gold-gradient) !important;
+  color: var(--silho-navy) !important;
+}
+
+@keyframes silho-sheen {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body .dashboard-header::after,
+  html body .medical-page-header::after {
+    animation: none;
+  }
+}

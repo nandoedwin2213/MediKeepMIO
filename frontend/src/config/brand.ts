@@ -8,6 +8,8 @@ export const BRAND = {
   tagline: 'Plataforma de gestión de la resistencia a la insulina',
   logo: '/silho-icon.svg',
   defaultLanguage: 'es',
+  // Upstream MediKeep release notes mention its GitHub contributors; not for clinic staff.
+  showReleaseNotes: false,
 };
 
 /**
