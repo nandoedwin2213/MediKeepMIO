@@ -24,7 +24,7 @@
       "username": {
         "description": "Anpassat namn för aviseringsboten",
         "label": "Botanvändarnamn (valfritt)",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "Skapa en webhook i dina Discord-serverinställningar",

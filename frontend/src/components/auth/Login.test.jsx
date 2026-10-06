@@ -148,10 +148,10 @@ describe('Login Component', () => {
       expect(screen.queryByTestId('config-error')).not.toBeInTheDocument();
     });
 
-    test('renders with MediKeep title', () => {
+    test('renders with SILHO brand title', () => {
       render(<Login />);
 
-      expect(screen.getByText(/medikeep/i)).toBeInTheDocument();
+      expect(screen.getByText('SILHO')).toBeInTheDocument();
     });
 
     test('renders form inputs correctly', () => {
@@ -370,7 +370,10 @@ describe('Login Component', () => {
     // ?next= is attacker-supplied in a link, so an off-origin value must not
     // survive into a post-authentication navigation.
     test('rejects an off-origin next and uses the dashboard', async () => {
-      mockLocation = { search: '?next=https%3A%2F%2Fevil.example', state: null };
+      mockLocation = {
+        search: '?next=https%3A%2F%2Fevil.example',
+        state: null,
+      };
       renderAuthenticated();
 
       await waitFor(() => {
@@ -390,7 +393,7 @@ describe('Login Component', () => {
         },
       });
 
-      expect(screen.getByText(/medikeep/i)).toBeInTheDocument();
+      expect(screen.getByText('SILHO')).toBeInTheDocument();
     });
 
     test('renders with app data context', () => {

@@ -24,7 +24,7 @@
       "username": {
         "description": "Пользовательское имя для бота уведомлений",
         "label": "Имя бота (необязательно)",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "Создайте webhook в настройках вашего сервера Discord",

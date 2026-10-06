@@ -8,7 +8,7 @@
  */
 export const env = {
   API_URL: import.meta.env.VITE_API_URL || '/api/v1',
-  NAME: import.meta.env.VITE_NAME || 'MediKeep',
+  NAME: import.meta.env.VITE_NAME || 'SILHO',
   DEBUG: import.meta.env.VITE_DEBUG === 'true',
   MODE: import.meta.env.MODE,
   DEV: import.meta.env.DEV,

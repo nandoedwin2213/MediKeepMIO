@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import HttpBackend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { isDevelopment } from '../config/env';
+import { BRAND } from '../config/brand';
 import logger from '../services/logger';
 
 // Bundle English translations so the fallback language is always available synchronously.
@@ -31,9 +32,15 @@ const {
   documents: documentsEn,
 } = bundledEn as Record<string, Record<string, unknown>>;
 
+const languageDetector = new LanguageDetector();
+languageDetector.addDetector({
+  name: 'brandDefault',
+  lookup: () => BRAND.defaultLanguage,
+});
+
 i18n
   .use(HttpBackend)
-  .use(LanguageDetector)
+  .use(languageDetector)
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
@@ -106,7 +113,7 @@ i18n
     // Provisional until login: UserPreferencesContext overrides this with the
     // user's stored choice, or records what was detected here when there is none.
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['localStorage', 'brandDefault'],
       caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
     },

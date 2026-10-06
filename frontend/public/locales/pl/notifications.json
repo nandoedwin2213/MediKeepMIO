@@ -24,7 +24,7 @@
       "username": {
         "description": "Niestandardowa nazwa bota powiadomień",
         "label": "Nazwa użytkownika bota (opcjonalnie)",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "Utwórz webhook w ustawieniach serwera Discord",

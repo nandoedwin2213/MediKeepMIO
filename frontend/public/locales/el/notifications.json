@@ -24,7 +24,7 @@
       "username": {
         "description": "Προσαρμοσμένο όνομα για το bot ειδοποιήσεων",
         "label": "Όνομα Χρήστη Bot (Προαιρετικό)",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "Δημιουργήστε ένα webhook στις ρυθμίσεις του διακομιστή Discord σας",

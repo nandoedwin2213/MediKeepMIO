@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SILHO">
+  <rect width="512" height="512" rx="112" fill="#0B1A33"/>
+  <circle cx="256" cy="256" r="178" fill="none" stroke="#C9A45C" stroke-width="14"/>
+  <path d="M318 184c-14-30-44-46-80-46-46 0-80 26-80 64 0 36 26 52 82 66 46 12 66 24 66 50 0 28-28 48-68 48-38 0-66-18-78-50" fill="none" stroke="#E5CF95" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M384 92c0 0-26 30-26 48a26 26 0 0 0 52 0c0-18-26-48-26-48z" fill="#C9A45C"/>
+</svg>

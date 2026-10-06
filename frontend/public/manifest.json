@@ -1,7 +1,7 @@
 {
-  "short_name": "MediKeep",
-  "name": "MediKeep",
-  "description": "Your personal health record keeper",
+  "short_name": "SILHO",
+  "name": "SILHO Servicios Médicos",
+  "description": "Plataforma de gestión de la resistencia a la insulina",
   "icons": [
     {
       "src": "icon-256.png",
@@ -25,11 +25,11 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "theme_color": "#2563eb",
+  "theme_color": "#0B1A33",
   "background_color": "#ffffff",
   "orientation": "portrait-primary",
   "categories": ["medical", "health", "productivity"],
-  "lang": "en-US",
+  "lang": "es-EC",
   "prefer_related_applications": false,
   "screenshots": [
     {
@@ -37,7 +37,7 @@
       "sizes": "256x256",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "MediKeep Dashboard"
+      "label": "Panel de SILHO"
     }
   ]
 }

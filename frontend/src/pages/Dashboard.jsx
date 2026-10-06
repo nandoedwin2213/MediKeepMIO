@@ -66,6 +66,7 @@ import {
   isActivityClickable,
   getActivityTooltip,
 } from '../utils/activityNavigation';
+import { BRAND, isModuleHidden } from '../config/brand';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -690,10 +691,10 @@ const Dashboard = () => {
   return (
     <Container size={1400} py="md" px={{ base: 12, sm: 16, md: 'md' }}>
       <PageHeader
-        title="MediKeep"
+        title={BRAND.name}
         icon={
           <img
-            src="/medikeep-icon.svg"
+            src={BRAND.logo}
             alt=""
             width={36}
             height={36}
@@ -851,9 +852,11 @@ const Dashboard = () => {
                   )}
                 </Text>
                 <SimpleGrid cols={{ base: 2, sm: 3 }} spacing={12}>
-                  {coreModules.map((module, index) => (
-                    <ModuleCard key={index} module={module} />
-                  ))}
+                  {coreModules
+                    .filter(module => !isModuleHidden(module.link))
+                    .map((module, index) => (
+                      <ModuleCard key={index} module={module} />
+                    ))}
                 </SimpleGrid>
               </div>
 
@@ -866,9 +869,11 @@ const Dashboard = () => {
                   )}
                 </Text>
                 <SimpleGrid cols={2} spacing={12}>
-                  {treatmentModules.map((module, index) => (
-                    <ModuleCard key={index} module={module} />
-                  ))}
+                  {treatmentModules
+                    .filter(module => !isModuleHidden(module.link))
+                    .map((module, index) => (
+                      <ModuleCard key={index} module={module} />
+                    ))}
                 </SimpleGrid>
               </div>
 
@@ -881,9 +886,11 @@ const Dashboard = () => {
                   )}
                 </Text>
                 <SimpleGrid cols={{ base: 2, sm: 3 }} spacing={12}>
-                  {monitoringModules.map((module, index) => (
-                    <ModuleCard key={index} module={module} />
-                  ))}
+                  {monitoringModules
+                    .filter(module => !isModuleHidden(module.link))
+                    .map((module, index) => (
+                      <ModuleCard key={index} module={module} />
+                    ))}
                 </SimpleGrid>
               </div>
 
@@ -893,9 +900,11 @@ const Dashboard = () => {
                   {t('dashboard.sections.prevention', 'Prevention & History')}
                 </Text>
                 <SimpleGrid cols={{ base: 2, sm: 3 }} spacing={12}>
-                  {preventionModules.map((module, index) => (
-                    <ModuleCard key={index} module={module} />
-                  ))}
+                  {preventionModules
+                    .filter(module => !isModuleHidden(module.link))
+                    .map((module, index) => (
+                      <ModuleCard key={index} module={module} />
+                    ))}
                 </SimpleGrid>
               </div>
             </Stack>
@@ -912,59 +921,61 @@ const Dashboard = () => {
                   )}
                 </Text>
                 <Stack gap={6}>
-                  {additionalModules.map((module, index) => {
-                    const Icon = module.icon;
-                    return (
-                      <Paper
-                        key={index}
-                        className="dashboard-resource-item"
-                        p="8px 10px"
-                        radius="sm"
-                        onClick={_e => {
-                          logger.info(
-                            'Additional resource clicked:',
-                            module.link
-                          );
-                          try {
-                            navigate(module.link);
-                          } catch (error) {
-                            logger.error('Navigation error:', error);
-                            frontendLogger.logError(
-                              'Navigation error from additional resource',
-                              {
-                                error: error.message,
-                                component: 'Dashboard',
-                                link: module.link,
-                              }
+                  {additionalModules
+                    .filter(module => !isModuleHidden(module.link))
+                    .map((module, index) => {
+                      const Icon = module.icon;
+                      return (
+                        <Paper
+                          key={index}
+                          className="dashboard-resource-item"
+                          p="8px 10px"
+                          radius="sm"
+                          onClick={_e => {
+                            logger.info(
+                              'Additional resource clicked:',
+                              module.link
                             );
-                          }
-                        }}
-                        style={{ cursor: 'pointer' }}
-                        withBorder
-                      >
-                        <Group gap="sm">
-                          <Box
-                            className="dashboard-resource-icon"
-                            style={{
-                              background: `var(--mantine-color-${module.color}-light)`,
-                            }}
-                          >
-                            <Icon
-                              size={12}
-                              color={`var(--mantine-color-${module.color}-filled)`}
+                            try {
+                              navigate(module.link);
+                            } catch (error) {
+                              logger.error('Navigation error:', error);
+                              frontendLogger.logError(
+                                'Navigation error from additional resource',
+                                {
+                                  error: error.message,
+                                  component: 'Dashboard',
+                                  link: module.link,
+                                }
+                              );
+                            }
+                          }}
+                          style={{ cursor: 'pointer' }}
+                          withBorder
+                        >
+                          <Group gap="sm">
+                            <Box
+                              className="dashboard-resource-icon"
+                              style={{
+                                background: `var(--mantine-color-${module.color}-light)`,
+                              }}
+                            >
+                              <Icon
+                                size={12}
+                                color={`var(--mantine-color-${module.color}-filled)`}
+                              />
+                            </Box>
+                            <Text size="13px" fw={500} style={{ flex: 1 }}>
+                              {module.title}
+                            </Text>
+                            <IconChevronRight
+                              size={14}
+                              color="var(--mantine-color-dimmed)"
                             />
-                          </Box>
-                          <Text size="13px" fw={500} style={{ flex: 1 }}>
-                            {module.title}
-                          </Text>
-                          <IconChevronRight
-                            size={14}
-                            color="var(--mantine-color-dimmed)"
-                          />
-                        </Group>
-                      </Paper>
-                    );
-                  })}
+                          </Group>
+                        </Paper>
+                      );
+                    })}
                 </Stack>
               </Card>
               {/* Invitation Notifications */}

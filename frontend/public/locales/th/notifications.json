@@ -21,7 +21,7 @@
       "username": {
         "description": "ชื่อที่กำหนดเองสำหรับบอทการแจ้งเตือน",
         "label": "ชื่อผู้ใช้บอท (ไม่บังคับ)",
-        "placeholder": "MediKeep"
+        "placeholder": "SILHO"
       },
       "webhookUrl": {
         "description": "สร้าง webhook ในการตั้งค่าเซิร์ฟเวอร์ Discord ของคุณ",
