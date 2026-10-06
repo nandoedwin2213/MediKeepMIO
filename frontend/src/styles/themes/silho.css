@@ -297,3 +297,178 @@ html body:has([class*='loginContainer']) .app-footer * {
   background: transparent !important;
   border-color: rgba(229, 207, 149, 0.15) !important;
 }
+
+/* Desktop navigation (sections menu under the header) */
+html body .desktop-navigation {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-bottom: 1px solid rgba(201, 164, 92, 0.3) !important;
+  box-shadow: 0 8px 24px rgba(11, 26, 51, 0.07) !important;
+}
+
+html[data-theme='dark'] body .desktop-navigation {
+  background: rgba(11, 26, 51, 0.8) !important;
+}
+
+html body .desktop-nav-trigger {
+  border-radius: 999px !important;
+  border: 1px solid transparent !important;
+  font-weight: 600 !important;
+  color: var(--silho-navy-2) !important;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease !important;
+}
+
+html[data-theme='dark'] body .desktop-nav-trigger {
+  color: var(--silho-gold-light) !important;
+}
+
+html body .desktop-nav-trigger:hover,
+html body .desktop-nav-trigger[aria-expanded='true'] {
+  background: rgba(201, 164, 92, 0.14) !important;
+  border-color: rgba(201, 164, 92, 0.45) !important;
+}
+
+html body .desktop-nav-trigger.section-active {
+  background: linear-gradient(135deg, #1d3566 0%, #0b1a33 100%) !important;
+  color: var(--silho-gold-light) !important;
+  border: 1px solid rgba(229, 207, 149, 0.5) !important;
+  box-shadow: 0 4px 14px rgba(11, 26, 51, 0.25);
+}
+
+/* Header back button */
+html body .medical-page-header .back-button,
+html body .dashboard-header .back-button {
+  background: rgba(201, 164, 92, 0.12) !important;
+  color: var(--silho-gold-light) !important;
+  border: 1px solid rgba(229, 207, 149, 0.45) !important;
+  border-radius: 999px !important;
+  white-space: nowrap !important;
+}
+
+/* Mobile header: keep title and hamburger inside the viewport */
+@media (max-width: 768px) {
+  html body .medical-page-header,
+  html body .dashboard-header {
+    padding: 10px 12px !important;
+    gap: 8px;
+    border-radius: 12px !important;
+  }
+
+  html body .medical-page-header .header-left,
+  html body .medical-page-header .header-right {
+    flex: 0 0 auto !important;
+  }
+
+  html body .medical-page-header .header-left:empty {
+    display: none !important;
+  }
+
+  html body .medical-page-header .header-center {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  html body .medical-page-header .page-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.04em;
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center;
+  }
+
+  html body .medical-page-header .back-button {
+    padding: 0.35rem 0.7rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Login (dark theme): secondary button readable on the dark card */
+html[data-theme='dark'] body [class*='createUserBtn'] {
+  color: var(--silho-gold-light) !important;
+  border-color: rgba(229, 207, 149, 0.45) !important;
+}
+
+html[data-theme='dark'] body [class*='createUserBtn']:hover {
+  background: rgba(201, 164, 92, 0.12) !important;
+}
+
+/* Admin console header */
+html body .admin-header {
+  position: relative;
+  background: var(--silho-hero-gradient) !important;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.45) !important;
+  color: #fff;
+}
+
+html body .admin-header .silho-admin-title {
+  color: var(--silho-gold-light) !important;
+  letter-spacing: 0.04em;
+}
+
+html body .admin-header .mantine-ActionIcon-root:not(.sidebar-toggle-btn) {
+  color: var(--silho-gold-light) !important;
+}
+
+/* Dashboard stats */
+html body .dashboard-stat-card .silho-stat-value {
+  background: var(--silho-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mobile inner pages (header with back button): compact arrow + ellipsized title */
+@media (max-width: 768px) {
+  html body .page-header:has(.back-button) {
+    padding: 10px 12px !important;
+    gap: 8px;
+  }
+
+  html body .page-header:has(.back-button) .header-left,
+  html body .page-header:has(.back-button) .header-right {
+    flex: 0 0 auto !important;
+  }
+
+  html body .page-header:has(.back-button) .header-center {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  html body .page-header:has(.back-button) .page-title {
+    display: block !important;
+    font-size: 1.05rem !important;
+    text-align: center;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  html body .page-header .back-button {
+    font-size: 0 !important;
+    width: 38px;
+    height: 38px;
+    padding: 0 !important;
+    justify-content: center;
+  }
+
+  html body .page-header .back-button::before {
+    content: '←';
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+
+  html body .dashboard-module-card .icon-circle {
+    flex-shrink: 0 !important;
+    min-height: 44px !important;
+  }
+}
+
+/* Login tagline readable on the dark card */
+html[data-theme='dark'] body [class*='loginHeader'] p,
+html[data-mantine-color-scheme='dark'] body [class*='loginHeader'] p {
+  color: rgba(229, 207, 149, 0.85) !important;
+}

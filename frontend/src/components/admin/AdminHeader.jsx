@@ -22,6 +22,7 @@ import {
   IconSun,
   IconLogout,
 } from '@tabler/icons-react';
+import { BRAND } from '../../config/brand';
 import './AdminHeader.css';
 
 const AdminHeader = ({ user, onLogout, onToggleSidebar }) => {
@@ -67,7 +68,13 @@ const AdminHeader = ({ user, onLogout, onToggleSidebar }) => {
           >
             <IconMenu2 size={20} />
           </ActionIcon>
-          <Text fw={600} size="xl" style={{ whiteSpace: 'nowrap' }}>
+          <img src={BRAND.logo} alt="" width={36} height={36} />
+          <Text
+            className="silho-admin-title"
+            fw={600}
+            size="xl"
+            style={{ whiteSpace: 'nowrap' }}
+          >
             {t('header.title', 'Medical Records Admin')}
           </Text>
         </Group>
