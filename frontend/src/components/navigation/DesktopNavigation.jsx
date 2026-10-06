@@ -15,7 +15,11 @@ const DesktopNavigation = ({ user: _user, isAdmin, onLogout }) => {
   const { viewport, width } = useViewport();
 
   // Get navigation sections based on viewport (desktop or laptop)
-  const navigationSections = getNavigationSections(viewport, isAdmin);
+  const navigationSections = getNavigationSections(
+    viewport,
+    isAdmin,
+    _user?.role
+  );
 
   const isCurrentPath = path => {
     if (path === '/dashboard') {

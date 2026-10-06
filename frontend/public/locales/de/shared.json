@@ -315,7 +315,9 @@
     "website": "Website",
     "weekly": "Wöchentlich",
     "weight": "Körpergewicht",
-    "zip": "ZIP"
+    "zip": "ZIP",
+    "physio": "Physiotherapeut",
+    "nutritionist": "Ernährungsberater"
   },
   "permissions": {
     "viewOnly": "Nur-Lese-Zugriff"

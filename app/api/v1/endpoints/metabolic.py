@@ -28,6 +28,7 @@ from app.services.metabolic_config import (
     default_config,
     validate_config,
 )
+from app.services.metabolic_dashboard import build_dashboard, is_professional
 from app.services.metabolic_engine import (
     evaluate_patient,
     get_active_config,
@@ -129,6 +130,20 @@ def evaluate(
             saved=True,
             result=result,
         )
+
+
+@router.get("/professional/dashboard", response_model=Dict[str, Any])
+def professional_dashboard(
+    *,
+    request: Request,
+    db: Session = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user),
+) -> Any:
+    """Risk distribution and follow-up alerts for the patients this professional can access."""
+    if not is_professional(current_user):
+        raise ForbiddenException(message="Professional role required", request=request)
+    with handle_database_errors(request=request):
+        return build_dashboard(db, current_user)
 
 
 @router.get("/patients/{patient_id}/progress", response_model=Dict[str, Any])

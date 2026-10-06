@@ -1957,6 +1957,49 @@
         "title": "My evolution",
         "empty": "The chart appears with two or more measurements."
       }
+    },
+    "professional": {
+      "title": "Professional metabolic dashboard",
+      "subtitle": "Risk distribution and patients who need follow-up, recalculated with the active clinical configuration.",
+      "total": "Patients",
+      "followUp": "{{count}} need follow-up",
+      "alertsTitle": "Alerts",
+      "noAlerts": "No patients need follow-up right now.",
+      "patientsTitle": "Patients",
+      "open": "Open",
+      "empty": "You have no patients yet. Patients you create or that are shared with you will appear here.",
+      "loadError": "The professional dashboard could not be loaded.",
+      "disclaimer": "Internal follow-up indicator, not a diagnosis. Thresholds come from Administration → Clinical configuration.",
+      "levels": {
+        "favorable": "Favorable status",
+        "initial": "Initial risk",
+        "moderate": "Moderate risk",
+        "high": "High risk",
+        "unknown": "No score yet"
+      },
+      "alertText": {
+        "high_risk": "patients are in the high metabolic risk group",
+        "risk_increased": "patients increased their metabolic risk",
+        "critical": "patients have values that require medical assessment",
+        "hba1c": "patients have HbA1c outside the configured range",
+        "stale": "patients have no measurements in the last {{days}} days",
+        "no_data": "patients have no laboratory or vital sign data"
+      },
+      "alertBadge": {
+        "high_risk": "High risk group",
+        "risk_increased": "Risk increased",
+        "critical": "Medical assessment",
+        "hba1c": "High HbA1c",
+        "stale": "Outdated data",
+        "no_data": "No data"
+      },
+      "columns": {
+        "patient": "Patient name",
+        "score": "Score and level",
+        "change": "Change",
+        "lastData": "Last measurement",
+        "alerts": "Follow-up"
+      }
     }
   }
 }

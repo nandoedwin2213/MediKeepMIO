@@ -113,7 +113,8 @@
       "vitalSigns": "Sinais Vitais",
       "insulinResistance": "Resistência à insulina",
       "metabolicRisk": "Risco metabólico",
-      "myMetabolicHealth": "Minha saúde metabólica"
+      "myMetabolicHealth": "Minha saúde metabólica",
+      "professionalDashboard": "Painel profissional"
     },
     "sections": {
       "administration": "Administração",

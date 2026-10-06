@@ -1953,6 +1953,49 @@
         "title": "我的变化趋势",
         "empty": "有两次或以上测量时显示图表。"
       }
+    },
+    "professional": {
+      "title": "专业代谢面板",
+      "subtitle": "风险分布及需要随访的患者，按当前临床配置重新计算。",
+      "total": "患者",
+      "followUp": "{{count}} 位需要随访",
+      "alertsTitle": "提醒",
+      "noAlerts": "目前没有需要随访的患者。",
+      "patientsTitle": "患者列表",
+      "open": "打开",
+      "empty": "暂无患者。您创建或他人共享给您的患者将显示在这里。",
+      "loadError": "无法加载专业面板。",
+      "disclaimer": "内部随访指标，不是诊断。阈值在 管理 → 临床配置 中设置。",
+      "levels": {
+        "favorable": "状态良好",
+        "initial": "初期风险",
+        "moderate": "中度风险",
+        "high": "高风险",
+        "unknown": "暂无评分"
+      },
+      "alertText": {
+        "high_risk": "位患者属于代谢高风险组",
+        "risk_increased": "位患者代谢风险上升",
+        "critical": "位患者的数值需要医生评估",
+        "hba1c": "位患者 HbA1c 超出设定范围",
+        "stale": "位患者近 {{days}} 天无测量",
+        "no_data": "位患者没有化验或生命体征数据"
+      },
+      "alertBadge": {
+        "high_risk": "高风险",
+        "risk_increased": "风险上升",
+        "critical": "需医生评估",
+        "hba1c": "HbA1c 偏高",
+        "stale": "数据过旧",
+        "no_data": "无数据"
+      },
+      "columns": {
+        "patient": "患者姓名",
+        "score": "评分与等级",
+        "change": "变化",
+        "lastData": "最近测量",
+        "alerts": "随访"
+      }
     }
   }
 }

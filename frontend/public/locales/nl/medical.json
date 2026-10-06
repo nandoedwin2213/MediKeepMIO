@@ -1957,6 +1957,49 @@
         "title": "Mijn verloop",
         "empty": "De grafiek verschijnt bij twee of meer metingen."
       }
+    },
+    "professional": {
+      "title": "Professioneel metabool dashboard",
+      "subtitle": "Risicoverdeling en patiënten die opvolging nodig hebben, herberekend met de actieve klinische configuratie.",
+      "total": "Patiënten",
+      "followUp": "{{count}} hebben opvolging nodig",
+      "alertsTitle": "Waarschuwingen",
+      "noAlerts": "Momenteel heeft geen patiënt opvolging nodig.",
+      "patientsTitle": "Patiëntenlijst",
+      "open": "Openen",
+      "empty": "Nog geen patiënten. Patiënten die je aanmaakt of die met je gedeeld worden, verschijnen hier.",
+      "loadError": "Het dashboard kon niet worden geladen.",
+      "disclaimer": "Interne opvolgindicator, geen diagnose. Drempels staan in Beheer → Klinische configuratie.",
+      "levels": {
+        "favorable": "Gunstige toestand",
+        "initial": "Beginnend risico",
+        "moderate": "Matig risico",
+        "high": "Hoog risico",
+        "unknown": "Nog geen score"
+      },
+      "alertText": {
+        "high_risk": "patiënten zitten in de groep met hoog metabool risico",
+        "risk_increased": "patiënten met een gestegen metabool risico",
+        "critical": "patiënten met waarden die medische beoordeling vereisen",
+        "hba1c": "patiënten met HbA1c buiten het ingestelde bereik",
+        "stale": "patiënten zonder metingen in de laatste {{days}} dagen",
+        "no_data": "patiënten zonder labo- of vitale gegevens"
+      },
+      "alertBadge": {
+        "high_risk": "Hoog risico",
+        "risk_increased": "Risico gestegen",
+        "critical": "Medische beoordeling",
+        "hba1c": "HbA1c hoog",
+        "stale": "Verouderde gegevens",
+        "no_data": "Geen gegevens"
+      },
+      "columns": {
+        "patient": "Naam van de patiënt",
+        "score": "Score en niveau",
+        "change": "Verandering",
+        "lastData": "Laatste meting",
+        "alerts": "Opvolging"
+      }
     }
   }
 }

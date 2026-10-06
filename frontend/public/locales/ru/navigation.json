@@ -113,7 +113,8 @@
       "vitalSigns": "Жизненные показатели",
       "insulinResistance": "Инсулинорезистентность",
       "metabolicRisk": "Метаболический риск",
-      "myMetabolicHealth": "Моё метаболическое здоровье"
+      "myMetabolicHealth": "Моё метаболическое здоровье",
+      "professionalDashboard": "Панель специалиста"
     },
     "sections": {
       "administration": "Администрирование",

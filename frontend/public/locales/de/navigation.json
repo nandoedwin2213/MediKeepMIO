@@ -113,7 +113,8 @@
       "vitalSigns": "Vitalzeichen",
       "insulinResistance": "Insulinresistenz",
       "metabolicRisk": "Metabolisches Risiko",
-      "myMetabolicHealth": "Meine Stoffwechselgesundheit"
+      "myMetabolicHealth": "Meine Stoffwechselgesundheit",
+      "professionalDashboard": "Fach-Dashboard"
     },
     "sections": {
       "administration": "Administration",

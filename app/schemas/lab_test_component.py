@@ -233,7 +233,9 @@ class LabTestComponentBase(BaseModel):
 
 
 # Fields that participate in result-type validity checks (used by Update validator)
-_RESULT_TYPE_FIELDS = frozenset({"result_type", "value", "unit", "qualitative_value", "textual_value"})
+_RESULT_TYPE_FIELDS = frozenset(
+    {"result_type", "value", "unit", "qualitative_value", "textual_value"}
+)
 
 
 class LabTestComponentCreate(LabTestComponentBase):
@@ -260,9 +262,7 @@ class LabTestComponentCreate(LabTestComponentBase):
             if self.value is not None:
                 raise ValueError(f"Numeric value must be empty for {rt} tests")
             if self.ref_range_min is not None or self.ref_range_max is not None:
-                raise ValueError(
-                    f"Reference ranges are not applicable for {rt} tests"
-                )
+                raise ValueError(f"Reference ranges are not applicable for {rt} tests")
             if rt == "textual" and self.qualitative_value is not None:
                 raise ValueError("Qualitative value must be empty for textual tests")
         return self
@@ -478,7 +478,10 @@ class LabTestComponentUpdate(BaseModel):
         if rt == "quantitative":
             if "value" in self.model_fields_set and self.value is None:
                 raise ValueError("Value cannot be cleared for quantitative tests")
-            if "result_type" in self.model_fields_set and "value" not in self.model_fields_set:
+            if (
+                "result_type" in self.model_fields_set
+                and "value" not in self.model_fields_set
+            ):
                 raise ValueError(
                     "When switching to quantitative, value must be provided in the same update"
                 )
@@ -486,17 +489,21 @@ class LabTestComponentUpdate(BaseModel):
             if self.value is not None:
                 raise ValueError(f"Numeric value must be empty for {rt} tests")
             if self.ref_range_min is not None or self.ref_range_max is not None:
-                raise ValueError(
-                    f"Reference ranges are not applicable for {rt} tests"
-                )
+                raise ValueError(f"Reference ranges are not applicable for {rt} tests")
             if rt == "textual" and self.qualitative_value is not None:
                 raise ValueError("Qualitative value must be empty for textual tests")
             if rt == "qualitative":
-                if "qualitative_value" in self.model_fields_set and self.qualitative_value is None:
+                if (
+                    "qualitative_value" in self.model_fields_set
+                    and self.qualitative_value is None
+                ):
                     raise ValueError(
                         "Qualitative value cannot be cleared for qualitative tests"
                     )
-                if "result_type" in self.model_fields_set and "qualitative_value" not in self.model_fields_set:
+                if (
+                    "result_type" in self.model_fields_set
+                    and "qualitative_value" not in self.model_fields_set
+                ):
                     raise ValueError(
                         "When switching to qualitative, qualitative_value must be provided in the same update"
                     )
@@ -584,7 +591,9 @@ class LabTestComponentForStack(LabTestComponentResponse):
     completed_date: Optional[date] = None
     ordered_date: Optional[date] = None
     facility: Optional[str] = None
-    is_legacy: bool = False  # True for synthesized entries from component-less LabResults (#1014)
+    is_legacy: bool = (
+        False  # True for synthesized entries from component-less LabResults (#1014)
+    )
 
     model_config = {"from_attributes": True}
 

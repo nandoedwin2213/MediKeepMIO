@@ -3,6 +3,8 @@ from typing import Optional
 
 from pydantic import BaseModel, ConfigDict, EmailStr, field_validator
 
+from app.schemas.admin import ALLOWED_ROLES
+
 
 class UserBase(BaseModel):
     """
@@ -57,7 +59,7 @@ class UserBase(BaseModel):
         Raises:
             ValueError: If role is not in allowed list
         """
-        allowed_roles = ["admin", "user", "guest", "doctor", "nurse", "staff"]
+        allowed_roles = list(ALLOWED_ROLES)
         if v.lower() not in allowed_roles:
             raise ValueError(f"Role must be one of: {', '.join(allowed_roles)}")
         return v.lower()
@@ -338,7 +340,7 @@ class UserUpdate(BaseModel):
     def validate_role(cls, v):
         """Validate role if provided."""
         if v is not None:
-            allowed_roles = ["admin", "user", "guest", "doctor", "nurse", "staff"]
+            allowed_roles = list(ALLOWED_ROLES)
             if v.lower() not in allowed_roles:
                 raise ValueError(f"Role must be one of: {', '.join(allowed_roles)}")
             return v.lower()

@@ -315,7 +315,9 @@
     "website": "Веб-сайт",
     "weekly": "Еженедельно",
     "weight": "Вес",
-    "zip": "ZIP"
+    "zip": "ZIP",
+    "physio": "Физиотерапевт",
+    "nutritionist": "Диетолог"
   },
   "permissions": {
     "viewOnly": "Доступ только для чтения"

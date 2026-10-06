@@ -18,6 +18,8 @@ const metabolicApi = {
     apiService.get(`/metabolic/patients/${patientId}/profile`, { signal }),
   updateProfile: (patientId, profile) =>
     apiService.put(`/metabolic/patients/${patientId}/profile`, profile),
+  getProfessionalDashboard: signal =>
+    apiService.get('/metabolic/professional/dashboard', { signal }),
 };
 
 export default metabolicApi;

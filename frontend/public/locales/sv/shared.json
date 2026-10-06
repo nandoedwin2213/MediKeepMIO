@@ -315,7 +315,9 @@
     "website": "Webbplats",
     "weekly": "Veckovis",
     "weight": "Vikt",
-    "zip": "ZIP"
+    "zip": "ZIP",
+    "physio": "Fysioterapeut",
+    "nutritionist": "Dietist"
   },
   "permissions": {
     "viewOnly": "Skrivskyddad åtkomst"

@@ -1957,6 +1957,49 @@
         "title": "Mein Verlauf",
         "empty": "Das Diagramm erscheint ab zwei Messungen."
       }
+    },
+    "professional": {
+      "title": "Professionelles Stoffwechsel-Dashboard",
+      "subtitle": "Risikoverteilung und Patienten mit Nachsorgebedarf, berechnet mit der aktiven klinischen Konfiguration.",
+      "total": "Patienten",
+      "followUp": "{{count}} benötigen Nachsorge",
+      "alertsTitle": "Warnungen",
+      "noAlerts": "Derzeit benötigt kein Patient Nachsorge.",
+      "patientsTitle": "Patientenliste",
+      "open": "Öffnen",
+      "empty": "Noch keine Patienten. Hier erscheinen Patienten, die Sie anlegen oder die mit Ihnen geteilt werden.",
+      "loadError": "Das Dashboard konnte nicht geladen werden.",
+      "disclaimer": "Interner Verlaufsindikator, keine Diagnose. Schwellenwerte unter Verwaltung → Klinische Konfiguration.",
+      "levels": {
+        "favorable": "Günstiger Zustand",
+        "initial": "Beginnendes Risiko",
+        "moderate": "Mäßiges Risiko",
+        "high": "Hohes Risiko",
+        "unknown": "Noch kein Score"
+      },
+      "alertText": {
+        "high_risk": "Patienten gehören zur Gruppe mit hohem Stoffwechselrisiko",
+        "risk_increased": "Patienten mit gestiegenem Stoffwechselrisiko",
+        "critical": "Patienten mit Werten, die ärztlich beurteilt werden müssen",
+        "hba1c": "Patienten mit HbA1c außerhalb des konfigurierten Bereichs",
+        "stale": "Patienten ohne Messungen in den letzten {{days}} Tagen",
+        "no_data": "Patienten ohne Labor- oder Vitaldaten"
+      },
+      "alertBadge": {
+        "high_risk": "Hohes Risiko",
+        "risk_increased": "Risiko gestiegen",
+        "critical": "Ärztliche Beurteilung",
+        "hba1c": "HbA1c hoch",
+        "stale": "Veraltete Daten",
+        "no_data": "Keine Daten"
+      },
+      "columns": {
+        "patient": "Name des Patienten",
+        "score": "Score und Stufe",
+        "change": "Veränderung",
+        "lastData": "Letzte Messung",
+        "alerts": "Nachsorge"
+      }
     }
   }
 }

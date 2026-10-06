@@ -1957,6 +1957,49 @@
         "title": "Mój przebieg",
         "empty": "Wykres pojawi się przy dwóch lub więcej pomiarach."
       }
+    },
+    "professional": {
+      "title": "Profesjonalny panel metaboliczny",
+      "subtitle": "Rozkład ryzyka i pacjenci wymagający kontroli, przeliczone według aktywnej konfiguracji klinicznej.",
+      "total": "Pacjenci",
+      "followUp": "{{count}} wymaga kontroli",
+      "alertsTitle": "Alerty",
+      "noAlerts": "Obecnie żaden pacjent nie wymaga kontroli.",
+      "patientsTitle": "Lista pacjentów",
+      "open": "Otwórz",
+      "empty": "Brak pacjentów. Pojawią się tu pacjenci utworzeni przez Ciebie lub Tobie udostępnieni.",
+      "loadError": "Nie udało się wczytać panelu.",
+      "disclaimer": "Wewnętrzny wskaźnik kontroli, nie diagnoza. Progi ustala się w Administracja → Konfiguracja kliniczna.",
+      "levels": {
+        "favorable": "Stan korzystny",
+        "initial": "Ryzyko początkowe",
+        "moderate": "Ryzyko umiarkowane",
+        "high": "Ryzyko wysokie",
+        "unknown": "Brak wyniku"
+      },
+      "alertText": {
+        "high_risk": "pacjentów jest w grupie wysokiego ryzyka metabolicznego",
+        "risk_increased": "pacjentów zwiększyło ryzyko metaboliczne",
+        "critical": "pacjentów ma wartości wymagające oceny lekarskiej",
+        "hba1c": "pacjentów ma HbA1c poza ustalonym zakresem",
+        "stale": "pacjentów bez pomiarów w ostatnich {{days}} dniach",
+        "no_data": "pacjentów bez danych laboratoryjnych i parametrów życiowych"
+      },
+      "alertBadge": {
+        "high_risk": "Wysokie ryzyko",
+        "risk_increased": "Ryzyko wzrosło",
+        "critical": "Ocena lekarska",
+        "hba1c": "Wysoka HbA1c",
+        "stale": "Stare dane",
+        "no_data": "Brak danych"
+      },
+      "columns": {
+        "patient": "Imię i nazwisko pacjenta",
+        "score": "Wynik i poziom",
+        "change": "Zmiana",
+        "lastData": "Ostatni pomiar",
+        "alerts": "Kontrola"
+      }
     }
   }
 }

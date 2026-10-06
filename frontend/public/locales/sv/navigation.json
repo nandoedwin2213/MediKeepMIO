@@ -113,7 +113,8 @@
       "vitalSigns": "Vitalparametrar",
       "insulinResistance": "Insulinresistens",
       "metabolicRisk": "Metabol risk",
-      "myMetabolicHealth": "Min metabola hälsa"
+      "myMetabolicHealth": "Min metabola hälsa",
+      "professionalDashboard": "Professionell översikt"
     },
     "sections": {
       "administration": "Administration",

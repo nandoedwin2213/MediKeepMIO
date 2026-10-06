@@ -315,7 +315,9 @@
     "website": "Website",
     "weekly": "Wekelijks",
     "weight": "Gewicht",
-    "zip": "ZIP"
+    "zip": "ZIP",
+    "physio": "Fysiotherapeut",
+    "nutritionist": "Diëtist"
   },
   "permissions": {
     "viewOnly": "Alleen-lezen toegang"

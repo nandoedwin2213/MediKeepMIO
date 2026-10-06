@@ -56,6 +56,15 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.professionalDashboard',
+        name: 'Professional dashboard',
+        path: '/professional/metabolic-dashboard',
+        icon: '🩺',
+        id: 'professional-dashboard',
+        featured: true,
+        roles: ['doctor', 'nurse', 'staff', 'physio', 'nutritionist'],
+      },
+      {
         nameKey: 'sidebarNav.items.metabolicRisk',
         name: 'Metabolic risk',
         path: '/metabolic-risk',
@@ -306,7 +315,11 @@ export const VIEWPORT_CONFIGS = {
 };
 
 // Helper function to get navigation sections based on viewport and user role
-export const getNavigationSections = (viewport, isAdmin = false) => {
+export const getNavigationSections = (
+  viewport,
+  isAdmin = false,
+  userRole = null
+) => {
   // Removed frequent navigation logging for performance
 
   const sections = Object.fromEntries(
@@ -314,7 +327,11 @@ export const getNavigationSections = (viewport, isAdmin = false) => {
       key,
       {
         ...section,
-        items: section.items.filter(item => !isModuleHidden(item.path)),
+        items: section.items.filter(
+          item =>
+            !isModuleHidden(item.path) &&
+            (!item.roles || isAdmin || item.roles.includes(userRole))
+        ),
       },
     ])
   );

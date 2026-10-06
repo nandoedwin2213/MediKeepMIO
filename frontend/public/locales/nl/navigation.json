@@ -113,7 +113,8 @@
       "vitalSigns": "Vitale functies",
       "insulinResistance": "Insulineresistentie",
       "metabolicRisk": "Metabool risico",
-      "myMetabolicHealth": "Mijn metabole gezondheid"
+      "myMetabolicHealth": "Mijn metabole gezondheid",
+      "professionalDashboard": "Professionele weergave"
     },
     "sections": {
       "administration": "Beheer",

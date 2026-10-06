@@ -34,15 +34,11 @@ def _normalize_reminder_times(value):
     if not isinstance(value, list):
         raise ValueError("reminder_times must be a list of HH:MM strings")
     if len(value) > MAX_REMINDER_TIMES:
-        raise ValueError(
-            f"At most {MAX_REMINDER_TIMES} reminder times allowed"
-        )
+        raise ValueError(f"At most {MAX_REMINDER_TIMES} reminder times allowed")
     seen = set()
     for entry in value:
         if not isinstance(entry, str) or not HHMM_24H_RE.match(entry):
-            raise ValueError(
-                f"Reminder time '{entry}' must be in HH:MM 24-hour format"
-            )
+            raise ValueError(f"Reminder time '{entry}' must be in HH:MM 24-hour format")
         if entry in seen:
             raise ValueError(f"Duplicate reminder time: {entry}")
         seen.add(entry)
@@ -55,7 +51,11 @@ def _normalize_reminder_days(value):
         return None
     if not isinstance(value, list):
         raise ValueError("reminder_days must be a list of integers (0=Mon - 6=Sun)")
-    invalid = [d for d in value if isinstance(d, bool) or not isinstance(d, int) or d not in VALID_REMINDER_DAYS]
+    invalid = [
+        d
+        for d in value
+        if isinstance(d, bool) or not isinstance(d, int) or d not in VALID_REMINDER_DAYS
+    ]
     if invalid:
         raise ValueError(
             f"reminder_days values must be integers 0-6 (Mon=0, Sun=6); invalid: {invalid}"
@@ -118,7 +118,9 @@ class MedicationBase(TaggedEntityMixin):
     @field_validator("reminder_message")
     @classmethod
     def validate_reminder_message(cls, v):
-        return validate_text_field(v, max_length=MAX_REMINDER_MESSAGE_LENGTH, field_name="Reminder message")
+        return validate_text_field(
+            v, max_length=MAX_REMINDER_MESSAGE_LENGTH, field_name="Reminder message"
+        )
 
     @field_validator("reminder_days")
     @classmethod
@@ -289,7 +291,9 @@ class MedicationUpdate(TaggedEntityUpdateMixin):
     @field_validator("reminder_message")
     @classmethod
     def validate_reminder_message(cls, v):
-        return validate_text_field(v, max_length=MAX_REMINDER_MESSAGE_LENGTH, field_name="Reminder message")
+        return validate_text_field(
+            v, max_length=MAX_REMINDER_MESSAGE_LENGTH, field_name="Reminder message"
+        )
 
     @field_validator("reminder_days")
     @classmethod
