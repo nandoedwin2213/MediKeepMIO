@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {
   Alert,
   Badge,
+  Box,
   Button,
   Card,
   Center,
@@ -43,10 +44,14 @@ import logger from '../../services/logger';
 import { convertForDisplay } from '../../utils/unitConversion';
 import {
   LEVEL_COLORS,
+  bandRanges,
   buildHomaIrSeries,
   buildTgHdlSeries,
   calculateBmiImperial,
   classify,
+  classifyBp,
+  classifyWaist,
+  formatBandRange,
   glucoseToMgDl,
   hba1cToPercent,
   hdlToMgDl,
@@ -55,6 +60,7 @@ import {
   round,
   summarizeSeries,
   triglyceridesToMgDl,
+  waistBandKey,
 } from '../../utils/insulinResistance';
 
 const LAB_QUERIES = {
@@ -73,19 +79,6 @@ const CYAN = '#4FD8F0';
 const NAVY = '#2B4A85';
 const NAVY_LIGHT = '#8FB0F0';
 const CYAN_LINE = '#1FA9C4';
-
-// IDF cut-offs for South/Central American populations: ≥90 cm men, ≥80 cm women.
-const classifyWaist = (waistCm, gender) => {
-  if (waistCm === null || waistCm === undefined) return null;
-  const g = String(gender || '')
-    .trim()
-    .toLowerCase();
-  let cutoff = null;
-  if (['m', 'male', 'masculino', 'hombre'].includes(g)) cutoff = 90;
-  if (['f', 'female', 'femenino', 'mujer'].includes(g)) cutoff = 80;
-  if (cutoff === null) return null;
-  return waistCm >= cutoff ? 'high' : 'normal';
-};
 
 const fetchTrendWithRetry = async (patientId, name, signal) => {
   for (let attempt = 0; attempt < 2; attempt += 1) {
@@ -141,6 +134,8 @@ function MetricCard({
   levelLabel,
   formatDate,
   lowerIsBetter = true,
+  ranges,
+  rangesHint,
 }) {
   const { t } = useTranslation('medical');
   const change = summary?.change;
@@ -193,6 +188,63 @@ function MetricCard({
       ) : (
         <Text size="sm" c="dimmed" mt={8}>
           {t('insulinResistance.noData', 'No data yet')}
+        </Text>
+      )}
+      {ranges?.length > 0 && (
+        <Stack gap={4} mt="sm" className="silho-ir-ranges">
+          <Text size="10px" fw={700} tt="uppercase" c="dimmed">
+            {t('insulinResistance.rangesTitle', 'Reference ranges')}
+          </Text>
+          <div className="silho-ir-scale">
+            {ranges.map(r => (
+              <span
+                key={r.level}
+                className="silho-ir-scale-seg"
+                data-active={r.level === level || undefined}
+                style={{
+                  background: `var(--mantine-color-${LEVEL_COLORS[r.level]}-6)`,
+                }}
+              />
+            ))}
+          </div>
+          {ranges.map(r => {
+            const active = r.level === level;
+            return (
+              <Group
+                key={r.level}
+                gap={6}
+                wrap="nowrap"
+                justify="space-between"
+                className="silho-ir-range"
+                data-active={active || undefined}
+              >
+                <Group gap={6} wrap="nowrap">
+                  <Box
+                    className="silho-ir-dot"
+                    style={{
+                      background: `var(--mantine-color-${LEVEL_COLORS[r.level]}-6)`,
+                    }}
+                  />
+                  <Text size="xs" fw={active ? 700 : 500}>
+                    {t(`insulinResistance.levels.${r.level}`, r.level)}
+                  </Text>
+                </Group>
+                <Text
+                  size="xs"
+                  fw={active ? 700 : 400}
+                  c={active ? undefined : 'dimmed'}
+                  style={{ whiteSpace: 'nowrap' }}
+                >
+                  {r.text}
+                </Text>
+              </Group>
+            );
+          })}
+        </Stack>
+      )}
+      {!ranges?.length && rangesHint && (
+        <Text size="xs" c="dimmed" mt="sm">
+          {rangesHint}
         </Text>
       )}
     </Card>
@@ -299,7 +351,7 @@ function TrendCard({ title, lines, reference, formatDate }) {
 }
 
 const InsulinResistance = () => {
-  const { t } = useTranslation('medical');
+  const { t, i18n } = useTranslation('medical');
   const navigate = useNavigate();
   const { patient } = usePatientWithStaticData();
   const currentPatient = patient?.patient;
@@ -422,6 +474,15 @@ const InsulinResistance = () => {
   const levelLabel = level =>
     level ? t(`insulinResistance.levels.${level}`, level) : null;
   const fmt = useCallback(d => (d ? formatDate(d) : ''), [formatDate]);
+  const numFmt = useMemo(
+    () => new Intl.NumberFormat(i18n.language, { maximumFractionDigits: 1 }),
+    [i18n.language]
+  );
+  const rangesFor = (metric, factor = 1) =>
+    bandRanges(metric, factor).map(r => ({
+      level: r.level,
+      text: formatBandRange(r, numFmt.format),
+    }));
 
   if (!currentPatient) {
     return (
@@ -446,6 +507,19 @@ const InsulinResistance = () => {
     currentPatient?.gender
   );
   const homaLevel = classify('homaIr', homa?.latest);
+  const lastDiastolic = series.diastolic[series.diastolic.length - 1]?.value;
+  const bpLevel = classifyBp(summaries.systolic?.latest, lastDiastolic);
+  const diastolicText = Object.fromEntries(
+    rangesFor('diastolic').map(r => [r.level, r.text])
+  );
+  const bpRanges = rangesFor('systolic').map(r => ({
+    level: r.level,
+    text: `${r.text} / ${diastolicText[r.level] ?? diastolicText.normal}`,
+  }));
+  const waistKey = waistBandKey(currentPatient?.gender);
+  const waistRanges = waistKey
+    ? rangesFor(waistKey, series.waistUnit === 'cm' ? 1 : 1 / 2.54)
+    : null;
   const bp = summaries.systolic
     ? `${summaries.systolic.latest}/${series.diastolic[series.diastolic.length - 1]?.value ?? '–'}`
     : null;
@@ -583,11 +657,12 @@ const InsulinResistance = () => {
             </Alert>
           )}
 
-          <SimpleGrid cols={{ base: 2, sm: 3, lg: 4 }} spacing="md">
+          <SimpleGrid cols={{ base: 1, xs: 2, md: 3, lg: 4 }} spacing="md">
             <MetricCard
               label={t('insulinResistance.metrics.glucose', 'Fasting glucose')}
               unit="mg/dL"
               summary={summaries.glucose}
+              ranges={rangesFor('glucose')}
               level={classify('glucose', summaries.glucose?.latest)}
               levelLabel={levelLabel(
                 classify('glucose', summaries.glucose?.latest)
@@ -598,6 +673,7 @@ const InsulinResistance = () => {
               label={t('insulinResistance.metrics.insulin', 'Fasting insulin')}
               unit="µU/mL"
               summary={summaries.insulin}
+              ranges={rangesFor('insulin')}
               level={classify('insulin', summaries.insulin?.latest)}
               levelLabel={levelLabel(
                 classify('insulin', summaries.insulin?.latest)
@@ -608,6 +684,7 @@ const InsulinResistance = () => {
               label="HbA1c"
               unit="%"
               summary={summaries.hba1c}
+              ranges={rangesFor('hba1c')}
               level={classify('hba1c', summaries.hba1c?.latest)}
               levelLabel={levelLabel(
                 classify('hba1c', summaries.hba1c?.latest)
@@ -618,6 +695,7 @@ const InsulinResistance = () => {
               label={t('insulinResistance.metrics.tgHdl', 'Triglycerides/HDL')}
               unit=""
               summary={summaries.tgHdl}
+              ranges={rangesFor('tgHdl')}
               level={classify('tgHdl', summaries.tgHdl?.latest)}
               levelLabel={levelLabel(
                 classify('tgHdl', summaries.tgHdl?.latest)
@@ -634,6 +712,11 @@ const InsulinResistance = () => {
               label={t('insulinResistance.metrics.waist', 'Waist')}
               unit={series.waistUnit}
               summary={summaries.waist}
+              ranges={waistRanges}
+              rangesHint={t(
+                'insulinResistance.waistNoGender',
+                "Record the patient's sex to see waist ranges."
+              )}
               level={waistLevel}
               levelLabel={levelLabel(waistLevel)}
               formatDate={fmt}
@@ -642,6 +725,7 @@ const InsulinResistance = () => {
               label={t('insulinResistance.metrics.bmi', 'BMI')}
               unit="kg/m²"
               summary={summaries.bmi}
+              ranges={rangesFor('bmi')}
               level={classify('bmi', summaries.bmi?.latest)}
               levelLabel={levelLabel(classify('bmi', summaries.bmi?.latest))}
               formatDate={fmt}
@@ -657,16 +741,16 @@ const InsulinResistance = () => {
                   ? { ...summaries.systolic, latest: bp, change: null }
                   : null
               }
-              level={classify('systolic', summaries.systolic?.latest)}
-              levelLabel={levelLabel(
-                classify('systolic', summaries.systolic?.latest)
-              )}
+              level={bpLevel}
+              levelLabel={levelLabel(bpLevel)}
+              ranges={bpRanges}
               formatDate={fmt}
             />
             <MetricCard
               label="HOMA-IR"
               unit=""
               summary={homa}
+              ranges={rangesFor('homaIr')}
               level={homaLevel}
               levelLabel={levelLabel(homaLevel)}
               formatDate={fmt}

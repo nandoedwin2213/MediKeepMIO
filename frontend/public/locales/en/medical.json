@@ -1715,7 +1715,9 @@
     "levels": {
       "normal": "Optimal",
       "borderline": "Watch",
-      "high": "High"
+      "high": "High",
+      "low": "Low",
+      "veryHigh": "Very high"
     },
     "metrics": {
       "glucose": "Fasting glucose",
@@ -1735,6 +1737,8 @@
       "diastolic": "Diastolic"
     },
     "partialError": "Some results could not be loaded; the values shown may be incomplete.",
-    "retry": "Retry"
+    "retry": "Retry",
+    "rangesTitle": "Reference ranges",
+    "waistNoGender": "Record the patient's sex to see waist ranges."
   }
 }

@@ -1715,7 +1715,9 @@
     "levels": {
       "normal": "Optimale",
       "borderline": "À surveiller",
-      "high": "Élevé"
+      "high": "Élevé",
+      "low": "Bas",
+      "veryHigh": "Très élevé"
     },
     "metrics": {
       "glucose": "Glycémie à jeun",
@@ -1735,6 +1737,8 @@
       "diastolic": "Diastolique"
     },
     "partialError": "Certains résultats n'ont pas pu être chargés ; les valeurs affichées peuvent être incomplètes.",
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "rangesTitle": "Valeurs de référence",
+    "waistNoGender": "Indiquez le sexe du patient pour voir les seuils de tour de taille."
   }
 }

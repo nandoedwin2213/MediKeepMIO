@@ -1715,7 +1715,9 @@
     "levels": {
       "normal": "Ottimale",
       "borderline": "Da monitorare",
-      "high": "Elevato"
+      "high": "Elevato",
+      "low": "Basso",
+      "veryHigh": "Molto elevato"
     },
     "metrics": {
       "glucose": "Glicemia a digiuno",
@@ -1735,6 +1737,8 @@
       "diastolic": "Diastolica"
     },
     "partialError": "Alcuni risultati non sono stati caricati; i valori mostrati potrebbero essere incompleti.",
-    "retry": "Riprova"
+    "retry": "Riprova",
+    "rangesTitle": "Intervalli di riferimento",
+    "waistNoGender": "Registra il sesso del paziente per vedere gli intervalli della circonferenza vita."
   }
 }

@@ -1711,7 +1711,9 @@
     "levels": {
       "normal": "理想",
       "borderline": "需关注",
-      "high": "偏高"
+      "high": "偏高",
+      "low": "偏低",
+      "veryHigh": "显著偏高"
     },
     "metrics": {
       "glucose": "空腹血糖",
@@ -1731,6 +1733,8 @@
       "diastolic": "舒张压"
     },
     "partialError": "部分结果无法加载；显示的数值可能不完整。",
-    "retry": "重试"
+    "retry": "重试",
+    "rangesTitle": "参考范围",
+    "waistNoGender": "请填写患者性别以查看腰围参考范围。"
   }
 }

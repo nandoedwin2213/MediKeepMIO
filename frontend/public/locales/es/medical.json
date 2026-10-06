@@ -1713,9 +1713,11 @@
     "addVitals": "Agregar signos vitales",
     "disclaimer": "Los rangos son orientativos (HOMA-IR ≥ 2,5; HbA1c ≥ 5,7 %; glucosa en ayunas ≥ 100 mg/dL; TG/HDL ≥ 2). Los puntos de corte varían según la población y el laboratorio; la interpretación corresponde al médico tratante.",
     "levels": {
-      "normal": "En rango",
-      "borderline": "Vigilar",
-      "high": "Elevado"
+      "normal": "Normal",
+      "borderline": "Límite",
+      "high": "Elevado",
+      "low": "Bajo",
+      "veryHigh": "Muy elevado"
     },
     "metrics": {
       "glucose": "Glucosa en ayunas",
@@ -1735,6 +1737,8 @@
       "diastolic": "Diastólica"
     },
     "partialError": "No se pudieron cargar algunos resultados; los valores mostrados pueden estar incompletos.",
-    "retry": "Reintentar"
+    "retry": "Reintentar",
+    "rangesTitle": "Rangos de referencia",
+    "waistNoGender": "Registra el sexo del paciente para ver los rangos de cintura."
   }
 }

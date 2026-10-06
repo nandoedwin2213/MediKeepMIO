@@ -1715,7 +1715,9 @@
     "levels": {
       "normal": "Ótimo",
       "borderline": "Atenção",
-      "high": "Elevado"
+      "high": "Elevado",
+      "low": "Baixo",
+      "veryHigh": "Muito elevado"
     },
     "metrics": {
       "glucose": "Glicose em jejum",
@@ -1735,6 +1737,8 @@
       "diastolic": "Diastólica"
     },
     "partialError": "Alguns resultados não puderam ser carregados; os valores exibidos podem estar incompletos.",
-    "retry": "Tentar novamente"
+    "retry": "Tentar novamente",
+    "rangesTitle": "Faixas de referência",
+    "waistNoGender": "Registre o sexo do paciente para ver as faixas de cintura."
   }
 }
