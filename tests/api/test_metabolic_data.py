@@ -307,3 +307,14 @@ def test_research_export_mixed_cohort(
     client.put(url, json={"research_consent": False}, headers=user_token_headers)
     r = client.get("/api/v1/metabolic/research/export?format=csv", headers=admin)
     assert len(r.text.strip().splitlines()) == 1
+
+
+def test_parse_skips_reference_range_when_ocr_misses_value():
+    """An OCR-garbled result must not fall back to the lower reference limit."""
+    garbled = parse_lab_text(
+        "Acido urico Pal mg/dL 3.5 =~ 7.2\nAcido urico 5.1 mg/dL 3.5 - 7.2"
+    )
+    assert [(r["value"], r["ref_min"], r["ref_max"]) for r in garbled["rows"]] == [
+        (5.1, 3.5, 7.2)
+    ]
+    assert garbled["unrecognized"] == 1

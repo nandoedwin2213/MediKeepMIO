@@ -192,6 +192,8 @@ _EXCLUDE_RE = re.compile(
     r"|urinari|promedio|average|\beag\b|post|\bpp\b|tolerancia|curva|estimad)"
 )
 _RANGE_RE = re.compile(rf"({_NUM})\s*(?:-|–|—|a|to|hasta)\s*({_NUM})")
+# A number that opens a range ("3.5 - 7.2", OCR "3.5 =~ 7.2") is the reference, not the result.
+_RANGE_START_RE = re.compile(rf"\s*(?:[-–—=~]+|a|to|hasta)\s*{_NUM}")
 _MAX_RE = re.compile(rf"(?:<|≤|menor\s+(?:a|de)|hasta|up\s+to)\s*=?\s*({_NUM})")
 _MIN_RE = re.compile(rf"(?:>|≥|mayor\s+(?:a|de))\s*=?\s*({_NUM})")
 _DATE_RES = (
@@ -315,6 +317,9 @@ def parse_lab_text(text: str) -> Dict[str, Any]:
             continue
         after = rest[vm.end() :]
         if _HOURS_RE.match(after):
+            continue
+        if _RANGE_START_RE.match(after):
+            unrecognized += 1
             continue
         name_part = _UNIT_RE.sub("", lowered[: m.end() + vm.start()])
         if _EXCLUDE_RE.search(name_part) or re.search(r"[a-z]\s*/\s*[a-z]", name_part):
