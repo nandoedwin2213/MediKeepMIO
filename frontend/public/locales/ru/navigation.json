@@ -118,7 +118,8 @@
       "metabolicMovement": "Мои упражнения",
       "metabolicNutrition": "Моё питание",
       "metabolicRecipes": "Мои рецепты",
-      "metabolicWeek": "Моя неделя"
+      "metabolicWeek": "Моя неделя",
+      "metabolicAI": "Мой помощник"
     },
     "sections": {
       "administration": "Администрирование",

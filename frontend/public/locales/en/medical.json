@@ -2518,6 +2518,94 @@
         "5": "Saturday",
         "6": "Sunday"
       }
+    },
+    "ai": {
+      "title": "My metabolic assistant",
+      "subtitle": "FISAI Metabolic AI turns your results into a simple explanation and priorities, and lets you simulate what could improve.",
+      "disclaimer": "The assistant explains, it does not diagnose or replace your doctor. A professional reviews and approves every explanation before you see it.",
+      "needsReview": "⚠️ Requires medical evaluation",
+      "pattern": {
+        "insufficient": "There is not enough data yet to explain your metabolic risk. Record weight, waist, blood pressure and fasting labs.",
+        "favorable": "Your indicators are within the expected ranges. Keep your habits and repeat your check-ups as indicated.",
+        "single": "The main point to improve is: {{factors}}. The rest of your indicators are favorable.",
+        "combination": "There is no single worrying value, but the combination of {{factors}} is increasing your metabolic risk.",
+        "needs_review": "Some results ({{factors}}) are clearly outside the reference range. This result requires professional evaluation."
+      },
+      "concernsTitle": "What is increasing your risk",
+      "strengthsTitle": "What is going well",
+      "prioritiesTitle": "Your priorities",
+      "becauseOf": "Related to: {{factors}}",
+      "priorities": {
+        "reduce_waist": "Reduce waist circumference",
+        "increase_activity": "Increase physical activity",
+        "carb_quality": "Improve the quality of carbohydrates",
+        "strength": "Build muscle mass and strength",
+        "blood_pressure": "Lower salt and keep blood pressure under control",
+        "healthy_fats": "Choose healthy fats and more fibre",
+        "liver": "Take care of your liver: limit alcohol and added sugar",
+        "sleep": "Improve sleep duration and quality",
+        "stop_smoking": "Stop smoking (ask for support)",
+        "repeat_labs": "Repeat labs as indicated by your professional"
+      },
+      "change": {
+        "improved": "Your score improved {{points}} points",
+        "worsened": "Your score dropped {{points}} points",
+        "same": "Your score did not change",
+        "mainly": "Mainly because of:"
+      },
+      "levels": {
+        "normal": "Adequate",
+        "borderline": "Borderline",
+        "low": "Out of range",
+        "high": "Out of range",
+        "veryHigh": "Far out of range"
+      },
+      "status": {
+        "draft": "Draft",
+        "approved": "Published",
+        "archived": "Archived"
+      },
+      "explain": {
+        "title": "What your results mean",
+        "pending": "Your professional has not reviewed your explanation yet. You will see it here once it is approved.",
+        "emptyPro": "No explanation yet. Generate a draft from the latest evaluation, review it and approve it.",
+        "generate": "Generate explanation",
+        "regenerate": "New draft",
+        "draftNotice": "The patient does not see it until you approve it.",
+        "prioritiesLabel": "Priorities (choose and order)",
+        "note": "Professional note",
+        "notePlaceholder": "Optional: indications or context for the patient",
+        "noteTitle": "Note from your professional",
+        "save": "Save draft",
+        "approve": "Approve and publish",
+        "delete": "Delete draft",
+        "saved": "Draft saved",
+        "approved": "Explanation published to the patient",
+        "error": "The action could not be completed. Try again.",
+        "reviewed": "Reviewed and approved by your professional on {{date}}"
+      },
+      "sim": {
+        "title": "What would happen if I improve…?",
+        "subtitle": "Move the sliders and press Simulate to see which indicators could potentially improve.",
+        "disclaimer": "Educational simulation: it recalculates your score with the values you choose. It is not a clinical prediction or a guaranteed result.",
+        "run": "Simulate",
+        "reset": "Reset",
+        "current": "Now",
+        "simulated": "Simulated",
+        "delta": "Change: {{points}}",
+        "summary": "With these changes, these indicators could potentially change:",
+        "noChanges": "With these values the indicators would not change. Try other values.",
+        "missing": "No recorded value for: {{items}}. That change could not be simulated.",
+        "fields": {
+          "waist": "Reduce waist (cm)",
+          "weight": "Reduce weight (kg)",
+          "triglycerides": "Lower triglycerides (mg/dL)",
+          "glucose": "Lower fasting glucose (mg/dL)",
+          "hba1c": "Improve HbA1c (%)",
+          "physical_activity": "Add exercise (min/week)"
+        }
+      },
+      "rangesLink": "See reference ranges"
     }
   }
 }

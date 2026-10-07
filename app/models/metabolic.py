@@ -240,3 +240,28 @@ class AdherenceLog(Base):
     updated_at = Column(
         DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
     )
+
+
+class MetabolicInsight(Base):
+    """FISAI Metabolic AI explanation; patients only see it once a professional approves it."""
+
+    __tablename__ = "metabolic_insights"
+
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(
+        Integer,
+        ForeignKey("patients.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    status = Column(String(20), default="draft", nullable=False)
+    content = Column(JSON, nullable=False)
+    note = Column(Text, nullable=True)
+    engine_version = Column(String(30), nullable=True)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    approved_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    approved_at = Column(DateTime, nullable=True)
+    created_at = Column(DateTime, default=get_utc_now, nullable=False)
+    updated_at = Column(
+        DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
+    )

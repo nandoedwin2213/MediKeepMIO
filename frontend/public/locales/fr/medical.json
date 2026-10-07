@@ -2518,6 +2518,94 @@
         "5": "Samedi",
         "6": "Dimanche"
       }
+    },
+    "ai": {
+      "title": "Mon assistant métabolique",
+      "subtitle": "FISAI Metabolic AI transforme tes résultats en une explication simple et en priorités, et te permet de simuler ce qui pourrait s’améliorer.",
+      "disclaimer": "L’assistant explique, il ne pose pas de diagnostic et ne remplace pas ton médecin. Un professionnel relit et valide chaque explication avant que tu la voies.",
+      "needsReview": "⚠️ Nécessite une évaluation médicale",
+      "pattern": {
+        "insufficient": "Il n’y a pas encore assez de données pour expliquer ton risque métabolique. Enregistre poids, tour de taille, tension et bilans à jeun.",
+        "favorable": "Tes indicateurs sont dans les plages attendues. Garde tes habitudes et refais tes contrôles comme indiqué.",
+        "single": "Le principal point à améliorer est : {{factors}}. Le reste de tes indicateurs est favorable.",
+        "combination": "Aucune valeur isolée n’est inquiétante, mais la combinaison de {{factors}} augmente ton risque métabolique.",
+        "needs_review": "Certains résultats ({{factors}}) sont nettement hors de la plage de référence. Ce résultat nécessite une évaluation professionnelle."
+      },
+      "concernsTitle": "Ce qui augmente ton risque",
+      "strengthsTitle": "Ce qui va bien",
+      "prioritiesTitle": "Tes priorités",
+      "becauseOf": "En lien avec : {{factors}}",
+      "priorities": {
+        "reduce_waist": "Réduire le tour de taille",
+        "increase_activity": "Augmenter l’activité physique",
+        "carb_quality": "Améliorer la qualité des glucides",
+        "strength": "Développer la masse et la force musculaires",
+        "blood_pressure": "Réduire le sel et contrôler la tension",
+        "healthy_fats": "Choisir de bonnes graisses et plus de fibres",
+        "liver": "Prendre soin du foie : limiter l’alcool et les sucres ajoutés",
+        "sleep": "Améliorer la durée et la qualité du sommeil",
+        "stop_smoking": "Arrêter de fumer (demande de l’aide)",
+        "repeat_labs": "Refaire le bilan selon l’avis du professionnel"
+      },
+      "change": {
+        "improved": "Ton score s’est amélioré de {{points}} points",
+        "worsened": "Ton score a baissé de {{points}} points",
+        "same": "Ton score n’a pas changé",
+        "mainly": "Principalement grâce à :"
+      },
+      "levels": {
+        "normal": "Adéquat",
+        "borderline": "Limite",
+        "low": "Hors plage",
+        "high": "Hors plage",
+        "veryHigh": "Très hors plage"
+      },
+      "status": {
+        "draft": "Brouillon",
+        "approved": "Publiée",
+        "archived": "Archivée"
+      },
+      "explain": {
+        "title": "Ce que signifient tes résultats",
+        "pending": "Ton professionnel n’a pas encore relu ton explication. Tu la verras ici dès qu’elle sera validée.",
+        "emptyPro": "Pas encore d’explication. Génère un brouillon à partir de la dernière évaluation, relis-le et valide-le.",
+        "generate": "Générer l’explication",
+        "regenerate": "Nouveau brouillon",
+        "draftNotice": "Le patient ne le voit pas tant que tu ne l’as pas validé.",
+        "prioritiesLabel": "Priorités (choisir et ordonner)",
+        "note": "Note du professionnel",
+        "notePlaceholder": "Facultatif : indications ou contexte pour le patient",
+        "noteTitle": "Note de ton professionnel",
+        "save": "Enregistrer le brouillon",
+        "approve": "Valider et publier",
+        "delete": "Supprimer le brouillon",
+        "saved": "Brouillon enregistré",
+        "approved": "Explication publiée pour le patient",
+        "error": "L’action n’a pas pu être effectuée. Réessaie.",
+        "reviewed": "Relue et validée par ton professionnel le {{date}}"
+      },
+      "sim": {
+        "title": "Que se passerait-il si j’améliore… ?",
+        "subtitle": "Déplace les curseurs et appuie sur Simuler pour voir quels indicateurs pourraient potentiellement s’améliorer.",
+        "disclaimer": "Simulation éducative : elle recalcule ton score avec les valeurs choisies. Ce n’est ni une prédiction clinique ni un résultat garanti.",
+        "run": "Simuler",
+        "reset": "Réinitialiser",
+        "current": "Maintenant",
+        "simulated": "Simulé",
+        "delta": "Variation : {{points}}",
+        "summary": "Avec ces changements, ces indicateurs pourraient potentiellement évoluer :",
+        "noChanges": "Avec ces valeurs, les indicateurs ne changeraient pas. Essaie d’autres valeurs.",
+        "missing": "Aucune valeur enregistrée pour : {{items}}. Ce changement n’a pas pu être simulé.",
+        "fields": {
+          "waist": "Réduire le tour de taille (cm)",
+          "weight": "Réduire le poids (kg)",
+          "triglycerides": "Réduire les triglycérides (mg/dL)",
+          "glucose": "Réduire la glycémie à jeun (mg/dL)",
+          "hba1c": "Améliorer l’HbA1c (%)",
+          "physical_activity": "Ajouter de l’exercice (min/semaine)"
+        }
+      },
+      "rangesLink": "Voir les plages de référence"
     }
   }
 }

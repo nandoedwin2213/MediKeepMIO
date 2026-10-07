@@ -2518,6 +2518,94 @@
         "5": "Samstag",
         "6": "Sonntag"
       }
+    },
+    "ai": {
+      "title": "Mein Stoffwechsel-Assistent",
+      "subtitle": "FISAI Metabolic AI übersetzt deine Ergebnisse in eine einfache Erklärung mit Prioritäten und lässt dich simulieren, was sich verbessern könnte.",
+      "disclaimer": "Der Assistent erklärt, er stellt keine Diagnosen und ersetzt nicht deinen Arzt. Eine Fachkraft prüft und gibt jede Erklärung frei, bevor du sie siehst.",
+      "needsReview": "⚠️ Ärztliche Abklärung erforderlich",
+      "pattern": {
+        "insufficient": "Es gibt noch nicht genug Daten, um dein Stoffwechselrisiko zu erklären. Erfasse Gewicht, Taillenumfang, Blutdruck und Nüchternlaborwerte.",
+        "favorable": "Deine Werte liegen in den erwarteten Bereichen. Behalte deine Gewohnheiten bei und wiederhole die Kontrollen wie empfohlen.",
+        "single": "Der wichtigste Punkt zur Verbesserung ist: {{factors}}. Deine übrigen Werte sind günstig.",
+        "combination": "Es gibt keinen einzelnen besorgniserregenden Wert, aber die Kombination aus {{factors}} erhöht dein Stoffwechselrisiko.",
+        "needs_review": "Einige Ergebnisse ({{factors}}) liegen deutlich außerhalb des Referenzbereichs. Dieses Ergebnis erfordert eine fachliche Abklärung."
+      },
+      "concernsTitle": "Was dein Risiko erhöht",
+      "strengthsTitle": "Was gut läuft",
+      "prioritiesTitle": "Deine Prioritäten",
+      "becauseOf": "Bezogen auf: {{factors}}",
+      "priorities": {
+        "reduce_waist": "Taillenumfang verringern",
+        "increase_activity": "Körperliche Aktivität steigern",
+        "carb_quality": "Qualität der Kohlenhydrate verbessern",
+        "strength": "Muskelmasse und Kraft aufbauen",
+        "blood_pressure": "Salz reduzieren und Blutdruck kontrollieren",
+        "healthy_fats": "Gesunde Fette und mehr Ballaststoffe wählen",
+        "liver": "Die Leber schonen: Alkohol und Zuckerzusatz begrenzen",
+        "sleep": "Schlafdauer und -qualität verbessern",
+        "stop_smoking": "Mit dem Rauchen aufhören (Unterstützung holen)",
+        "repeat_labs": "Laborwerte nach fachlicher Anweisung wiederholen"
+      },
+      "change": {
+        "improved": "Dein Score hat sich um {{points}} Punkte verbessert",
+        "worsened": "Dein Score ist um {{points}} Punkte gesunken",
+        "same": "Dein Score hat sich nicht verändert",
+        "mainly": "Hauptsächlich wegen:"
+      },
+      "levels": {
+        "normal": "Im Zielbereich",
+        "borderline": "Grenzwertig",
+        "low": "Außerhalb des Bereichs",
+        "high": "Außerhalb des Bereichs",
+        "veryHigh": "Deutlich außerhalb"
+      },
+      "status": {
+        "draft": "Entwurf",
+        "approved": "Veröffentlicht",
+        "archived": "Archiviert"
+      },
+      "explain": {
+        "title": "Was deine Ergebnisse bedeuten",
+        "pending": "Deine Fachkraft hat deine Erklärung noch nicht geprüft. Du siehst sie hier, sobald sie freigegeben ist.",
+        "emptyPro": "Noch keine Erklärung. Erstelle einen Entwurf aus der letzten Auswertung, prüfe ihn und gib ihn frei.",
+        "generate": "Erklärung erstellen",
+        "regenerate": "Neuer Entwurf",
+        "draftNotice": "Der Patient sieht ihn erst nach deiner Freigabe.",
+        "prioritiesLabel": "Prioritäten (auswählen und ordnen)",
+        "note": "Notiz der Fachkraft",
+        "notePlaceholder": "Optional: Hinweise oder Kontext für den Patienten",
+        "noteTitle": "Notiz deiner Fachkraft",
+        "save": "Entwurf speichern",
+        "approve": "Freigeben und veröffentlichen",
+        "delete": "Entwurf löschen",
+        "saved": "Entwurf gespeichert",
+        "approved": "Erklärung für den Patienten veröffentlicht",
+        "error": "Die Aktion konnte nicht abgeschlossen werden. Versuche es erneut.",
+        "reviewed": "Von deiner Fachkraft am {{date}} geprüft und freigegeben"
+      },
+      "sim": {
+        "title": "Was wäre, wenn ich mich verbessere …?",
+        "subtitle": "Bewege die Regler und tippe auf Simulieren, um zu sehen, welche Werte sich möglicherweise verbessern könnten.",
+        "disclaimer": "Lernsimulation: Sie berechnet deinen Score mit den gewählten Werten neu. Sie ist keine klinische Vorhersage und kein garantiertes Ergebnis.",
+        "run": "Simulieren",
+        "reset": "Zurücksetzen",
+        "current": "Jetzt",
+        "simulated": "Simuliert",
+        "delta": "Änderung: {{points}}",
+        "summary": "Mit diesen Änderungen könnten sich diese Werte möglicherweise verändern:",
+        "noChanges": "Mit diesen Werten würden sich die Indikatoren nicht ändern. Probiere andere Werte.",
+        "missing": "Kein erfasster Wert für: {{items}}. Diese Änderung konnte nicht simuliert werden.",
+        "fields": {
+          "waist": "Taille verringern (cm)",
+          "weight": "Gewicht verringern (kg)",
+          "triglycerides": "Triglyzeride senken (mg/dL)",
+          "glucose": "Nüchternglukose senken (mg/dL)",
+          "hba1c": "HbA1c verbessern (%)",
+          "physical_activity": "Mehr Bewegung (Min./Woche)"
+        }
+      },
+      "rangesLink": "Referenzbereiche ansehen"
     }
   }
 }

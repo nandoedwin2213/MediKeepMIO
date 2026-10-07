@@ -54,6 +54,7 @@ from .labs import (
 )
 from .metabolic import (
     AdherenceLog,
+    MetabolicInsight,
     ExercisePlan,
     FunctionalAssessment,
     MetabolicAssessment,
@@ -102,6 +103,7 @@ from .user import (
 
 __all__ = [
     "AdherenceLog",
+    "MetabolicInsight",
     "ExercisePlan",
     "FunctionalAssessment",
     "MetabolicAssessment",

@@ -118,7 +118,8 @@
       "metabolicMovement": "Η άσκησή μου",
       "metabolicNutrition": "Η διατροφή μου",
       "metabolicRecipes": "Οι συνταγές μου",
-      "metabolicWeek": "Η εβδομάδα μου"
+      "metabolicWeek": "Η εβδομάδα μου",
+      "metabolicAI": "Ο βοηθός μου"
     },
     "sections": {
       "administration": "Διαχείριση",

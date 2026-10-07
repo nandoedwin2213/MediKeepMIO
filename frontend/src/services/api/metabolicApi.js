@@ -88,6 +88,23 @@ const metabolicApi = {
       params,
       signal,
     }),
+  getInsights: (patientId, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/insights`, { signal }),
+  generateInsight: patientId =>
+    apiService.post(`/metabolic/patients/${patientId}/insights/generate`),
+  updateInsight: (patientId, insightId, body) =>
+    apiService.put(
+      `/metabolic/patients/${patientId}/insights/${insightId}`,
+      body
+    ),
+  approveInsight: (patientId, insightId) =>
+    apiService.post(
+      `/metabolic/patients/${patientId}/insights/${insightId}/approve`
+    ),
+  deleteInsight: (patientId, insightId) =>
+    apiService.delete(`/metabolic/patients/${patientId}/insights/${insightId}`),
+  simulate: (patientId, body) =>
+    apiService.post(`/metabolic/patients/${patientId}/simulate`, body),
   getProfessionalDashboard: signal =>
     apiService.get('/metabolic/professional/dashboard', { signal }),
 };

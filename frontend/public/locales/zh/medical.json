@@ -2514,6 +2514,94 @@
         "5": "星期六",
         "6": "星期日"
       }
+    },
+    "ai": {
+      "title": "我的代谢助手",
+      "subtitle": "FISAI Metabolic AI 将你的结果转化为简单的解释和优先事项，并可模拟哪些方面可能改善。",
+      "disclaimer": "助手只做解释，不做诊断，也不能替代医生。每条解释在你看到之前都由专业人员审核批准。",
+      "needsReview": "⚠️ 需要医生评估",
+      "pattern": {
+        "insufficient": "目前数据不足，无法解释你的代谢风险。请记录体重、腰围、血压和空腹化验结果。",
+        "favorable": "你的指标处于预期范围内。保持你的习惯，并按指示复查。",
+        "single": "最需要改善的是：{{factors}}。其余指标良好。",
+        "combination": "没有单一令人担忧的数值，但 {{factors}} 的组合正在增加你的代谢风险。",
+        "needs_review": "部分结果（{{factors}}）明显超出参考范围。该结果需要专业评估。"
+      },
+      "concernsTitle": "哪些因素在增加你的风险",
+      "strengthsTitle": "做得好的方面",
+      "prioritiesTitle": "你的优先事项",
+      "becauseOf": "相关指标：{{factors}}",
+      "priorities": {
+        "reduce_waist": "减小腰围",
+        "increase_activity": "增加身体活动",
+        "carb_quality": "改善碳水化合物质量",
+        "strength": "增加肌肉量和力量",
+        "blood_pressure": "减少盐分并控制血压",
+        "healthy_fats": "选择健康脂肪并增加膳食纤维",
+        "liver": "保护肝脏：限制酒精和添加糖",
+        "sleep": "改善睡眠时长和质量",
+        "stop_smoking": "戒烟（寻求帮助）",
+        "repeat_labs": "按专业人员建议复查化验"
+      },
+      "change": {
+        "improved": "你的评分提高了 {{points}} 分",
+        "worsened": "你的评分下降了 {{points}} 分",
+        "same": "你的评分没有变化",
+        "mainly": "主要原因："
+      },
+      "levels": {
+        "normal": "达标",
+        "borderline": "临界",
+        "low": "超出范围",
+        "high": "超出范围",
+        "veryHigh": "明显超出范围"
+      },
+      "status": {
+        "draft": "草稿",
+        "approved": "已发布",
+        "archived": "已归档"
+      },
+      "explain": {
+        "title": "你的结果意味着什么",
+        "pending": "专业人员尚未审核你的解释。批准后会显示在这里。",
+        "emptyPro": "尚无解释。请根据最新评估生成草稿，审核后批准。",
+        "generate": "生成解释",
+        "regenerate": "新草稿",
+        "draftNotice": "在你批准之前，患者看不到。",
+        "prioritiesLabel": "优先事项（选择并排序）",
+        "note": "专业人员备注",
+        "notePlaceholder": "可选：给患者的建议或说明",
+        "noteTitle": "专业人员给你的备注",
+        "save": "保存草稿",
+        "approve": "批准并发布",
+        "delete": "删除草稿",
+        "saved": "草稿已保存",
+        "approved": "解释已向患者发布",
+        "error": "操作未能完成，请重试。",
+        "reviewed": "专业人员已于 {{date}} 审核并批准"
+      },
+      "sim": {
+        "title": "如果我改善……会怎样？",
+        "subtitle": "拖动滑块并点击“模拟”，查看哪些指标可能改善。",
+        "disclaimer": "教育性模拟：按你选择的数值重新计算评分，并非临床预测或保证结果。",
+        "run": "模拟",
+        "reset": "重置",
+        "current": "当前",
+        "simulated": "模拟后",
+        "delta": "变化：{{points}}",
+        "summary": "做出这些改变后，这些指标可能会变化：",
+        "noChanges": "按这些数值，指标不会变化。请尝试其他数值。",
+        "missing": "没有记录的数值：{{items}}，无法模拟该变化。",
+        "fields": {
+          "waist": "减少腰围（厘米）",
+          "weight": "减轻体重（公斤）",
+          "triglycerides": "降低甘油三酯（mg/dL）",
+          "glucose": "降低空腹血糖（mg/dL）",
+          "hba1c": "改善 HbA1c（%）",
+          "physical_activity": "增加运动（分钟/周）"
+        }
+      },
+      "rangesLink": "查看参考范围"
     }
   }
 }

@@ -2518,6 +2518,94 @@
         "5": "Sabato",
         "6": "Domenica"
       }
+    },
+    "ai": {
+      "title": "Il mio assistente metabolico",
+      "subtitle": "FISAI Metabolic AI trasforma i tuoi risultati in una spiegazione semplice e in priorità, e ti permette di simulare cosa potrebbe migliorare.",
+      "disclaimer": "L’assistente spiega, non fa diagnosi e non sostituisce il medico. Un professionista rivede e approva ogni spiegazione prima che tu la veda.",
+      "needsReview": "⚠️ Richiede una valutazione medica",
+      "pattern": {
+        "insufficient": "Non ci sono ancora dati sufficienti per spiegare il tuo rischio metabolico. Registra peso, vita, pressione ed esami a digiuno.",
+        "favorable": "I tuoi indicatori sono negli intervalli attesi. Mantieni le tue abitudini e ripeti i controlli come indicato.",
+        "single": "Il punto principale da migliorare è: {{factors}}. Gli altri indicatori sono favorevoli.",
+        "combination": "Non c’è un singolo valore preoccupante, ma la combinazione di {{factors}} sta aumentando il tuo rischio metabolico.",
+        "needs_review": "Alcuni risultati ({{factors}}) sono chiaramente fuori dall’intervallo di riferimento. Questo risultato richiede una valutazione professionale."
+      },
+      "concernsTitle": "Cosa sta aumentando il tuo rischio",
+      "strengthsTitle": "Cosa va bene",
+      "prioritiesTitle": "Le tue priorità",
+      "becauseOf": "Legato a: {{factors}}",
+      "priorities": {
+        "reduce_waist": "Ridurre la circonferenza vita",
+        "increase_activity": "Aumentare l’attività fisica",
+        "carb_quality": "Migliorare la qualità dei carboidrati",
+        "strength": "Aumentare massa e forza muscolare",
+        "blood_pressure": "Ridurre il sale e controllare la pressione",
+        "healthy_fats": "Scegliere grassi sani e più fibre",
+        "liver": "Proteggere il fegato: limitare alcol e zuccheri aggiunti",
+        "sleep": "Migliorare durata e qualità del sonno",
+        "stop_smoking": "Smettere di fumare (chiedi supporto)",
+        "repeat_labs": "Ripetere gli esami secondo l’indicazione del professionista"
+      },
+      "change": {
+        "improved": "Il tuo punteggio è migliorato di {{points}} punti",
+        "worsened": "Il tuo punteggio è sceso di {{points}} punti",
+        "same": "Il tuo punteggio non è cambiato",
+        "mainly": "Principalmente per:"
+      },
+      "levels": {
+        "normal": "Adeguato",
+        "borderline": "Al limite",
+        "low": "Fuori intervallo",
+        "high": "Fuori intervallo",
+        "veryHigh": "Molto fuori intervallo"
+      },
+      "status": {
+        "draft": "Bozza",
+        "approved": "Pubblicata",
+        "archived": "Archiviata"
+      },
+      "explain": {
+        "title": "Cosa significano i tuoi risultati",
+        "pending": "Il tuo professionista non ha ancora rivisto la spiegazione. La vedrai qui una volta approvata.",
+        "emptyPro": "Nessuna spiegazione ancora. Genera una bozza dall’ultima valutazione, rivedila e approvala.",
+        "generate": "Genera spiegazione",
+        "regenerate": "Nuova bozza",
+        "draftNotice": "Il paziente non la vede finché non la approvi.",
+        "prioritiesLabel": "Priorità (scegli e ordina)",
+        "note": "Nota del professionista",
+        "notePlaceholder": "Facoltativo: indicazioni o contesto per il paziente",
+        "noteTitle": "Nota del tuo professionista",
+        "save": "Salva bozza",
+        "approve": "Approva e pubblica",
+        "delete": "Elimina bozza",
+        "saved": "Bozza salvata",
+        "approved": "Spiegazione pubblicata per il paziente",
+        "error": "Non è stato possibile completare l’azione. Riprova.",
+        "reviewed": "Rivista e approvata dal tuo professionista il {{date}}"
+      },
+      "sim": {
+        "title": "Cosa succederebbe se migliorassi…?",
+        "subtitle": "Sposta i cursori e premi Simula per vedere quali indicatori potrebbero potenzialmente migliorare.",
+        "disclaimer": "Simulazione educativa: ricalcola il tuo punteggio con i valori scelti. Non è una previsione clinica né un risultato garantito.",
+        "run": "Simula",
+        "reset": "Reimposta",
+        "current": "Ora",
+        "simulated": "Simulato",
+        "delta": "Variazione: {{points}}",
+        "summary": "Con questi cambiamenti, questi indicatori potrebbero potenzialmente cambiare:",
+        "noChanges": "Con questi valori gli indicatori non cambierebbero. Prova altri valori.",
+        "missing": "Nessun valore registrato per: {{items}}. Questa modifica non è stata simulata.",
+        "fields": {
+          "waist": "Ridurre la vita (cm)",
+          "weight": "Ridurre il peso (kg)",
+          "triglycerides": "Ridurre i trigliceridi (mg/dL)",
+          "glucose": "Ridurre la glicemia a digiuno (mg/dL)",
+          "hba1c": "Migliorare l’HbA1c (%)",
+          "physical_activity": "Aggiungere esercizio (min/settimana)"
+        }
+      },
+      "rangesLink": "Vedi intervalli di riferimento"
     }
   }
 }
