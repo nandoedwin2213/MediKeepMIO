@@ -119,7 +119,8 @@
       "metabolicNutrition": "La mia alimentazione",
       "metabolicRecipes": "Le mie ricette",
       "metabolicWeek": "La mia settimana",
-      "metabolicAI": "Il mio assistente"
+      "metabolicAI": "Il mio assistente",
+      "metabolicLabs": "Importa esami"
     },
     "sections": {
       "administration": "Amministrazione",

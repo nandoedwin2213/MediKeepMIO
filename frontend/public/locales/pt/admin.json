@@ -565,7 +565,8 @@
       "analytics": "Análises",
       "maintenance": "Manutenção",
       "trash": "Lixeira",
-      "metabolicSettings": "Configuração clínica"
+      "metabolicSettings": "Configuração clínica",
+      "metabolicResearch": "Exportação para pesquisa"
     },
     "sections": {
       "dataManagement": "Gerenciamento de Dados",
@@ -759,5 +760,36 @@
     "notes": "Motivo da alteração (opcional)",
     "reset": "Carregar valores padrão",
     "save": "Salvar nova versão"
+  },
+  "metabolicResearch": {
+    "title": "Exportação para pesquisa",
+    "subtitle": "Conjunto de dados pseudonimizado das avaliações metabólicas para pesquisa, com códigos LOINC e dicionário de dados.",
+    "loadError": "Não foi possível carregar o resumo de pesquisa.",
+    "exportError": "Não foi possível gerar a exportação.",
+    "stats": {
+      "patients_total": "Pacientes",
+      "patients_consented": "Com consentimento de pesquisa",
+      "assessments": "Avaliações exportáveis",
+      "columns": "Variáveis"
+    },
+    "smallTitle": "Amostra pequena",
+    "smallSample": "Menos de {{count}} pacientes deram consentimento. Com tão poucas pessoas alguém poderia ser reconhecido: não publique dados individuais.",
+    "howTitle": "Como os dados são protegidos",
+    "measures": {
+      "consent": "Apenas pacientes que marcaram o consentimento de pesquisa no histórico metabólico.",
+      "pseudonym": "Nomes, documentos e contatos são substituídos por um código de pesquisa.",
+      "age": "A idade é agrupada em faixas de 5 anos; sem data de nascimento.",
+      "dates": "As datas exatas são substituídas por dias desde a primeira avaliação.",
+      "freeText": "Notas, objetivos e outros textos livres nunca são exportados.",
+      "loinc": "As variáveis laboratoriais trazem o código LOINC e a unidade no dicionário de dados."
+    },
+    "ethics": "Usar estes dados num estudo requer aprovação de um comitê de ética e cumprimento da lei de proteção de dados (LOPDP).",
+    "downloadTitle": "Baixar",
+    "formats": {
+      "csv": "Dados (CSV)",
+      "json": "Dados + dicionário (JSON)",
+      "dictionary": "Dicionário de dados (CSV)"
+    },
+    "audit": "Cada download fica registrado no log de auditoria."
   }
 }

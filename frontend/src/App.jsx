@@ -82,6 +82,8 @@ import MetabolicNutrition from './pages/medical/MetabolicNutrition';
 import MetabolicRecipes from './pages/medical/MetabolicRecipes';
 import MetabolicWeek from './pages/medical/MetabolicWeek';
 import MetabolicAI from './pages/medical/MetabolicAI';
+import MetabolicLabImport from './pages/medical/MetabolicLabImport';
+import MetabolicResearch from './pages/admin/MetabolicResearch';
 import MetabolicSettings from './pages/admin/MetabolicSettings';
 import Injuries from './pages/medical/Injuries';
 import MedicalEquipment from './pages/medical/MedicalEquipment';
@@ -549,6 +551,14 @@ function App() {
                             }
                           />
                           <Route
+                            path="/metabolic-labs"
+                            element={
+                              <ProtectedRoute>
+                                <MetabolicLabImport />
+                              </ProtectedRoute>
+                            }
+                          />
+                          <Route
                             path="/metabolic-ai"
                             element={
                               <ProtectedRoute>
@@ -737,6 +747,14 @@ function App() {
                             element={
                               <AdminRoute>
                                 <SystemHealth />
+                              </AdminRoute>
+                            }
+                          />
+                          <Route
+                            path="/admin/metabolic-research"
+                            element={
+                              <AdminRoute>
+                                <MetabolicResearch />
                               </AdminRoute>
                             }
                           />

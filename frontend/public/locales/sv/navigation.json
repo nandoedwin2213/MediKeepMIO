@@ -119,7 +119,8 @@
       "metabolicNutrition": "Min kost",
       "metabolicRecipes": "Mina recept",
       "metabolicWeek": "Min vecka",
-      "metabolicAI": "Min assistent"
+      "metabolicAI": "Min assistent",
+      "metabolicLabs": "Importera labb"
     },
     "sections": {
       "administration": "Administration",

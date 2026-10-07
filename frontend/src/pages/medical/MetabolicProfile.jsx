@@ -62,6 +62,7 @@ const EMPTY = {
   musculoskeletal_limitations: '',
   pain_level: '',
   goals: '',
+  research_consent: false,
 };
 
 const toPayload = form => {
@@ -311,6 +312,24 @@ const MetabolicProfile = () => {
                   onChange={e => set('goals', e.currentTarget.value)}
                 />
               </Stack>
+            </Card>
+
+            <Card withBorder radius="lg" padding="lg">
+              <Title order={4} mb="xs">
+                {t('metabolic.profile.sections.research', 'Research')}
+              </Title>
+              <Checkbox
+                label={t(
+                  'metabolic.profile.fields.research_consent',
+                  'I agree that my data may be used, without my name, for metabolic health research'
+                )}
+                description={t(
+                  'metabolic.profile.researchHint',
+                  'Optional. Only coded data is shared: no name, ID number, birth date, exact dates or free-text notes. You can withdraw at any time by unticking this box.'
+                )}
+                checked={!!form.research_consent}
+                onChange={e => set('research_consent', e.currentTarget.checked)}
+              />
             </Card>
 
             <Group justify="flex-end">

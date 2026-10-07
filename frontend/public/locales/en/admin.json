@@ -565,7 +565,8 @@
       "analytics": "Analytics",
       "maintenance": "Maintenance",
       "trash": "Trash",
-      "metabolicSettings": "Clinical configuration"
+      "metabolicSettings": "Clinical configuration",
+      "metabolicResearch": "Research export"
     },
     "sections": {
       "dataManagement": "Data Management",
@@ -759,5 +760,36 @@
     "notes": "Reason for the change (optional)",
     "reset": "Load default values",
     "save": "Save new version"
+  },
+  "metabolicResearch": {
+    "title": "Research export",
+    "subtitle": "Pseudonymised dataset of metabolic assessments for research, with LOINC codes and a data dictionary.",
+    "loadError": "Could not load the research summary.",
+    "exportError": "Could not generate the export.",
+    "stats": {
+      "patients_total": "Patients",
+      "patients_consented": "With research consent",
+      "assessments": "Exportable assessments",
+      "columns": "Variables"
+    },
+    "smallTitle": "Small sample",
+    "smallSample": "Fewer than {{count}} patients have consented. With so few people someone could be recognised: do not publish individual data.",
+    "howTitle": "How the data is protected",
+    "measures": {
+      "consent": "Only patients who ticked the research consent in their metabolic history.",
+      "pseudonym": "Names, ID numbers and contact details are replaced by a coded research ID.",
+      "age": "Age is grouped in 5-year bands; no birth date.",
+      "dates": "Exact dates are replaced by days since the first assessment.",
+      "freeText": "Notes, goals and other free text are never exported.",
+      "loinc": "Lab variables carry their LOINC code and unit in the data dictionary."
+    },
+    "ethics": "Using this data in a study requires approval from an ethics committee and compliance with the data protection law (LOPDP).",
+    "downloadTitle": "Download",
+    "formats": {
+      "csv": "Data (CSV)",
+      "json": "Data + dictionary (JSON)",
+      "dictionary": "Data dictionary (CSV)"
+    },
+    "audit": "Every download is recorded in the audit log."
   }
 }

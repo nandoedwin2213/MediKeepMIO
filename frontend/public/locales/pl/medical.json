@@ -1862,7 +1862,8 @@
     "actions": {
       "profile": "Wywiad metaboliczny i nawyki",
       "addLab": "Wyniki badań",
-      "addVitals": "Parametry życiowe"
+      "addVitals": "Parametry życiowe",
+      "importLab": "Importuj wyniki"
     },
     "warnings": {
       "unknownUnit": "{{variable}}: nierozpoznana jednostka „{{unit}}”, wartość nie została użyta"
@@ -1879,7 +1880,8 @@
       "sections": {
         "history": "Czy rozpoznano u Ciebie…?",
         "habits": "Twoje nawyki",
-        "limitations": "Ograniczenia i cele"
+        "limitations": "Ograniczenia i cele",
+        "research": "Badania naukowe"
       },
       "fields": {
         "has_diabetes": "Cukrzyca",
@@ -1904,7 +1906,8 @@
         "diet_pattern": "Sposób odżywiania",
         "meals_per_day": "Główne posiłki dziennie",
         "food_intolerances": "Nietolerancje pokarmowe (np. laktoza, gluten)",
-        "food_dislikes": "Produkty, których nie lubisz lub unikasz"
+        "food_dislikes": "Produkty, których nie lubisz lub unikasz",
+        "research_consent": "Zgadzam się na wykorzystanie moich danych, bez mojego nazwiska, do badań nad zdrowiem metabolicznym"
       },
       "options": {
         "alcohol": {
@@ -1925,7 +1928,8 @@
           "pescatarian": "Peskatariańska",
           "other": "Inna"
         }
-      }
+      },
+      "researchHint": "Opcjonalnie. Udostępniane są tylko zakodowane dane: bez nazwiska, numeru dokumentu, daty urodzenia, dokładnych dat ani notatek tekstowych. Możesz w każdej chwili wycofać zgodę, odznaczając to pole."
     },
     "health": {
       "title": "Moje zdrowie metaboliczne",
@@ -2606,6 +2610,51 @@
         }
       },
       "rangesLink": "Zobacz zakresy referencyjne"
+    },
+    "labs": {
+      "title": "Importuj wyniki badań",
+      "subtitle": "Wklej tekst wyników laboratoryjnych albo prześlij plik PDF lub CSV. Glukoza, insulina, HbA1c, lipidy, enzymy wątrobowe, kreatynina i kwas moczowy są rozpoznawane i kodowane w LOINC. Przed zapisaniem sprawdzasz wszystko.",
+      "defaultName": "Panel metaboliczny",
+      "parseError": "Nie udało się odczytać wyników. Sprawdź plik lub wklej tekst.",
+      "importError": "Nie udało się zapisać wartości. Sprawdź wartości i jednostki.",
+      "imported": "Zapisane wartości: {{count}}",
+      "newScore": "Score Metabólico FISAI wynosi teraz {{score}}.",
+      "seeRisk": "Zobacz ryzyko metaboliczne",
+      "seeLabs": "Zobacz wyniki badań",
+      "step1": "1. Wklej lub prześlij wyniki",
+      "step1Hint": "Jeden wynik w wierszu, np. «Glucosa en ayunas 95 mg/dL 70 - 100». Akceptowane są PDF (cyfrowe lub skany), CSV i TXT.",
+      "pasteLabel": "Tekst wyników laboratoryjnych",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "Prześlij PDF / CSV",
+      "analyse": "Analizuj",
+      "template": "Szablon CSV",
+      "step2": "2. Sprawdź i potwierdź",
+      "found": "Rozpoznane wartości: {{count}}.",
+      "unrecognized": "Nierozpoznane wiersze: {{count}}.",
+      "nothingFound": "Nie rozpoznano żadnych wartości metabolicznych. Sprawdź tekst lub użyj szablonu CSV.",
+      "date": "Data pobrania",
+      "name": "Nazwa",
+      "facility": "Laboratorium",
+      "cols": {
+        "test": "Badanie",
+        "value": "Wartość",
+        "unit": "Jednostka",
+        "reference": "Zakres referencyjny"
+      },
+      "include": "Uwzględnij",
+      "loincHint": "Międzynarodowy kod standardowy (LOINC)",
+      "warnings": {
+        "implausible": "Nieprawdopodobna wartość: sprawdź jednostkę",
+        "unknown_unit": "Nierozpoznana jednostka",
+        "unit_assumed": "Brak jednostki: wybierz ją",
+        "qualifier": "Wartość z < lub >",
+        "duplicate": "Powtórzone: nie uwzględniono"
+      },
+      "chooseUnit": "Jednostka",
+      "refMin": "Min.",
+      "refMax": "Maks.",
+      "reviewHint": "Porównaj każdą wartość z wynikami. Wartości zostaną zapisane jako wynik badania i zaktualizują wynik metaboliczny.",
+      "import": "Zapisz wartości ({{count}})"
     }
   }
 }

@@ -1858,7 +1858,8 @@
     "actions": {
       "profile": "代谢病史和习惯",
       "addLab": "化验结果",
-      "addVitals": "生命体征"
+      "addVitals": "生命体征",
+      "importLab": "导入化验单"
     },
     "warnings": {
       "unknownUnit": "{{variable}}：无法识别单位“{{unit}}”，未使用该值"
@@ -1875,7 +1876,8 @@
       "sections": {
         "history": "医生是否告诉过你患有……？",
         "habits": "你的习惯",
-        "limitations": "限制和目标"
+        "limitations": "限制和目标",
+        "research": "科研"
       },
       "fields": {
         "has_diabetes": "糖尿病",
@@ -1900,7 +1902,8 @@
         "diet_pattern": "饮食类型",
         "meals_per_day": "每天正餐数",
         "food_intolerances": "食物不耐受（如乳糖、麸质）",
-        "food_dislikes": "不喜欢或回避的食物"
+        "food_dislikes": "不喜欢或回避的食物",
+        "research_consent": "我同意在不显示姓名的情况下将我的数据用于代谢健康研究"
       },
       "options": {
         "alcohol": {
@@ -1921,7 +1924,8 @@
           "pescatarian": "鱼素",
           "other": "其他"
         }
-      }
+      },
+      "researchHint": "可选。仅共享编码数据：不含姓名、证件号、出生日期、确切日期或自由文本备注。您可随时取消勾选以撤回。"
     },
     "health": {
       "title": "我的代谢健康",
@@ -2602,6 +2606,51 @@
         }
       },
       "rangesLink": "查看参考范围"
+    },
+    "labs": {
+      "title": "导入化验结果",
+      "subtitle": "粘贴化验单文本，或上传 PDF 或 CSV 文件。系统识别血糖、胰岛素、HbA1c、血脂、肝酶、肌酐和尿酸，并用 LOINC 编码。保存前由您核对全部内容。",
+      "defaultName": "代谢化验组合",
+      "parseError": "无法读取化验单。请检查文件或粘贴文本。",
+      "importError": "无法保存数值。请检查数值和单位。",
+      "imported": "已保存数值：{{count}}",
+      "newScore": "Score Metabólico FISAI 现在为 {{score}}。",
+      "seeRisk": "查看代谢风险",
+      "seeLabs": "查看化验结果",
+      "step1": "1. 粘贴或上传化验单",
+      "step1Hint": "每行一个结果，例如 «Glucosa en ayunas 95 mg/dL 70 - 100»。支持 PDF（电子版或扫描件）、CSV 和 TXT。",
+      "pasteLabel": "化验单文本",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "上传 PDF / CSV",
+      "analyse": "分析",
+      "template": "CSV 模板",
+      "step2": "2. 核对并确认",
+      "found": "已识别数值：{{count}}。",
+      "unrecognized": "未识别行数：{{count}}。",
+      "nothingFound": "未识别到代谢指标。请检查文本或使用 CSV 模板。",
+      "date": "采样日期",
+      "name": "名称",
+      "facility": "实验室",
+      "cols": {
+        "test": "检验项目",
+        "value": "数值",
+        "unit": "单位",
+        "reference": "参考范围"
+      },
+      "include": "包含",
+      "loincHint": "国际标准编码（LOINC）",
+      "warnings": {
+        "implausible": "数值不合理：请检查单位",
+        "unknown_unit": "无法识别的单位",
+        "unit_assumed": "缺少单位：请选择",
+        "qualifier": "带 < 或 > 的数值",
+        "duplicate": "重复：不包含"
+      },
+      "chooseUnit": "单位",
+      "refMin": "最小",
+      "refMax": "最大",
+      "reviewHint": "请将每个数值与化验单核对。数值将保存为化验结果并更新代谢评分。",
+      "import": "保存 {{count}} 个数值"
     }
   }
 }

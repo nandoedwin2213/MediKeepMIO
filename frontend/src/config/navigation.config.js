@@ -88,6 +88,13 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.metabolicLabs',
+        name: 'Import labs',
+        path: '/metabolic-labs',
+        icon: '🧪',
+        id: 'metabolic-labs',
+      },
+      {
         nameKey: 'sidebarNav.items.metabolicAI',
         name: 'My assistant',
         path: '/metabolic-ai',

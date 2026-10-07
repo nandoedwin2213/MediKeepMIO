@@ -105,6 +105,20 @@ const metabolicApi = {
     apiService.delete(`/metabolic/patients/${patientId}/insights/${insightId}`),
   simulate: (patientId, body) =>
     apiService.post(`/metabolic/patients/${patientId}/simulate`, body),
+  getLabCatalog: signal =>
+    apiService.get('/metabolic/labs/catalog', { signal }),
+  parseLabs: (patientId, { text, file }) => {
+    const form = new FormData();
+    if (file) form.append('file', file);
+    else form.append('text', text || '');
+    return apiService.post(`/metabolic/patients/${patientId}/labs/parse`, form);
+  },
+  importLabs: (patientId, body) =>
+    apiService.post(`/metabolic/patients/${patientId}/labs/import`, body),
+  getResearchSummary: signal =>
+    apiService.get('/metabolic/research/summary', { signal }),
+  exportResearch: format =>
+    apiService.get('/metabolic/research/export', { params: { format } }),
   getProfessionalDashboard: signal =>
     apiService.get('/metabolic/professional/dashboard', { signal }),
 };

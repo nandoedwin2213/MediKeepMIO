@@ -1862,7 +1862,8 @@
     "actions": {
       "profile": "Historique métabolique et habitudes",
       "addLab": "Analyses",
-      "addVitals": "Signes vitaux"
+      "addVitals": "Signes vitaux",
+      "importLab": "Importer un bilan"
     },
     "warnings": {
       "unknownUnit": "{{variable}} : unité « {{unit}} » non reconnue, valeur non utilisée"
@@ -1879,7 +1880,8 @@
       "sections": {
         "history": "Vous a-t-on dit que vous avez… ?",
         "habits": "Vos habitudes",
-        "limitations": "Limitations et objectifs"
+        "limitations": "Limitations et objectifs",
+        "research": "Recherche"
       },
       "fields": {
         "has_diabetes": "Diabète",
@@ -1904,7 +1906,8 @@
         "diet_pattern": "Type d’alimentation",
         "meals_per_day": "Repas principaux par jour",
         "food_intolerances": "Intolérances alimentaires (ex. lactose, gluten)",
-        "food_dislikes": "Aliments que tu n’aimes pas ou évites"
+        "food_dislikes": "Aliments que tu n’aimes pas ou évites",
+        "research_consent": "J'accepte que mes données soient utilisées, sans mon nom, pour la recherche en santé métabolique"
       },
       "options": {
         "alcohol": {
@@ -1925,7 +1928,8 @@
           "pescatarian": "Pescétarienne",
           "other": "Autre"
         }
-      }
+      },
+      "researchHint": "Facultatif. Seules des données codées sont partagées : ni nom, ni numéro d'identité, ni date de naissance, ni dates exactes, ni notes en texte libre. Vous pouvez retirer votre accord à tout moment en décochant cette case."
     },
     "health": {
       "title": "Ma santé métabolique",
@@ -2606,6 +2610,51 @@
         }
       },
       "rangesLink": "Voir les plages de référence"
+    },
+    "labs": {
+      "title": "Importer un bilan biologique",
+      "subtitle": "Collez le texte du compte rendu ou téléversez son PDF ou un fichier CSV. Glucose, insuline, HbA1c, lipides, enzymes hépatiques, créatinine et acide urique sont reconnus et codés en LOINC. Vous vérifiez tout avant d'enregistrer.",
+      "defaultName": "Bilan métabolique",
+      "parseError": "Impossible de lire le compte rendu. Vérifiez le fichier ou collez le texte.",
+      "importError": "Impossible d'enregistrer les valeurs. Vérifiez les valeurs et les unités.",
+      "imported": "Valeurs enregistrées : {{count}}",
+      "newScore": "Le Score Metabólico FISAI est maintenant de {{score}}.",
+      "seeRisk": "Voir le risque métabolique",
+      "seeLabs": "Voir les analyses",
+      "step1": "1. Collez ou téléversez le compte rendu",
+      "step1Hint": "Un résultat par ligne, par exemple «Glucosa en ayunas 95 mg/dL 70 - 100». PDF (numérique ou scanné), CSV et TXT acceptés.",
+      "pasteLabel": "Texte du compte rendu",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "Téléverser PDF / CSV",
+      "analyse": "Analyser",
+      "template": "Modèle CSV",
+      "step2": "2. Vérifiez et confirmez",
+      "found": "Valeurs reconnues : {{count}}.",
+      "unrecognized": "Lignes non reconnues : {{count}}.",
+      "nothingFound": "Aucune valeur métabolique reconnue. Vérifiez le texte ou utilisez le modèle CSV.",
+      "date": "Date du prélèvement",
+      "name": "Nom",
+      "facility": "Laboratoire",
+      "cols": {
+        "test": "Analyse",
+        "value": "Valeur",
+        "unit": "Unité",
+        "reference": "Valeurs de référence"
+      },
+      "include": "Inclure",
+      "loincHint": "Code standard international (LOINC)",
+      "warnings": {
+        "implausible": "Valeur peu plausible : vérifiez l'unité",
+        "unknown_unit": "Unité non reconnue",
+        "unit_assumed": "Unité manquante : choisissez-la",
+        "qualifier": "Valeur avec < ou >",
+        "duplicate": "Répété : non inclus"
+      },
+      "chooseUnit": "Unité",
+      "refMin": "Min.",
+      "refMax": "Max.",
+      "reviewHint": "Comparez chaque valeur au compte rendu. Les valeurs sont enregistrées comme résultat d'analyse et mettent à jour le score métabolique.",
+      "import": "Enregistrer {{count}} valeurs"
     }
   }
 }

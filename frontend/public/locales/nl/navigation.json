@@ -119,7 +119,8 @@
       "metabolicNutrition": "Mijn voeding",
       "metabolicRecipes": "Mijn recepten",
       "metabolicWeek": "Mijn week",
-      "metabolicAI": "Mijn assistent"
+      "metabolicAI": "Mijn assistent",
+      "metabolicLabs": "Lab importeren"
     },
     "sections": {
       "administration": "Beheer",

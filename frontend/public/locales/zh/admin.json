@@ -565,7 +565,8 @@
       "analytics": "数据分析",
       "maintenance": "维护",
       "trash": "垃圾箱",
-      "metabolicSettings": "临床配置"
+      "metabolicSettings": "临床配置",
+      "metabolicResearch": "科研导出"
     },
     "sections": {
       "dataManagement": "数据管理",
@@ -759,5 +760,36 @@
     "notes": "更改原因（可选）",
     "reset": "加载默认值",
     "save": "保存新版本"
+  },
+  "metabolicResearch": {
+    "title": "科研导出",
+    "subtitle": "用于科研的代谢评估假名化数据集，含 LOINC 编码和数据字典。",
+    "loadError": "无法加载科研概要。",
+    "exportError": "无法生成导出文件。",
+    "stats": {
+      "patients_total": "患者",
+      "patients_consented": "已同意科研",
+      "assessments": "可导出评估",
+      "columns": "变量"
+    },
+    "smallTitle": "样本量小",
+    "smallSample": "同意的患者少于 {{count}} 人。人数这么少可能识别出个人：请勿发布个体数据。",
+    "howTitle": "数据如何受到保护",
+    "measures": {
+      "consent": "仅包括在代谢病史中勾选科研同意的患者。",
+      "pseudonym": "姓名、证件号和联系方式替换为编码的科研 ID。",
+      "age": "年龄按 5 岁分组；不含出生日期。",
+      "dates": "确切日期替换为距首次评估的天数。",
+      "freeText": "备注、目标和其他自由文本从不导出。",
+      "loinc": "化验变量在数据字典中附有 LOINC 编码和单位。"
+    },
+    "ethics": "在研究中使用这些数据需经伦理委员会批准，并遵守数据保护法（LOPDP）。",
+    "downloadTitle": "下载",
+    "formats": {
+      "csv": "数据（CSV）",
+      "json": "数据 + 字典（JSON）",
+      "dictionary": "数据字典（CSV）"
+    },
+    "audit": "每次下载都会记录在审计日志中。"
   }
 }

@@ -1862,7 +1862,8 @@
     "actions": {
       "profile": "Histórico metabólico e hábitos",
       "addLab": "Exames laboratoriais",
-      "addVitals": "Sinais vitais"
+      "addVitals": "Sinais vitais",
+      "importLab": "Importar exame"
     },
     "warnings": {
       "unknownUnit": "{{variable}}: unidade «{{unit}}» não reconhecida, valor não usado"
@@ -1879,7 +1880,8 @@
       "sections": {
         "history": "Já disseram que você tem…?",
         "habits": "Seus hábitos",
-        "limitations": "Limitações e objetivos"
+        "limitations": "Limitações e objetivos",
+        "research": "Pesquisa"
       },
       "fields": {
         "has_diabetes": "Diabetes",
@@ -1904,7 +1906,8 @@
         "diet_pattern": "Tipo de alimentação",
         "meals_per_day": "Refeições principais por dia",
         "food_intolerances": "Intolerâncias alimentares (ex.: lactose, glúten)",
-        "food_dislikes": "Alimentos de que não gosta ou evita"
+        "food_dislikes": "Alimentos de que não gosta ou evita",
+        "research_consent": "Concordo que os meus dados sejam usados, sem o meu nome, para pesquisa em saúde metabólica"
       },
       "options": {
         "alcohol": {
@@ -1925,7 +1928,8 @@
           "pescatarian": "Pescetariana",
           "other": "Outra"
         }
-      }
+      },
+      "researchHint": "Opcional. Só são partilhados dados codificados: sem nome, documento, data de nascimento, datas exatas nem notas de texto livre. Pode retirar a qualquer momento desmarcando esta caixa."
     },
     "health": {
       "title": "Minha saúde metabólica",
@@ -2606,6 +2610,51 @@
         }
       },
       "rangesLink": "Ver faixas de referência"
+    },
+    "labs": {
+      "title": "Importar exame laboratorial",
+      "subtitle": "Cole o texto do laudo ou envie o PDF ou um arquivo CSV. Glicose, insulina, HbA1c, lipídios, enzimas hepáticas, creatinina e ácido úrico são reconhecidos e codificados com LOINC. Você revisa tudo antes de salvar.",
+      "defaultName": "Painel metabólico",
+      "parseError": "Não foi possível ler o laudo. Verifique o arquivo ou cole o texto.",
+      "importError": "Não foi possível salvar os valores. Verifique valores e unidades.",
+      "imported": "Valores salvos: {{count}}",
+      "newScore": "O Score Metabólico FISAI agora é {{score}}.",
+      "seeRisk": "Ver risco metabólico",
+      "seeLabs": "Ver exames",
+      "step1": "1. Cole ou envie o laudo",
+      "step1Hint": "Um resultado por linha, por exemplo «Glucosa en ayunas 95 mg/dL 70 - 100». Aceita PDF (digital ou digitalizado), CSV e TXT.",
+      "pasteLabel": "Texto do laudo",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "Enviar PDF / CSV",
+      "analyse": "Analisar",
+      "template": "Modelo CSV",
+      "step2": "2. Revise e confirme",
+      "found": "Valores reconhecidos: {{count}}.",
+      "unrecognized": "Linhas não reconhecidas: {{count}}.",
+      "nothingFound": "Nenhum valor metabólico foi reconhecido. Verifique o texto ou use o modelo CSV.",
+      "date": "Data da coleta",
+      "name": "Nome",
+      "facility": "Laboratório",
+      "cols": {
+        "test": "Exame",
+        "value": "Valor",
+        "unit": "Unidade",
+        "reference": "Valores de referência"
+      },
+      "include": "Incluir",
+      "loincHint": "Código padrão internacional (LOINC)",
+      "warnings": {
+        "implausible": "Valor pouco plausível: verifique a unidade",
+        "unknown_unit": "Unidade não reconhecida",
+        "unit_assumed": "Falta a unidade: escolha-a",
+        "qualifier": "Valor com < ou >",
+        "duplicate": "Repetido: não incluído"
+      },
+      "chooseUnit": "Unidade",
+      "refMin": "Mín.",
+      "refMax": "Máx.",
+      "reviewHint": "Compare cada valor com o laudo. Os valores são salvos como resultado de exame e atualizam o score metabólico.",
+      "import": "Salvar {{count}} valores"
     }
   }
 }

@@ -565,7 +565,8 @@
       "analytics": "Analyse de données",
       "maintenance": "Maintenance",
       "trash": "Corbeille",
-      "metabolicSettings": "Configuration clinique"
+      "metabolicSettings": "Configuration clinique",
+      "metabolicResearch": "Export pour la recherche"
     },
     "sections": {
       "dataManagement": "Gestion des données",
@@ -759,5 +760,36 @@
     "notes": "Motif du changement (facultatif)",
     "reset": "Charger les valeurs par défaut",
     "save": "Enregistrer une nouvelle version"
+  },
+  "metabolicResearch": {
+    "title": "Export pour la recherche",
+    "subtitle": "Jeu de données pseudonymisé des évaluations métaboliques pour la recherche, avec codes LOINC et dictionnaire de données.",
+    "loadError": "Impossible de charger le résumé de recherche.",
+    "exportError": "Impossible de générer l'export.",
+    "stats": {
+      "patients_total": "Patients",
+      "patients_consented": "Avec consentement recherche",
+      "assessments": "Évaluations exportables",
+      "columns": "Variables"
+    },
+    "smallTitle": "Petit échantillon",
+    "smallSample": "Moins de {{count}} patients ont donné leur accord. Avec si peu de personnes, quelqu'un pourrait être reconnu : ne publiez pas de données individuelles.",
+    "howTitle": "Comment les données sont protégées",
+    "measures": {
+      "consent": "Uniquement les patients ayant coché le consentement recherche dans leur historique métabolique.",
+      "pseudonym": "Noms, numéros d'identité et coordonnées sont remplacés par un identifiant de recherche codé.",
+      "age": "L'âge est regroupé par tranches de 5 ans ; pas de date de naissance.",
+      "dates": "Les dates exactes sont remplacées par le nombre de jours depuis la première évaluation.",
+      "freeText": "Les notes, objectifs et autres textes libres ne sont jamais exportés.",
+      "loinc": "Les variables biologiques portent leur code LOINC et leur unité dans le dictionnaire de données."
+    },
+    "ethics": "Utiliser ces données dans une étude exige l'approbation d'un comité d'éthique et le respect de la loi sur la protection des données (LOPDP).",
+    "downloadTitle": "Télécharger",
+    "formats": {
+      "csv": "Données (CSV)",
+      "json": "Données + dictionnaire (JSON)",
+      "dictionary": "Dictionnaire de données (CSV)"
+    },
+    "audit": "Chaque téléchargement est enregistré dans le journal d'audit."
   }
 }
