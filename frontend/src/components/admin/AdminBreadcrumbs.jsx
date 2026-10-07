@@ -1,11 +1,16 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Breadcrumbs, Anchor, Text, Box } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons-react';
 import { generateAdminBreadcrumbs } from '../../utils/adminBreadcrumbs';
 
 const AdminBreadcrumbs = () => {
+  const { t } = useTranslation(['admin', 'shared']);
   const { pathname } = useLocation();
-  const crumbs = generateAdminBreadcrumbs(pathname);
+  const crumbs = generateAdminBreadcrumbs(pathname).map(c => ({
+    ...c,
+    label: c.key ? t(c.key, c.label) : c.label,
+  }));
 
   // Hide breadcrumbs on dashboard root (single crumb only)
   if (crumbs.length <= 1) {

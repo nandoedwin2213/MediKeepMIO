@@ -149,11 +149,14 @@ def research_export(
 ) -> Any:
     """Pseudonymised dataset of consenting patients (admin only, audited)."""
     stamp = date.today().strftime("%Y%m%d")
-    if format == "dictionary":
-        content = to_csv(data_dictionary(), ["column", "description", "unit", "loinc"])
-        return _download(content, "text/csv", f"silho-research-dictionary-{stamp}.csv")
     with handle_database_errors(request=request):
-        if format == "json":
+        if format == "dictionary":
+            dictionary = data_dictionary()
+            count = len(dictionary)
+            content = to_csv(dictionary, ["column", "description", "unit", "loinc"])
+            media = "text/csv"
+            filename = f"silho-research-dictionary-{stamp}.csv"
+        elif format == "json":
             import json
 
             payload = build_json(db)

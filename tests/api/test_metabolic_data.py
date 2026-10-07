@@ -2,6 +2,7 @@
 
 from datetime import date, datetime
 
+from app.models.activity_log import ActivityLog
 from app.models.labs import LabTestComponent
 from app.models.metabolic import MetabolicAssessment, MetabolicProfile
 from app.services.metabolic_labs import parse_lab_text
@@ -185,6 +186,13 @@ def test_research_consent_and_export(
     assert loinc["glucose"] == "2345-7" and loinc["waist"] == "8280-0"
     d = client.get("/api/v1/metabolic/research/export?format=dictionary", headers=admin)
     assert d.status_code == 200 and d.text.startswith("column,description,unit,loinc")
+    audited = [
+        log.description
+        for log in db_session.query(ActivityLog)
+        .filter(ActivityLog.action == "metabolic_research_export")
+        .all()
+    ]
+    assert len(audited) == 3 and any("dictionary" in a for a in audited)
 
     client.put(url, json={"research_consent": False}, headers=user)
     profile = (

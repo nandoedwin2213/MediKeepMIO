@@ -148,7 +148,7 @@ const MetabolicResearch = () => {
                   {FORMATS.map(f => (
                     <Button
                       key={f.format}
-                      variant={f.format === 'csv' ? 'filled' : 'light'}
+                      variant={f.format === 'csv' ? 'filled' : 'default'}
                       leftSection={<IconDownload size={16} />}
                       loading={busy === f.format}
                       disabled={
