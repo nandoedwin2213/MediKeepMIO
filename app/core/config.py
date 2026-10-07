@@ -341,6 +341,14 @@ class Settings:  # App Info
         os.getenv("ALLOW_USER_REGISTRATION", "True").lower() == "true"
     )  # Default: enabled to avoid lockout scenarios
 
+    # PayPhone subscriptions. Premium access is enforced only once PayPhone is
+    # fully configured (token, store id and the public URL PayPhone returns to).
+    PAYPHONE_TOKEN: str = get_secret("PAYPHONE_TOKEN", "")
+    PAYPHONE_STORE_ID: str = os.getenv("PAYPHONE_STORE_ID", "")
+    APP_PUBLIC_URL: str = os.getenv("APP_PUBLIC_URL", "")
+    BILLING_REQUIRED: bool = os.getenv("BILLING_REQUIRED", "true").lower() == "true"
+    BILLING_PLANS: str = os.getenv("BILLING_PLANS", "")
+
     # Integration URL SSRF Control
     # Controls whether user-configured integration URLs (Paperless/Papra) may
     # target private/loopback addresses (RFC1918 10/172.16/192.168, 127.x).

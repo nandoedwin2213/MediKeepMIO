@@ -121,6 +121,17 @@ def setup_static_files(app: FastAPI) -> tuple[str | None, str | None]:
                 name="recipes",
             )
 
+        landing_dir = os.path.join(static_dir, "landing")
+        if os.path.exists(landing_dir):
+            app.mount(
+                "/landing",
+                CachedStaticFiles(
+                    directory=landing_dir,
+                    cache_control="public, max-age=86400",
+                ),
+                name="landing",
+            )
+
         # Also mount at /static for backward compatibility
         app.mount("/static", StaticFiles(directory=static_dir), name="static")
         logger.info(f"Serving static files from: {static_dir}")

@@ -121,7 +121,8 @@
       "metabolicWeek": "สัปดาห์ของฉัน",
       "metabolicAI": "ผู้ช่วยของฉัน",
       "metabolicLabs": "นำเข้าผลแล็บ",
-      "metabolicWearables": "กิจกรรมและอุปกรณ์สวมใส่"
+      "metabolicWearables": "กิจกรรมและอุปกรณ์สวมใส่",
+      "subscription": "การสมัครสมาชิกของฉัน"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

@@ -121,7 +121,8 @@
       "metabolicWeek": "Моя неделя",
       "metabolicAI": "Мой помощник",
       "metabolicLabs": "Импорт анализов",
-      "metabolicWearables": "Активность и гаджеты"
+      "metabolicWearables": "Активность и гаджеты",
+      "subscription": "Моя подписка"
     },
     "sections": {
       "administration": "Администрирование",

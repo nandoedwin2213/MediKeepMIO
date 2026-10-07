@@ -121,7 +121,8 @@
       "metabolicWeek": "Min vecka",
       "metabolicAI": "Min assistent",
       "metabolicLabs": "Importera labb",
-      "metabolicWearables": "Aktivitet och wearables"
+      "metabolicWearables": "Aktivitet och wearables",
+      "subscription": "Mitt abonnemang"
     },
     "sections": {
       "administration": "Administration",

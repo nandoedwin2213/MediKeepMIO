@@ -110,6 +110,13 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.subscription',
+        name: 'My subscription',
+        path: '/subscription',
+        icon: '💳',
+        id: 'subscription',
+      },
+      {
         nameKey: 'sidebarNav.items.professionalDashboard',
         name: 'Professional dashboard',
         path: '/professional/metabolic-dashboard',
