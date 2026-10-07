@@ -58,7 +58,7 @@ const AdminHeader = ({ user, onLogout, onToggleSidebar }) => {
       }}
     >
       <Group h="100%" justify="space-between" wrap="nowrap" gap="md">
-        <Group gap="md" wrap="nowrap" style={{ flexShrink: 0 }}>
+        <Group gap="md" wrap="nowrap" style={{ minWidth: 0 }}>
           <ActionIcon
             className="sidebar-toggle-btn"
             variant="filled"
@@ -68,13 +68,14 @@ const AdminHeader = ({ user, onLogout, onToggleSidebar }) => {
           >
             <IconMenu2 size={20} />
           </ActionIcon>
-          <img src={BRAND.logo} alt="" width={36} height={36} />
-          <Text
-            className="silho-admin-title"
-            fw={600}
-            size="xl"
-            style={{ whiteSpace: 'nowrap' }}
-          >
+          <img
+            src={BRAND.logo}
+            alt=""
+            width={36}
+            height={36}
+            style={{ flexShrink: 0 }}
+          />
+          <Text className="silho-admin-title" fw={600} size="xl" truncate="end">
             {t('header.title', 'Medical Records Admin')}
           </Text>
         </Group>
