@@ -29,20 +29,6 @@
   text-decoration: none;
 }
 
-.lp-nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.85rem clamp(1rem, 4vw, 3rem);
-  background: rgba(5, 12, 28, 0.82);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(201, 164, 92, 0.25);
-}
-
 .lp-brand {
   display: inline-flex;
   align-items: center;
@@ -51,25 +37,6 @@
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 0.12em;
-}
-
-.lp-nav-links {
-  display: flex;
-  gap: 1.8rem;
-}
-
-.lp-nav-links a {
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.95rem;
-}
-
-.lp-nav-links a:hover {
-  color: var(--lp-gold-light);
-}
-
-.lp-nav-cta {
-  display: flex;
-  gap: 0.6rem;
 }
 
 .lp-btn {
@@ -616,10 +583,6 @@
 }
 
 @media (max-width: 960px) {
-  .lp-nav-links {
-    display: none;
-  }
-
   .lp-hero {
     grid-template-columns: 1fr;
   }
@@ -647,23 +610,6 @@
 }
 
 @media (max-width: 560px) {
-  .lp-nav {
-    padding: 0.7rem 0.9rem;
-  }
-
-  .lp-brand span {
-    font-size: 1rem;
-  }
-
-  .lp-nav-cta .lp-btn {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.85rem;
-  }
-
-  .lp-nav-cta .lp-btn-ghost {
-    display: none;
-  }
-
   .lp-steps,
   .lp-tools {
     grid-template-columns: 1fr;

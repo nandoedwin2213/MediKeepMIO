@@ -20,6 +20,7 @@ import {
   IconUsers,
 } from '@tabler/icons-react';
 import { BRAND } from '../../config/brand';
+import PublicNav from '../../components/public/PublicNav';
 import billingApi from '../../services/api/billingApi';
 import {
   formatMoney,
@@ -72,26 +73,14 @@ function Landing() {
 
   return (
     <div className="lp">
-      <header className="lp-nav">
-        <Link to="/" className="lp-brand" aria-label={BRAND.name}>
-          <img src={BRAND.logo} alt="" width="36" height="36" />
-          <span>{BRAND.name}</span>
-        </Link>
-        <nav className="lp-nav-links" aria-label={t('landing.nav.label')}>
-          <a href="#como-funciona">{t('landing.nav.how')}</a>
-          <a href="#programa">{t('landing.nav.program')}</a>
-          <a href="#planes">{t('landing.nav.plans')}</a>
-          <a href="#preguntas">{t('landing.nav.faq')}</a>
-        </nav>
-        <div className="lp-nav-cta">
-          <Link to="/login" className="lp-btn lp-btn-ghost">
-            {t('landing.cta.login')}
-          </Link>
-          <Link to="/user-creation" className="lp-btn lp-btn-gold">
-            {t('landing.cta.start')}
-          </Link>
-        </div>
-      </header>
+      <PublicNav
+        links={[
+          { href: '#como-funciona', label: t('landing.nav.how') },
+          { href: '#programa', label: t('landing.nav.program') },
+          { href: '#planes', label: t('landing.nav.plans') },
+          { href: '#preguntas', label: t('landing.nav.faq') },
+        ]}
+      />
 
       <section className="lp-hero">
         <div className="lp-hero-text">

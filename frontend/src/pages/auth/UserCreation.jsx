@@ -1,18 +1,13 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
 import UserRegistrationForm from '../../components/forms/UserRegistrationForm';
+import PublicNav from '../../components/public/PublicNav';
 import { buildLoginPath } from '../../utils/loginRedirect';
-import {
-  Card,
-  Text,
-  Group,
-  ThemeIcon,
-  Container,
-  Button,
-  List,
-} from '@mantine/core';
-import { IconUserPlus, IconArrowLeft } from '@tabler/icons-react';
+import { BRAND } from '../../config/brand';
+import { Text, Group, ThemeIcon, List, Paper } from '@mantine/core';
+import { IconShieldCheck } from '@tabler/icons-react';
+import styles from '../../styles/pages/Login.module.css';
 
 const UserCreation = () => {
   const navigate = useNavigate();
@@ -64,99 +59,67 @@ const UserCreation = () => {
   };
 
   return (
-    <Container size="md" py="xl">
-      <div style={{ minHeight: '100vh', paddingTop: '2rem' }}>
-        {/* Header */}
-        <div style={{ marginBottom: '2rem' }}>
-          <Group mb="sm">
-            <Button
-              variant="subtle"
-              leftSection={<IconArrowLeft size={16} />}
-              onClick={() => navigate(buildLoginPath())}
-              color="gray"
-            >
-              {t('userCreation.backToLogin')}
-            </Button>
-          </Group>
-
-          <Group align="center" mb="xs">
-            <ThemeIcon size="xl" variant="light" color="blue">
-              <IconUserPlus size={24} />
-            </ThemeIcon>
-            <div>
-              <h1
-                style={{
-                  margin: 0,
-                  fontSize: '1.875rem',
-                  fontWeight: 600,
-                  color: '#1f2937',
-                }}
-              >
-                {t('userCreation.pageTitle')}
-              </h1>
-              <p
-                style={{
-                  margin: '0.5rem 0 0 0',
-                  color: '#6b7280',
-                  fontSize: '0.875rem',
-                }}
-              >
-                {t('userCreation.pageSubtitle')}
-              </p>
-            </div>
-          </Group>
+    <div className={styles.loginContainer}>
+      <PublicNav overlay />
+      <div className={`${styles.loginForm} ${styles.registerForm}`}>
+        <div className={styles.loginHeader}>
+          <h1>
+            <img
+              src={BRAND.logo}
+              alt=""
+              width={48}
+              height={48}
+              style={{
+                verticalAlign: 'middle',
+                marginRight: '12px',
+                filter: 'drop-shadow(0 6px 16px rgba(11, 26, 51, 0.35))',
+              }}
+            />
+            {t('userCreation.pageTitle')}
+          </h1>
+          <p style={{ margin: '4px 0 0', opacity: 0.8 }}>
+            {t('userCreation.pageSubtitle')}
+          </p>
         </div>
 
-        {/* Main Form Card */}
-        <Card shadow="sm" p="xl" withBorder>
-          <Group mb="md">
-            <ThemeIcon size="lg" variant="light" color="green">
-              <IconUserPlus size={20} />
+        <div className={styles.loginDivider}>
+          <span>{t('userCreation.cardTitle')}</span>
+        </div>
+
+        <UserRegistrationForm
+          onSuccess={handleSuccess}
+          onCancel={handleCancel}
+          isAdminContext={false}
+        />
+
+        <Paper p="md" mt="lg" radius="lg" className="silho-info-box">
+          <Group align="flex-start" wrap="nowrap">
+            <ThemeIcon size="md" radius="xl" className="silho-info-icon">
+              <IconShieldCheck size={16} />
             </ThemeIcon>
             <div>
-              <Text size="lg" fw={600}>
-                {t('userCreation.cardTitle')}
+              <Text size="sm" fw={600}>
+                {t('userCreation.whatHappensNext')}
               </Text>
-              <Text size="sm" c="dimmed">
-                {t('userCreation.cardSubtitle')}
-              </Text>
+              <List size="xs" c="dimmed" listStyleType="disc" mt={4}>
+                <List.Item>{t('userCreation.nextSteps.autoRecord')}</List.Item>
+                <List.Item>{t('userCreation.nextSteps.loggedIn')}</List.Item>
+                <List.Item>
+                  {t('userCreation.nextSteps.startManaging')}
+                </List.Item>
+                <List.Item>{t('userCreation.nextSteps.dataSecure')}</List.Item>
+              </List>
             </div>
           </Group>
+        </Paper>
 
-          <UserRegistrationForm
-            onSuccess={handleSuccess}
-            onCancel={handleCancel}
-            isAdminContext={false}
-          />
-
-          {/* Info Card */}
-          <Card p="md" withBorder mt="lg" bg="blue.0">
-            <Group>
-              <ThemeIcon size="md" variant="light" color="blue">
-                <IconUserPlus size={16} />
-              </ThemeIcon>
-              <div>
-                <Text size="sm" fw={500}>
-                  {t('userCreation.whatHappensNext')}
-                </Text>
-                <List size="xs" c="dimmed" listStyleType="disc" mt={4}>
-                  <List.Item>
-                    {t('userCreation.nextSteps.autoRecord')}
-                  </List.Item>
-                  <List.Item>{t('userCreation.nextSteps.loggedIn')}</List.Item>
-                  <List.Item>
-                    {t('userCreation.nextSteps.startManaging')}
-                  </List.Item>
-                  <List.Item>
-                    {t('userCreation.nextSteps.dataSecure')}
-                  </List.Item>
-                </List>
-              </div>
-            </Group>
-          </Card>
-        </Card>
+        <div className={styles.loginActions}>
+          <Link to={buildLoginPath()} className={styles.backHomeLink}>
+            {t('userCreation.backToLogin')}
+          </Link>
+        </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

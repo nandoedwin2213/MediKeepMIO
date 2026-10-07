@@ -731,7 +731,7 @@ export default function MetabolicRecipes() {
   };
 
   return (
-    <Container size="lg" py="md" className="silho-ir-page">
+    <Container size="xl" py="md" className="silho-ir-page">
       <PageHeader title={r('title')} icon="🍲" />
       <Text c="dimmed" mt="md">
         {r('subtitle')}

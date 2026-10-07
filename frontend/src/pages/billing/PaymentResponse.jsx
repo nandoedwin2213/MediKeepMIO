@@ -58,7 +58,7 @@ function PaymentResponse() {
   }, [cancelled, id, clientTx]);
 
   return (
-    <Container size="lg" py="md">
+    <Container size="xl" py="md">
       <PageHeader title={t('billing.title')} icon="💳" />
       <Card withBorder radius="lg" padding="xl" maw={640} mx="auto" mt="lg">
         <Stack gap="md">

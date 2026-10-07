@@ -25,6 +25,15 @@
     #c9a45c 55%,
     #8e6b2e 100%
   );
+  --silho-canvas: #f6f3ec;
+  --silho-card-border: rgba(11, 26, 51, 0.09);
+}
+
+[data-theme='dark'] {
+  --color-bg-primary: #0f1d38;
+  --color-bg-secondary: #0b1a33;
+  --silho-canvas: #071026;
+  --silho-card-border: rgba(229, 207, 149, 0.14);
 }
 
 body {
@@ -39,8 +48,12 @@ body {
       rgba(43, 74, 133, 0.08) 0%,
       transparent 70%
     ),
-    var(--color-bg-secondary, #f4f6fb);
+    var(--silho-canvas);
   background-attachment: fixed;
+}
+
+html body {
+  background-color: var(--silho-canvas);
 }
 
 /* Header */
@@ -289,6 +302,26 @@ html body .reload-button {
 /* Login: footer sits below the full-height hero, keep it on the dark canvas */
 html body:has([class*='loginContainer']) {
   background: #050c1c;
+}
+
+/* Public header on top of the login / sign-up canvas */
+html body [class*='loginContainer']:has(.silho-pubnav) {
+  justify-content: flex-start;
+  padding-top: 112px;
+}
+
+html body [class*='loginContainer'] [class*='registerForm'] {
+  margin-top: 0;
+}
+
+html body .silho-info-box {
+  background: rgba(201, 164, 92, 0.1) !important;
+  border: 1px solid rgba(201, 164, 92, 0.35) !important;
+}
+
+html body .silho-info-icon {
+  background: var(--silho-navy) !important;
+  color: var(--silho-gold-light) !important;
 }
 
 html body:has([class*='loginContainer']) .app-footer,
@@ -597,8 +630,16 @@ html[data-mantine-color-scheme='dark'] body [class*='loginHeader'] p {
 /* Metabolic risk engine */
 html body .silho-mr-hero {
   background:
-    radial-gradient(circle at 15% 20%, rgba(201, 164, 92, 0.18), transparent 55%),
-    radial-gradient(circle at 90% 90%, rgba(79, 216, 240, 0.12), transparent 50%),
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(201, 164, 92, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(79, 216, 240, 0.12),
+      transparent 50%
+    ),
     var(--mantine-color-body);
   border-color: rgba(201, 164, 92, 0.35);
 }
@@ -616,4 +657,90 @@ html body .silho-mr-factor:hover {
 
 html body .silho-mr-band-row {
   align-items: flex-end;
+}
+
+/* Unified surfaces: same cards as the landing in every screen */
+html body .mantine-Card-root {
+  border-color: var(--silho-card-border) !important;
+}
+
+/* Navigation strip under the page header */
+html body .desktop-navigation {
+  background: rgba(255, 255, 255, 0.86) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 164, 92, 0.35) !important;
+}
+
+html[data-theme='dark'] body .desktop-navigation {
+  background: rgba(5, 12, 28, 0.85) !important;
+}
+
+/* Admin console: navy sidebar matching the public header */
+html body .admin-layout,
+html body .admin-main,
+html body .admin-content {
+  background: var(--silho-canvas) !important;
+}
+
+html body .admin-sidebar {
+  background:
+    radial-gradient(
+      120% 60% at 0% 0%,
+      rgba(79, 216, 240, 0.12) 0%,
+      transparent 55%
+    ),
+    linear-gradient(180deg, #050c1c 0%, #0b1a33 60%, #152b55 100%) !important;
+  border-right: 1px solid rgba(201, 164, 92, 0.35) !important;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html body .admin-sidebar .mantine-Text-root,
+html body .admin-sidebar .mantine-NavLink-label,
+html body .admin-sidebar .mantine-NavLink-section,
+html body .admin-sidebar .mantine-ActionIcon-root {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+html body .admin-sidebar .mantine-Text-root[data-size='xs'],
+html body .admin-sidebar .mantine-Text-root[tt='uppercase'] {
+  color: rgba(229, 207, 149, 0.75) !important;
+}
+
+html body .admin-sidebar .mantine-NavLink-root:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+html body .admin-sidebar .mantine-NavLink-root[data-active] {
+  background: rgba(201, 164, 92, 0.16) !important;
+  box-shadow: inset 3px 0 0 var(--silho-gold);
+}
+
+html
+  body
+  .admin-sidebar
+  .mantine-NavLink-root[data-active]
+  .mantine-NavLink-label,
+html
+  body
+  .admin-sidebar
+  .mantine-NavLink-root[data-active]
+  .mantine-NavLink-section {
+  color: var(--silho-gold-light) !important;
+}
+
+html body .admin-sidebar .mantine-ActionIcon-root[data-variant='light'] {
+  background: rgba(201, 164, 92, 0.18) !important;
+  color: var(--silho-gold-light) !important;
+}
+
+/* Sign-up form labels readable on the dark glass card */
+html[data-theme='dark']
+  body
+  [class*='registerForm']
+  .mantine-InputWrapper-label,
+html[data-theme='dark']
+  body
+  [class*='registerForm']
+  .mantine-InputWrapper-description {
+  color: rgba(255, 255, 255, 0.85) !important;
 }

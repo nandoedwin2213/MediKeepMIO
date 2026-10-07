@@ -13,6 +13,7 @@ import { useAutoRedirectToProvider } from '../../hooks/useAutoRedirectToProvider
 import { IconUser, IconLock, IconEye, IconEyeOff } from '@tabler/icons-react';
 import styles from '../../styles/pages/Login.module.css';
 import { BRAND } from '../../config/brand';
+import PublicNav from '../../components/public/PublicNav';
 
 /**
  * Copy for each `reason` the redirect helper can attach.
@@ -356,6 +357,7 @@ const Login = () => {
   };
   return (
     <div className={styles.loginContainer}>
+      <PublicNav overlay />
       <div className={styles.loginForm}>
         <div className={styles.loginHeader}>
           <h1>

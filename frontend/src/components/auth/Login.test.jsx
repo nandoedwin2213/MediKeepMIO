@@ -151,7 +151,9 @@ describe('Login Component', () => {
     test('renders with SILHO brand title', () => {
       render(<Login />);
 
-      expect(screen.getByText('SILHO')).toBeInTheDocument();
+      expect(
+        screen.getByRole('heading', { level: 1, name: /SILHO/ })
+      ).toBeInTheDocument();
     });
 
     test('renders form inputs correctly', () => {
@@ -393,7 +395,9 @@ describe('Login Component', () => {
         },
       });
 
-      expect(screen.getByText('SILHO')).toBeInTheDocument();
+      expect(
+        screen.getByRole('heading', { level: 1, name: /SILHO/ })
+      ).toBeInTheDocument();
     });
 
     test('renders with app data context', () => {

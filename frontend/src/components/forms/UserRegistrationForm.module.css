@@ -19,8 +19,8 @@
 .formGroup label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #555;
-  font-weight: 500;
+  color: var(--color-text-primary);
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -28,19 +28,20 @@
 .formGroup select {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid #e1e5e9;
-  border-radius: 5px;
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--border-radius-lg);
   font-size: 1rem;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
   outline: none;
-  background: white;
-  color: #333;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 .formGroup input:focus,
 .formGroup select:focus {
-  border-color: #667eea;
+  border-color: var(--silho-gold, #c9a45c);
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.18);
 }
 
 .passwordRequirements {

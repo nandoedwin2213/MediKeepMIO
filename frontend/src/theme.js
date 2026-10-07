@@ -11,8 +11,8 @@ const FONT_FAMILY =
 export const cssVariablesResolver = theme => ({
   variables: {
     '--input-bd-focus': theme.colors.primary[5],
-    '--card-shadow': '0 2px 4px rgba(0, 0, 0, 0.1)',
-    '--button-font-weight': '500',
+    '--card-shadow': '0 10px 30px rgba(11, 26, 51, 0.06)',
+    '--button-font-weight': '600',
   },
   light: {
     '--mantine-color-text': '#000000',
@@ -22,7 +22,7 @@ export const cssVariablesResolver = theme => ({
     '--input-placeholder-color': '#3f4a59',
     '--input-section-color': '#000000',
     '--input-bd': '#6b7280',
-    '--mantine-color-body': '#e2e8f0',
+    '--mantine-color-body': '#f6f3ec',
     '--mantine-color-default': '#ffffff',
     '--mantine-color-default-border': '#1e293b',
     '--mantine-color-default-border-hover': '#0f172a',
@@ -35,9 +35,9 @@ export const cssVariablesResolver = theme => ({
     '--input-placeholder-color': '#a0aec0',
     '--input-section-color': '#f7fafc',
     '--input-bd': '#4a5568',
-    '--mantine-color-body': '#1a202c',
-    '--mantine-color-default': '#3d4a61',
-    '--mantine-color-default-border': '#718096',
+    '--mantine-color-body': '#0b1a33',
+    '--mantine-color-default': '#13213d',
+    '--mantine-color-default-border': '#3a5a98',
     '--mantine-color-default-border-hover': '#a0aec0',
   },
 });
@@ -137,6 +137,7 @@ export const theme = createTheme({
   /** Component-specific theme overrides using CSS variables */
   components: {
     Button: {
+      defaultProps: { radius: 'xl' },
       styles: {
         root: {
           fontWeight: 'var(--button-font-weight)',
@@ -154,6 +155,7 @@ export const theme = createTheme({
       },
     },
     Card: {
+      defaultProps: { radius: 'lg' },
       styles: {
         root: {
           boxShadow: 'var(--card-shadow)',
@@ -250,6 +252,7 @@ export const theme = createTheme({
       },
     },
     SegmentedControl: {
+      defaultProps: { radius: 'xl' },
       styles: {
         root: {
           backgroundColor: 'var(--color-bg-secondary)',

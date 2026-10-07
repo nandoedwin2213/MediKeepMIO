@@ -461,7 +461,7 @@ export default function MetabolicWeek() {
   const hasPlans = week && (week.plans?.exercise || week.plans?.nutrition);
 
   return (
-    <Container size="lg" py="md" className="silho-ir-page">
+    <Container size="xl" py="md" className="silho-ir-page">
       <PageHeader title={w('title')} icon="📅" />
       <Text c="dimmed" mt="md">
         {w('subtitle')}

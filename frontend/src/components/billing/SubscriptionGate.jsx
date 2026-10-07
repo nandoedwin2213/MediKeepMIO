@@ -47,7 +47,7 @@ function SubscriptionGate({ children }) {
   if (state.hasAccess) return children;
 
   return (
-    <Container size="lg" py="md">
+    <Container size="xl" py="md">
       <PageHeader title={t('billing.title')} icon="💳" />
       <Card
         withBorder

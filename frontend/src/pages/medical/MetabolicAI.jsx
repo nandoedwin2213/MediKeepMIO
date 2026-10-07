@@ -658,7 +658,7 @@ export default function MetabolicAI() {
   const professional = PRO_ROLES.includes(user?.role);
 
   return (
-    <Container size="lg" py="md" className="silho-ir-page">
+    <Container size="xl" py="md" className="silho-ir-page">
       <PageHeader title={a('title')} icon="💡" />
       <Text c="dimmed" mt="md">
         {a('subtitle')}

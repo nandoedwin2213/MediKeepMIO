@@ -101,7 +101,7 @@ function Subscription() {
 
   if (loading) {
     return (
-      <Container size="lg" py="xl">
+      <Container size="xl" py="xl">
         <Loader />
       </Container>
     );
@@ -113,7 +113,7 @@ function Subscription() {
   const canPay = Boolean(me?.configured) && !me?.exempt;
 
   return (
-    <Container size="lg" py="md">
+    <Container size="xl" py="md">
       <PageHeader title={t('billing.title')} icon="💳" />
       <Text c="dimmed" mt="md">
         {t('billing.subtitle')}
