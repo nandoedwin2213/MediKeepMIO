@@ -27,7 +27,7 @@ import { clearAutoRedirectAttempts } from '../../utils/autoRedirectGuard';
  * echoes it back - so both go through safeInternalPath before anyone navigates
  * to them.
  */
-const getPostSSORedirectPath = ({
+export const getPostSSORedirectPath = ({
   mustChangePassword,
   isNewUser,
   returnUrl,

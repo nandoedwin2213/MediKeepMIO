@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
 import UserRegistrationForm from '../../components/forms/UserRegistrationForm';
 import PublicNav from '../../components/public/PublicNav';
+import ClerkEntryButton from '../../components/auth/ClerkEntryButton';
 import { buildLoginPath } from '../../utils/loginRedirect';
 import { BRAND } from '../../config/brand';
 import { Text, Group, ThemeIcon, List, Paper } from '@mantine/core';
@@ -85,6 +86,8 @@ const UserCreation = () => {
         <div className={styles.loginDivider}>
           <span>{t('userCreation.cardTitle')}</span>
         </div>
+
+        <ClerkEntryButton mode="sign-up" showDivider={false} />
 
         <UserRegistrationForm
           onSuccess={handleSuccess}

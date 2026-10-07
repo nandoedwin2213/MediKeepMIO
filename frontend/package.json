@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@clerk/clerk-react": "5.61.10",
+    "@clerk/localizations": "3.37.9",
     "@mantine/core": "^8.3.18",
     "@mantine/dates": "^8.3.18",
     "@mantine/dropzone": "^8.3.18",

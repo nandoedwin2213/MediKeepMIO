@@ -14,6 +14,7 @@ import { IconUser, IconLock, IconEye, IconEyeOff } from '@tabler/icons-react';
 import styles from '../../styles/pages/Login.module.css';
 import { BRAND } from '../../config/brand';
 import PublicNav from '../../components/public/PublicNav';
+import ClerkEntryButton from '../../components/auth/ClerkEntryButton';
 
 /**
  * Copy for each `reason` the redirect helper can attach.
@@ -528,6 +529,10 @@ const Login = () => {
               </button>
             </div>
           )}
+
+        {autoRedirect.status !== 'redirecting' && (
+          <ClerkEntryButton showDivider={passwordFormVisible} />
+        )}
 
         {/* Under sso_only the server returns registration_enabled:false with an
             English message; render our own translated notice instead. */}

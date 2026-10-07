@@ -238,10 +238,7 @@ class SimpleAuthService {
           errorData,
           category: 'auth_login_failure',
         });
-        return authFailure(
-          errorData,
-          `HTTP ${response.status}: Login failed`
-        );
+        return authFailure(errorData, `HTTP ${response.status}: Login failed`);
       }
 
       const data = await response.json();
@@ -684,6 +681,73 @@ class SimpleAuthService {
         error: error.message,
         errorCode: error.errorCode || null,
       };
+    }
+  }
+
+  // Clerk sign-in (email and Google): public configuration
+  async getClerkConfig() {
+    try {
+      const response = await this.makeRequest('/auth/clerk/config', {
+        method: 'GET',
+      });
+      if (!response.ok) {
+        return { enabled: false, error: true };
+      }
+      return await response.json();
+    } catch (error) {
+      logger.warn('Failed to get Clerk config', {
+        error: error.message,
+        category: 'clerk_config',
+      });
+      return { enabled: false, error: true };
+    }
+  }
+
+  // Exchange a Clerk session token for a MediKeep session (cookie set by backend)
+  async exchangeClerkSession(token) {
+    try {
+      const response = await this.makeRequest('/auth/clerk/exchange', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        return {
+          success: false,
+          status: response.status,
+          error: errorData.message || errorData.detail || 'Sign-in failed',
+          errorCode:
+            errorData.error_code ||
+            response.headers.get('X-Error-Code') ||
+            null,
+        };
+      }
+
+      const data = await response.json();
+      return {
+        success: true,
+        user: data.user
+          ? {
+              id: data.user.id,
+              username: data.user.username,
+              email: data.user.email,
+              fullName: data.user.full_name,
+              role: data.user.role,
+              authMethod: data.user.auth_method,
+              isAdmin: isAdminRole(data.user.role),
+            }
+          : null,
+        isNewUser: data.is_new_user,
+        mustChangePassword: data.must_change_password || false,
+      };
+    } catch (error) {
+      logger.error('Clerk exchange error', {
+        error: error.message,
+        category: 'clerk_exchange',
+      });
+      return { success: false, error: error.message, errorCode: null };
     }
   }
 

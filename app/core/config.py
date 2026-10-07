@@ -349,6 +349,15 @@ class Settings:  # App Info
     BILLING_REQUIRED: bool = os.getenv("BILLING_REQUIRED", "true").lower() == "true"
     BILLING_PLANS: str = os.getenv("BILLING_PLANS", "")
 
+    # Clerk sign-in (email and Google). Enabled when both keys are set; Clerk only
+    # proves who the person is - roles and medical data stay in MediKeep.
+    CLERK_PUBLISHABLE_KEY: str = os.getenv("CLERK_PUBLISHABLE_KEY", "")
+    CLERK_SECRET_KEY: str = get_secret("CLERK_SECRET_KEY", "")
+    # Origins allowed in the session token's azp claim. Defaults to APP_PUBLIC_URL.
+    CLERK_AUTHORIZED_PARTIES: list = json.loads(
+        os.getenv("CLERK_AUTHORIZED_PARTIES", "[]")
+    )
+
     # Integration URL SSRF Control
     # Controls whether user-configured integration URLs (Paperless/Papra) may
     # target private/loopback addresses (RFC1918 10/172.16/192.168, 127.x).
