@@ -245,6 +245,37 @@ class AdherenceLog(Base):
     )
 
 
+class WearableDaily(Base):
+    """Daily activity summary imported from a wearable export (one row per day and source)."""
+
+    __tablename__ = "wearable_daily"
+    __table_args__ = (
+        UniqueConstraint("patient_id", "day", "source", name="uq_wearable_day_source"),
+    )
+
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(
+        Integer,
+        ForeignKey("patients.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    day = Column(Date, nullable=False, index=True)
+    source = Column(String(30), nullable=False)  # apple_health, google_fit, csv
+    steps = Column(Integer, nullable=True)
+    exercise_minutes = Column(Integer, nullable=True)
+    active_kcal = Column(Integer, nullable=True)
+    sleep_hours = Column(Float, nullable=True)
+    resting_hr = Column(Float, nullable=True)
+    avg_hr = Column(Float, nullable=True)
+    weight_kg = Column(Float, nullable=True)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    created_at = Column(DateTime, default=get_utc_now, nullable=False)
+    updated_at = Column(
+        DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
+    )
+
+
 class MetabolicInsight(Base):
     """FISAI Metabolic AI explanation; patients only see it once a professional approves it."""
 

@@ -120,7 +120,8 @@
       "metabolicRecipes": "สูตรอาหารของฉัน",
       "metabolicWeek": "สัปดาห์ของฉัน",
       "metabolicAI": "ผู้ช่วยของฉัน",
-      "metabolicLabs": "นำเข้าผลแล็บ"
+      "metabolicLabs": "นำเข้าผลแล็บ",
+      "metabolicWearables": "กิจกรรมและอุปกรณ์สวมใส่"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

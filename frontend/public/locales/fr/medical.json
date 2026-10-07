@@ -2521,7 +2521,9 @@
         "4": "Vendredi",
         "5": "Samedi",
         "6": "Dimanche"
-      }
+      },
+      "stepsTracked": "Enregistré : {{steps}} pas",
+      "fromWearable": "Depuis votre objet connecté"
     },
     "ai": {
       "title": "Mon assistant métabolique",
@@ -2655,6 +2657,69 @@
       "refMax": "Max.",
       "reviewHint": "Comparez chaque valeur au compte rendu. Les valeurs sont enregistrées comme résultat d'analyse et mettent à jour le score métabolique.",
       "import": "Enregistrer {{count}} valeurs"
+    },
+    "wearables": {
+      "title": "Activité et objets connectés",
+      "subtitle": "Importez le fichier exporté de votre montre ou téléphone pour voir vos pas, activité, sommeil, fréquence cardiaque et poids à côté de votre plan métabolique.",
+      "nativeNote": "La synchronisation automatique avec Apple Santé ou Health Connect nécessite une application mobile. Pour l’instant, importez le fichier exporté quand vous voulez mettre à jour vos données.",
+      "howTitle": "Comment exporter vos données",
+      "tabOther": "Autres applis",
+      "apple1": "Sur votre iPhone, ouvrez l’app Santé et touchez votre photo ou vos initiales (en haut à droite).",
+      "apple2": "Touchez « Exporter toutes les données de santé » et confirmez avec « Exporter ». Cela peut prendre quelques minutes.",
+      "apple3": "Enregistrez le fichier export.zip dans Fichiers ou envoyez-le sur votre ordinateur.",
+      "apple4": "Importez export.zip ici (inutile de le décompresser) et cliquez sur « Analyser ».",
+      "google1": "Allez sur takeout.google.com et connectez-vous avec le compte Google utilisé dans Google Fit.",
+      "google2": "Cliquez sur « Tout désélectionner », cochez seulement « Fit » puis « Étape suivante » → « Créer une exportation ».",
+      "google3": "Téléchargez le ZIP quand Google vous l’envoie par e-mail.",
+      "google4": "Importez le ZIP ici, ou seulement le fichier « Daily activity metrics.csv » du dossier Takeout/Fit.",
+      "other1": "Samsung Health, Garmin, Fitbit ou Health Connect : exportez vos données quotidiennes en CSV depuis l’app ou une app de synchronisation.",
+      "other2": "Ou téléchargez notre modèle, remplissez une ligne par jour (date, pas, minutes actives, sommeil, fréquence cardiaque au repos, poids) et importez-le.",
+      "upload": "Choisir un fichier",
+      "analyse": "Analyser",
+      "template": "Télécharger le modèle CSV",
+      "privacy": "Le fichier est traité sur le serveur SILHO et n’est pas partagé avec des tiers. Seuls les résumés quotidiens sont enregistrés.",
+      "parseError": "Impossible de lire le fichier. Vérifiez qu’il s’agit de l’export.zip d’Apple Santé, d’un CSV Google Fit ou du modèle.",
+      "importError": "Impossible d’enregistrer les données. Réessayez.",
+      "previewTitle": "Vérifiez avant d’enregistrer",
+      "range": "{{start}} – {{end}} · {{count}} jours",
+      "discarded": "{{count}} valeurs ont été écartées (dates futures ou valeurs impossibles).",
+      "cols": {
+        "date": "Date",
+        "exercise": "Exercice (min)"
+      },
+      "metrics": {
+        "steps": "Pas par jour",
+        "physical_activity": "Activité physique",
+        "sleep": "Sommeil",
+        "resting_hr": "Fréquence cardiaque au repos",
+        "weight": "Poids"
+      },
+      "hints": {
+        "steps": "Moyenne de pas par jour. L’objectif est plus de 7 500.",
+        "physical_activity": "Minutes d’exercice par semaine. Il est recommandé d’en faire au moins 150.",
+        "sleep": "Moyenne d’heures de sommeil par nuit. Idéal : 7 à 9.",
+        "resting_hr": "Pouls moyen au repos. Plus bas indique en général une meilleure forme."
+      },
+      "reviewNote": "Des résumés quotidiens sont enregistrés ; les jours déjà importés sont mis à jour.",
+      "weightNote": "Le dernier poids de chaque semaine (jusqu’à 12 semaines) est aussi enregistré dans Signes vitaux.",
+      "save": "Enregistrer {{count}} jours",
+      "cancel": "Annuler",
+      "imported": "{{count}} jours enregistrés",
+      "newScore": "Score : {{score}}",
+      "summaryTitle": "Moyenne des {{days}} derniers jours",
+      "lastImport": "Dernière importation : {{date}}",
+      "rangesNote": "Les plages de pas et de fréquence cardiaque sont indicatives ; vérifiez-les avec votre médecin.",
+      "apply": "Utiliser dans mon historique métabolique",
+      "applyHint": "Met à jour l’activité physique hebdomadaire et les heures de sommeil de votre historique métabolique avec ces moyennes et recalcule le score.",
+      "applied": "Historique mis à jour : {{minutes}} min/sem. et {{hours}} h de sommeil. Score : {{score}}",
+      "applyError": "Impossible de mettre à jour l’historique métabolique.",
+      "chartTitle": "Pas par jour",
+      "noData": "Aucune donnée d’objet connecté pour l’instant. Importez un export pour la voir ici.",
+      "units": {
+        "steps": "pas/jour",
+        "minWeek": "min/sem.",
+        "bpm": "batt./min"
+      }
     }
   }
 }

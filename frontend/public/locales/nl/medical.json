@@ -2521,7 +2521,9 @@
         "4": "Vrijdag",
         "5": "Zaterdag",
         "6": "Zondag"
-      }
+      },
+      "stepsTracked": "Geregistreerd: {{steps}} stappen",
+      "fromWearable": "Van je wearable"
     },
     "ai": {
       "title": "Mijn metabole assistent",
@@ -2655,6 +2657,69 @@
       "refMax": "Max.",
       "reviewHint": "Vergelijk elke waarde met het rapport. De waarden worden opgeslagen als labuitslag en werken de metabole score bij.",
       "import": "{{count}} waarden opslaan"
+    },
+    "wearables": {
+      "title": "Activiteit en wearables",
+      "subtitle": "Upload het geëxporteerde bestand van je horloge of telefoon om je stappen, activiteit, slaap, hartslag en gewicht naast je metabool plan te zien.",
+      "nativeNote": "Automatisch synchroniseren met Apple Gezondheid of Health Connect vereist een mobiele app. Upload voorlopig het geëxporteerde bestand wanneer je je gegevens wilt bijwerken.",
+      "howTitle": "Zo exporteer je je gegevens",
+      "tabOther": "Andere apps",
+      "apple1": "Open op je iPhone de app Gezondheid en tik op je foto of initialen (rechtsboven).",
+      "apple2": "Tik op ‘Exporteer alle gezondheidsgegevens’ en bevestig met ‘Exporteer’. Dit kan enkele minuten duren.",
+      "apple3": "Bewaar export.zip in Bestanden of stuur het naar je computer.",
+      "apple4": "Upload export.zip hier (niet uitpakken) en klik op ‘Analyseren’.",
+      "google1": "Ga naar takeout.google.com en log in met het Google-account dat je in Google Fit gebruikt.",
+      "google2": "Klik op ‘Alles deselecteren’, vink alleen ‘Fit’ aan en kies ‘Volgende stap’ → ‘Export maken’.",
+      "google3": "Download de ZIP wanneer Google je mailt.",
+      "google4": "Upload de ZIP hier, of alleen het bestand ‘Daily activity metrics.csv’ uit de map Takeout/Fit.",
+      "other1": "Samsung Health, Garmin, Fitbit of Health Connect: exporteer je dagelijkse gegevens als CSV vanuit de app of met een sync-app.",
+      "other2": "Of download ons sjabloon, vul één rij per dag in (datum, stappen, actieve minuten, slaap, rusthartslag, gewicht) en upload het.",
+      "upload": "Bestand kiezen",
+      "analyse": "Analyseren",
+      "template": "CSV-sjabloon downloaden",
+      "privacy": "Het bestand wordt verwerkt op de SILHO-server en niet gedeeld met derden. Alleen dagelijkse samenvattingen worden opgeslagen.",
+      "parseError": "Het bestand kon niet worden gelezen. Controleer of het de export.zip van Apple Gezondheid, een Google Fit-CSV of het sjabloon is.",
+      "importError": "De gegevens konden niet worden opgeslagen. Probeer het opnieuw.",
+      "previewTitle": "Controleer voor het opslaan",
+      "range": "{{start}} – {{end}} · {{count}} dagen",
+      "discarded": "{{count}} waarden zijn weggelaten (toekomstige data of onmogelijke waarden).",
+      "cols": {
+        "date": "Datum",
+        "exercise": "Beweging (min)"
+      },
+      "metrics": {
+        "steps": "Stappen per dag",
+        "physical_activity": "Lichamelijke activiteit",
+        "sleep": "Slaap",
+        "resting_hr": "Rusthartslag",
+        "weight": "Gewicht"
+      },
+      "hints": {
+        "steps": "Gemiddeld aantal stappen per dag. Het doel is meer dan 7.500.",
+        "physical_activity": "Minuten beweging per week. Aanbevolen is minstens 150.",
+        "sleep": "Gemiddeld aantal uren slaap per nacht. Ideaal: 7 tot 9.",
+        "resting_hr": "Gemiddelde hartslag in rust. Lager betekent meestal een betere conditie."
+      },
+      "reviewNote": "Er worden dagelijkse samenvattingen opgeslagen; al geïmporteerde dagen worden bijgewerkt.",
+      "weightNote": "Het laatste gewicht van elke week (tot 12 weken) wordt ook opgeslagen bij Vitale functies.",
+      "save": "{{count}} dagen opslaan",
+      "cancel": "Annuleren",
+      "imported": "{{count}} dagen opgeslagen",
+      "newScore": "Score: {{score}}",
+      "summaryTitle": "Gemiddelde van de laatste {{days}} dagen",
+      "lastImport": "Laatste import: {{date}}",
+      "rangesNote": "De bereiken voor stappen en hartslag zijn richtlijnen; bespreek ze met je arts.",
+      "apply": "Gebruiken in mijn metabole anamnese",
+      "applyHint": "Werkt de wekelijkse activiteit en slaapuren in je metabole anamnese bij met deze gemiddelden en berekent de score opnieuw.",
+      "applied": "Anamnese bijgewerkt: {{minutes}} min/week en {{hours}} u slaap. Score: {{score}}",
+      "applyError": "De metabole anamnese kon niet worden bijgewerkt.",
+      "chartTitle": "Stappen per dag",
+      "noData": "Nog geen wearable-gegevens. Upload een export om ze hier te zien.",
+      "units": {
+        "steps": "stappen/dag",
+        "minWeek": "min. per week",
+        "bpm": "slagen/min"
+      }
     }
   }
 }

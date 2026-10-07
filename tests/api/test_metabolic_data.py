@@ -210,3 +210,111 @@ def test_age_band():
     assert age_band(date(1980, 5, 10), date(2026, 5, 9)) == "45-49"
     assert age_band(date(2010, 1, 1), date(2026, 1, 1)) == "<18"
     assert age_band(None, date(2026, 1, 1)) is None
+
+
+def _assessment(patient_id, when, score):
+    return MetabolicAssessment(
+        patient_id=patient_id,
+        assessed_at=when,
+        algorithm_version="1",
+        config_version=0,
+        fingerprint=f"{patient_id}-{score}-{when.day}",
+        score=score,
+        risk_level="moderate",
+        metabolic_syndrome_status="indeterminate",
+        result={
+            "patient": {"sex": "F"},
+            "inputs": {"glucose": {"value": 99.0, "date": when.date().isoformat()}},
+            "indicators": {},
+        },
+    )
+
+
+def test_parse_txt_latin1_and_scanned_pdf(
+    authenticated_client, test_patient, monkeypatch
+):
+    url = BASE.format(test_patient.id) + "/labs/parse"
+    r = authenticated_client.post(
+        url, files={"file": ("informe.txt", REPORT.encode("latin-1"), "text/plain")}
+    )
+    assert r.status_code == 200 and r.json()["source"] == "file"
+    tg = [x for x in r.json()["rows"] if x["variable"] == "triglycerides"]
+    assert tg and tg[0]["value"] == 230
+
+    from app.services.pdf_text_extraction_service import PDFTextExtractionService
+
+    monkeypatch.setattr(
+        PDFTextExtractionService,
+        "extract_text",
+        lambda self, content, name: {"text": REPORT, "method": "ocr"},
+    )
+    r = authenticated_client.post(
+        url, files={"file": ("scan.pdf", b"%PDF-1.4 scanned", "application/pdf")}
+    )
+    assert r.status_code == 200 and r.json()["source"] == "pdf_ocr"
+    assert r.json()["suggested_date"] == "2026-09-12"
+
+
+def test_research_export_mixed_cohort(
+    client, user_token_headers, admin_token_headers, db_session, test_patient
+):
+    from app.crud.patient import patient as patient_crud
+    from app.crud.user import user as user_crud
+    from app.schemas.patient import PatientCreate
+    from app.schemas.user import UserCreate
+
+    other_user = user_crud.create(
+        db_session,
+        obj_in=UserCreate(
+            username="otheruser",
+            email="other@example.com",
+            password="otherpassword123",
+            full_name="Other User",
+            role="user",
+        ),
+    )
+    other = patient_crud.create_for_user(
+        db_session,
+        user_id=other_user.id,
+        patient_data=PatientCreate(
+            first_name="Nadia",
+            last_name="Noconsent",
+            birth_date=date(1980, 5, 5),
+            gender="F",
+            address="1 Other St",
+        ),
+    )
+    db_session.add(MetabolicProfile(patient_id=other.id, research_consent=False))
+    for pid in (test_patient.id, other.id):
+        db_session.add(_assessment(pid, datetime(2026, 7, 1), 50))
+    db_session.commit()
+    url = BASE.format(test_patient.id) + "/profile"
+    assert (
+        client.put(
+            url, json={"research_consent": True}, headers=user_token_headers
+        ).status_code
+        == 200
+    )
+
+    admin = admin_token_headers
+    summary = client.get("/api/v1/metabolic/research/summary", headers=admin).json()
+    assert summary["patients_consented"] == 1
+    r = client.get("/api/v1/metabolic/research/export?format=csv", headers=admin)
+    body = r.text
+    assert research_id(test_patient.id) in body
+    assert research_id(other.id) not in body and "Noconsent" not in body
+
+    client.put(url, json={"research_consent": False}, headers=user_token_headers)
+    r = client.get("/api/v1/metabolic/research/export?format=csv", headers=admin)
+    assert len(r.text.strip().splitlines()) == 1
+
+
+def test_parse_skips_reference_range_when_ocr_misses_value():
+    """An OCR-garbled result must not fall back to the lower reference limit."""
+    garbled = parse_lab_text(
+        "Acido urico Pal mg/dL 3.5 =~ 7.2\nAcido urico 5.1 mg/dL 3.5 - 7.2"
+    )
+    assert [(r["value"], r["ref_min"], r["ref_max"]) for r in garbled["rows"]] == [
+        (5.1, 3.5, 7.2)
+    ]
+    assert garbled["unrecognized"] == 1

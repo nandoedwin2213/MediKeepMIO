@@ -60,6 +60,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     logrotate \
     tesseract-ocr \
     tesseract-ocr-eng \
+    tesseract-ocr-spa \
     fonts-noto-cjk \
     fonts-noto-core \
     poppler-utils \

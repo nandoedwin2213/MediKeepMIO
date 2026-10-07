@@ -64,6 +64,18 @@ def _meals(
     return meals
 
 
+def _wearable_done(day: Dict[str, Any], tracked: Dict[str, Any]) -> Set[str]:
+    """Checklist items met by wearable data: steps target and planned aerobic minutes."""
+    out: Set[str] = set()
+    steps, minutes = tracked.get("steps"), tracked.get("exercise_minutes")
+    if steps is not None and day.get("steps_target") and steps >= day["steps_target"]:
+        out.add("walk")
+    planned = (day.get("aerobic") or {}).get("minutes")
+    if minutes is not None and planned and minutes >= planned:
+        out.add("exercise")
+    return out
+
+
 def build_week(
     start: date,
     *,
@@ -75,6 +87,7 @@ def build_week(
     today: date,
     exercise_since: Optional[date] = None,
     nutrition_since: Optional[date] = None,
+    activity: Optional[Dict[date, Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """Lay out the approved plans over Monday–Sunday and score the checklist."""
     start = week_start(start)
@@ -148,9 +161,20 @@ def build_week(
             day["meals"] = _meals(by_category, i, offset, snacks)
             if nutrition_since is None or day_date >= nutrition_since:
                 items.append("nutrition")
-        day["items"] = [
-            {"item": key, "done": done.get((day_date, key), False)} for key in items
-        ]
+        tracked = (activity or {}).get(day_date) or {}
+        day["steps"] = tracked.get("steps")
+        day["exercise_minutes"] = tracked.get("exercise_minutes")
+        auto = _wearable_done(day, tracked)
+        day["items"] = []
+        for key in items:
+            logged = done.get((day_date, key), False)
+            day["items"].append(
+                {
+                    "item": key,
+                    "done": logged or key in auto,
+                    "source": "wearable" if key in auto and not logged else None,
+                }
+            )
         days.append(day)
 
     active = (exercise is not None and (exercise_since or start) <= end) or (

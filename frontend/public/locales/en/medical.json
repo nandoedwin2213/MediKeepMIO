@@ -2521,7 +2521,9 @@
         "4": "Friday",
         "5": "Saturday",
         "6": "Sunday"
-      }
+      },
+      "stepsTracked": "Recorded: {{steps}} steps",
+      "fromWearable": "From your wearable"
     },
     "ai": {
       "title": "My metabolic assistant",
@@ -2655,6 +2657,69 @@
       "refMax": "Max",
       "reviewHint": "Check each value against the report. The values are saved as a lab result and update the metabolic score.",
       "import": "Save {{count}} values"
+    },
+    "wearables": {
+      "title": "Activity & wearables",
+      "subtitle": "Upload the file exported from your watch or phone to see your steps, activity, sleep, heart rate and weight next to your metabolic plan.",
+      "nativeNote": "Automatic sync with Apple Health or Health Connect needs a mobile app. For now, upload the exported file whenever you want to update your data.",
+      "howTitle": "How to export your data",
+      "tabOther": "Other apps",
+      "apple1": "On your iPhone, open the Health app and tap your photo or initials (top right).",
+      "apple2": "Tap “Export All Health Data” and confirm with “Export”. It may take a few minutes.",
+      "apple3": "Save the export.zip file to Files or send it to your computer.",
+      "apple4": "Upload export.zip here (no need to unzip it) and press “Analyse”.",
+      "google1": "Go to takeout.google.com and sign in with the Google account you use in Google Fit.",
+      "google2": "Click “Deselect all”, tick only “Fit” and choose “Next step” → “Create export”.",
+      "google3": "Download the ZIP when Google emails you.",
+      "google4": "Upload the ZIP here, or only the file “Daily activity metrics.csv” from the Takeout/Fit folder.",
+      "other1": "Samsung Health, Garmin, Fitbit or Health Connect: export your daily data as CSV from the app or a sync app.",
+      "other2": "Or download our template, fill in one row per day (date, steps, active minutes, sleep, resting heart rate, weight) and upload it.",
+      "upload": "Choose file",
+      "analyse": "Analyse",
+      "template": "Download CSV template",
+      "privacy": "The file is processed on the SILHO server and is not shared with third parties. Only daily summaries are stored.",
+      "parseError": "Could not read the file. Check that it is Apple Health's export.zip, a Google Fit CSV or the template.",
+      "importError": "Could not save the data. Please try again.",
+      "previewTitle": "Review before saving",
+      "range": "{{start}} – {{end}} · {{count}} days",
+      "discarded": "{{count}} values were discarded (future dates or impossible values).",
+      "cols": {
+        "date": "Date",
+        "exercise": "Exercise (min)"
+      },
+      "metrics": {
+        "steps": "Steps per day",
+        "physical_activity": "Physical activity",
+        "sleep": "Sleep",
+        "resting_hr": "Resting heart rate",
+        "weight": "Weight"
+      },
+      "hints": {
+        "steps": "Average steps per day. The goal is more than 7,500.",
+        "physical_activity": "Exercise minutes per week. The recommendation is at least 150.",
+        "sleep": "Average hours of sleep per night. Ideal: 7 to 9.",
+        "resting_hr": "Average heart rate at rest. Lower usually means better fitness."
+      },
+      "reviewNote": "Daily summaries are saved; if you already imported these days, they are updated.",
+      "weightNote": "The last weight of each week (up to 12 weeks) is also saved in Vitals.",
+      "save": "Save {{count}} days",
+      "cancel": "Cancel",
+      "imported": "{{count}} days saved",
+      "newScore": "Score: {{score}}",
+      "summaryTitle": "Average of the last {{days}} days",
+      "lastImport": "Last import: {{date}}",
+      "rangesNote": "Step and heart rate ranges are guidance; review them with your doctor.",
+      "apply": "Use in my metabolic history",
+      "applyHint": "Updates the weekly physical activity and sleep hours in your metabolic history with these averages and recalculates the score.",
+      "applied": "History updated: {{minutes}} min/week and {{hours}} h of sleep. Score: {{score}}",
+      "applyError": "Could not update the metabolic history.",
+      "chartTitle": "Steps per day",
+      "noData": "You have no wearable data yet. Upload an export to see it here.",
+      "units": {
+        "steps": "steps/day",
+        "minWeek": "min/week",
+        "bpm": "bpm"
+      }
     }
   }
 }

@@ -15,11 +15,13 @@ from app.models.metabolic import (
     MetabolicProfile,
     NutritionPlan,
     Recipe,
+    WearableDaily,
 )
 from app.models.models import User
 from app.schemas.metabolic_week import AdherenceWrite
 from app.services.metabolic_dashboard import is_professional
 from app.services.metabolic_recipes import ensure_library, recommend
+from app.services.metabolic_wearables import merge_daily
 from app.services.metabolic_week import build_week, week_start
 
 router = APIRouter()
@@ -83,6 +85,16 @@ def _measured(db: Session, patient_id: int, start: date, end: date) -> Dict[str,
     return out
 
 
+def _activity(db: Session, patient_id: int, start: date, end: date) -> Dict:
+    return merge_daily(
+        db.query(WearableDaily).filter(
+            WearableDaily.patient_id == patient_id,
+            WearableDaily.day >= start,
+            WearableDaily.day <= end,
+        )
+    )
+
+
 def _logs(db: Session, patient_id: int, start: date, end: date) -> list:
     return (
         db.query(AdherenceLog)
@@ -126,6 +138,7 @@ def get_week(
         recipes=_week_recipes(db, patient_id, nutrition),
         logs=_logs(db, patient_id, monday, sunday),
         measured=_measured(db, patient_id, monday, sunday),
+        activity=_activity(db, patient_id, monday, sunday),
         today=today,
         exercise_since=_since(exercise),
         nutrition_since=_since(nutrition),
@@ -203,6 +216,7 @@ def adherence_history(
     nutrition = _approved(db, NutritionPlan, patient_id)
     logs = _logs(db, patient_id, first, last)
     measured = _measured(db, patient_id, first, last)
+    activity = _activity(db, patient_id, first, last + timedelta(days=6))
     out = []
     for k in range(weeks):
         monday = first + timedelta(weeks=k)
@@ -213,6 +227,7 @@ def adherence_history(
             recipes=[],
             logs=logs,
             measured=measured,
+            activity=activity,
             today=today,
             exercise_since=_since(exercise),
             nutrition_since=_since(nutrition),

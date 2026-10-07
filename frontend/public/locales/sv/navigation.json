@@ -120,7 +120,8 @@
       "metabolicRecipes": "Mina recept",
       "metabolicWeek": "Min vecka",
       "metabolicAI": "Min assistent",
-      "metabolicLabs": "Importera labb"
+      "metabolicLabs": "Importera labb",
+      "metabolicWearables": "Aktivitet och wearables"
     },
     "sections": {
       "administration": "Administration",

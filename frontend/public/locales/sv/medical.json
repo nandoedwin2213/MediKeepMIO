@@ -2521,7 +2521,9 @@
         "4": "Fredag",
         "5": "Lördag",
         "6": "Söndag"
-      }
+      },
+      "stepsTracked": "Registrerat: {{steps}} steg",
+      "fromWearable": "Från din wearable"
     },
     "ai": {
       "title": "Min metabola assistent",
@@ -2655,6 +2657,69 @@
       "refMax": "Max.",
       "reviewHint": "Jämför varje värde med rapporten. Värdena sparas som ett labbresultat och uppdaterar den metabola poängen.",
       "import": "Spara {{count}} värden"
+    },
+    "wearables": {
+      "title": "Aktivitet och wearables",
+      "subtitle": "Ladda upp filen som exporterats från klockan eller telefonen för att se steg, aktivitet, sömn, puls och vikt bredvid din metabola plan.",
+      "nativeNote": "Automatisk synk med Apple Hälsa eller Health Connect kräver en mobilapp. Ladda tills vidare upp den exporterade filen när du vill uppdatera dina data.",
+      "howTitle": "Så exporterar du dina data",
+      "tabOther": "Andra appar",
+      "apple1": "Öppna appen Hälsa på din iPhone och tryck på din bild eller dina initialer (uppe till höger).",
+      "apple2": "Tryck på ”Exportera alla hälsodata” och bekräfta med ”Exportera”. Det kan ta några minuter.",
+      "apple3": "Spara filen export.zip i Filer eller skicka den till datorn.",
+      "apple4": "Ladda upp export.zip här (packa inte upp den) och klicka på ”Analysera”.",
+      "google1": "Gå till takeout.google.com och logga in med Google-kontot du använder i Google Fit.",
+      "google2": "Klicka på ”Avmarkera alla”, markera bara ”Fit” och välj ”Nästa steg” → ”Skapa export”.",
+      "google3": "Ladda ner ZIP-filen när Google mejlar dig.",
+      "google4": "Ladda upp ZIP-filen här, eller bara filen ”Daily activity metrics.csv” från mappen Takeout/Fit.",
+      "other1": "Samsung Health, Garmin, Fitbit eller Health Connect: exportera dina dagliga data som CSV från appen eller med en synkapp.",
+      "other2": "Eller ladda ner vår mall, fyll i en rad per dag (datum, steg, aktiva minuter, sömn, vilopuls, vikt) och ladda upp den.",
+      "upload": "Välj fil",
+      "analyse": "Analysera",
+      "template": "Ladda ner CSV-mall",
+      "privacy": "Filen behandlas på SILHO-servern och delas inte med tredje part. Endast dagliga sammanfattningar sparas.",
+      "parseError": "Filen kunde inte läsas. Kontrollera att det är export.zip från Apple Hälsa, en CSV från Google Fit eller mallen.",
+      "importError": "Data kunde inte sparas. Försök igen.",
+      "previewTitle": "Granska innan du sparar",
+      "range": "{{start}} – {{end}} · {{count}} dagar",
+      "discarded": "{{count}} värden togs bort (framtida datum eller omöjliga värden).",
+      "cols": {
+        "date": "Datum",
+        "exercise": "Träning (min)"
+      },
+      "metrics": {
+        "steps": "Steg per dag",
+        "physical_activity": "Fysisk aktivitet",
+        "sleep": "Sömn",
+        "resting_hr": "Vilopuls",
+        "weight": "Vikt"
+      },
+      "hints": {
+        "steps": "Genomsnittligt antal steg per dag. Målet är mer än 7 500.",
+        "physical_activity": "Träningsminuter per vecka. Rekommendationen är minst 150.",
+        "sleep": "Genomsnittliga sömntimmar per natt. Idealt: 7 till 9.",
+        "resting_hr": "Genomsnittlig puls i vila. Lägre innebär oftast bättre kondition."
+      },
+      "reviewNote": "Dagliga sammanfattningar sparas; redan importerade dagar uppdateras.",
+      "weightNote": "Den senaste vikten varje vecka (upp till 12 veckor) sparas också under Vitalparametrar.",
+      "save": "Spara {{count}} dagar",
+      "cancel": "Avbryt",
+      "imported": "{{count}} dagar sparade",
+      "newScore": "Poäng: {{score}}",
+      "summaryTitle": "Genomsnitt de senaste {{days}} dagarna",
+      "lastImport": "Senaste import: {{date}}",
+      "rangesNote": "Intervallen för steg och puls är vägledande; gå igenom dem med din läkare.",
+      "apply": "Använd i min metabola anamnes",
+      "applyHint": "Uppdaterar veckans fysiska aktivitet och sömntimmar i din metabola anamnes med dessa genomsnitt och räknar om poängen.",
+      "applied": "Anamnes uppdaterad: {{minutes}} min/vecka och {{hours}} h sömn. Poäng: {{score}}",
+      "applyError": "Den metabola anamnesen kunde inte uppdateras.",
+      "chartTitle": "Steg per dag",
+      "noData": "Du har inga wearable-data än. Ladda upp en export för att se dem här.",
+      "units": {
+        "steps": "steg/dag",
+        "minWeek": "min/vecka",
+        "bpm": "slag/min"
+      }
     }
   }
 }
