@@ -1994,7 +1994,8 @@
         "critical": "Patienten mit Werten, die ärztlich beurteilt werden müssen",
         "hba1c": "Patienten mit HbA1c außerhalb des konfigurierten Bereichs",
         "stale": "Patienten ohne Messungen in den letzten {{days}} Tagen",
-        "no_data": "Patienten ohne Labor- oder Vitaldaten"
+        "no_data": "Patienten ohne Labor- oder Vitaldaten",
+        "no_activity": "Patienten haben seit einer Woche keine Bewegung erfasst"
       },
       "alertBadge": {
         "high_risk": "Hohes Risiko",
@@ -2002,7 +2003,8 @@
         "critical": "Ärztliche Beurteilung",
         "hba1c": "HbA1c hoch",
         "stale": "Veraltete Daten",
-        "no_data": "Keine Daten"
+        "no_data": "Keine Daten",
+        "no_activity": "Seit 7 Tagen keine Bewegung"
       },
       "columns": {
         "patient": "Name des Patienten",
@@ -2451,6 +2453,70 @@
         "no_added_sugar": "Ohne Zuckerzusatz",
         "low_fat": "Fettarm",
         "quick": "Schnell"
+      }
+    },
+    "week": {
+      "title": "Meine Woche",
+      "subtitle": "Deine Stoffwechselwoche: Mahlzeiten, Bewegung und Training für jeden Tag, erstellt aus den von deinen Fachkräften freigegebenen Plänen. Hake ab, was du erledigst.",
+      "disclaimer": "Das Wochenprogramm ist ein Informationsleitfaden auf Basis deiner freigegebenen Pläne. Folge den Anweisungen deiner Fachkräfte und brich das Training bei Brustschmerzen, Atemnot oder Schwindel ab.",
+      "loadError": "Deine Woche konnte nicht geladen werden.",
+      "saveError": "Die Änderung konnte nicht gespeichert werden.",
+      "range": "{{start}} – {{end}}",
+      "prev": "Vorherige Woche",
+      "next": "Nächste Woche",
+      "thisWeek": "Zurück zu dieser Woche",
+      "today": "Heute",
+      "future": "Demnächst",
+      "score": {
+        "label": "Wöchentliche Therapietreue",
+        "current": "Du hast diese Woche {{percent}} % deines Programms erfüllt",
+        "past": "Du hast in dieser Woche {{percent}} % deines Programms erfüllt",
+        "none": "Hake täglich ab, was du erledigst, um deine Therapietreue zu sehen.",
+        "tasks": "{{done}} von {{expected}} Aufgaben bisher"
+      },
+      "noPlans": "Dein Wochenprogramm erscheint hier, sobald deine Fachkraft deinen Trainings- oder Ernährungsplan freigibt.",
+      "goMovement": "Zu Mein Training",
+      "goNutrition": "Zu Meine Ernährung",
+      "weekly": {
+        "title": "Messungen dieser Woche"
+      },
+      "fromVitals": "In den Vitalwerten erfasst",
+      "goVitals": "In Vitalwerten erfassen",
+      "sections": {
+        "meals": "Mahlzeiten",
+        "activity": "Bewegung",
+        "checklist": "Erledigt?"
+      },
+      "meals": {
+        "breakfast": "Frühstück",
+        "lunch": "Mittagessen",
+        "dinner": "Abendessen",
+        "snack": "Zwischenmahlzeit"
+      },
+      "aerobic": "{{minutes}} Min. · {{type}} · {{intensity}}",
+      "strength": "Kraft: {{sets}} Sätze × {{reps}} Wiederholungen",
+      "mobility": "Mobilität {{minutes}} Min.",
+      "balance": "Gleichgewicht {{minutes}} Min.",
+      "steps": "Ziel: {{steps}} Schritte",
+      "rest": "Heute kein strukturiertes Training: bleib tagsüber in Bewegung.",
+      "items": {
+        "exercise": "Training erledigt",
+        "walk": "Spaziergang erledigt",
+        "nutrition": "Ernährungsplan eingehalten",
+        "weight": "Gewicht erfasst",
+        "waist": "Taillenumfang erfasst"
+      },
+      "history": {
+        "title": "Therapietreue pro Woche"
+      },
+      "weekdays": {
+        "0": "Montag",
+        "1": "Dienstag",
+        "2": "Mittwoch",
+        "3": "Donnerstag",
+        "4": "Freitag",
+        "5": "Samstag",
+        "6": "Sonntag"
       }
     }
   }

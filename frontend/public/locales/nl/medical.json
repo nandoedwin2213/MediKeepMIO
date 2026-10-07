@@ -1994,7 +1994,8 @@
         "critical": "patiënten met waarden die medische beoordeling vereisen",
         "hba1c": "patiënten met HbA1c buiten het ingestelde bereik",
         "stale": "patiënten zonder metingen in de laatste {{days}} dagen",
-        "no_data": "patiënten zonder labo- of vitale gegevens"
+        "no_data": "patiënten zonder labo- of vitale gegevens",
+        "no_activity": "patiënten hebben al een week geen beweging vastgelegd"
       },
       "alertBadge": {
         "high_risk": "Hoog risico",
@@ -2002,7 +2003,8 @@
         "critical": "Medische beoordeling",
         "hba1c": "HbA1c hoog",
         "stale": "Verouderde gegevens",
-        "no_data": "Geen gegevens"
+        "no_data": "Geen gegevens",
+        "no_activity": "7 dagen geen beweging"
       },
       "columns": {
         "patient": "Naam van de patiënt",
@@ -2451,6 +2453,70 @@
         "no_added_sugar": "Zonder toegevoegde suiker",
         "low_fat": "Vetarm",
         "quick": "Snel"
+      }
+    },
+    "week": {
+      "title": "Mijn week",
+      "subtitle": "Je metabole week: maaltijden, beweging en training per dag, op basis van de plannen die je zorgverleners hebben goedgekeurd. Vink af wat je doet.",
+      "disclaimer": "Het weekprogramma is een educatieve gids op basis van je goedgekeurde plannen. Volg het advies van je zorgverleners en stop met trainen bij pijn op de borst, kortademigheid of duizeligheid.",
+      "loadError": "Je week kon niet worden geladen.",
+      "saveError": "De wijziging kon niet worden opgeslagen.",
+      "range": "{{start}} – {{end}}",
+      "prev": "Vorige week",
+      "next": "Volgende week",
+      "thisWeek": "Terug naar deze week",
+      "today": "Vandaag",
+      "future": "Binnenkort",
+      "score": {
+        "label": "Wekelijkse therapietrouw",
+        "current": "Je hebt deze week {{percent}}% van je programma gedaan",
+        "past": "Je hebt die week {{percent}}% van je programma gedaan",
+        "none": "Vink elke dag af wat je doet om je therapietrouw te zien.",
+        "tasks": "{{done}} van {{expected}} taken tot nu toe"
+      },
+      "noPlans": "Je weekprogramma verschijnt hier zodra je zorgverlener je trainings- of voedingsplan goedkeurt.",
+      "goMovement": "Naar Mijn training",
+      "goNutrition": "Naar Mijn voeding",
+      "weekly": {
+        "title": "Metingen van deze week"
+      },
+      "fromVitals": "Vastgelegd bij vitale functies",
+      "goVitals": "Vastleggen bij vitale functies",
+      "sections": {
+        "meals": "Maaltijden",
+        "activity": "Beweging",
+        "checklist": "Gedaan?"
+      },
+      "meals": {
+        "breakfast": "Ontbijt",
+        "lunch": "Middageten",
+        "dinner": "Avondeten",
+        "snack": "Tussendoortje"
+      },
+      "aerobic": "{{minutes}} min · {{type}} · {{intensity}}",
+      "strength": "Kracht: {{sets}} sets × {{reps}} herhalingen",
+      "mobility": "Mobiliteit {{minutes}} min",
+      "balance": "Balans {{minutes}} min",
+      "steps": "Doel: {{steps}} stappen",
+      "rest": "Vandaag geen gestructureerde training: blijf in beweging.",
+      "items": {
+        "exercise": "Training gedaan",
+        "walk": "Wandeling gedaan",
+        "nutrition": "Voedingsplan gevolgd",
+        "weight": "Gewicht vastgelegd",
+        "waist": "Middelomtrek vastgelegd"
+      },
+      "history": {
+        "title": "Therapietrouw per week"
+      },
+      "weekdays": {
+        "0": "Maandag",
+        "1": "Dinsdag",
+        "2": "Woensdag",
+        "3": "Donderdag",
+        "4": "Vrijdag",
+        "5": "Zaterdag",
+        "6": "Zondag"
       }
     }
   }

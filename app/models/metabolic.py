@@ -4,12 +4,14 @@ from sqlalchemy import (
     JSON,
     Boolean,
     Column,
+    Date,
     DateTime,
     Float,
     ForeignKey,
     Integer,
     String,
     Text,
+    UniqueConstraint,
 )
 
 from .base import Base, get_utc_now
@@ -204,6 +206,35 @@ class Recipe(Base):
     language = Column(String(10), default="es", nullable=False)
     is_library = Column(Boolean, default=False, nullable=False)
     is_active = Column(Boolean, default=True, nullable=False)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    created_at = Column(DateTime, default=get_utc_now, nullable=False)
+    updated_at = Column(
+        DateTime, default=get_utc_now, onupdate=get_utc_now, nullable=False
+    )
+
+
+class AdherenceLog(Base):
+    """Daily/weekly checklist entries of the patient's programme (one row per item and day)."""
+
+    __tablename__ = "adherence_logs"
+    __table_args__ = (
+        UniqueConstraint(
+            "patient_id", "log_date", "item", name="uq_adherence_patient_date_item"
+        ),
+    )
+
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(
+        Integer,
+        ForeignKey("patients.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    log_date = Column(Date, nullable=False, index=True)
+    item = Column(String(30), nullable=False)
+    done = Column(Boolean, default=True, nullable=False)
+    value = Column(Float, nullable=True)
+    source = Column(String(20), default="patient", nullable=False)
     created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     created_at = Column(DateTime, default=get_utc_now, nullable=False)
     updated_at = Column(

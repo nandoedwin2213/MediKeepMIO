@@ -117,7 +117,8 @@
       "professionalDashboard": "专业人员面板",
       "metabolicMovement": "我的运动",
       "metabolicNutrition": "我的营养",
-      "metabolicRecipes": "我的食谱"
+      "metabolicRecipes": "我的食谱",
+      "metabolicWeek": "我的一周"
     },
     "sections": {
       "administration": "管理",

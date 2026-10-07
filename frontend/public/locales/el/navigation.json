@@ -117,7 +117,8 @@
       "professionalDashboard": "Πίνακας επαγγελματία",
       "metabolicMovement": "Η άσκησή μου",
       "metabolicNutrition": "Η διατροφή μου",
-      "metabolicRecipes": "Οι συνταγές μου"
+      "metabolicRecipes": "Οι συνταγές μου",
+      "metabolicWeek": "Η εβδομάδα μου"
     },
     "sections": {
       "administration": "Διαχείριση",

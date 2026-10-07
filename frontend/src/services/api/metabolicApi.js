@@ -79,6 +79,15 @@ const metabolicApi = {
       params,
       signal,
     }),
+  getWeek: (patientId, params, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/week`, { params, signal }),
+  logAdherence: (patientId, body) =>
+    apiService.put(`/metabolic/patients/${patientId}/adherence`, body),
+  getAdherenceHistory: (patientId, params, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/adherence/history`, {
+      params,
+      signal,
+    }),
   getProfessionalDashboard: signal =>
     apiService.get('/metabolic/professional/dashboard', { signal }),
 };

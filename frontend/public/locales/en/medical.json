@@ -1994,7 +1994,8 @@
         "critical": "patients have values that require medical assessment",
         "hba1c": "patients have HbA1c outside the configured range",
         "stale": "patients have no measurements in the last {{days}} days",
-        "no_data": "patients have no laboratory or vital sign data"
+        "no_data": "patients have no laboratory or vital sign data",
+        "no_activity": "patients have not logged physical activity in the last week"
       },
       "alertBadge": {
         "high_risk": "High risk group",
@@ -2002,7 +2003,8 @@
         "critical": "Medical assessment",
         "hba1c": "High HbA1c",
         "stale": "Outdated data",
-        "no_data": "No data"
+        "no_data": "No data",
+        "no_activity": "No activity for 7 days"
       },
       "columns": {
         "patient": "Patient name",
@@ -2451,6 +2453,70 @@
         "no_added_sugar": "No added sugar",
         "low_fat": "Low fat",
         "quick": "Quick"
+      }
+    },
+    "week": {
+      "title": "My week",
+      "subtitle": "Your metabolic week: meals, physical activity and exercise for each day, built from the plans approved by your professionals. Mark what you complete.",
+      "disclaimer": "The weekly programme is an educational guide based on your approved plans. Follow your professionals' indications and stop exercising if you feel chest pain, shortness of breath or dizziness.",
+      "loadError": "Could not load your week.",
+      "saveError": "Could not save the change.",
+      "range": "{{start}} – {{end}}",
+      "prev": "Previous week",
+      "next": "Next week",
+      "thisWeek": "Back to this week",
+      "today": "Today",
+      "future": "Upcoming",
+      "score": {
+        "label": "Weekly adherence",
+        "current": "You have completed {{percent}}% of your programme this week",
+        "past": "You completed {{percent}}% of your programme that week",
+        "none": "Mark what you complete each day to see your adherence.",
+        "tasks": "{{done}} of {{expected}} tasks so far"
+      },
+      "noPlans": "Your weekly programme will appear here once your professional approves your exercise or nutrition plan.",
+      "goMovement": "Go to My exercise",
+      "goNutrition": "Go to My nutrition",
+      "weekly": {
+        "title": "This week's measurements"
+      },
+      "fromVitals": "Recorded in vital signs",
+      "goVitals": "Record in vital signs",
+      "sections": {
+        "meals": "Meals",
+        "activity": "Physical activity",
+        "checklist": "Did you do it?"
+      },
+      "meals": {
+        "breakfast": "Breakfast",
+        "lunch": "Lunch",
+        "dinner": "Dinner",
+        "snack": "Snack"
+      },
+      "aerobic": "{{minutes}} min · {{type}} · {{intensity}}",
+      "strength": "Strength: {{sets}} sets × {{reps}} reps",
+      "mobility": "Mobility {{minutes}} min",
+      "balance": "Balance {{minutes}} min",
+      "steps": "Goal: {{steps}} steps",
+      "rest": "No structured exercise today: keep moving during the day.",
+      "items": {
+        "exercise": "Exercise done",
+        "walk": "Walk done",
+        "nutrition": "Nutrition plan followed",
+        "weight": "Weight recorded",
+        "waist": "Waist recorded"
+      },
+      "history": {
+        "title": "Adherence by week"
+      },
+      "weekdays": {
+        "0": "Monday",
+        "1": "Tuesday",
+        "2": "Wednesday",
+        "3": "Thursday",
+        "4": "Friday",
+        "5": "Saturday",
+        "6": "Sunday"
       }
     }
   }
