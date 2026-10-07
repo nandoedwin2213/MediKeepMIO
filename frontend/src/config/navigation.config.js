@@ -95,6 +95,13 @@ export const NAVIGATION_SECTIONS = {
         id: 'metabolic-labs',
       },
       {
+        nameKey: 'sidebarNav.items.metabolicWearables',
+        name: 'Wearables',
+        path: '/metabolic-wearables',
+        icon: '⌚',
+        id: 'metabolic-wearables',
+      },
+      {
         nameKey: 'sidebarNav.items.metabolicAI',
         name: 'My assistant',
         path: '/metabolic-ai',

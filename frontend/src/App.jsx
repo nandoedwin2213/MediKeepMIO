@@ -83,6 +83,7 @@ import MetabolicRecipes from './pages/medical/MetabolicRecipes';
 import MetabolicWeek from './pages/medical/MetabolicWeek';
 import MetabolicAI from './pages/medical/MetabolicAI';
 import MetabolicLabImport from './pages/medical/MetabolicLabImport';
+import MetabolicWearables from './pages/medical/MetabolicWearables';
 import MetabolicResearch from './pages/admin/MetabolicResearch';
 import MetabolicSettings from './pages/admin/MetabolicSettings';
 import Injuries from './pages/medical/Injuries';
@@ -555,6 +556,14 @@ function App() {
                             element={
                               <ProtectedRoute>
                                 <MetabolicLabImport />
+                              </ProtectedRoute>
+                            }
+                          />
+                          <Route
+                            path="/metabolic-wearables"
+                            element={
+                              <ProtectedRoute>
+                                <MetabolicWearables />
                               </ProtectedRoute>
                             }
                           />

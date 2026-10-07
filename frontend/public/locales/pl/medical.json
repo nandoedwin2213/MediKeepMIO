@@ -2521,7 +2521,9 @@
         "4": "Piątek",
         "5": "Sobota",
         "6": "Niedziela"
-      }
+      },
+      "stepsTracked": "Zarejestrowano: {{steps}} kroków",
+      "fromWearable": "Z twojego urządzenia"
     },
     "ai": {
       "title": "Mój asystent metaboliczny",
@@ -2655,6 +2657,69 @@
       "refMax": "Maks.",
       "reviewHint": "Porównaj każdą wartość z wynikami. Wartości zostaną zapisane jako wynik badania i zaktualizują wynik metaboliczny.",
       "import": "Zapisz wartości ({{count}})"
+    },
+    "wearables": {
+      "title": "Aktywność i urządzenia",
+      "subtitle": "Prześlij plik wyeksportowany z zegarka lub telefonu, aby zobaczyć kroki, aktywność, sen, tętno i wagę obok planu metabolicznego.",
+      "nativeNote": "Automatyczna synchronizacja z Apple Zdrowie lub Health Connect wymaga aplikacji mobilnej. Na razie przesyłaj wyeksportowany plik, gdy chcesz zaktualizować dane.",
+      "howTitle": "Jak wyeksportować dane",
+      "tabOther": "Inne aplikacje",
+      "apple1": "Na iPhonie otwórz aplikację Zdrowie i stuknij swoje zdjęcie lub inicjały (prawy górny róg).",
+      "apple2": "Stuknij „Eksportuj wszystkie dane zdrowotne” i potwierdź „Eksportuj”. Może to potrwać kilka minut.",
+      "apple3": "Zapisz plik export.zip w Plikach lub wyślij go na komputer.",
+      "apple4": "Prześlij tutaj export.zip (bez rozpakowywania) i kliknij „Analizuj”.",
+      "google1": "Wejdź na takeout.google.com i zaloguj się kontem Google używanym w Google Fit.",
+      "google2": "Kliknij „Odznacz wszystko”, zaznacz tylko „Fit” i wybierz „Następny krok” → „Utwórz eksport”.",
+      "google3": "Pobierz plik ZIP, gdy Google przyśle e-mail.",
+      "google4": "Prześlij tutaj ZIP albo tylko plik „Daily activity metrics.csv” z folderu Takeout/Fit.",
+      "other1": "Samsung Health, Garmin, Fitbit lub Health Connect: wyeksportuj dane dzienne do CSV z aplikacji lub aplikacji synchronizującej.",
+      "other2": "Albo pobierz nasz szablon, wypełnij jeden wiersz na dzień (data, kroki, aktywne minuty, sen, tętno spoczynkowe, waga) i prześlij go.",
+      "upload": "Wybierz plik",
+      "analyse": "Analizuj",
+      "template": "Pobierz szablon CSV",
+      "privacy": "Plik jest przetwarzany na serwerze SILHO i nie jest udostępniany osobom trzecim. Zapisywane są tylko podsumowania dzienne.",
+      "parseError": "Nie udało się odczytać pliku. Sprawdź, czy to export.zip z Apple Zdrowie, plik CSV z Google Fit lub szablon.",
+      "importError": "Nie udało się zapisać danych. Spróbuj ponownie.",
+      "previewTitle": "Sprawdź przed zapisaniem",
+      "range": "{{start}} – {{end}} · dni: {{count}}",
+      "discarded": "Odrzucono wartości: {{count}} (przyszłe daty lub niemożliwe wartości).",
+      "cols": {
+        "date": "Data",
+        "exercise": "Ćwiczenia (min)"
+      },
+      "metrics": {
+        "steps": "Kroki dziennie",
+        "physical_activity": "Aktywność fizyczna",
+        "sleep": "Sen",
+        "resting_hr": "Tętno spoczynkowe",
+        "weight": "Waga"
+      },
+      "hints": {
+        "steps": "Średnia liczba kroków dziennie. Cel to ponad 7500.",
+        "physical_activity": "Minuty ćwiczeń tygodniowo. Zalecane jest co najmniej 150.",
+        "sleep": "Średnia liczba godzin snu na noc. Idealnie: 7–9.",
+        "resting_hr": "Średnie tętno w spoczynku. Niższe zwykle oznacza lepszą kondycję."
+      },
+      "reviewNote": "Zapisywane są podsumowania dzienne; już zaimportowane dni zostaną zaktualizowane.",
+      "weightNote": "Ostatnia waga z każdego tygodnia (do 12 tygodni) jest też zapisywana w Parametrach życiowych.",
+      "save": "Zapisz dni: {{count}}",
+      "cancel": "Anuluj",
+      "imported": "Zapisano dni: {{count}}",
+      "newScore": "Wynik: {{score}}",
+      "summaryTitle": "Średnia z ostatnich {{days}} dni",
+      "lastImport": "Ostatni import: {{date}}",
+      "rangesNote": "Zakresy kroków i tętna są orientacyjne; omów je z lekarzem.",
+      "apply": "Użyj w moim wywiadzie metabolicznym",
+      "applyHint": "Aktualizuje tygodniową aktywność fizyczną i godziny snu w wywiadzie metabolicznym tymi średnimi i ponownie oblicza wynik.",
+      "applied": "Wywiad zaktualizowany: {{minutes}} min/tydz. i {{hours}} h snu. Wynik: {{score}}",
+      "applyError": "Nie udało się zaktualizować wywiadu metabolicznego.",
+      "chartTitle": "Kroki dziennie",
+      "noData": "Nie masz jeszcze danych z urządzeń. Prześlij eksport, aby je tu zobaczyć.",
+      "units": {
+        "steps": "kroki/dzień",
+        "minWeek": "min/tydz.",
+        "bpm": "ud./min"
+      }
     }
   }
 }

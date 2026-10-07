@@ -117,6 +117,15 @@ class PDFTextExtractionService:
         # Check Tesseract availability on initialization (cached at class level)
         self.ocr_available = self._check_tesseract_availability()
 
+    @staticmethod
+    def _ocr_lang() -> Optional[str]:
+        """Spanish + English when installed (lab reports are mostly Spanish)."""
+        try:
+            installed = set(pytesseract.get_languages(config=""))
+        except Exception:
+            return None
+        return "+".join(lang for lang in ("spa", "eng") if lang in installed) or None
+
     def _check_tesseract_availability(self) -> bool:
         """
         Check if Tesseract OCR is available on the system.
@@ -517,6 +526,8 @@ class PDFTextExtractionService:
         )
         page_count = len(images)
 
+        lang = self._ocr_lang()
+
         # Process each page individually
         for i, image in enumerate(images):
             # Preprocess image for better OCR
@@ -524,7 +535,9 @@ class PDFTextExtractionService:
 
             # Run OCR
             page_text = pytesseract.image_to_string(
-                processed_image, config="--psm 6"  # Assume uniform block of text
+                processed_image,
+                lang=lang,
+                config="--psm 6",  # Assume uniform block of text
             )
 
             text_parts.append(page_text)

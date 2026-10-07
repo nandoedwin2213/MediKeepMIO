@@ -120,7 +120,8 @@
       "metabolicRecipes": "Мои рецепты",
       "metabolicWeek": "Моя неделя",
       "metabolicAI": "Мой помощник",
-      "metabolicLabs": "Импорт анализов"
+      "metabolicLabs": "Импорт анализов",
+      "metabolicWearables": "Активность и гаджеты"
     },
     "sections": {
       "administration": "Администрирование",

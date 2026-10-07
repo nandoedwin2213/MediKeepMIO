@@ -120,7 +120,8 @@
       "metabolicRecipes": "Οι συνταγές μου",
       "metabolicWeek": "Η εβδομάδα μου",
       "metabolicAI": "Ο βοηθός μου",
-      "metabolicLabs": "Εισαγωγή εξετάσεων"
+      "metabolicLabs": "Εισαγωγή εξετάσεων",
+      "metabolicWearables": "Δραστηριότητα και wearables"
     },
     "sections": {
       "administration": "Διαχείριση",

@@ -2521,7 +2521,9 @@
         "4": "Freitag",
         "5": "Samstag",
         "6": "Sonntag"
-      }
+      },
+      "stepsTracked": "Erfasst: {{steps}} Schritte",
+      "fromWearable": "Von deinem Wearable"
     },
     "ai": {
       "title": "Mein Stoffwechsel-Assistent",
@@ -2655,6 +2657,69 @@
       "refMax": "Max.",
       "reviewHint": "Vergleichen Sie jeden Wert mit dem Befund. Die Werte werden als Laborergebnis gespeichert und aktualisieren den Stoffwechsel-Score.",
       "import": "{{count}} Werte speichern"
+    },
+    "wearables": {
+      "title": "Aktivität & Wearables",
+      "subtitle": "Lade die von Uhr oder Handy exportierte Datei hoch, um Schritte, Aktivität, Schlaf, Herzfrequenz und Gewicht neben deinem Stoffwechselplan zu sehen.",
+      "nativeNote": "Die automatische Synchronisierung mit Apple Health oder Health Connect erfordert eine mobile App. Lade vorerst die exportierte Datei hoch, wann immer du deine Daten aktualisieren möchtest.",
+      "howTitle": "So exportierst du deine Daten",
+      "tabOther": "Andere Apps",
+      "apple1": "Öffne auf dem iPhone die Health-App und tippe oben rechts auf dein Foto oder deine Initialen.",
+      "apple2": "Tippe auf „Alle Gesundheitsdaten exportieren“ und bestätige mit „Exportieren“. Das kann einige Minuten dauern.",
+      "apple3": "Speichere die Datei export.zip in „Dateien“ oder sende sie an deinen Computer.",
+      "apple4": "Lade export.zip hier hoch (nicht entpacken) und klicke auf „Analysieren“.",
+      "google1": "Öffne takeout.google.com und melde dich mit dem Google-Konto an, das du in Google Fit nutzt.",
+      "google2": "Klicke auf „Auswahl aufheben“, wähle nur „Fit“ und dann „Nächster Schritt“ → „Export erstellen“.",
+      "google3": "Lade die ZIP-Datei herunter, wenn Google dir eine E-Mail schickt.",
+      "google4": "Lade die ZIP-Datei hier hoch oder nur die Datei „Daily activity metrics.csv“ aus dem Ordner Takeout/Fit.",
+      "other1": "Samsung Health, Garmin, Fitbit oder Health Connect: Exportiere deine Tagesdaten als CSV aus der App oder mit einer Sync-App.",
+      "other2": "Oder lade unsere Vorlage herunter, fülle eine Zeile pro Tag aus (Datum, Schritte, aktive Minuten, Schlaf, Ruhepuls, Gewicht) und lade sie hoch.",
+      "upload": "Datei wählen",
+      "analyse": "Analysieren",
+      "template": "CSV-Vorlage herunterladen",
+      "privacy": "Die Datei wird auf dem SILHO-Server verarbeitet und nicht an Dritte weitergegeben. Gespeichert werden nur Tageszusammenfassungen.",
+      "parseError": "Die Datei konnte nicht gelesen werden. Prüfe, ob es die export.zip von Apple Health, eine Google-Fit-CSV oder die Vorlage ist.",
+      "importError": "Die Daten konnten nicht gespeichert werden. Bitte erneut versuchen.",
+      "previewTitle": "Vor dem Speichern prüfen",
+      "range": "{{start}} – {{end}} · {{count}} Tage",
+      "discarded": "{{count}} Werte wurden verworfen (Datum in der Zukunft oder unmögliche Werte).",
+      "cols": {
+        "date": "Datum",
+        "exercise": "Training (Min.)"
+      },
+      "metrics": {
+        "steps": "Schritte pro Tag",
+        "physical_activity": "Körperliche Aktivität",
+        "sleep": "Schlaf",
+        "resting_hr": "Ruhepuls",
+        "weight": "Gewicht"
+      },
+      "hints": {
+        "steps": "Durchschnittliche Schritte pro Tag. Ziel: mehr als 7.500.",
+        "physical_activity": "Trainingsminuten pro Woche. Empfohlen sind mindestens 150.",
+        "sleep": "Durchschnittliche Schlafstunden pro Nacht. Ideal: 7 bis 9.",
+        "resting_hr": "Durchschnittlicher Puls in Ruhe. Niedriger bedeutet meist bessere Fitness."
+      },
+      "reviewNote": "Es werden Tageszusammenfassungen gespeichert; bereits importierte Tage werden aktualisiert.",
+      "weightNote": "Das letzte Gewicht jeder Woche (bis zu 12 Wochen) wird auch unter Vitalwerte gespeichert.",
+      "save": "{{count}} Tage speichern",
+      "cancel": "Abbrechen",
+      "imported": "{{count}} Tage gespeichert",
+      "newScore": "Score: {{score}}",
+      "summaryTitle": "Durchschnitt der letzten {{days}} Tage",
+      "lastImport": "Letzter Import: {{date}}",
+      "rangesNote": "Die Bereiche für Schritte und Herzfrequenz sind Richtwerte; besprich sie mit deinem Arzt.",
+      "apply": "In meiner Stoffwechselanamnese verwenden",
+      "applyHint": "Überträgt diese Durchschnittswerte in die wöchentliche Aktivität und Schlafdauer deiner Stoffwechselanamnese und berechnet den Score neu.",
+      "applied": "Anamnese aktualisiert: {{minutes}} Min./Woche und {{hours}} h Schlaf. Score: {{score}}",
+      "applyError": "Die Stoffwechselanamnese konnte nicht aktualisiert werden.",
+      "chartTitle": "Schritte pro Tag",
+      "noData": "Noch keine Wearable-Daten. Lade einen Export hoch, um sie hier zu sehen.",
+      "units": {
+        "steps": "Schritte/Tag",
+        "minWeek": "Min./Woche",
+        "bpm": "S/min"
+      }
     }
   }
 }

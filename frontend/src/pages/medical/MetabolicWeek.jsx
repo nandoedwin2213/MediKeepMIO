@@ -249,6 +249,14 @@ function DayCard({ day, onToggle, saving }) {
             <Text size="sm" fw={600}>
               {w('steps', { steps: numberFmt.format(day.steps_target) })}
             </Text>
+            {day.steps != null && (
+              <Text
+                size="xs"
+                c={day.steps >= day.steps_target ? 'teal' : 'dimmed'}
+              >
+                {w('stepsTracked', { steps: numberFmt.format(day.steps) })}
+              </Text>
+            )}
             {day.walk_after_meals && (
               <Text size="xs" c="dimmed">
                 {mv('fields.walkAfterMealsText')}
@@ -266,12 +274,15 @@ function DayCard({ day, onToggle, saving }) {
             labelPosition="left"
           />
           <Stack gap={8}>
-            {day.items.map(({ item, done }) => (
+            {day.items.map(({ item, done, source }) => (
               <Checkbox
                 key={item}
                 label={w(`items.${item}`)}
+                description={
+                  source === 'wearable' ? w('fromWearable') : undefined
+                }
                 checked={done}
-                disabled={day.is_future || saving}
+                disabled={day.is_future || saving || source === 'wearable'}
                 color="green"
                 onChange={e =>
                   onToggle(day.date, item, e.currentTarget.checked)

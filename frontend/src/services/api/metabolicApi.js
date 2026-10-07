@@ -115,6 +115,23 @@ const metabolicApi = {
   },
   importLabs: (patientId, body) =>
     apiService.post(`/metabolic/patients/${patientId}/labs/import`, body),
+  parseWearables: (patientId, file) => {
+    const form = new FormData();
+    form.append('file', file);
+    return apiService.post(
+      `/metabolic/patients/${patientId}/wearables/parse`,
+      form
+    );
+  },
+  importWearables: (patientId, body) =>
+    apiService.post(`/metabolic/patients/${patientId}/wearables/import`, body),
+  getWearables: (patientId, params, signal) =>
+    apiService.get(`/metabolic/patients/${patientId}/wearables`, {
+      params,
+      signal,
+    }),
+  applyWearables: patientId =>
+    apiService.post(`/metabolic/patients/${patientId}/wearables/apply-profile`),
   getResearchSummary: signal =>
     apiService.get('/metabolic/research/summary', { signal }),
   exportResearch: format =>

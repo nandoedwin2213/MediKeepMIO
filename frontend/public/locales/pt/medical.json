@@ -2521,7 +2521,9 @@
         "4": "Sexta-feira",
         "5": "Sábado",
         "6": "Domingo"
-      }
+      },
+      "stepsTracked": "Registrado: {{steps}} passos",
+      "fromWearable": "Do seu wearable"
     },
     "ai": {
       "title": "Meu assistente metabólico",
@@ -2655,6 +2657,69 @@
       "refMax": "Máx.",
       "reviewHint": "Compare cada valor com o laudo. Os valores são salvos como resultado de exame e atualizam o score metabólico.",
       "import": "Salvar {{count}} valores"
+    },
+    "wearables": {
+      "title": "Atividade e wearables",
+      "subtitle": "Envie o arquivo exportado do seu relógio ou celular para ver passos, atividade, sono, frequência cardíaca e peso ao lado do seu plano metabólico.",
+      "nativeNote": "A sincronização automática com o Apple Saúde ou o Health Connect requer um aplicativo móvel. Por enquanto, envie o arquivo exportado sempre que quiser atualizar seus dados.",
+      "howTitle": "Como exportar seus dados",
+      "tabOther": "Outros apps",
+      "apple1": "No iPhone, abra o app Saúde e toque na sua foto ou iniciais (canto superior direito).",
+      "apple2": "Toque em «Exportar Todos os Dados de Saúde» e confirme com «Exportar». Pode levar alguns minutos.",
+      "apple3": "Salve o arquivo export.zip em Arquivos ou envie-o ao seu computador.",
+      "apple4": "Envie aqui o export.zip (não precisa descompactar) e clique em «Analisar».",
+      "google1": "Acesse takeout.google.com com a conta Google que você usa no Google Fit.",
+      "google2": "Clique em «Desmarcar tudo», marque só «Fit» e escolha «Próxima etapa» → «Criar exportação».",
+      "google3": "Baixe o ZIP quando o Google enviar o e-mail.",
+      "google4": "Envie aqui o ZIP, ou apenas o arquivo «Daily activity metrics.csv» da pasta Takeout/Fit.",
+      "other1": "Samsung Health, Garmin, Fitbit ou Health Connect: exporte seus dados diários em CSV pelo app ou por um app de sincronização.",
+      "other2": "Ou baixe nosso modelo, preencha uma linha por dia (data, passos, minutos ativos, sono, frequência em repouso, peso) e envie-o.",
+      "upload": "Escolher arquivo",
+      "analyse": "Analisar",
+      "template": "Baixar modelo CSV",
+      "privacy": "O arquivo é processado no servidor SILHO e não é compartilhado com terceiros. Só são guardados os resumos diários.",
+      "parseError": "Não foi possível ler o arquivo. Verifique se é o export.zip do Apple Saúde, um CSV do Google Fit ou o modelo.",
+      "importError": "Não foi possível salvar os dados. Tente novamente.",
+      "previewTitle": "Revise antes de salvar",
+      "range": "{{start}} – {{end}} · {{count}} dias",
+      "discarded": "{{count}} valores foram descartados (datas futuras ou valores impossíveis).",
+      "cols": {
+        "date": "Data",
+        "exercise": "Exercício (min)"
+      },
+      "metrics": {
+        "steps": "Passos por dia",
+        "physical_activity": "Atividade física",
+        "sleep": "Sono",
+        "resting_hr": "Frequência cardíaca em repouso",
+        "weight": "Peso"
+      },
+      "hints": {
+        "steps": "Média de passos por dia. A meta é mais de 7.500.",
+        "physical_activity": "Minutos de exercício por semana. O recomendado é pelo menos 150.",
+        "sleep": "Média de horas de sono por noite. Ideal: 7 a 9.",
+        "resting_hr": "Pulsação média em repouso. Mais baixa costuma indicar melhor condicionamento."
+      },
+      "reviewNote": "São guardados resumos diários; os dias já importados são atualizados.",
+      "weightNote": "O último peso de cada semana (até 12 semanas) também é guardado em Sinais vitais.",
+      "save": "Salvar {{count}} dias",
+      "cancel": "Cancelar",
+      "imported": "{{count}} dias salvos",
+      "newScore": "Pontuação: {{score}}",
+      "summaryTitle": "Média dos últimos {{days}} dias",
+      "lastImport": "Última importação: {{date}}",
+      "rangesNote": "As faixas de passos e frequência cardíaca são orientativas; revise-as com seu médico.",
+      "apply": "Usar no meu histórico metabólico",
+      "applyHint": "Atualiza a atividade física semanal e as horas de sono do seu histórico metabólico com estas médias e recalcula a pontuação.",
+      "applied": "Histórico atualizado: {{minutes}} min/sem. e {{hours}} h de sono. Pontuação: {{score}}",
+      "applyError": "Não foi possível atualizar o histórico metabólico.",
+      "chartTitle": "Passos por dia",
+      "noData": "Você ainda não tem dados de wearables. Envie uma exportação para vê-los aqui.",
+      "units": {
+        "steps": "passos/dia",
+        "minWeek": "min/sem.",
+        "bpm": "bat/min"
+      }
     }
   }
 }

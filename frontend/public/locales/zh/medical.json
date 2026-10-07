@@ -2517,7 +2517,9 @@
         "4": "星期五",
         "5": "星期六",
         "6": "星期日"
-      }
+      },
+      "stepsTracked": "已记录：{{steps}} 步",
+      "fromWearable": "来自你的可穿戴设备"
     },
     "ai": {
       "title": "我的代谢助手",
@@ -2651,6 +2653,69 @@
       "refMax": "最大",
       "reviewHint": "请将每个数值与化验单核对。数值将保存为化验结果并更新代谢评分。",
       "import": "保存 {{count}} 个数值"
+    },
+    "wearables": {
+      "title": "活动与可穿戴设备",
+      "subtitle": "上传从手表或手机导出的文件，即可在代谢计划旁查看步数、活动、睡眠、心率和体重。",
+      "nativeNote": "与 Apple 健康或 Health Connect 自动同步需要移动应用。目前请在需要更新数据时上传导出的文件。",
+      "howTitle": "如何导出数据",
+      "tabOther": "其他应用",
+      "apple1": "在 iPhone 上打开“健康”App，轻点右上角的头像或姓名缩写。",
+      "apple2": "轻点“导出所有健康数据”，再轻点“导出”确认。可能需要几分钟。",
+      "apple3": "将 export.zip 文件存到“文件”或发送到电脑。",
+      "apple4": "在此上传 export.zip（无需解压），然后点击“分析”。",
+      "google1": "打开 takeout.google.com，用你在 Google Fit 中使用的 Google 账号登录。",
+      "google2": "点击“取消全选”，只勾选“Fit”，然后选择“下一步”→“创建导出”。",
+      "google3": "Google 发送邮件后下载 ZIP 文件。",
+      "google4": "在此上传 ZIP，或仅上传 Takeout/Fit 文件夹中的“Daily activity metrics.csv”。",
+      "other1": "Samsung Health、Garmin、Fitbit 或 Health Connect：从应用或同步工具将每日数据导出为 CSV。",
+      "other2": "或下载我们的模板，每天填写一行（日期、步数、活动分钟、睡眠、静息心率、体重）后上传。",
+      "upload": "选择文件",
+      "analyse": "分析",
+      "template": "下载 CSV 模板",
+      "privacy": "文件在 SILHO 服务器上处理，不会与第三方共享。只保存每日汇总。",
+      "parseError": "无法读取文件。请确认它是 Apple 健康的 export.zip、Google Fit 的 CSV 或模板。",
+      "importError": "无法保存数据，请重试。",
+      "previewTitle": "保存前请检查",
+      "range": "{{start}} – {{end}} · {{count}} 天",
+      "discarded": "已舍弃 {{count}} 个值（未来日期或不可能的值）。",
+      "cols": {
+        "date": "日期",
+        "exercise": "运动（分钟）"
+      },
+      "metrics": {
+        "steps": "每日步数",
+        "physical_activity": "身体活动",
+        "sleep": "睡眠",
+        "resting_hr": "静息心率",
+        "weight": "体重"
+      },
+      "hints": {
+        "steps": "每天平均步数。目标是超过 7,500 步。",
+        "physical_activity": "每周运动分钟数。建议至少 150 分钟。",
+        "sleep": "每晚平均睡眠时长。理想：7 至 9 小时。",
+        "resting_hr": "静息时的平均心率。越低通常代表体能越好。"
+      },
+      "reviewNote": "保存每日汇总；已导入的日期会被更新。",
+      "weightNote": "每周最后一次体重（最多 12 周）也会保存到生命体征中。",
+      "save": "保存 {{count}} 天",
+      "cancel": "取消",
+      "imported": "已保存 {{count}} 天",
+      "newScore": "评分：{{score}}",
+      "summaryTitle": "最近 {{days}} 天平均值",
+      "lastImport": "上次导入：{{date}}",
+      "rangesNote": "步数和心率范围仅供参考，请与医生一起评估。",
+      "apply": "用于我的代谢病史",
+      "applyHint": "用这些平均值更新代谢病史中的每周身体活动和睡眠时长，并重新计算评分。",
+      "applied": "病史已更新：每周 {{minutes}} 分钟，睡眠 {{hours}} 小时。评分：{{score}}",
+      "applyError": "无法更新代谢病史。",
+      "chartTitle": "每日步数",
+      "noData": "还没有可穿戴设备数据。上传导出文件后即可在此查看。",
+      "units": {
+        "steps": "步/天",
+        "minWeek": "分钟/周",
+        "bpm": "次/分"
+      }
     }
   }
 }

@@ -2521,7 +2521,9 @@
         "4": "Venerdì",
         "5": "Sabato",
         "6": "Domenica"
-      }
+      },
+      "stepsTracked": "Registrati: {{steps}} passi",
+      "fromWearable": "Dal tuo wearable"
     },
     "ai": {
       "title": "Il mio assistente metabolico",
@@ -2655,6 +2657,69 @@
       "refMax": "Max.",
       "reviewHint": "Confronta ogni valore con il referto. I valori vengono salvati come esame di laboratorio e aggiornano lo score metabolico.",
       "import": "Salva {{count}} valori"
+    },
+    "wearables": {
+      "title": "Attività e wearable",
+      "subtitle": "Carica il file esportato dall’orologio o dal telefono per vedere passi, attività, sonno, frequenza cardiaca e peso accanto al tuo piano metabolico.",
+      "nativeNote": "La sincronizzazione automatica con Apple Salute o Health Connect richiede un’app mobile. Per ora carica il file esportato ogni volta che vuoi aggiornare i dati.",
+      "howTitle": "Come esportare i tuoi dati",
+      "tabOther": "Altre app",
+      "apple1": "Sull’iPhone apri l’app Salute e tocca la tua foto o le iniziali (in alto a destra).",
+      "apple2": "Tocca «Esporta tutti i dati sanitari» e conferma con «Esporta». Può richiedere qualche minuto.",
+      "apple3": "Salva il file export.zip in File o invialo al computer.",
+      "apple4": "Carica qui export.zip (non serve decomprimerlo) e premi «Analizza».",
+      "google1": "Vai su takeout.google.com e accedi con l’account Google che usi in Google Fit.",
+      "google2": "Fai clic su «Deseleziona tutto», seleziona solo «Fit» e scegli «Passaggio successivo» → «Crea esportazione».",
+      "google3": "Scarica lo ZIP quando Google ti invia l’e-mail.",
+      "google4": "Carica qui lo ZIP, oppure solo il file «Daily activity metrics.csv» della cartella Takeout/Fit.",
+      "other1": "Samsung Health, Garmin, Fitbit o Health Connect: esporta i dati giornalieri in CSV dall’app o con un’app di sincronizzazione.",
+      "other2": "Oppure scarica il nostro modello, compila una riga per giorno (data, passi, minuti attivi, sonno, frequenza a riposo, peso) e caricalo.",
+      "upload": "Scegli file",
+      "analyse": "Analizza",
+      "template": "Scarica modello CSV",
+      "privacy": "Il file viene elaborato sul server SILHO e non viene condiviso con terzi. Si salvano solo i riepiloghi giornalieri.",
+      "parseError": "Impossibile leggere il file. Verifica che sia l’export.zip di Apple Salute, un CSV di Google Fit o il modello.",
+      "importError": "Impossibile salvare i dati. Riprova.",
+      "previewTitle": "Controlla prima di salvare",
+      "range": "{{start}} – {{end}} · {{count}} giorni",
+      "discarded": "Sono stati scartati {{count}} valori (date future o valori impossibili).",
+      "cols": {
+        "date": "Data",
+        "exercise": "Esercizio (min)"
+      },
+      "metrics": {
+        "steps": "Passi al giorno",
+        "physical_activity": "Attività fisica",
+        "sleep": "Sonno",
+        "resting_hr": "Frequenza cardiaca a riposo",
+        "weight": "Peso"
+      },
+      "hints": {
+        "steps": "Media dei passi al giorno. L’obiettivo è oltre 7.500.",
+        "physical_activity": "Minuti di esercizio a settimana. Si raccomandano almeno 150.",
+        "sleep": "Media delle ore di sonno per notte. Ideale: da 7 a 9.",
+        "resting_hr": "Battito medio a riposo. Più basso indica di solito una forma migliore."
+      },
+      "reviewNote": "Si salvano riepiloghi giornalieri; i giorni già importati vengono aggiornati.",
+      "weightNote": "L’ultimo peso di ogni settimana (fino a 12 settimane) viene salvato anche nei Parametri vitali.",
+      "save": "Salva {{count}} giorni",
+      "cancel": "Annulla",
+      "imported": "{{count}} giorni salvati",
+      "newScore": "Punteggio: {{score}}",
+      "summaryTitle": "Media degli ultimi {{days}} giorni",
+      "lastImport": "Ultima importazione: {{date}}",
+      "rangesNote": "Gli intervalli di passi e frequenza cardiaca sono indicativi; verificali con il tuo medico.",
+      "apply": "Usa nella mia anamnesi metabolica",
+      "applyHint": "Aggiorna l’attività fisica settimanale e le ore di sonno della tua anamnesi metabolica con queste medie e ricalcola il punteggio.",
+      "applied": "Anamnesi aggiornata: {{minutes}} min/sett. e {{hours}} h di sonno. Punteggio: {{score}}",
+      "applyError": "Impossibile aggiornare l’anamnesi metabolica.",
+      "chartTitle": "Passi al giorno",
+      "noData": "Non hai ancora dati dai wearable. Carica un’esportazione per vederli qui.",
+      "units": {
+        "steps": "passi/giorno",
+        "minWeek": "min/sett.",
+        "bpm": "batt/min"
+      }
     }
   }
 }

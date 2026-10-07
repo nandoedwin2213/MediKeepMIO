@@ -120,7 +120,8 @@
       "metabolicRecipes": "Moje przepisy",
       "metabolicWeek": "Mój tydzień",
       "metabolicAI": "Mój asystent",
-      "metabolicLabs": "Importuj wyniki"
+      "metabolicLabs": "Importuj wyniki",
+      "metabolicWearables": "Aktywność i urządzenia"
     },
     "sections": {
       "administration": "Administracja",
