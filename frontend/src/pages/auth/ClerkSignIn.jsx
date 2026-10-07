@@ -239,7 +239,10 @@ const ClerkSignIn = () => {
       >
         {content}
         {config?.enabled && (
-          <Link to={buildLoginPath()} className={styles.backHomeLink}>
+          <Link
+            to={buildLoginPath()}
+            className={`${styles.backHomeLink} ${styles.onDarkLink}`}
+          >
             {t('clerk.backToLogin')}
           </Link>
         )}

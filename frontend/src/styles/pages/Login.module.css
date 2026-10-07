@@ -503,3 +503,7 @@
 .backHomeLink:hover {
   text-decoration: underline;
 }
+
+.onDarkLink {
+  color: rgba(246, 243, 236, 0.85);
+}
