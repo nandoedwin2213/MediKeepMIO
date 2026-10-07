@@ -1862,7 +1862,8 @@
     "actions": {
       "profile": "Metabolische Anamnese und Gewohnheiten",
       "addLab": "Laborwerte",
-      "addVitals": "Vitalwerte"
+      "addVitals": "Vitalwerte",
+      "importLab": "Laborbefund importieren"
     },
     "warnings": {
       "unknownUnit": "{{variable}}: Einheit „{{unit}}“ nicht erkannt, Wert nicht verwendet"
@@ -1879,7 +1880,8 @@
       "sections": {
         "history": "Wurde bei Ihnen festgestellt…?",
         "habits": "Ihre Gewohnheiten",
-        "limitations": "Einschränkungen und Ziele"
+        "limitations": "Einschränkungen und Ziele",
+        "research": "Forschung"
       },
       "fields": {
         "has_diabetes": "Diabetes",
@@ -1904,7 +1906,8 @@
         "diet_pattern": "Ernährungsweise",
         "meals_per_day": "Hauptmahlzeiten pro Tag",
         "food_intolerances": "Nahrungsmittelunverträglichkeiten (z. B. Laktose, Gluten)",
-        "food_dislikes": "Lebensmittel, die du nicht magst oder meidest"
+        "food_dislikes": "Lebensmittel, die du nicht magst oder meidest",
+        "research_consent": "Ich bin einverstanden, dass meine Daten ohne meinen Namen für die Forschung zur Stoffwechselgesundheit verwendet werden"
       },
       "options": {
         "alcohol": {
@@ -1925,7 +1928,8 @@
           "pescatarian": "Pescetarisch",
           "other": "Andere"
         }
-      }
+      },
+      "researchHint": "Freiwillig. Es werden nur kodierte Daten weitergegeben: kein Name, keine Ausweisnummer, kein Geburtsdatum, keine genauen Daten und keine Freitextnotizen. Sie können jederzeit widerrufen, indem Sie das Häkchen entfernen."
     },
     "health": {
       "title": "Meine Stoffwechselgesundheit",
@@ -2606,6 +2610,51 @@
         }
       },
       "rangesLink": "Referenzbereiche ansehen"
+    },
+    "labs": {
+      "title": "Laborbefund importieren",
+      "subtitle": "Fügen Sie den Text des Laborbefunds ein oder laden Sie das PDF oder eine CSV-Datei hoch. Glukose, Insulin, HbA1c, Blutfette, Leberenzyme, Kreatinin und Harnsäure werden erkannt und mit LOINC kodiert. Sie prüfen alles vor dem Speichern.",
+      "defaultName": "Stoffwechsel-Laborpanel",
+      "parseError": "Der Befund konnte nicht gelesen werden. Prüfen Sie die Datei oder fügen Sie den Text ein.",
+      "importError": "Die Werte konnten nicht gespeichert werden. Prüfen Sie Werte und Einheiten.",
+      "imported": "Gespeicherte Werte: {{count}}",
+      "newScore": "Der Score Metabólico FISAI beträgt jetzt {{score}}.",
+      "seeRisk": "Stoffwechselrisiko ansehen",
+      "seeLabs": "Laborergebnisse ansehen",
+      "step1": "1. Befund einfügen oder hochladen",
+      "step1Hint": "Ein Ergebnis pro Zeile, z. B. «Glucosa en ayunas 95 mg/dL 70 - 100». PDF (digital oder gescannt), CSV und TXT werden akzeptiert.",
+      "pasteLabel": "Text des Laborbefunds",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "PDF / CSV hochladen",
+      "analyse": "Analysieren",
+      "template": "CSV-Vorlage",
+      "step2": "2. Prüfen und bestätigen",
+      "found": "Erkannte Werte: {{count}}.",
+      "unrecognized": "Nicht erkannte Zeilen: {{count}}.",
+      "nothingFound": "Es wurden keine Stoffwechselwerte erkannt. Prüfen Sie den Text oder nutzen Sie die CSV-Vorlage.",
+      "date": "Datum der Probe",
+      "name": "Bezeichnung",
+      "facility": "Labor",
+      "cols": {
+        "test": "Untersuchung",
+        "value": "Wert",
+        "unit": "Einheit",
+        "reference": "Referenzbereich"
+      },
+      "include": "Übernehmen",
+      "loincHint": "Internationaler Standardcode (LOINC)",
+      "warnings": {
+        "implausible": "Unplausibler Wert: Einheit prüfen",
+        "unknown_unit": "Einheit nicht erkannt",
+        "unit_assumed": "Einheit fehlt: bitte wählen",
+        "qualifier": "Wert mit < oder >",
+        "duplicate": "Wiederholt: nicht übernommen"
+      },
+      "chooseUnit": "Einheit",
+      "refMin": "Min.",
+      "refMax": "Max.",
+      "reviewHint": "Vergleichen Sie jeden Wert mit dem Befund. Die Werte werden als Laborergebnis gespeichert und aktualisieren den Stoffwechsel-Score.",
+      "import": "{{count}} Werte speichern"
     }
   }
 }

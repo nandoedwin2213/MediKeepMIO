@@ -565,7 +565,8 @@
       "analytics": "Analityka",
       "maintenance": "Konserwacja",
       "trash": "Kosz",
-      "metabolicSettings": "Konfiguracja kliniczna"
+      "metabolicSettings": "Konfiguracja kliniczna",
+      "metabolicResearch": "Eksport do badań"
     },
     "sections": {
       "dataManagement": "Zarządzanie danymi",
@@ -759,5 +760,36 @@
     "notes": "Powód zmiany (opcjonalnie)",
     "reset": "Wczytaj wartości domyślne",
     "save": "Zapisz nową wersję"
+  },
+  "metabolicResearch": {
+    "title": "Eksport do badań",
+    "subtitle": "Spseudonimizowany zbiór ocen metabolicznych do badań, z kodami LOINC i słownikiem danych.",
+    "loadError": "Nie udało się wczytać podsumowania badań.",
+    "exportError": "Nie udało się wygenerować eksportu.",
+    "stats": {
+      "patients_total": "Pacjenci",
+      "patients_consented": "Ze zgodą na badania",
+      "assessments": "Oceny do eksportu",
+      "columns": "Zmienne"
+    },
+    "smallTitle": "Mała próba",
+    "smallSample": "Zgodę wyraziło mniej niż {{count}} pacjentów. Przy tak małej liczbie osób ktoś mógłby zostać rozpoznany: nie publikuj danych indywidualnych.",
+    "howTitle": "Jak chronione są dane",
+    "measures": {
+      "consent": "Tylko pacjenci, którzy zaznaczyli zgodę na badania w swoim wywiadzie metabolicznym.",
+      "pseudonym": "Imiona, nazwiska, numery dokumentów i dane kontaktowe są zastępowane zakodowanym identyfikatorem.",
+      "age": "Wiek jest grupowany w przedziały 5-letnie; bez daty urodzenia.",
+      "dates": "Dokładne daty zastępuje liczba dni od pierwszej oceny.",
+      "freeText": "Notatki, cele i inne teksty nigdy nie są eksportowane.",
+      "loinc": "Zmienne laboratoryjne mają w słowniku danych kod LOINC i jednostkę."
+    },
+    "ethics": "Wykorzystanie tych danych w badaniu wymaga zgody komisji bioetycznej i przestrzegania ustawy o ochronie danych (LOPDP).",
+    "downloadTitle": "Pobierz",
+    "formats": {
+      "csv": "Dane (CSV)",
+      "json": "Dane + słownik (JSON)",
+      "dictionary": "Słownik danych (CSV)"
+    },
+    "audit": "Każde pobranie jest zapisywane w dzienniku audytu."
   }
 }

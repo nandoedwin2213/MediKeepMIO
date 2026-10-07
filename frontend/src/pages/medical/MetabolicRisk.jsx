@@ -22,6 +22,7 @@ import {
   IconAlertTriangle,
   IconCheck,
   IconClipboardHeart,
+  IconFileImport,
   IconFlask,
   IconHeartbeat,
   IconMinus,
@@ -610,6 +611,13 @@ const MetabolicRisk = () => {
                 onClick={() => navigate('/lab-results')}
               >
                 {t('metabolic.actions.addLab', 'Lab results')}
+              </Button>
+              <Button
+                variant="light"
+                leftSection={<IconFileImport size={16} />}
+                onClick={() => navigate('/metabolic-labs')}
+              >
+                {t('metabolic.actions.importLab', 'Import lab report')}
               </Button>
               <Button
                 variant="light"

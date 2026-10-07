@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from app.api import deps
 from app.api.deps import ValidationException
 from app.core.http.error_handling import ForbiddenException, handle_database_errors
+from app.models.base import get_utc_now
 from app.models.metabolic import (
     MetabolicAssessment,
     MetabolicEngineConfig,
@@ -223,8 +224,13 @@ def update_profile(
         if profile is None:
             profile = MetabolicProfile(patient_id=patient_id)
             db.add(profile)
+        was_consenting = bool(profile.research_consent)
         for field, value in body.model_dump().items():
             setattr(profile, field, value)
+        if profile.research_consent and not was_consenting:
+            profile.research_consent_at = get_utc_now()
+        elif not profile.research_consent:
+            profile.research_consent_at = None
         profile.updated_by_user_id = current_user.id
         db.commit()
         db.refresh(profile)

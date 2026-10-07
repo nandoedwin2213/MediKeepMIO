@@ -565,7 +565,8 @@
       "analytics": "Analyse",
       "maintenance": "Onderhoud",
       "trash": "Prullenbak",
-      "metabolicSettings": "Klinische configuratie"
+      "metabolicSettings": "Klinische configuratie",
+      "metabolicResearch": "Onderzoeksexport"
     },
     "sections": {
       "dataManagement": "Gegevensbeheer",
@@ -759,5 +760,36 @@
     "notes": "Reden van de wijziging (optioneel)",
     "reset": "Standaardwaarden laden",
     "save": "Nieuwe versie opslaan"
+  },
+  "metabolicResearch": {
+    "title": "Onderzoeksexport",
+    "subtitle": "Gepseudonimiseerde dataset van metabole beoordelingen voor onderzoek, met LOINC-codes en datawoordenboek.",
+    "loadError": "Het onderzoeksoverzicht kon niet worden geladen.",
+    "exportError": "De export kon niet worden gemaakt.",
+    "stats": {
+      "patients_total": "Patiënten",
+      "patients_consented": "Met toestemming voor onderzoek",
+      "assessments": "Exporteerbare beoordelingen",
+      "columns": "Variabelen"
+    },
+    "smallTitle": "Kleine steekproef",
+    "smallSample": "Minder dan {{count}} patiënten hebben toestemming gegeven. Met zo weinig mensen kan iemand herkend worden: publiceer geen individuele gegevens.",
+    "howTitle": "Hoe de gegevens worden beschermd",
+    "measures": {
+      "consent": "Alleen patiënten die in hun metabole anamnese toestemming voor onderzoek hebben aangevinkt.",
+      "pseudonym": "Namen, identiteitsnummers en contactgegevens worden vervangen door een gecodeerde onderzoeks-ID.",
+      "age": "Leeftijd wordt gegroepeerd in klassen van 5 jaar; geen geboortedatum.",
+      "dates": "Exacte data worden vervangen door dagen sinds de eerste beoordeling.",
+      "freeText": "Notities, doelen en andere vrije tekst worden nooit geëxporteerd.",
+      "loinc": "Labvariabelen hebben hun LOINC-code en eenheid in het datawoordenboek."
+    },
+    "ethics": "Gebruik van deze gegevens in een studie vereist goedkeuring van een ethische commissie en naleving van de wet op gegevensbescherming (LOPDP).",
+    "downloadTitle": "Downloaden",
+    "formats": {
+      "csv": "Gegevens (CSV)",
+      "json": "Gegevens + woordenboek (JSON)",
+      "dictionary": "Datawoordenboek (CSV)"
+    },
+    "audit": "Elke download wordt vastgelegd in het auditlogboek."
   }
 }

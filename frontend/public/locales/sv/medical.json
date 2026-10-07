@@ -1862,7 +1862,8 @@
     "actions": {
       "profile": "Metabol anamnes och vanor",
       "addLab": "Labbresultat",
-      "addVitals": "Vitalparametrar"
+      "addVitals": "Vitalparametrar",
+      "importLab": "Importera labbrapport"
     },
     "warnings": {
       "unknownUnit": "{{variable}}: enheten \"{{unit}}\" känns inte igen, värdet användes inte"
@@ -1879,7 +1880,8 @@
       "sections": {
         "history": "Har du fått veta att du har…?",
         "habits": "Dina vanor",
-        "limitations": "Begränsningar och mål"
+        "limitations": "Begränsningar och mål",
+        "research": "Forskning"
       },
       "fields": {
         "has_diabetes": "Diabetes",
@@ -1904,7 +1906,8 @@
         "diet_pattern": "Kosthållning",
         "meals_per_day": "Huvudmål per dag",
         "food_intolerances": "Födoämnesintoleranser (t.ex. laktos, gluten)",
-        "food_dislikes": "Livsmedel du ogillar eller undviker"
+        "food_dislikes": "Livsmedel du ogillar eller undviker",
+        "research_consent": "Jag godkänner att mina uppgifter används, utan mitt namn, för forskning om metabol hälsa"
       },
       "options": {
         "alcohol": {
@@ -1925,7 +1928,8 @@
           "pescatarian": "Pescetarian",
           "other": "Annan"
         }
-      }
+      },
+      "researchHint": "Frivilligt. Endast kodade uppgifter delas: inget namn, personnummer, födelsedatum, exakta datum eller fritextanteckningar. Du kan när som helst återkalla genom att avmarkera rutan."
     },
     "health": {
       "title": "Min metabola hälsa",
@@ -2606,6 +2610,51 @@
         }
       },
       "rangesLink": "Visa referensintervall"
+    },
+    "labs": {
+      "title": "Importera labbrapport",
+      "subtitle": "Klistra in texten från labbrapporten eller ladda upp pdf:en eller en csv-fil. Glukos, insulin, HbA1c, blodfetter, leverenzymer, kreatinin och urinsyra känns igen och kodas med LOINC. Du granskar allt innan det sparas.",
+      "defaultName": "Metabol labbpanel",
+      "parseError": "Rapporten kunde inte läsas. Kontrollera filen eller klistra in texten.",
+      "importError": "Värdena kunde inte sparas. Kontrollera värden och enheter.",
+      "imported": "Sparade värden: {{count}}",
+      "newScore": "Score Metabólico FISAI är nu {{score}}.",
+      "seeRisk": "Se metabol risk",
+      "seeLabs": "Se labbresultat",
+      "step1": "1. Klistra in eller ladda upp rapporten",
+      "step1Hint": "Ett resultat per rad, till exempel «Glucosa en ayunas 95 mg/dL 70 - 100». Pdf (digital eller skannad), csv och txt accepteras.",
+      "pasteLabel": "Text från labbrapporten",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "Ladda upp pdf / csv",
+      "analyse": "Analysera",
+      "template": "Csv-mall",
+      "step2": "2. Granska och bekräfta",
+      "found": "Igenkända värden: {{count}}.",
+      "unrecognized": "Rader som inte känns igen: {{count}}.",
+      "nothingFound": "Inga metabola värden kändes igen. Kontrollera texten eller använd csv-mallen.",
+      "date": "Provdatum",
+      "name": "Namn",
+      "facility": "Laboratorium",
+      "cols": {
+        "test": "Analys",
+        "value": "Värde",
+        "unit": "Enhet",
+        "reference": "Referensintervall"
+      },
+      "include": "Ta med",
+      "loincHint": "Internationell standardkod (LOINC)",
+      "warnings": {
+        "implausible": "Osannolikt värde: kontrollera enheten",
+        "unknown_unit": "Enheten känns inte igen",
+        "unit_assumed": "Enhet saknas: välj en",
+        "qualifier": "Värde med < eller >",
+        "duplicate": "Upprepat: tas inte med"
+      },
+      "chooseUnit": "Enhet",
+      "refMin": "Min.",
+      "refMax": "Max.",
+      "reviewHint": "Jämför varje värde med rapporten. Värdena sparas som ett labbresultat och uppdaterar den metabola poängen.",
+      "import": "Spara {{count}} värden"
     }
   }
 }

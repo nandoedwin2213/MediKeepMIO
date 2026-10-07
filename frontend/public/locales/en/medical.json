@@ -1862,7 +1862,8 @@
     "actions": {
       "profile": "Metabolic history and habits",
       "addLab": "Lab results",
-      "addVitals": "Vital signs"
+      "addVitals": "Vital signs",
+      "importLab": "Import lab report"
     },
     "warnings": {
       "unknownUnit": "{{variable}}: unit \"{{unit}}\" not recognised, value not used"
@@ -1879,7 +1880,8 @@
       "sections": {
         "history": "Have you been told you have…?",
         "habits": "Your habits",
-        "limitations": "Limitations and goals"
+        "limitations": "Limitations and goals",
+        "research": "Research"
       },
       "fields": {
         "has_diabetes": "Diabetes",
@@ -1904,7 +1906,8 @@
         "diet_pattern": "Eating pattern",
         "meals_per_day": "Main meals per day",
         "food_intolerances": "Food intolerances (e.g. lactose, gluten)",
-        "food_dislikes": "Foods you dislike or avoid"
+        "food_dislikes": "Foods you dislike or avoid",
+        "research_consent": "I agree that my data may be used, without my name, for metabolic health research"
       },
       "options": {
         "alcohol": {
@@ -1925,7 +1928,8 @@
           "pescatarian": "Pescatarian",
           "other": "Other"
         }
-      }
+      },
+      "researchHint": "Optional. Only coded data is shared: no name, ID number, birth date, exact dates or free-text notes. You can withdraw at any time by unticking this box."
     },
     "health": {
       "title": "My metabolic health",
@@ -2606,6 +2610,51 @@
         }
       },
       "rangesLink": "See reference ranges"
+    },
+    "labs": {
+      "title": "Import lab report",
+      "subtitle": "Paste the text of the lab report or upload its PDF or a CSV file. Glucose, insulin, HbA1c, lipids, liver enzymes, creatinine and uric acid are recognised and coded with LOINC. You review everything before saving.",
+      "defaultName": "Metabolic lab panel",
+      "parseError": "Could not read the report. Check the file or paste the text.",
+      "importError": "Could not save the values. Check the values and units.",
+      "imported": "Values saved: {{count}}",
+      "newScore": "The Score Metabólico FISAI is now {{score}}.",
+      "seeRisk": "See metabolic risk",
+      "seeLabs": "See lab results",
+      "step1": "1. Paste or upload the report",
+      "step1Hint": "One result per line, for example «Glucosa en ayunas 95 mg/dL 70 - 100». PDF (digital or scanned), CSV and TXT files are accepted.",
+      "pasteLabel": "Lab report text",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "Upload PDF / CSV",
+      "analyse": "Analyse",
+      "template": "CSV template",
+      "step2": "2. Review and confirm",
+      "found": "Values recognised: {{count}}.",
+      "unrecognized": "Lines not recognised: {{count}}.",
+      "nothingFound": "No metabolic values were recognised. Check the text or use the CSV template.",
+      "date": "Sample date",
+      "name": "Name",
+      "facility": "Laboratory",
+      "cols": {
+        "test": "Test",
+        "value": "Value",
+        "unit": "Unit",
+        "reference": "Reference range"
+      },
+      "include": "Include",
+      "loincHint": "International standard code (LOINC)",
+      "warnings": {
+        "implausible": "Implausible value: check the unit",
+        "unknown_unit": "Unit not recognised",
+        "unit_assumed": "Unit missing: choose it",
+        "qualifier": "Value with < or >",
+        "duplicate": "Repeated: not included"
+      },
+      "chooseUnit": "Unit",
+      "refMin": "Min",
+      "refMax": "Max",
+      "reviewHint": "Check each value against the report. The values are saved as a lab result and update the metabolic score.",
+      "import": "Save {{count}} values"
     }
   }
 }

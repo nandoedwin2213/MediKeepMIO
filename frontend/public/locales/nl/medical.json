@@ -1862,7 +1862,8 @@
     "actions": {
       "profile": "Metabole voorgeschiedenis en gewoonten",
       "addLab": "Labuitslagen",
-      "addVitals": "Vitale functies"
+      "addVitals": "Vitale functies",
+      "importLab": "Labrapport importeren"
     },
     "warnings": {
       "unknownUnit": "{{variable}}: eenheid \"{{unit}}\" niet herkend, waarde niet gebruikt"
@@ -1879,7 +1880,8 @@
       "sections": {
         "history": "Is bij jou vastgesteld…?",
         "habits": "Je gewoonten",
-        "limitations": "Beperkingen en doelen"
+        "limitations": "Beperkingen en doelen",
+        "research": "Onderzoek"
       },
       "fields": {
         "has_diabetes": "Diabetes",
@@ -1904,7 +1906,8 @@
         "diet_pattern": "Eetpatroon",
         "meals_per_day": "Hoofdmaaltijden per dag",
         "food_intolerances": "Voedselintoleranties (bijv. lactose, gluten)",
-        "food_dislikes": "Voedsel dat je niet lust of vermijdt"
+        "food_dislikes": "Voedsel dat je niet lust of vermijdt",
+        "research_consent": "Ik ga ermee akkoord dat mijn gegevens zonder mijn naam worden gebruikt voor onderzoek naar metabole gezondheid"
       },
       "options": {
         "alcohol": {
@@ -1925,7 +1928,8 @@
           "pescatarian": "Pescotariër",
           "other": "Anders"
         }
-      }
+      },
+      "researchHint": "Optioneel. Alleen gecodeerde gegevens worden gedeeld: geen naam, identiteitsnummer, geboortedatum, exacte data of vrije notities. U kunt dit altijd intrekken door het vinkje weg te halen."
     },
     "health": {
       "title": "Mijn metabole gezondheid",
@@ -2606,6 +2610,51 @@
         }
       },
       "rangesLink": "Referentiewaarden bekijken"
+    },
+    "labs": {
+      "title": "Labrapport importeren",
+      "subtitle": "Plak de tekst van het labrapport of upload de pdf of een csv-bestand. Glucose, insuline, HbA1c, lipiden, leverenzymen, creatinine en urinezuur worden herkend en met LOINC gecodeerd. U controleert alles voordat het wordt opgeslagen.",
+      "defaultName": "Metabool labpanel",
+      "parseError": "Het rapport kon niet worden gelezen. Controleer het bestand of plak de tekst.",
+      "importError": "De waarden konden niet worden opgeslagen. Controleer waarden en eenheden.",
+      "imported": "Opgeslagen waarden: {{count}}",
+      "newScore": "De Score Metabólico FISAI is nu {{score}}.",
+      "seeRisk": "Metabool risico bekijken",
+      "seeLabs": "Labuitslagen bekijken",
+      "step1": "1. Plak of upload het rapport",
+      "step1Hint": "Eén uitslag per regel, bijvoorbeeld «Glucosa en ayunas 95 mg/dL 70 - 100». Pdf (digitaal of gescand), csv en txt worden geaccepteerd.",
+      "pasteLabel": "Tekst van het labrapport",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "Pdf / csv uploaden",
+      "analyse": "Analyseren",
+      "template": "Csv-sjabloon",
+      "step2": "2. Controleren en bevestigen",
+      "found": "Herkende waarden: {{count}}.",
+      "unrecognized": "Niet herkende regels: {{count}}.",
+      "nothingFound": "Er zijn geen metabole waarden herkend. Controleer de tekst of gebruik het csv-sjabloon.",
+      "date": "Datum van afname",
+      "name": "Naam",
+      "facility": "Laboratorium",
+      "cols": {
+        "test": "Bepaling",
+        "value": "Waarde",
+        "unit": "Eenheid",
+        "reference": "Referentiewaarden"
+      },
+      "include": "Opnemen",
+      "loincHint": "Internationale standaardcode (LOINC)",
+      "warnings": {
+        "implausible": "Onwaarschijnlijke waarde: controleer de eenheid",
+        "unknown_unit": "Eenheid niet herkend",
+        "unit_assumed": "Eenheid ontbreekt: kies er een",
+        "qualifier": "Waarde met < of >",
+        "duplicate": "Herhaald: niet opgenomen"
+      },
+      "chooseUnit": "Eenheid",
+      "refMin": "Min.",
+      "refMax": "Max.",
+      "reviewHint": "Vergelijk elke waarde met het rapport. De waarden worden opgeslagen als labuitslag en werken de metabole score bij.",
+      "import": "{{count}} waarden opslaan"
     }
   }
 }

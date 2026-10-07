@@ -565,7 +565,8 @@
       "analytics": "Analíticas",
       "maintenance": "Mantenimiento",
       "trash": "Papelera",
-      "metabolicSettings": "Configuración clínica"
+      "metabolicSettings": "Configuración clínica",
+      "metabolicResearch": "Exportación para investigación"
     },
     "sections": {
       "dataManagement": "Gestión de datos",
@@ -759,5 +760,36 @@
     "notes": "Motivo del cambio (opcional)",
     "reset": "Cargar valores por defecto",
     "save": "Guardar nueva versión"
+  },
+  "metabolicResearch": {
+    "title": "Exportación para investigación",
+    "subtitle": "Datos seudonimizados de las evaluaciones metabólicas para investigación, con códigos LOINC y diccionario de datos.",
+    "loadError": "No se pudo cargar el resumen de investigación.",
+    "exportError": "No se pudo generar la exportación.",
+    "stats": {
+      "patients_total": "Pacientes",
+      "patients_consented": "Con consentimiento de investigación",
+      "assessments": "Evaluaciones exportables",
+      "columns": "Variables"
+    },
+    "smallTitle": "Muestra pequeña",
+    "smallSample": "Menos de {{count}} pacientes han dado su consentimiento. Con tan pocas personas alguien podría ser reconocido: no publiques datos individuales.",
+    "howTitle": "Cómo se protegen los datos",
+    "measures": {
+      "consent": "Solo pacientes que marcaron el consentimiento de investigación en su historia metabólica.",
+      "pseudonym": "Nombres, cédulas y datos de contacto se sustituyen por un código de investigación.",
+      "age": "La edad se agrupa en tramos de 5 años; sin fecha de nacimiento.",
+      "dates": "Las fechas exactas se sustituyen por días desde la primera evaluación.",
+      "freeText": "Notas, objetivos y otros textos libres nunca se exportan.",
+      "loinc": "Las variables de laboratorio llevan su código LOINC y su unidad en el diccionario de datos."
+    },
+    "ethics": "Usar estos datos en un estudio requiere la aprobación de un comité de ética y cumplir la Ley Orgánica de Protección de Datos Personales (LOPDP).",
+    "downloadTitle": "Descargar",
+    "formats": {
+      "csv": "Datos (CSV)",
+      "json": "Datos + diccionario (JSON)",
+      "dictionary": "Diccionario de datos (CSV)"
+    },
+    "audit": "Cada descarga queda registrada en el registro de auditoría."
   }
 }

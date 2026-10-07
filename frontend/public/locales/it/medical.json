@@ -1862,7 +1862,8 @@
     "actions": {
       "profile": "Anamnesi metabolica e abitudini",
       "addLab": "Esami di laboratorio",
-      "addVitals": "Parametri vitali"
+      "addVitals": "Parametri vitali",
+      "importLab": "Importa referto"
     },
     "warnings": {
       "unknownUnit": "{{variable}}: unità «{{unit}}» non riconosciuta, valore non usato"
@@ -1879,7 +1880,8 @@
       "sections": {
         "history": "Ti hanno detto che hai…?",
         "habits": "Le tue abitudini",
-        "limitations": "Limitazioni e obiettivi"
+        "limitations": "Limitazioni e obiettivi",
+        "research": "Ricerca"
       },
       "fields": {
         "has_diabetes": "Diabete",
@@ -1904,7 +1906,8 @@
         "diet_pattern": "Tipo di alimentazione",
         "meals_per_day": "Pasti principali al giorno",
         "food_intolerances": "Intolleranze alimentari (es. lattosio, glutine)",
-        "food_dislikes": "Alimenti che non ti piacciono o eviti"
+        "food_dislikes": "Alimenti che non ti piacciono o eviti",
+        "research_consent": "Acconsento all'uso dei miei dati, senza il mio nome, per la ricerca sulla salute metabolica"
       },
       "options": {
         "alcohol": {
@@ -1925,7 +1928,8 @@
           "pescatarian": "Pescetariana",
           "other": "Altro"
         }
-      }
+      },
+      "researchHint": "Facoltativo. Si condividono solo dati codificati: niente nome, documento, data di nascita, date esatte o note di testo libero. Puoi revocarlo in qualsiasi momento togliendo la spunta."
     },
     "health": {
       "title": "La mia salute metabolica",
@@ -2606,6 +2610,51 @@
         }
       },
       "rangesLink": "Vedi intervalli di riferimento"
+    },
+    "labs": {
+      "title": "Importa referto di laboratorio",
+      "subtitle": "Incolla il testo del referto o carica il PDF o un file CSV. Glucosio, insulina, HbA1c, lipidi, enzimi epatici, creatinina e acido urico vengono riconosciuti e codificati con LOINC. Controlli tutto prima di salvare.",
+      "defaultName": "Pannello metabolico",
+      "parseError": "Impossibile leggere il referto. Controlla il file o incolla il testo.",
+      "importError": "Impossibile salvare i valori. Controlla valori e unità.",
+      "imported": "Valori salvati: {{count}}",
+      "newScore": "Lo Score Metabólico FISAI ora è {{score}}.",
+      "seeRisk": "Vedi rischio metabolico",
+      "seeLabs": "Vedi esami",
+      "step1": "1. Incolla o carica il referto",
+      "step1Hint": "Un risultato per riga, ad esempio «Glucosa en ayunas 95 mg/dL 70 - 100». Sono accettati PDF (digitali o scansionati), CSV e TXT.",
+      "pasteLabel": "Testo del referto",
+      "pastePlaceholder": "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
+      "upload": "Carica PDF / CSV",
+      "analyse": "Analizza",
+      "template": "Modello CSV",
+      "step2": "2. Controlla e conferma",
+      "found": "Valori riconosciuti: {{count}}.",
+      "unrecognized": "Righe non riconosciute: {{count}}.",
+      "nothingFound": "Nessun valore metabolico riconosciuto. Controlla il testo o usa il modello CSV.",
+      "date": "Data del prelievo",
+      "name": "Nome",
+      "facility": "Laboratorio",
+      "cols": {
+        "test": "Esame",
+        "value": "Valore",
+        "unit": "Unità",
+        "reference": "Intervallo di riferimento"
+      },
+      "include": "Includi",
+      "loincHint": "Codice standard internazionale (LOINC)",
+      "warnings": {
+        "implausible": "Valore poco plausibile: controlla l'unità",
+        "unknown_unit": "Unità non riconosciuta",
+        "unit_assumed": "Unità mancante: sceglila",
+        "qualifier": "Valore con < o >",
+        "duplicate": "Ripetuto: non incluso"
+      },
+      "chooseUnit": "Unità",
+      "refMin": "Min.",
+      "refMax": "Max.",
+      "reviewHint": "Confronta ogni valore con il referto. I valori vengono salvati come esame di laboratorio e aggiornano lo score metabolico.",
+      "import": "Salva {{count}} valori"
     }
   }
 }

@@ -119,7 +119,8 @@
       "metabolicNutrition": "Η διατροφή μου",
       "metabolicRecipes": "Οι συνταγές μου",
       "metabolicWeek": "Η εβδομάδα μου",
-      "metabolicAI": "Ο βοηθός μου"
+      "metabolicAI": "Ο βοηθός μου",
+      "metabolicLabs": "Εισαγωγή εξετάσεων"
     },
     "sections": {
       "administration": "Διαχείριση",

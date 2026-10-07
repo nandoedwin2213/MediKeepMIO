@@ -18,6 +18,7 @@
     "Dashboard",
     "Details",
     "Diabetes",
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Fax",
     "Gluten",
     "Hybrid",
@@ -60,6 +61,7 @@
   ],
   "el": [
     "Email",
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Medicare Part D",
     "Vision HMO",
     "Vision PPO",
@@ -97,17 +99,18 @@
     "San Francisco",
     "Score",
     "Simple",
+    "Snack",
     "Snacks",
     "Sublingual",
     "Total",
+    "Variables",
     "cm",
     "kg",
     "lbs",
     "mmHg",
     "{{count}} Error",
     "{{kcal}} kcal",
-    "{{minutes}} min",
-    "Snack"
+    "{{minutes}} min"
   ],
   "fr": [
     "1 dose",
@@ -134,6 +137,7 @@
     "Dose {{number}}",
     "Dose {{n}}",
     "EPO (Exclusive Provider Organization)",
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Fax",
     "Gluten",
     "HDHP (High Deductible Health Plan)",
@@ -172,6 +176,7 @@
     "Total",
     "Type",
     "Urgent",
+    "Variables",
     "cm",
     "kg",
     "lbs",
@@ -198,6 +203,7 @@
     "Dose {{number}}",
     "Dose {{n}}",
     "Email",
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Fax",
     "Info",
     "Max",
@@ -231,6 +237,7 @@
     "Dashboard",
     "Details",
     "Diabetes",
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Fax",
     "Filters",
     "Gluten",
@@ -281,6 +288,7 @@
   ],
   "pl": [
     "Administrator",
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Gluten",
     "Manifest",
     "Minimum",
@@ -309,6 +317,7 @@
     "Dose {{number}}",
     "Dose {{n}}",
     "Email",
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Fax",
     "Gastrointestinal",
     "Hospital",
@@ -338,6 +347,7 @@
     "{{minutes}} min"
   ],
   "ru": [
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "GitHub ID:"
   ],
   "sv": [
@@ -347,8 +357,10 @@
     "Bilateral",
     "DHMO (Dental Health Maintenance Organization)",
     "DPPO (Dental Preferred Provider Organization)",
+    "Data (CSV)",
     "Diabetes",
     "EPO (Exclusive Provider Organization)",
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Fax",
     "Form",
     "Gastrointestinal",
@@ -394,12 +406,14 @@
     "{{minutes}} min"
   ],
   "th": [
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "GitHub ID:",
     "Medicare Part D",
     "O2 Sat",
     "mmHg"
   ],
   "zh": [
+    "Fasting glucose 95 mg/dL 70 - 100\nTriglycerides 180 mg/dL < 150\nHDL cholesterol 42 mg/dL > 40",
     "Webhook URL",
     "mmHg"
   ]

@@ -565,7 +565,8 @@
       "analytics": "Analisi",
       "maintenance": "Manutenzione",
       "trash": "Cestino",
-      "metabolicSettings": "Configurazione clinica"
+      "metabolicSettings": "Configurazione clinica",
+      "metabolicResearch": "Esportazione per la ricerca"
     },
     "sections": {
       "dataManagement": "Gestione dati",
@@ -759,5 +760,36 @@
     "notes": "Motivo della modifica (facoltativo)",
     "reset": "Carica valori predefiniti",
     "save": "Salva nuova versione"
+  },
+  "metabolicResearch": {
+    "title": "Esportazione per la ricerca",
+    "subtitle": "Dataset pseudonimizzato delle valutazioni metaboliche per la ricerca, con codici LOINC e dizionario dei dati.",
+    "loadError": "Impossibile caricare il riepilogo della ricerca.",
+    "exportError": "Impossibile generare l'esportazione.",
+    "stats": {
+      "patients_total": "Pazienti",
+      "patients_consented": "Con consenso alla ricerca",
+      "assessments": "Valutazioni esportabili",
+      "columns": "Variabili"
+    },
+    "smallTitle": "Campione piccolo",
+    "smallSample": "Meno di {{count}} pazienti hanno dato il consenso. Con così poche persone qualcuno potrebbe essere riconosciuto: non pubblicare dati individuali.",
+    "howTitle": "Come vengono protetti i dati",
+    "measures": {
+      "consent": "Solo pazienti che hanno spuntato il consenso alla ricerca nella loro anamnesi metabolica.",
+      "pseudonym": "Nomi, documenti e contatti sono sostituiti da un codice di ricerca.",
+      "age": "L'età è raggruppata in fasce di 5 anni; nessuna data di nascita.",
+      "dates": "Le date esatte sono sostituite dai giorni dalla prima valutazione.",
+      "freeText": "Note, obiettivi e altri testi liberi non vengono mai esportati.",
+      "loinc": "Le variabili di laboratorio riportano codice LOINC e unità nel dizionario dei dati."
+    },
+    "ethics": "L'uso di questi dati in uno studio richiede l'approvazione di un comitato etico e il rispetto della legge sulla protezione dei dati (LOPDP).",
+    "downloadTitle": "Scarica",
+    "formats": {
+      "csv": "Dati (CSV)",
+      "json": "Dati + dizionario (JSON)",
+      "dictionary": "Dizionario dei dati (CSV)"
+    },
+    "audit": "Ogni download viene registrato nel registro di audit."
   }
 }

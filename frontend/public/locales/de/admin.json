@@ -565,7 +565,8 @@
       "analytics": "Analysen",
       "maintenance": "Wartung",
       "trash": "Papierkorb",
-      "metabolicSettings": "Klinische Konfiguration"
+      "metabolicSettings": "Klinische Konfiguration",
+      "metabolicResearch": "Forschungsexport"
     },
     "sections": {
       "dataManagement": "Datenverwaltung",
@@ -759,5 +760,36 @@
     "notes": "Grund der Änderung (optional)",
     "reset": "Standardwerte laden",
     "save": "Neue Version speichern"
+  },
+  "metabolicResearch": {
+    "title": "Forschungsexport",
+    "subtitle": "Pseudonymisierter Datensatz der Stoffwechselbewertungen für die Forschung, mit LOINC-Codes und Datenwörterbuch.",
+    "loadError": "Die Forschungsübersicht konnte nicht geladen werden.",
+    "exportError": "Der Export konnte nicht erstellt werden.",
+    "stats": {
+      "patients_total": "Patienten",
+      "patients_consented": "Mit Forschungseinwilligung",
+      "assessments": "Exportierbare Bewertungen",
+      "columns": "Variablen"
+    },
+    "smallTitle": "Kleine Stichprobe",
+    "smallSample": "Weniger als {{count}} Patienten haben eingewilligt. Bei so wenigen Personen könnte jemand erkannt werden: keine Einzeldaten veröffentlichen.",
+    "howTitle": "So werden die Daten geschützt",
+    "measures": {
+      "consent": "Nur Patienten, die in ihrer Stoffwechselanamnese der Forschung zugestimmt haben.",
+      "pseudonym": "Namen, Ausweisnummern und Kontaktdaten werden durch eine kodierte Forschungs-ID ersetzt.",
+      "age": "Das Alter wird in 5-Jahres-Gruppen angegeben; kein Geburtsdatum.",
+      "dates": "Genaue Daten werden durch Tage seit der ersten Bewertung ersetzt.",
+      "freeText": "Notizen, Ziele und andere Freitexte werden nie exportiert.",
+      "loinc": "Laborvariablen enthalten im Datenwörterbuch ihren LOINC-Code und ihre Einheit."
+    },
+    "ethics": "Die Nutzung dieser Daten in einer Studie erfordert die Zustimmung einer Ethikkommission und die Einhaltung des Datenschutzgesetzes (LOPDP).",
+    "downloadTitle": "Herunterladen",
+    "formats": {
+      "csv": "Daten (CSV)",
+      "json": "Daten + Wörterbuch (JSON)",
+      "dictionary": "Datenwörterbuch (CSV)"
+    },
+    "audit": "Jeder Download wird im Audit-Protokoll erfasst."
   }
 }

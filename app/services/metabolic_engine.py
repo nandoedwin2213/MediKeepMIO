@@ -87,6 +87,23 @@ LAB_ALIASES: Dict[str, List[str]] = {
 }
 _ALIAS_INDEX = {alias: var for var, aliases in LAB_ALIASES.items() for alias in aliases}
 
+# Primary LOINC code first; components carrying any of these codes map to the variable.
+LOINC_CODES: Dict[str, List[str]] = {
+    "glucose": ["2345-7", "1558-6", "14749-6", "2339-0"],
+    "insulin": ["20448-7"],
+    "hba1c": ["4548-4", "17856-6", "59261-8"],
+    "triglycerides": ["2571-8", "14927-8"],
+    "hdl": ["2085-9", "14646-4"],
+    "ldl": ["18262-6", "13457-7", "2089-1"],
+    "total_cholesterol": ["2093-3", "14647-2"],
+    "alt": ["1742-6"],
+    "ast": ["1920-8"],
+    "ggt": ["2324-2"],
+    "creatinine": ["2160-0", "14682-9"],
+    "uric_acid": ["3084-1", "14933-6"],
+}
+LOINC_INDEX = {code: var for var, codes in LOINC_CODES.items() for code in codes}
+
 _MG_DL = {"mg/dl": 1.0, "": 1.0}
 UNIT_FACTORS: Dict[str, Dict[str, float]] = {
     "glucose": {**_MG_DL, "mmol/l": 18.016},
@@ -95,6 +112,9 @@ UNIT_FACTORS: Dict[str, Dict[str, float]] = {
         "uu/ml": 1.0,
         "µiu/ml": 1.0,
         "uiu/ml": 1.0,
+        "µui/ml": 1.0,
+        "uui/ml": 1.0,
+        "mui/l": 1.0,
         "mu/l": 1.0,
         "miu/l": 1.0,
         "": 1.0,
@@ -269,7 +289,7 @@ def collect_lab_points(
             component.canonical_test_name,
             component.abbreviation,
         ]
-        variable = next(
+        variable = LOINC_INDEX.get((component.test_code or "").strip()) or next(
             (
                 _ALIAS_INDEX[n.strip().lower()]
                 for n in names

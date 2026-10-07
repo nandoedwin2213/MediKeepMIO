@@ -68,6 +68,7 @@ class MetabolicProfileBase(BaseModel):
     food_intolerances: Optional[str] = Field(None, max_length=1000)
     food_dislikes: Optional[str] = Field(None, max_length=1000)
     meals_per_day: Optional[int] = Field(None, ge=1, le=8)
+    research_consent: Optional[bool] = None
 
 
 class MetabolicProfileUpdate(MetabolicProfileBase):
@@ -78,6 +79,7 @@ class MetabolicProfileResponse(MetabolicProfileBase):
     model_config = ConfigDict(from_attributes=True)
 
     patient_id: int
+    research_consent_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
     updated_by_user_id: Optional[int] = None
 

@@ -93,6 +93,9 @@ class MetabolicProfile(Base):
     food_intolerances = Column(Text, nullable=True)
     food_dislikes = Column(Text, nullable=True)
     meals_per_day = Column(Integer, nullable=True)
+    # Explicit opt-in to appear (pseudonymised) in research exports.
+    research_consent = Column(Boolean, nullable=True)
+    research_consent_at = Column(DateTime, nullable=True)
 
     updated_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     created_at = Column(DateTime, default=get_utc_now, nullable=False)

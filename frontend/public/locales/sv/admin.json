@@ -565,7 +565,8 @@
       "analytics": "Analys",
       "maintenance": "Underhåll",
       "trash": "Papperskorg",
-      "metabolicSettings": "Klinisk konfiguration"
+      "metabolicSettings": "Klinisk konfiguration",
+      "metabolicResearch": "Forskningsexport"
     },
     "sections": {
       "dataManagement": "Datahantering",
@@ -759,5 +760,36 @@
     "notes": "Orsak till ändringen (valfritt)",
     "reset": "Läs in standardvärden",
     "save": "Spara ny version"
+  },
+  "metabolicResearch": {
+    "title": "Forskningsexport",
+    "subtitle": "Pseudonymiserad datamängd med metabola bedömningar för forskning, med LOINC-koder och dataordlista.",
+    "loadError": "Forskningsöversikten kunde inte läsas in.",
+    "exportError": "Exporten kunde inte skapas.",
+    "stats": {
+      "patients_total": "Patienter",
+      "patients_consented": "Med forskningssamtycke",
+      "assessments": "Exporterbara bedömningar",
+      "columns": "Variabler"
+    },
+    "smallTitle": "Litet urval",
+    "smallSample": "Färre än {{count}} patienter har samtyckt. Med så få personer kan någon kännas igen: publicera inte individuella uppgifter.",
+    "howTitle": "Så skyddas uppgifterna",
+    "measures": {
+      "consent": "Endast patienter som har kryssat i forskningssamtycket i sin metabola anamnes.",
+      "pseudonym": "Namn, personnummer och kontaktuppgifter ersätts med ett kodat forsknings-id.",
+      "age": "Åldern grupperas i 5-årsintervall; inget födelsedatum.",
+      "dates": "Exakta datum ersätts med dagar sedan första bedömningen.",
+      "freeText": "Anteckningar, mål och annan fritext exporteras aldrig.",
+      "loinc": "Labbvariabler har sin LOINC-kod och enhet i dataordlistan."
+    },
+    "ethics": "Att använda uppgifterna i en studie kräver godkännande av en etikprövningsnämnd och att dataskyddslagen (LOPDP) följs.",
+    "downloadTitle": "Ladda ner",
+    "formats": {
+      "csv": "Data (CSV)",
+      "json": "Data + ordlista (JSON)",
+      "dictionary": "Dataordlista (CSV)"
+    },
+    "audit": "Varje nedladdning registreras i granskningsloggen."
   }
 }

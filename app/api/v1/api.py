@@ -30,6 +30,7 @@ from app.api.v1.endpoints import (
     metabolic_recipes,
     metabolic_week,
     metabolic_ai,
+    metabolic_data,
     notifications,
     paperless,
     papra,
@@ -147,6 +148,9 @@ api_router.include_router(
     metabolic_week.router, prefix="/metabolic", tags=["metabolic"]
 )
 api_router.include_router(metabolic_ai.router, prefix="/metabolic", tags=["metabolic"])
+api_router.include_router(
+    metabolic_data.router, prefix="/metabolic", tags=["metabolic"]
+)
 api_router.include_router(symptom.router, prefix="/symptoms", tags=["symptoms"])
 api_router.include_router(
     injury_type.router, prefix="/injury-types", tags=["injury-types"]
