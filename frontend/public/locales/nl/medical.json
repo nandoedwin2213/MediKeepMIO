@@ -2518,6 +2518,94 @@
         "5": "Zaterdag",
         "6": "Zondag"
       }
+    },
+    "ai": {
+      "title": "Mijn metabole assistent",
+      "subtitle": "FISAI Metabolic AI zet je resultaten om in een eenvoudige uitleg en prioriteiten, en laat je simuleren wat er kan verbeteren.",
+      "disclaimer": "De assistent legt uit, stelt geen diagnoses en vervangt je arts niet. Een zorgverlener controleert en keurt elke uitleg goed voordat je die ziet.",
+      "needsReview": "⚠️ Medische beoordeling nodig",
+      "pattern": {
+        "insufficient": "Er zijn nog niet genoeg gegevens om je metabole risico uit te leggen. Leg gewicht, middelomtrek, bloeddruk en nuchtere labwaarden vast.",
+        "favorable": "Je waarden liggen binnen de verwachte grenzen. Houd je gewoonten vol en herhaal je controles zoals afgesproken.",
+        "single": "Het belangrijkste verbeterpunt is: {{factors}}. Je overige waarden zijn gunstig.",
+        "combination": "Er is geen enkele zorgwekkende waarde, maar de combinatie van {{factors}} verhoogt je metabole risico.",
+        "needs_review": "Sommige resultaten ({{factors}}) liggen duidelijk buiten het referentiebereik. Dit resultaat vraagt om professionele beoordeling."
+      },
+      "concernsTitle": "Wat je risico verhoogt",
+      "strengthsTitle": "Wat goed gaat",
+      "prioritiesTitle": "Jouw prioriteiten",
+      "becauseOf": "Gerelateerd aan: {{factors}}",
+      "priorities": {
+        "reduce_waist": "Middelomtrek verkleinen",
+        "increase_activity": "Meer bewegen",
+        "carb_quality": "Kwaliteit van koolhydraten verbeteren",
+        "strength": "Spiermassa en kracht opbouwen",
+        "blood_pressure": "Minder zout en bloeddruk onder controle houden",
+        "healthy_fats": "Kies gezonde vetten en meer vezels",
+        "liver": "Zorg voor je lever: beperk alcohol en toegevoegde suiker",
+        "sleep": "Slaapduur en -kwaliteit verbeteren",
+        "stop_smoking": "Stoppen met roken (vraag om hulp)",
+        "repeat_labs": "Labonderzoek herhalen zoals je zorgverlener aangeeft"
+      },
+      "change": {
+        "improved": "Je score is {{points}} punten verbeterd",
+        "worsened": "Je score is {{points}} punten gedaald",
+        "same": "Je score is niet veranderd",
+        "mainly": "Vooral door:"
+      },
+      "levels": {
+        "normal": "In orde",
+        "borderline": "Grenswaarde",
+        "low": "Buiten bereik",
+        "high": "Buiten bereik",
+        "veryHigh": "Ver buiten bereik"
+      },
+      "status": {
+        "draft": "Concept",
+        "approved": "Gepubliceerd",
+        "archived": "Gearchiveerd"
+      },
+      "explain": {
+        "title": "Wat je resultaten betekenen",
+        "pending": "Je zorgverlener heeft je uitleg nog niet gecontroleerd. Je ziet die hier zodra hij is goedgekeurd.",
+        "emptyPro": "Nog geen uitleg. Maak een concept op basis van de laatste evaluatie, controleer en keur het goed.",
+        "generate": "Uitleg genereren",
+        "regenerate": "Nieuw concept",
+        "draftNotice": "De patiënt ziet het pas als je het goedkeurt.",
+        "prioritiesLabel": "Prioriteiten (kies en orden)",
+        "note": "Notitie van de zorgverlener",
+        "notePlaceholder": "Optioneel: adviezen of context voor de patiënt",
+        "noteTitle": "Notitie van je zorgverlener",
+        "save": "Concept opslaan",
+        "approve": "Goedkeuren en publiceren",
+        "delete": "Concept verwijderen",
+        "saved": "Concept opgeslagen",
+        "approved": "Uitleg gepubliceerd voor de patiënt",
+        "error": "De actie kon niet worden voltooid. Probeer het opnieuw.",
+        "reviewed": "Gecontroleerd en goedgekeurd door je zorgverlener op {{date}}"
+      },
+      "sim": {
+        "title": "Wat als ik verbeter…?",
+        "subtitle": "Verschuif de schuifregelaars en druk op Simuleren om te zien welke waarden mogelijk verbeteren.",
+        "disclaimer": "Educatieve simulatie: je score wordt herberekend met de gekozen waarden. Het is geen klinische voorspelling of gegarandeerd resultaat.",
+        "run": "Simuleren",
+        "reset": "Herstellen",
+        "current": "Nu",
+        "simulated": "Gesimuleerd",
+        "delta": "Verandering: {{points}}",
+        "summary": "Met deze veranderingen kunnen deze waarden mogelijk veranderen:",
+        "noChanges": "Met deze waarden zouden de indicatoren niet veranderen. Probeer andere waarden.",
+        "missing": "Geen vastgelegde waarde voor: {{items}}. Die verandering kon niet worden gesimuleerd.",
+        "fields": {
+          "waist": "Middel verkleinen (cm)",
+          "weight": "Gewicht verminderen (kg)",
+          "triglycerides": "Triglyceriden verlagen (mg/dL)",
+          "glucose": "Nuchtere glucose verlagen (mg/dL)",
+          "hba1c": "HbA1c verbeteren (%)",
+          "physical_activity": "Meer beweging (min/week)"
+        }
+      },
+      "rangesLink": "Referentiewaarden bekijken"
     }
   }
 }

@@ -2518,6 +2518,94 @@
         "5": "Lördag",
         "6": "Söndag"
       }
+    },
+    "ai": {
+      "title": "Min metabola assistent",
+      "subtitle": "FISAI Metabolic AI gör om dina resultat till en enkel förklaring och prioriteringar, och låter dig simulera vad som kan förbättras.",
+      "disclaimer": "Assistenten förklarar, den ställer inga diagnoser och ersätter inte din läkare. En vårdgivare granskar och godkänner varje förklaring innan du ser den.",
+      "needsReview": "⚠️ Kräver medicinsk bedömning",
+      "pattern": {
+        "insufficient": "Det finns ännu inte tillräckligt med data för att förklara din metabola risk. Registrera vikt, midjemått, blodtryck och fasteprover.",
+        "favorable": "Dina värden ligger inom förväntade intervall. Behåll dina vanor och upprepa kontrollerna enligt ordination.",
+        "single": "Det viktigaste att förbättra är: {{factors}}. Dina övriga värden är gynnsamma.",
+        "combination": "Inget enskilt värde är oroande, men kombinationen av {{factors}} ökar din metabola risk.",
+        "needs_review": "Vissa resultat ({{factors}}) ligger tydligt utanför referensintervallet. Resultatet kräver professionell bedömning."
+      },
+      "concernsTitle": "Vad som ökar din risk",
+      "strengthsTitle": "Vad som går bra",
+      "prioritiesTitle": "Dina prioriteringar",
+      "becauseOf": "Kopplat till: {{factors}}",
+      "priorities": {
+        "reduce_waist": "Minska midjemåttet",
+        "increase_activity": "Öka den fysiska aktiviteten",
+        "carb_quality": "Förbättra kolhydratkvaliteten",
+        "strength": "Bygga muskelmassa och styrka",
+        "blood_pressure": "Minska saltet och hålla blodtrycket under kontroll",
+        "healthy_fats": "Välj nyttiga fetter och mer fibrer",
+        "liver": "Ta hand om levern: begränsa alkohol och tillsatt socker",
+        "sleep": "Förbättra sömnens längd och kvalitet",
+        "stop_smoking": "Sluta röka (be om stöd)",
+        "repeat_labs": "Upprepa proverna enligt vårdgivarens ordination"
+      },
+      "change": {
+        "improved": "Din poäng förbättrades med {{points}} poäng",
+        "worsened": "Din poäng sjönk med {{points}} poäng",
+        "same": "Din poäng har inte ändrats",
+        "mainly": "Främst på grund av:"
+      },
+      "levels": {
+        "normal": "Bra",
+        "borderline": "Gränsvärde",
+        "low": "Utanför intervallet",
+        "high": "Utanför intervallet",
+        "veryHigh": "Långt utanför"
+      },
+      "status": {
+        "draft": "Utkast",
+        "approved": "Publicerad",
+        "archived": "Arkiverad"
+      },
+      "explain": {
+        "title": "Vad dina resultat betyder",
+        "pending": "Din vårdgivare har inte granskat din förklaring ännu. Du ser den här när den har godkänts.",
+        "emptyPro": "Ingen förklaring ännu. Skapa ett utkast från den senaste bedömningen, granska och godkänn det.",
+        "generate": "Skapa förklaring",
+        "regenerate": "Nytt utkast",
+        "draftNotice": "Patienten ser det inte förrän du godkänner det.",
+        "prioritiesLabel": "Prioriteringar (välj och ordna)",
+        "note": "Vårdgivarens anteckning",
+        "notePlaceholder": "Valfritt: råd eller sammanhang för patienten",
+        "noteTitle": "Anteckning från din vårdgivare",
+        "save": "Spara utkast",
+        "approve": "Godkänn och publicera",
+        "delete": "Ta bort utkast",
+        "saved": "Utkast sparat",
+        "approved": "Förklaringen publicerad för patienten",
+        "error": "Åtgärden kunde inte slutföras. Försök igen.",
+        "reviewed": "Granskad och godkänd av din vårdgivare den {{date}}"
+      },
+      "sim": {
+        "title": "Vad händer om jag förbättrar …?",
+        "subtitle": "Dra i reglagen och tryck på Simulera för att se vilka värden som potentiellt kan förbättras.",
+        "disclaimer": "Pedagogisk simulering: den räknar om din poäng med de värden du väljer. Det är ingen klinisk prognos eller garanterat resultat.",
+        "run": "Simulera",
+        "reset": "Återställ",
+        "current": "Nu",
+        "simulated": "Simulerad",
+        "delta": "Förändring: {{points}}",
+        "summary": "Med dessa förändringar kan dessa värden potentiellt ändras:",
+        "noChanges": "Med dessa värden skulle indikatorerna inte ändras. Prova andra värden.",
+        "missing": "Inget registrerat värde för: {{items}}. Den förändringen kunde inte simuleras.",
+        "fields": {
+          "waist": "Minska midjan (cm)",
+          "weight": "Minska vikten (kg)",
+          "triglycerides": "Sänka triglycerider (mg/dL)",
+          "glucose": "Sänka fasteglukos (mg/dL)",
+          "hba1c": "Förbättra HbA1c (%)",
+          "physical_activity": "Mer träning (min/vecka)"
+        }
+      },
+      "rangesLink": "Visa referensintervall"
     }
   }
 }

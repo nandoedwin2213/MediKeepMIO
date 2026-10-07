@@ -88,6 +88,14 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.metabolicAI',
+        name: 'My assistant',
+        path: '/metabolic-ai',
+        icon: '💡',
+        id: 'metabolic-ai',
+        featured: true,
+      },
+      {
         nameKey: 'sidebarNav.items.professionalDashboard',
         name: 'Professional dashboard',
         path: '/professional/metabolic-dashboard',

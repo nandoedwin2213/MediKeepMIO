@@ -118,7 +118,8 @@
       "metabolicMovement": "Mijn beweging",
       "metabolicNutrition": "Mijn voeding",
       "metabolicRecipes": "Mijn recepten",
-      "metabolicWeek": "Mijn week"
+      "metabolicWeek": "Mijn week",
+      "metabolicAI": "Mijn assistent"
     },
     "sections": {
       "administration": "Beheer",

@@ -118,7 +118,8 @@
       "metabolicMovement": "การออกกำลังกายของฉัน",
       "metabolicNutrition": "โภชนาการของฉัน",
       "metabolicRecipes": "สูตรอาหารของฉัน",
-      "metabolicWeek": "สัปดาห์ของฉัน"
+      "metabolicWeek": "สัปดาห์ของฉัน",
+      "metabolicAI": "ผู้ช่วยของฉัน"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

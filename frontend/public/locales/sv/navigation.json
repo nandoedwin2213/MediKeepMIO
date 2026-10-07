@@ -118,7 +118,8 @@
       "metabolicMovement": "Min träning",
       "metabolicNutrition": "Min kost",
       "metabolicRecipes": "Mina recept",
-      "metabolicWeek": "Min vecka"
+      "metabolicWeek": "Min vecka",
+      "metabolicAI": "Min assistent"
     },
     "sections": {
       "administration": "Administration",

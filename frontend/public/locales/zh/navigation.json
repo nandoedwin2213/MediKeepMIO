@@ -118,7 +118,8 @@
       "metabolicMovement": "我的运动",
       "metabolicNutrition": "我的营养",
       "metabolicRecipes": "我的食谱",
-      "metabolicWeek": "我的一周"
+      "metabolicWeek": "我的一周",
+      "metabolicAI": "我的助手"
     },
     "sections": {
       "administration": "管理",

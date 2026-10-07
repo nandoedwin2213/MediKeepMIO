@@ -2518,6 +2518,94 @@
         "5": "Sobota",
         "6": "Niedziela"
       }
+    },
+    "ai": {
+      "title": "Mój asystent metaboliczny",
+      "subtitle": "FISAI Metabolic AI zamienia Twoje wyniki w proste wyjaśnienie i priorytety oraz pozwala symulować, co mogłoby się poprawić.",
+      "disclaimer": "Asystent wyjaśnia, nie stawia diagnoz i nie zastępuje lekarza. Specjalista sprawdza i zatwierdza każde wyjaśnienie, zanim je zobaczysz.",
+      "needsReview": "⚠️ Wymaga oceny lekarskiej",
+      "pattern": {
+        "insufficient": "Brakuje jeszcze danych, by wyjaśnić Twoje ryzyko metaboliczne. Zapisz masę ciała, obwód talii, ciśnienie i badania na czczo.",
+        "favorable": "Twoje wskaźniki mieszczą się w oczekiwanych zakresach. Utrzymuj nawyki i powtarzaj kontrole zgodnie z zaleceniami.",
+        "single": "Najważniejsze do poprawy: {{factors}}. Pozostałe wskaźniki są korzystne.",
+        "combination": "Żadna pojedyncza wartość nie jest niepokojąca, ale połączenie: {{factors}} zwiększa Twoje ryzyko metaboliczne.",
+        "needs_review": "Niektóre wyniki ({{factors}}) wyraźnie wykraczają poza zakres referencyjny. Ten wynik wymaga oceny specjalisty."
+      },
+      "concernsTitle": "Co zwiększa Twoje ryzyko",
+      "strengthsTitle": "Co idzie dobrze",
+      "prioritiesTitle": "Twoje priorytety",
+      "becauseOf": "Dotyczy: {{factors}}",
+      "priorities": {
+        "reduce_waist": "Zmniejszyć obwód talii",
+        "increase_activity": "Zwiększyć aktywność fizyczną",
+        "carb_quality": "Poprawić jakość węglowodanów",
+        "strength": "Zwiększyć masę i siłę mięśni",
+        "blood_pressure": "Ograniczyć sól i kontrolować ciśnienie",
+        "healthy_fats": "Wybierać zdrowe tłuszcze i więcej błonnika",
+        "liver": "Dbać o wątrobę: ograniczyć alkohol i cukier dodany",
+        "sleep": "Poprawić długość i jakość snu",
+        "stop_smoking": "Rzucić palenie (poproś o wsparcie)",
+        "repeat_labs": "Powtórzyć badania zgodnie z zaleceniem specjalisty"
+      },
+      "change": {
+        "improved": "Twój wynik poprawił się o {{points}} pkt",
+        "worsened": "Twój wynik spadł o {{points}} pkt",
+        "same": "Twój wynik się nie zmienił",
+        "mainly": "Głównie z powodu:"
+      },
+      "levels": {
+        "normal": "W normie",
+        "borderline": "Graniczny",
+        "low": "Poza zakresem",
+        "high": "Poza zakresem",
+        "veryHigh": "Znacznie poza zakresem"
+      },
+      "status": {
+        "draft": "Szkic",
+        "approved": "Opublikowane",
+        "archived": "Zarchiwizowane"
+      },
+      "explain": {
+        "title": "Co oznaczają Twoje wyniki",
+        "pending": "Specjalista jeszcze nie sprawdził Twojego wyjaśnienia. Zobaczysz je tutaj po zatwierdzeniu.",
+        "emptyPro": "Brak wyjaśnienia. Utwórz szkic na podstawie ostatniej oceny, sprawdź go i zatwierdź.",
+        "generate": "Utwórz wyjaśnienie",
+        "regenerate": "Nowy szkic",
+        "draftNotice": "Pacjent nie zobaczy go, dopóki go nie zatwierdzisz.",
+        "prioritiesLabel": "Priorytety (wybierz i uporządkuj)",
+        "note": "Notatka specjalisty",
+        "notePlaceholder": "Opcjonalnie: zalecenia lub kontekst dla pacjenta",
+        "noteTitle": "Notatka od specjalisty",
+        "save": "Zapisz szkic",
+        "approve": "Zatwierdź i opublikuj",
+        "delete": "Usuń szkic",
+        "saved": "Szkic zapisany",
+        "approved": "Wyjaśnienie opublikowane dla pacjenta",
+        "error": "Nie udało się wykonać akcji. Spróbuj ponownie.",
+        "reviewed": "Sprawdzone i zatwierdzone przez specjalistę {{date}}"
+      },
+      "sim": {
+        "title": "Co by było, gdybym poprawił…?",
+        "subtitle": "Przesuń suwaki i naciśnij Symuluj, aby zobaczyć, które wskaźniki mogłyby się poprawić.",
+        "disclaimer": "Symulacja edukacyjna: przelicza Twój wynik dla wybranych wartości. Nie jest prognozą kliniczną ani gwarantowanym rezultatem.",
+        "run": "Symuluj",
+        "reset": "Resetuj",
+        "current": "Teraz",
+        "simulated": "Symulowany",
+        "delta": "Zmiana: {{points}}",
+        "summary": "Przy tych zmianach te wskaźniki mogłyby się zmienić:",
+        "noChanges": "Przy tych wartościach wskaźniki się nie zmienią. Spróbuj innych.",
+        "missing": "Brak zapisanej wartości: {{items}}. Tej zmiany nie można było zasymulować.",
+        "fields": {
+          "waist": "Zmniejszyć talię (cm)",
+          "weight": "Zmniejszyć masę ciała (kg)",
+          "triglycerides": "Obniżyć triglicerydy (mg/dL)",
+          "glucose": "Obniżyć glukozę na czczo (mg/dL)",
+          "hba1c": "Poprawić HbA1c (%)",
+          "physical_activity": "Więcej ćwiczeń (min/tydzień)"
+        }
+      },
+      "rangesLink": "Zobacz zakresy referencyjne"
     }
   }
 }

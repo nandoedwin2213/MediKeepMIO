@@ -118,7 +118,8 @@
       "metabolicMovement": "Meine Bewegung",
       "metabolicNutrition": "Meine Ernährung",
       "metabolicRecipes": "Meine Rezepte",
-      "metabolicWeek": "Meine Woche"
+      "metabolicWeek": "Meine Woche",
+      "metabolicAI": "Mein Assistent"
     },
     "sections": {
       "administration": "Administration",

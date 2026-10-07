@@ -2518,6 +2518,94 @@
         "5": "Sábado",
         "6": "Domingo"
       }
+    },
+    "ai": {
+      "title": "Meu assistente metabólico",
+      "subtitle": "O FISAI Metabolic AI transforma seus resultados em uma explicação simples e em prioridades, e permite simular o que poderia melhorar.",
+      "disclaimer": "O assistente explica; não faz diagnósticos nem substitui seu médico. Um profissional revisa e aprova cada explicação antes que você a veja.",
+      "needsReview": "⚠️ Requer avaliação médica",
+      "pattern": {
+        "insufficient": "Ainda não há dados suficientes para explicar seu risco metabólico. Registre peso, cintura, pressão arterial e exames em jejum.",
+        "favorable": "Seus indicadores estão dentro das faixas esperadas. Mantenha seus hábitos e repita seus controles conforme indicado.",
+        "single": "O principal ponto a melhorar é: {{factors}}. O restante dos seus indicadores é favorável.",
+        "combination": "Não há um único valor preocupante, mas a combinação de {{factors}} está aumentando seu risco metabólico.",
+        "needs_review": "Alguns resultados ({{factors}}) estão claramente fora da faixa de referência. Este resultado requer avaliação profissional."
+      },
+      "concernsTitle": "O que está aumentando seu risco",
+      "strengthsTitle": "O que vai bem",
+      "prioritiesTitle": "Suas prioridades",
+      "becauseOf": "Relacionado a: {{factors}}",
+      "priorities": {
+        "reduce_waist": "Reduzir a circunferência abdominal",
+        "increase_activity": "Aumentar a atividade física",
+        "carb_quality": "Melhorar a qualidade dos carboidratos",
+        "strength": "Aumentar massa e força muscular",
+        "blood_pressure": "Reduzir o sal e controlar a pressão arterial",
+        "healthy_fats": "Escolher gorduras saudáveis e mais fibras",
+        "liver": "Cuidar do fígado: limitar álcool e açúcar adicionado",
+        "sleep": "Melhorar a duração e a qualidade do sono",
+        "stop_smoking": "Parar de fumar (peça apoio)",
+        "repeat_labs": "Repetir os exames conforme indicação profissional"
+      },
+      "change": {
+        "improved": "Seu score melhorou {{points}} pontos",
+        "worsened": "Seu score caiu {{points}} pontos",
+        "same": "Seu score não mudou",
+        "mainly": "Principalmente por:"
+      },
+      "levels": {
+        "normal": "Adequado",
+        "borderline": "Limítrofe",
+        "low": "Fora da faixa",
+        "high": "Fora da faixa",
+        "veryHigh": "Muito fora da faixa"
+      },
+      "status": {
+        "draft": "Rascunho",
+        "approved": "Publicada",
+        "archived": "Arquivada"
+      },
+      "explain": {
+        "title": "O que significam seus resultados",
+        "pending": "Seu profissional ainda não revisou sua explicação. Você a verá aqui quando for aprovada.",
+        "emptyPro": "Ainda não há explicação. Gere um rascunho com a última avaliação, revise e aprove.",
+        "generate": "Gerar explicação",
+        "regenerate": "Novo rascunho",
+        "draftNotice": "O paciente não vê até que você aprove.",
+        "prioritiesLabel": "Prioridades (escolha e ordene)",
+        "note": "Nota do profissional",
+        "notePlaceholder": "Opcional: orientações ou contexto para o paciente",
+        "noteTitle": "Nota do seu profissional",
+        "save": "Salvar rascunho",
+        "approve": "Aprovar e publicar",
+        "delete": "Excluir rascunho",
+        "saved": "Rascunho salvo",
+        "approved": "Explicação publicada para o paciente",
+        "error": "Não foi possível concluir a ação. Tente novamente.",
+        "reviewed": "Revisada e aprovada pelo seu profissional em {{date}}"
+      },
+      "sim": {
+        "title": "O que aconteceria se eu melhorar…?",
+        "subtitle": "Mova os controles e toque em Simular para ver quais indicadores poderiam potencialmente melhorar.",
+        "disclaimer": "Simulação educativa: recalcula seu score com os valores escolhidos. Não é uma previsão clínica nem um resultado garantido.",
+        "run": "Simular",
+        "reset": "Redefinir",
+        "current": "Agora",
+        "simulated": "Simulado",
+        "delta": "Mudança: {{points}}",
+        "summary": "Com essas mudanças, estes indicadores poderiam potencialmente mudar:",
+        "noChanges": "Com esses valores os indicadores não mudariam. Tente outros valores.",
+        "missing": "Não há valor registrado de: {{items}}. Essa mudança não pôde ser simulada.",
+        "fields": {
+          "waist": "Reduzir cintura (cm)",
+          "weight": "Reduzir peso (kg)",
+          "triglycerides": "Reduzir triglicerídeos (mg/dL)",
+          "glucose": "Reduzir glicose em jejum (mg/dL)",
+          "hba1c": "Melhorar HbA1c (%)",
+          "physical_activity": "Aumentar exercício (min/semana)"
+        }
+      },
+      "rangesLink": "Ver faixas de referência"
     }
   }
 }
