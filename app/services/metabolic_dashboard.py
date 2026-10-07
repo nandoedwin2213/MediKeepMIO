@@ -1,11 +1,11 @@
 """Professional dashboard: risk distribution and follow-up alerts across accessible patients."""
 
-from datetime import date
+from datetime import date, timedelta
 from typing import Any, Dict, List, Optional
 
 from sqlalchemy.orm import Session
 
-from app.models.metabolic import MetabolicAssessment
+from app.models.metabolic import AdherenceLog, ExercisePlan, MetabolicAssessment
 from app.models.models import User
 from app.services.metabolic_engine import evaluate_patient, save_if_changed
 from app.services.metabolic_progress import MEASURED_SOURCES, _to_date, build_progress
@@ -28,9 +28,12 @@ ALERT_KEYS = (
     "hba1c",
     "stale",
     "no_data",
+    "no_activity",
 )
 LEVEL_SEVERITY = {"high": 3, "moderate": 2, "initial": 1, "favorable": 0}
 STALE_DAYS = 90
+INACTIVE_DAYS = 7
+ACTIVITY_ITEMS = ("exercise", "walk")
 MAX_PATIENTS = 500
 
 
@@ -55,6 +58,7 @@ def summarize(
     result: Dict[str, Any],
     change: Optional[Dict[str, Any]],
     today: date,
+    inactive: bool = False,
 ) -> Dict[str, Any]:
     score = result.get("score") or {}
     last = last_measured_date(result)
@@ -74,6 +78,8 @@ def summarize(
         alerts.append("no_data")
     elif days > STALE_DAYS:
         alerts.append("stale")
+    if inactive:
+        alerts.append("no_activity")
     return {
         "score": score.get("value"),
         "level": score.get("level") or "unknown",
@@ -89,6 +95,32 @@ def summarize(
             if f.get("level") in ("high", "veryHigh")
         ][:3],
     }
+
+
+def is_inactive(db: Session, patient_id: int, today: date) -> bool:
+    """Approved exercise plan older than INACTIVE_DAYS with no activity logged since."""
+    cutoff = today - timedelta(days=INACTIVE_DAYS)
+    plan = (
+        db.query(ExercisePlan.approved_at)
+        .filter(
+            ExercisePlan.patient_id == patient_id, ExercisePlan.status == "approved"
+        )
+        .order_by(ExercisePlan.approved_at.desc())
+        .first()
+    )
+    if plan is None or plan.approved_at is None or plan.approved_at.date() > cutoff:
+        return False
+    logged = (
+        db.query(AdherenceLog.id)
+        .filter(
+            AdherenceLog.patient_id == patient_id,
+            AdherenceLog.item.in_(ACTIVITY_ITEMS),
+            AdherenceLog.done.is_(True),
+            AdherenceLog.log_date > cutoff,
+        )
+        .first()
+    )
+    return logged is None
 
 
 def build_dashboard(db: Session, user: User) -> Dict[str, Any]:
@@ -116,7 +148,7 @@ def build_dashboard(db: Session, user: User) -> Dict[str, Any]:
             {
                 "patient_id": patient.id,
                 "name": f"{patient.first_name} {patient.last_name}".strip(),
-                **summarize(result, change, today),
+                **summarize(result, change, today, is_inactive(db, patient.id, today)),
             }
         )
     rows.sort(
@@ -138,5 +170,6 @@ def build_dashboard(db: Session, user: User) -> Dict[str, Any]:
         "alerts": alert_counts,
         "needs_follow_up": sum(1 for r in rows if r["alerts"]),
         "stale_days": STALE_DAYS,
+        "inactive_days": INACTIVE_DAYS,
         "patients": rows,
     }

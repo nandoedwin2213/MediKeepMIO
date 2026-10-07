@@ -35,6 +35,7 @@ const ALERT_KEYS = [
   'hba1c',
   'stale',
   'no_data',
+  'no_activity',
 ];
 const ALERT_COLORS = {
   high_risk: 'red',
@@ -43,6 +44,7 @@ const ALERT_COLORS = {
   hba1c: 'red',
   stale: 'yellow',
   no_data: 'gray',
+  no_activity: 'yellow',
 };
 const levelColor = level => RISK_COLORS[level] || 'gray';
 

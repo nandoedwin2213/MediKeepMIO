@@ -117,7 +117,8 @@
       "professionalDashboard": "Professionele weergave",
       "metabolicMovement": "Mijn beweging",
       "metabolicNutrition": "Mijn voeding",
-      "metabolicRecipes": "Mijn recepten"
+      "metabolicRecipes": "Mijn recepten",
+      "metabolicWeek": "Mijn week"
     },
     "sections": {
       "administration": "Beheer",

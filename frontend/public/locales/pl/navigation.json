@@ -117,7 +117,8 @@
       "professionalDashboard": "Panel specjalisty",
       "metabolicMovement": "Moje ćwiczenia",
       "metabolicNutrition": "Moje odżywianie",
-      "metabolicRecipes": "Moje przepisy"
+      "metabolicRecipes": "Moje przepisy",
+      "metabolicWeek": "Mój tydzień"
     },
     "sections": {
       "administration": "Administracja",

@@ -80,6 +80,14 @@ export const NAVIGATION_SECTIONS = {
         featured: true,
       },
       {
+        nameKey: 'sidebarNav.items.metabolicWeek',
+        name: 'My week',
+        path: '/metabolic-week',
+        icon: '📅',
+        id: 'metabolic-week',
+        featured: true,
+      },
+      {
         nameKey: 'sidebarNav.items.professionalDashboard',
         name: 'Professional dashboard',
         path: '/professional/metabolic-dashboard',

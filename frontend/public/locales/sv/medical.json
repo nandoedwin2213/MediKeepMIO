@@ -1994,7 +1994,8 @@
         "critical": "patienter har värden som kräver läkarbedömning",
         "hba1c": "patienter har HbA1c utanför det inställda intervallet",
         "stale": "patienter utan mätningar de senaste {{days}} dagarna",
-        "no_data": "patienter utan labb- eller vitaldata"
+        "no_data": "patienter utan labb- eller vitaldata",
+        "no_activity": "patienter har inte registrerat fysisk aktivitet på en vecka"
       },
       "alertBadge": {
         "high_risk": "Hög risk",
@@ -2002,7 +2003,8 @@
         "critical": "Läkarbedömning",
         "hba1c": "Högt HbA1c",
         "stale": "Gamla data",
-        "no_data": "Inga data"
+        "no_data": "Inga data",
+        "no_activity": "Ingen aktivitet på 7 dagar"
       },
       "columns": {
         "patient": "Patientens namn",
@@ -2451,6 +2453,70 @@
         "no_added_sugar": "Utan tillsatt socker",
         "low_fat": "Fettsnål",
         "quick": "Snabb"
+      }
+    },
+    "week": {
+      "title": "Min vecka",
+      "subtitle": "Din metabola vecka: måltider, fysisk aktivitet och träning för varje dag, utifrån planerna som dina vårdgivare har godkänt. Bocka av det du gör.",
+      "disclaimer": "Veckoprogrammet är en informativ guide baserad på dina godkända planer. Följ dina vårdgivares råd och avbryt träningen vid bröstsmärta, andfåddhet eller yrsel.",
+      "loadError": "Det gick inte att läsa in din vecka.",
+      "saveError": "Ändringen kunde inte sparas.",
+      "range": "{{start}} – {{end}}",
+      "prev": "Föregående vecka",
+      "next": "Nästa vecka",
+      "thisWeek": "Tillbaka till denna vecka",
+      "today": "Idag",
+      "future": "Kommande",
+      "score": {
+        "label": "Följsamhet per vecka",
+        "current": "Du har genomfört {{percent}} % av ditt program den här veckan",
+        "past": "Du genomförde {{percent}} % av ditt program den veckan",
+        "none": "Bocka av det du gör varje dag för att se din följsamhet.",
+        "tasks": "{{done}} av {{expected}} uppgifter hittills"
+      },
+      "noPlans": "Ditt veckoprogram visas här när din vårdgivare har godkänt din tränings- eller kostplan.",
+      "goMovement": "Gå till Min träning",
+      "goNutrition": "Gå till Min kost",
+      "weekly": {
+        "title": "Veckans mätningar"
+      },
+      "fromVitals": "Registrerat i vitalparametrar",
+      "goVitals": "Registrera i vitalparametrar",
+      "sections": {
+        "meals": "Måltider",
+        "activity": "Fysisk aktivitet",
+        "checklist": "Klart?"
+      },
+      "meals": {
+        "breakfast": "Frukost",
+        "lunch": "Lunch",
+        "dinner": "Middag",
+        "snack": "Mellanmål"
+      },
+      "aerobic": "{{minutes}} min · {{type}} · {{intensity}}",
+      "strength": "Styrka: {{sets}} set × {{reps}} repetitioner",
+      "mobility": "Rörlighet {{minutes}} min",
+      "balance": "Balans {{minutes}} min",
+      "steps": "Mål: {{steps}} steg",
+      "rest": "Ingen strukturerad träning i dag: håll dig aktiv under dagen.",
+      "items": {
+        "exercise": "Träning genomförd",
+        "walk": "Promenad genomförd",
+        "nutrition": "Kostplanen följd",
+        "weight": "Vikt registrerad",
+        "waist": "Midjemått registrerat"
+      },
+      "history": {
+        "title": "Följsamhet per vecka"
+      },
+      "weekdays": {
+        "0": "Måndag",
+        "1": "Tisdag",
+        "2": "Onsdag",
+        "3": "Torsdag",
+        "4": "Fredag",
+        "5": "Lördag",
+        "6": "Söndag"
       }
     }
   }

@@ -1990,7 +1990,8 @@
         "critical": "位患者的数值需要医生评估",
         "hba1c": "位患者 HbA1c 超出设定范围",
         "stale": "位患者近 {{days}} 天无测量",
-        "no_data": "位患者没有化验或生命体征数据"
+        "no_data": "位患者没有化验或生命体征数据",
+        "no_activity": "名患者已一周未记录身体活动"
       },
       "alertBadge": {
         "high_risk": "高风险",
@@ -1998,7 +1999,8 @@
         "critical": "需医生评估",
         "hba1c": "HbA1c 偏高",
         "stale": "数据过旧",
-        "no_data": "无数据"
+        "no_data": "无数据",
+        "no_activity": "7 天无活动"
       },
       "columns": {
         "patient": "患者姓名",
@@ -2447,6 +2449,70 @@
         "no_added_sugar": "无添加糖",
         "low_fat": "低脂",
         "quick": "快手"
+      }
+    },
+    "week": {
+      "title": "我的一周",
+      "subtitle": "你的代谢周：根据专业人员批准的计划安排每天的饮食、身体活动和锻炼。完成后请打勾。",
+      "disclaimer": "每周计划是基于已批准计划的教育性指南。请遵循专业人员的建议，如出现胸痛、气短或头晕请停止运动。",
+      "loadError": "无法加载你的一周。",
+      "saveError": "无法保存更改。",
+      "range": "{{start}} – {{end}}",
+      "prev": "上一周",
+      "next": "下一周",
+      "thisWeek": "回到本周",
+      "today": "今天",
+      "future": "即将到来",
+      "score": {
+        "label": "每周依从性",
+        "current": "本周你已完成计划的 {{percent}}%",
+        "past": "那一周你完成了计划的 {{percent}}%",
+        "none": "每天勾选已完成的项目即可查看依从性。",
+        "tasks": "目前已完成 {{done}}/{{expected}} 项"
+      },
+      "noPlans": "专业人员批准你的运动或营养计划后，每周计划会显示在这里。",
+      "goMovement": "前往我的运动",
+      "goNutrition": "前往我的营养",
+      "weekly": {
+        "title": "本周测量"
+      },
+      "fromVitals": "已记录于生命体征",
+      "goVitals": "在生命体征中记录",
+      "sections": {
+        "meals": "饮食",
+        "activity": "身体活动",
+        "checklist": "完成了吗？"
+      },
+      "meals": {
+        "breakfast": "早餐",
+        "lunch": "午餐",
+        "dinner": "晚餐",
+        "snack": "加餐"
+      },
+      "aerobic": "{{minutes}} 分钟 · {{type}} · {{intensity}}",
+      "strength": "力量：{{sets}} 组 × {{reps}} 次",
+      "mobility": "灵活性 {{minutes}} 分钟",
+      "balance": "平衡 {{minutes}} 分钟",
+      "steps": "目标：{{steps}} 步",
+      "rest": "今天没有结构化训练：白天保持活动。",
+      "items": {
+        "exercise": "已完成锻炼",
+        "walk": "已完成步行",
+        "nutrition": "已遵循营养计划",
+        "weight": "已记录体重",
+        "waist": "已记录腰围"
+      },
+      "history": {
+        "title": "每周依从性趋势"
+      },
+      "weekdays": {
+        "0": "星期一",
+        "1": "星期二",
+        "2": "星期三",
+        "3": "星期四",
+        "4": "星期五",
+        "5": "星期六",
+        "6": "星期日"
       }
     }
   }

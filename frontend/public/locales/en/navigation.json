@@ -117,7 +117,8 @@
       "professionalDashboard": "Professional dashboard",
       "metabolicMovement": "My exercise",
       "metabolicNutrition": "My nutrition",
-      "metabolicRecipes": "My recipes"
+      "metabolicRecipes": "My recipes",
+      "metabolicWeek": "My week"
     },
     "sections": {
       "administration": "Administration",

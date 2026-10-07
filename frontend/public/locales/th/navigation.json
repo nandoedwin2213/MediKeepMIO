@@ -117,7 +117,8 @@
       "professionalDashboard": "แดชบอร์ดผู้เชี่ยวชาญ",
       "metabolicMovement": "การออกกำลังกายของฉัน",
       "metabolicNutrition": "โภชนาการของฉัน",
-      "metabolicRecipes": "สูตรอาหารของฉัน"
+      "metabolicRecipes": "สูตรอาหารของฉัน",
+      "metabolicWeek": "สัปดาห์ของฉัน"
     },
     "sections": {
       "administration": "การบริหารจัดการ",

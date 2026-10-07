@@ -1994,7 +1994,8 @@
         "critical": "pacientes têm valores que exigem avaliação médica",
         "hba1c": "pacientes têm HbA1c fora da faixa configurada",
         "stale": "pacientes sem medições nos últimos {{days}} dias",
-        "no_data": "pacientes sem dados de laboratório ou sinais vitais"
+        "no_data": "pacientes sem dados de laboratório ou sinais vitais",
+        "no_activity": "pacientes não registram atividade física há uma semana"
       },
       "alertBadge": {
         "high_risk": "Risco elevado",
@@ -2002,7 +2003,8 @@
         "critical": "Avaliação médica",
         "hba1c": "HbA1c alta",
         "stale": "Dados antigos",
-        "no_data": "Sem dados"
+        "no_data": "Sem dados",
+        "no_activity": "Sem atividade há 7 dias"
       },
       "columns": {
         "patient": "Nome do paciente",
@@ -2451,6 +2453,70 @@
         "no_added_sugar": "Sem açúcar adicionado",
         "low_fat": "Pouca gordura",
         "quick": "Rápida"
+      }
+    },
+    "week": {
+      "title": "Minha semana",
+      "subtitle": "Sua semana metabólica: refeições, atividade física e exercício de cada dia, com base nos planos aprovados pelos seus profissionais. Marque o que for cumprindo.",
+      "disclaimer": "O programa semanal é um guia educativo baseado nos seus planos aprovados. Siga as indicações dos seus profissionais e interrompa o exercício se sentir dor no peito, falta de ar ou tontura.",
+      "loadError": "Não foi possível carregar sua semana.",
+      "saveError": "Não foi possível salvar a alteração.",
+      "range": "{{start}} – {{end}}",
+      "prev": "Semana anterior",
+      "next": "Próxima semana",
+      "thisWeek": "Voltar para esta semana",
+      "today": "Hoje",
+      "future": "Em breve",
+      "score": {
+        "label": "Adesão semanal",
+        "current": "Você cumpriu {{percent}}% do seu programa nesta semana",
+        "past": "Você cumpriu {{percent}}% do seu programa naquela semana",
+        "none": "Marque o que cumprir a cada dia para ver sua adesão.",
+        "tasks": "{{done}} de {{expected}} tarefas até agora"
+      },
+      "noPlans": "Seu programa semanal aparecerá aqui quando seu profissional aprovar o plano de exercício ou de nutrição.",
+      "goMovement": "Ir para Meu exercício",
+      "goNutrition": "Ir para Minha nutrição",
+      "weekly": {
+        "title": "Medições da semana"
+      },
+      "fromVitals": "Registrado nos sinais vitais",
+      "goVitals": "Registrar nos sinais vitais",
+      "sections": {
+        "meals": "Refeições",
+        "activity": "Atividade física",
+        "checklist": "Você cumpriu?"
+      },
+      "meals": {
+        "breakfast": "Café da manhã",
+        "lunch": "Almoço",
+        "dinner": "Jantar",
+        "snack": "Lanche"
+      },
+      "aerobic": "{{minutes}} min · {{type}} · {{intensity}}",
+      "strength": "Força: {{sets}} séries × {{reps}} repetições",
+      "mobility": "Mobilidade {{minutes}} min",
+      "balance": "Equilíbrio {{minutes}} min",
+      "steps": "Meta: {{steps}} passos",
+      "rest": "Hoje não há exercício estruturado: mantenha-se ativo durante o dia.",
+      "items": {
+        "exercise": "Exercício realizado",
+        "walk": "Caminhada realizada",
+        "nutrition": "Plano nutricional cumprido",
+        "weight": "Peso registrado",
+        "waist": "Circunferência registrada"
+      },
+      "history": {
+        "title": "Adesão por semana"
+      },
+      "weekdays": {
+        "0": "Segunda-feira",
+        "1": "Terça-feira",
+        "2": "Quarta-feira",
+        "3": "Quinta-feira",
+        "4": "Sexta-feira",
+        "5": "Sábado",
+        "6": "Domingo"
       }
     }
   }

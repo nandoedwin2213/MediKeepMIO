@@ -117,7 +117,8 @@
       "professionalDashboard": "Tableau professionnel",
       "metabolicMovement": "Mon activité physique",
       "metabolicNutrition": "Mon alimentation",
-      "metabolicRecipes": "Mes recettes"
+      "metabolicRecipes": "Mes recettes",
+      "metabolicWeek": "Ma semaine"
     },
     "sections": {
       "administration": "Administration",

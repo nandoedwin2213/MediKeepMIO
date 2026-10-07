@@ -53,6 +53,7 @@ from .labs import (
     StandardizedTest,
 )
 from .metabolic import (
+    AdherenceLog,
     ExercisePlan,
     FunctionalAssessment,
     MetabolicAssessment,
@@ -100,6 +101,7 @@ from .user import (
 )
 
 __all__ = [
+    "AdherenceLog",
     "ExercisePlan",
     "FunctionalAssessment",
     "MetabolicAssessment",

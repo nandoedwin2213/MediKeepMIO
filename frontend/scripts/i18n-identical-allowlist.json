@@ -7,7 +7,8 @@
     "Papra",
     "Webhook",
     "ntfy",
-    "{\"Authorization\": \"Bearer token\"}"
+    "{\"Authorization\": \"Bearer token\"}",
+    "{{minutes}} min · {{type}} · {{intensity}}"
   ],
   "de": [
     "Administration",
@@ -105,7 +106,8 @@
     "mmHg",
     "{{count}} Error",
     "{{kcal}} kcal",
-    "{{minutes}} min"
+    "{{minutes}} min",
+    "Snack"
   ],
   "fr": [
     "1 dose",
