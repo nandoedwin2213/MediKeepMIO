@@ -78,7 +78,7 @@ describe('MetabolicLabImport', () => {
       text: 'Glucosa 104 mg/dL',
       file: null,
     });
-    expect(screen.getAllByText(/LOINC 2345-7/)).toHaveLength(2);
+    expect(screen.getAllByText(/LOINC 2345-7/)).toHaveLength(4);
 
     fireEvent.click(screen.getByText(/labs\.import$|Save 2 values/));
     await waitFor(() => expect(api.importLabs).toHaveBeenCalled());

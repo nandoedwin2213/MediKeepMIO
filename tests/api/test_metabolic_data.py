@@ -130,20 +130,27 @@ def test_research_consent_and_export(
         client.get("/api/v1/metabolic/research/summary", headers=user).status_code
         == 403
     )
-    for when, score in ((datetime(2026, 6, 1), 52), (datetime(2026, 9, 1), 60)):
+    for when, score, sampled in (
+        (datetime(2026, 6, 1), 52, "2026-05-30"),
+        (datetime(2026, 6, 2), 52, "2026-05-30"),
+        (datetime(2026, 9, 1), 60, "2026-08-30T08:00:00"),
+    ):
         db_session.add(
             MetabolicAssessment(
                 patient_id=test_patient.id,
                 assessed_at=when,
                 algorithm_version="1",
                 config_version=0,
-                fingerprint=str(score),
+                fingerprint=f"{score}-{when.day}",
                 score=score,
                 risk_level="moderate",
                 metabolic_syndrome_status="indeterminate",
                 result={
                     "patient": {"sex": "M"},
-                    "inputs": {"glucose": {"value": 104.0}, "weight": {"value": 80.0}},
+                    "inputs": {
+                        "glucose": {"value": 104.0, "date": sampled},
+                        "weight": {"value": 80.0},
+                    },
                     "indicators": {"homa_ir": {"value": 4.567}},
                     "metabolic_syndrome": {"met": 2},
                     "history": {"has_diabetes": False},

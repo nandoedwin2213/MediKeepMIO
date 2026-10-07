@@ -182,6 +182,21 @@ def _when(assessment: MetabolicAssessment) -> date:
     return at.date() if isinstance(at, datetime) else at
 
 
+def _measured_on(assessment: MetabolicAssessment) -> date:
+    inputs = (assessment.result or {}).get("inputs") or {}
+    dates = [
+        str(inputs[k]["date"])[:10]
+        for k in LAB_COLUMNS + VITAL_COLUMNS
+        if isinstance(inputs.get(k), dict) and inputs[k].get("date")
+    ]
+    if dates:
+        try:
+            return date.fromisoformat(max(dates))
+        except ValueError:
+            pass
+    return _when(assessment)
+
+
 def build_rows(db: Session) -> List[Dict[str, Any]]:
     rows: List[Dict[str, Any]] = []
     for patient, _profile in _consented(db):
@@ -193,8 +208,9 @@ def build_rows(db: Session) -> List[Dict[str, Any]]:
         )
         if not assessments:
             continue
-        first = _when(assessments[0])
+        first = min(_measured_on(a) for a in assessments)
         rid = research_id(patient.id)
+        previous = None
         for a in assessments:
             result = a.result or {}
             ms = result.get("metabolic_syndrome") or {}
@@ -202,8 +218,8 @@ def build_rows(db: Session) -> List[Dict[str, Any]]:
             row = {
                 "research_id": rid,
                 "sex": (result.get("patient") or {}).get("sex"),
-                "age_band": age_band(patient.birth_date, _when(a)),
-                "day": (_when(a) - first).days,
+                "age_band": age_band(patient.birth_date, _measured_on(a)),
+                "day": (_measured_on(a) - first).days,
                 "algorithm_version": a.algorithm_version,
                 "config_version": a.config_version,
                 "score": a.score,
@@ -215,6 +231,9 @@ def build_rows(db: Session) -> List[Dict[str, Any]]:
                 row[col] = _value(result, col)
             for col in HISTORY_COLUMNS:
                 row[col] = history.get(col)
+            if row == previous:
+                continue
+            previous = row
             rows.append(row)
     return rows
 
@@ -222,13 +241,7 @@ def build_rows(db: Session) -> List[Dict[str, Any]]:
 def summary(db: Session) -> Dict[str, Any]:
     consented = _consented(db)
     ids = [p.id for p, _ in consented]
-    assessments = (
-        db.query(MetabolicAssessment)
-        .filter(MetabolicAssessment.patient_id.in_(ids))
-        .count()
-        if ids
-        else 0
-    )
+    assessments = len(build_rows(db)) if ids else 0
     return {
         "version": EXPORT_VERSION,
         "patients_total": db.query(Patient).count(),

@@ -193,6 +193,87 @@ const MetabolicLabImport = () => {
     r => !r.unit || !(r.value > 0) || r.warnings.includes('implausible')
   );
 
+  const includeBox = r => (
+    <Checkbox
+      aria-label={l('include')}
+      checked={r.selected}
+      onChange={e =>
+        update(r.id, {
+          selected: e.currentTarget.checked,
+        })
+      }
+    />
+  );
+  const testCell = r => (
+    <>
+      <Group gap={6}>
+        <Text fw={600}>{t(`metabolic.indicators.${r.variable}`)}</Text>
+        <Badge size="xs" variant="outline" title={l('loincHint')}>
+          LOINC {r.loinc}
+        </Badge>
+      </Group>
+      <Text size="xs" c="dimmed" lineClamp={1}>
+        {r.line}
+      </Text>
+      {r.warnings.length > 0 && (
+        <Group gap={4} mt={4}>
+          {r.warnings.map(w => (
+            <Badge
+              key={w}
+              size="sm"
+              color={WARN_COLORS[w]}
+              variant="light"
+              style={{ textTransform: 'none' }}
+            >
+              {l(`warnings.${w}`)}
+            </Badge>
+          ))}
+        </Group>
+      )}
+    </>
+  );
+  const valueInput = r => (
+    <NumberInput
+      aria-label={l('cols.value')}
+      value={r.value}
+      min={0}
+      decimalScale={2}
+      hideControls
+      onChange={v => update(r.id, { value: v })}
+    />
+  );
+  const unitInput = r => (
+    <Select
+      aria-label={l('cols.unit')}
+      data={byVar[r.variable]?.units || []}
+      value={r.unit}
+      placeholder={l('chooseUnit')}
+      onChange={v => update(r.id, { unit: v })}
+      allowDeselect={false}
+    />
+  );
+  const rangeInputs = r => (
+    <Group gap={4} wrap="nowrap">
+      <NumberInput
+        aria-label={l('refMin')}
+        placeholder={l('refMin')}
+        value={r.ref_min ?? ''}
+        decimalScale={2}
+        hideControls
+        onChange={v => update(r.id, { ref_min: v, ref_text: null })}
+      />
+      <Text c="dimmed">–</Text>
+      <NumberInput
+        aria-label={l('refMax')}
+        placeholder={l('refMax')}
+        value={r.ref_max ?? ''}
+        decimalScale={2}
+        hideControls
+        onChange={v => update(r.id, { ref_max: v, ref_text: null })}
+      />
+    </Group>
+  );
+
   return (
     <Container size="lg" py="md" className="silho-ir-page">
       <PageHeader title={l('title')} icon="🧪" />
@@ -345,7 +426,27 @@ const MetabolicLabImport = () => {
                       }
                     />
                   </SimpleGrid>
-                  <Table.ScrollContainer minWidth={760}>
+                  <Stack gap="sm" hiddenFrom="sm">
+                    {rows.map(r => (
+                      <Card key={r.id} withBorder padding="sm" radius="md">
+                        <Group align="flex-start" wrap="nowrap" gap="sm">
+                          {includeBox(r)}
+                          <div style={{ minWidth: 0, flex: 1 }}>
+                            {testCell(r)}
+                          </div>
+                        </Group>
+                        <SimpleGrid cols={2} spacing="xs" mt="sm">
+                          {valueInput(r)}
+                          {unitInput(r)}
+                        </SimpleGrid>
+                        <Text size="xs" c="dimmed" mt="xs" mb={4}>
+                          {l('cols.reference')}
+                        </Text>
+                        {rangeInputs(r)}
+                      </Card>
+                    ))}
+                  </Stack>
+                  <Table.ScrollContainer minWidth={760} visibleFrom="sm">
                     <Table verticalSpacing="sm" striped>
                       <Table.Thead>
                         <Table.Tr>
@@ -359,94 +460,11 @@ const MetabolicLabImport = () => {
                       <Table.Tbody>
                         {rows.map(r => (
                           <Table.Tr key={r.id}>
-                            <Table.Td>
-                              <Checkbox
-                                aria-label={l('include')}
-                                checked={r.selected}
-                                onChange={e =>
-                                  update(r.id, {
-                                    selected: e.currentTarget.checked,
-                                  })
-                                }
-                              />
-                            </Table.Td>
-                            <Table.Td>
-                              <Group gap={6}>
-                                <Text fw={600}>
-                                  {t(`metabolic.indicators.${r.variable}`)}
-                                </Text>
-                                <Badge
-                                  size="xs"
-                                  variant="outline"
-                                  title={l('loincHint')}
-                                >
-                                  LOINC {r.loinc}
-                                </Badge>
-                              </Group>
-                              <Text size="xs" c="dimmed" lineClamp={1}>
-                                {r.line}
-                              </Text>
-                              {r.warnings.length > 0 && (
-                                <Group gap={4} mt={4}>
-                                  {r.warnings.map(w => (
-                                    <Badge
-                                      key={w}
-                                      size="sm"
-                                      color={WARN_COLORS[w]}
-                                      variant="light"
-                                      style={{ textTransform: 'none' }}
-                                    >
-                                      {l(`warnings.${w}`)}
-                                    </Badge>
-                                  ))}
-                                </Group>
-                              )}
-                            </Table.Td>
-                            <Table.Td w={120}>
-                              <NumberInput
-                                aria-label={l('cols.value')}
-                                value={r.value}
-                                min={0}
-                                decimalScale={2}
-                                hideControls
-                                onChange={v => update(r.id, { value: v })}
-                              />
-                            </Table.Td>
-                            <Table.Td w={140}>
-                              <Select
-                                aria-label={l('cols.unit')}
-                                data={byVar[r.variable]?.units || []}
-                                value={r.unit}
-                                placeholder={l('chooseUnit')}
-                                onChange={v => update(r.id, { unit: v })}
-                                allowDeselect={false}
-                              />
-                            </Table.Td>
-                            <Table.Td w={200}>
-                              <Group gap={4} wrap="nowrap">
-                                <NumberInput
-                                  aria-label={l('refMin')}
-                                  placeholder={l('refMin')}
-                                  value={r.ref_min ?? ''}
-                                  decimalScale={2}
-                                  hideControls
-                                  onChange={v =>
-                                    update(r.id, { ref_min: v, ref_text: null })
-                                  }
-                                />
-                                <Text c="dimmed">–</Text>
-                                <NumberInput
-                                  aria-label={l('refMax')}
-                                  placeholder={l('refMax')}
-                                  value={r.ref_max ?? ''}
-                                  decimalScale={2}
-                                  hideControls
-                                  onChange={v =>
-                                    update(r.id, { ref_max: v, ref_text: null })
-                                  }
-                                />
-                              </Group>
-                            </Table.Td>
+                            <Table.Td>{includeBox(r)}</Table.Td>
+                            <Table.Td>{testCell(r)}</Table.Td>
+                            <Table.Td w={120}>{valueInput(r)}</Table.Td>
+                            <Table.Td w={140}>{unitInput(r)}</Table.Td>
+                            <Table.Td w={200}>{rangeInputs(r)}</Table.Td>
                           </Table.Tr>
                         ))}
                       </Table.Tbody>
