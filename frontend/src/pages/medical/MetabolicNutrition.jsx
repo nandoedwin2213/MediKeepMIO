@@ -1015,7 +1015,7 @@ export default function MetabolicNutrition() {
   const professional = PRO_ROLES.includes(user?.role);
 
   return (
-    <Container size="lg" py="md" className="silho-ir-page">
+    <Container size="xl" py="md" className="silho-ir-page">
       <PageHeader title={n('title')} icon="🥗" />
       <Text c="dimmed" mt="md">
         {n('subtitle')}

@@ -1,0 +1,111 @@
+/* Shared public header: landing, login, sign-up. */
+.silho-pubnav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.85rem clamp(1rem, 4vw, 3rem);
+  background: #050c1c;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201, 164, 92, 0.25);
+  font-family: var(--font-family-sans, inherit);
+}
+
+.silho-pubnav--overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.silho-pubnav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.silho-pubnav-links {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.silho-pubnav-links a {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.silho-pubnav-links a:hover {
+  color: #e5cf95;
+}
+
+.silho-pubnav-cta {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.silho-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.silho-btn:hover {
+  transform: translateY(-1px);
+}
+
+.silho-btn-gold {
+  background: linear-gradient(135deg, #f6e7b8 0%, #c9a45c 55%, #8e6b2e 100%);
+  color: #0b1a33;
+  box-shadow: 0 8px 24px rgba(201, 164, 92, 0.35);
+}
+
+.silho-btn-ghost {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: transparent;
+}
+
+.silho-btn-ghost:hover {
+  border-color: #e5cf95;
+  color: #e5cf95;
+}
+
+@media (max-width: 960px) {
+  .silho-pubnav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .silho-pubnav-brand span {
+    display: none;
+  }
+
+  .silho-btn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}

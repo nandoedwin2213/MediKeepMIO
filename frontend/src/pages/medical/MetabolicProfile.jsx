@@ -137,7 +137,7 @@ const MetabolicProfile = () => {
   };
 
   return (
-    <Container size="lg" py="md" className="silho-ir-page">
+    <Container size="xl" py="md" className="silho-ir-page">
       <PageHeader
         title={t('metabolic.profile.title', 'Metabolic history')}
         icon="📋"
