@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { authErrorCopy } from '../../utils/authErrorCopy';
 import { useAuth } from '../../contexts/AuthContext';
@@ -569,6 +569,12 @@ const Login = () => {
             </div>
           </div>
         )}
+
+        <div className={styles.loginActions}>
+          <Link to="/" className={styles.backHomeLink}>
+            {t('common:landing.backHome')}
+          </Link>
+        </div>
       </div>
     </div>
   );

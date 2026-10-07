@@ -1,9 +1,10 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
 from app.api.v1 import admin
 from app.api.v1.endpoints import (
     allergy,
     auth,
+    billing,
     condition,
     custom_reports,
     emergency_contact,
@@ -54,11 +55,15 @@ from app.api.v1.endpoints import (
     utils,
     vitals,
 )
+from app.api.v1.endpoints.billing import require_subscription
+
+PREMIUM = [Depends(require_subscription)]
 
 api_router = APIRouter()
 
 # Include all endpoint routers
 api_router.include_router(auth.router, prefix="/auth", tags=["authentication"])
+api_router.include_router(billing.router, prefix="/billing", tags=["billing"])
 api_router.include_router(sso.router)  # SSO routes already have /auth/sso prefix
 api_router.include_router(users.router, prefix="/users", tags=["users"])
 api_router.include_router(patients.router, prefix="/patients", tags=["patients"])
@@ -135,25 +140,41 @@ api_router.include_router(
 )
 api_router.include_router(allergy.router, prefix="/allergies", tags=["allergies"])
 api_router.include_router(vitals.router, prefix="/vitals", tags=["vitals"])
-api_router.include_router(metabolic.router, prefix="/metabolic", tags=["metabolic"])
 api_router.include_router(
-    metabolic_movement.router, prefix="/metabolic", tags=["metabolic"]
+    metabolic.router, prefix="/metabolic", tags=["metabolic"], dependencies=PREMIUM
 )
 api_router.include_router(
-    metabolic_nutrition.router, prefix="/metabolic", tags=["metabolic"]
+    metabolic_movement.router,
+    prefix="/metabolic",
+    tags=["metabolic"],
+    dependencies=PREMIUM,
 )
 api_router.include_router(
-    metabolic_recipes.router, prefix="/metabolic", tags=["metabolic"]
+    metabolic_nutrition.router,
+    prefix="/metabolic",
+    tags=["metabolic"],
+    dependencies=PREMIUM,
 )
 api_router.include_router(
-    metabolic_week.router, prefix="/metabolic", tags=["metabolic"]
+    metabolic_recipes.router,
+    prefix="/metabolic",
+    tags=["metabolic"],
+    dependencies=PREMIUM,
 )
-api_router.include_router(metabolic_ai.router, prefix="/metabolic", tags=["metabolic"])
 api_router.include_router(
-    metabolic_data.router, prefix="/metabolic", tags=["metabolic"]
+    metabolic_week.router, prefix="/metabolic", tags=["metabolic"], dependencies=PREMIUM
 )
 api_router.include_router(
-    metabolic_wearables.router, prefix="/metabolic", tags=["metabolic"]
+    metabolic_ai.router, prefix="/metabolic", tags=["metabolic"], dependencies=PREMIUM
+)
+api_router.include_router(
+    metabolic_data.router, prefix="/metabolic", tags=["metabolic"], dependencies=PREMIUM
+)
+api_router.include_router(
+    metabolic_wearables.router,
+    prefix="/metabolic",
+    tags=["metabolic"],
+    dependencies=PREMIUM,
 )
 api_router.include_router(symptom.router, prefix="/symptoms", tags=["symptoms"])
 api_router.include_router(

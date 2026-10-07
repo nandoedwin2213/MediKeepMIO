@@ -1498,5 +1498,219 @@
       }
     }
   },
-  "warning": "Waarschuwing"
+  "warning": "Waarschuwing",
+  "landing": {
+    "nav": {
+      "label": "Hoofdnavigatie",
+      "how": "Hoe het werkt",
+      "program": "Programma",
+      "plans": "Abonnementen",
+      "faq": "Vragen"
+    },
+    "cta": {
+      "login": "Inloggen",
+      "start": "Account aanmaken",
+      "haveAccount": "Ik heb al een account"
+    },
+    "hero": {
+      "eyebrow": "Begeleide metabole gezondheid",
+      "title": "Begrijp je stofwisseling en verbeter die met je zorgteam",
+      "subtitle": "SILHO bundelt je labuitslagen, metingen, gewoonten, activiteit en slaap, berekent je metabole score en begeleidt je met door professionals goedgekeurde bewegings- en voedingsplannen.",
+      "trust1": "Referentiewaarden bij elke uitslag",
+      "trust2": "Plannen goedgekeurd door professionals",
+      "trust3": "Jouw gegevens, alleen voor jou",
+      "imageAlt": "Arts in gesprek met een patiënt"
+    },
+    "score": {
+      "label": "{{brand}} metabole score",
+      "favorable": "Gunstig",
+      "initial": "Beginnend",
+      "moderate": "Matig",
+      "high": "Hoog",
+      "change": "▲ 6 punten beter in 90 dagen"
+    },
+    "steps": {
+      "eyebrow": "Hoe het werkt",
+      "title": "Van een losse waarde naar een plan dat je kunt volgen",
+      "subtitle": "Vier stappen die bij elke controle terugkomen.",
+      "measure": {
+        "title": "Meten",
+        "text": "Upload je labuitslagen (pdf, foto of tekst), noteer middel, gewicht en bloeddruk en importeer stappen en slaap van je horloge."
+      },
+      "interpret": {
+        "title": "Begrijpen",
+        "text": "We berekenen HOMA-IR, TyG, METS-IR en meer, met bereik en stoplicht, en leggen uit wat je stofwisseling beïnvloedt."
+      },
+      "intervene": {
+        "title": "Ingrijpen",
+        "text": "Je arts, fysiotherapeut en diëtist keuren je bewegings- en voedingsplan goed, met recepten voor jou."
+      },
+      "follow": {
+        "title": "Opvolgen",
+        "text": "Vink je week af, bekijk je voortgang na 30 en 90 dagen en 12 maanden en begrijp waarom je risico veranderde."
+      }
+    },
+    "modules": {
+      "eyebrow": "Het programma",
+      "title": "Alles wat je nodig hebt op één plek",
+      "labs": {
+        "alt": "Bloedbuisjes in een laboratorium",
+        "title": "Labuitslagen die je begrijpt",
+        "text": "Upload je labrapport en SILHO herkent glucose, insuline, HbA1c, vetten, lever- en nierwaarden. Je controleert elke waarde voor het opslaan.",
+        "point1": "Leest digitale en gescande pdf’s",
+        "point2": "Elke waarde met bereik: normaal, grens, hoog en zeer hoog",
+        "point3": "Standaard LOINC-codes"
+      },
+      "exercise": {
+        "alt": "Mensen die stretchen tijdens een les",
+        "title": "Beweging op maat",
+        "text": "Eenvoudige functionele tests en een plan voor conditie, kracht, mobiliteit en balans, beoordeeld door je fysiotherapeut.",
+        "point1": "Opstaan uit stoel, knijpkracht en 6-minuten-wandeltest",
+        "point2": "Wekelijkse opbouw en veiligheidsregels",
+        "point3": "Dagelijks stappendoel"
+      },
+      "nutrition": {
+        "alt": "Verse salade met volkorenbrood",
+        "title": "Voeding zonder onmogelijke diëten",
+        "text": "Een plan op basis van je gegevens en voorkeuren: calorieën, eiwit, vezels en de bordmethode, met recepten die rekening houden met je allergieën.",
+        "point1": "Vegetarisch, veganistisch of alles",
+        "point2": "Meer dan 20 recepten met voedingswaarden",
+        "point3": "Goedgekeurd door je diëtist"
+      },
+      "wearables": {
+        "alt": "Persoon kijkt op een smartwatch",
+        "title": "Je horloge telt ook mee",
+        "text": "Importeer stappen, beweging, slaap en hartslag uit Apple Gezondheid of Google Fit en bekijk ze naast je weekprogramma.",
+        "point1": "Voorbeeld voor het opslaan",
+        "point2": "Gemiddelden over 28 dagen met bereiken",
+        "point3": "Jij bepaalt wanneer je profiel wordt bijgewerkt"
+      }
+    },
+    "tools": {
+      "assistant": {
+        "title": "Metabole assistent",
+        "text": "Uitleg in gewone taal en een simulator ‘wat als ik … verbeter?’."
+      },
+      "week": {
+        "title": "Mijn week",
+        "text": "Je programma van maandag tot zondag en hoeveel je ervan deed."
+      },
+      "team": {
+        "title": "Professioneel team",
+        "text": "Een dashboard met meldingen voor artsen, fysiotherapeuten en diëtisten."
+      },
+      "privacy": {
+        "title": "Gegevensbescherming",
+        "text": "Je klinische gegevens gaan nooit naar externe AI-diensten."
+      }
+    },
+    "plans": {
+      "eyebrow": "Abonnementen",
+      "title": "Kies je abonnement",
+      "subtitle": "Eenmalige betaling voor de gekozen periode. Geen automatische verlenging: jij beslist of je doorgaat.",
+      "popular": "Meest gekozen",
+      "cta": "Beginnen",
+      "note": "Betalingen via PayPhone. Prijzen in Amerikaanse dollars (USD)."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "what": {
+        "q": "Wat is de metabole score?",
+        "a": "Een score van 0 tot 100 op basis van labuitslagen, metingen en gewoonten. Hoe hoger, hoe gunstiger. Je ziet altijd welke factoren hem verhogen of verlagen."
+      },
+      "who": {
+        "q": "Voor wie is SILHO?",
+        "a": "Voor mensen met insulineresistentie, prediabetes, overgewicht of leververvetting, of wie dat wil voorkomen, begeleid door hun zorgteam."
+      },
+      "doctor": {
+        "q": "Vervangt het mijn arts?",
+        "a": "Nee. SILHO helpt meten en opvolgen; plannen worden beoordeeld en goedgekeurd door een professional. Bij klachten ga je naar je arts."
+      },
+      "data": {
+        "q": "Wie ziet mijn gegevens?",
+        "a": "Alleen jij en de professionals die je begeleiden. Voor onderzoek worden alleen geanonimiseerde gegevens gebruikt met jouw toestemming, die je altijd kunt intrekken."
+      },
+      "cancel": {
+        "q": "Hoe zeg ik op?",
+        "a": "Er zijn geen automatische afschrijvingen. Je betaalt voor 1, 3 of 12 maanden en beslist aan het eind of je verlengt."
+      }
+    },
+    "final": {
+      "title": "Je stofwisseling, gemeten en begeleid",
+      "text": "Maak je account aan met e-mail of Google en start vandaag je eerste evaluatie."
+    },
+    "footer": {
+      "disclaimer": "SILHO vervangt geen consult bij een arts. De informatie is educatief en wordt beoordeeld door zorgprofessionals.",
+      "credits": "Foto’s: StockSnap en rawpixel (publiek domein, CC0)."
+    },
+    "backHome": "← Terug naar home"
+  },
+  "billing": {
+    "plans": {
+      "monthly": "Maandelijks",
+      "quarterly": "Per kwartaal",
+      "yearly": "Jaarlijks"
+    },
+    "period": {
+      "monthly": "1 maand toegang",
+      "quarterly": "3 maanden toegang",
+      "yearly": "12 maanden toegang"
+    },
+    "perMonth": "{{amount}} per maand",
+    "saving": "Bespaar {{percent}}%",
+    "features": {
+      "score": "Metabole score en indicatoren met bereiken",
+      "plans": "Begeleide bewegings- en voedingsplannen",
+      "week": "Mijn week en therapietrouw",
+      "ai": "Assistent en simulator",
+      "data": "Import van labuitslagen en wearables"
+    },
+    "title": "Mijn abonnement",
+    "subtitle": "Toegang tot het volledige metabole programma van SILHO.",
+    "exempt": "Als professional heb je volledige toegang zonder abonnement.",
+    "notConfigured": "Online betalen wordt binnenkort geactiveerd. Tot die tijd is de toegang open.",
+    "activeTitle": "Actief abonnement",
+    "activeUntil": "Abonnement {{plan}} · geldig tot {{date}}",
+    "noActive": "Je hebt geen actief abonnement.",
+    "choose": "Kies een abonnement",
+    "extend": "Heb je al een actief abonnement, dan begint de nieuwe periode als het huidige afloopt.",
+    "pay": "Betalen met PayPhone",
+    "paying": "Doorsturen naar PayPhone…",
+    "terms": "Ik ga ermee akkoord dat de betaling alleen de gekozen periode dekt, zonder automatische verlenging, en dat SILHO geen artsconsult vervangt.",
+    "termsRequired": "Accepteer de voorwaarden om verder te gaan.",
+    "secure": "Veilig betalen met PayPhone. SILHO bewaart je kaartgegevens niet.",
+    "checkoutError": "De betaling kon niet worden gestart. Probeer het over een paar minuten opnieuw.",
+    "history": "Betalingsgeschiedenis",
+    "noHistory": "Nog geen betalingen.",
+    "col": {
+      "date": "Datum",
+      "plan": "Abonnement",
+      "amount": "Bedrag",
+      "status": "Status",
+      "validUntil": "Geldig tot"
+    },
+    "status": {
+      "active": "Betaald",
+      "pending": "In behandeling",
+      "cancelled": "Geannuleerd",
+      "rejected": "Geweigerd",
+      "error": "Mislukt"
+    },
+    "response": {
+      "title": "Resultaat van de betaling",
+      "confirming": "Je betaling wordt bevestigd bij PayPhone…",
+      "success": "Betaling goedgekeurd! Je abonnement is actief tot {{date}}.",
+      "rejected": "PayPhone heeft de betaling niet goedgekeurd.",
+      "cancelled": "Je hebt de betaling geannuleerd. Je kunt het altijd opnieuw proberen.",
+      "pending": "De betaling staat nog open bij PayPhone. Kijk over een paar minuten opnieuw.",
+      "error": "We konden de betaling niet bevestigen. Is er afgeschreven, neem dan contact op en we zoeken het uit.",
+      "goProgram": "Naar Mijn metabole gezondheid",
+      "backToPlans": "Terug naar Mijn abonnement"
+    },
+    "gate": {
+      "title": "Dit onderdeel hoort bij het SILHO-programma",
+      "text": "Neem een abonnement om je metabole score, bewegings- en voedingsplannen, je week en de assistent te zien.",
+      "cta": "Bekijk abonnementen"
+    }
+  }
 }

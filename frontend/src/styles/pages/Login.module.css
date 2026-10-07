@@ -485,3 +485,16 @@
     background: transparent;
   }
 }
+
+.backHomeLink {
+  display: block;
+  margin-top: 0.75rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+}
+
+.backHomeLink:hover {
+  text-decoration: underline;
+}

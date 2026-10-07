@@ -23,6 +23,7 @@ from .associations import (
     TreatmentMedication,
 )
 from .base import Base, get_utc_now
+from .billing import Subscription
 from .clinical import (
     Allergy,
     Condition,
@@ -102,6 +103,7 @@ from .user import (
 )
 
 __all__ = [
+    "Subscription",
     "AdherenceLog",
     "MetabolicInsight",
     "ExercisePlan",

@@ -1498,5 +1498,219 @@
       }
     }
   },
-  "warning": "Varning"
+  "warning": "Varning",
+  "landing": {
+    "nav": {
+      "label": "Huvudnavigering",
+      "how": "Så fungerar det",
+      "program": "Program",
+      "plans": "Abonnemang",
+      "faq": "Frågor"
+    },
+    "cta": {
+      "login": "Logga in",
+      "start": "Skapa mitt konto",
+      "haveAccount": "Jag har redan ett konto"
+    },
+    "hero": {
+      "eyebrow": "Övervakad metabol hälsa",
+      "title": "Förstå din ämnesomsättning och förbättra den med ditt vårdteam",
+      "subtitle": "SILHO samlar dina labbprover, mått, vanor, aktivitet och sömn, räknar ut din metabola poäng och stöttar dig med tränings- och kostplaner som godkänts av vårdpersonal.",
+      "trust1": "Referensintervall för varje värde",
+      "trust2": "Planer godkända av vårdpersonal",
+      "trust3": "Dina data, bara för dig",
+      "imageAlt": "Läkare som samtalar med en patient"
+    },
+    "score": {
+      "label": "{{brand}} metabol poäng",
+      "favorable": "Gynnsam",
+      "initial": "Tidig",
+      "moderate": "Måttlig",
+      "high": "Hög",
+      "change": "▲ 6 poäng bättre på 90 dagar"
+    },
+    "steps": {
+      "eyebrow": "Så fungerar det",
+      "title": "Från ett enskilt värde till en plan du kan följa",
+      "subtitle": "Fyra steg som upprepas vid varje kontroll.",
+      "measure": {
+        "title": "Mäta",
+        "text": "Ladda upp labbsvar (pdf, foto eller text), registrera midja, vikt och blodtryck och importera steg och sömn från klockan."
+      },
+      "interpret": {
+        "title": "Tolka",
+        "text": "Vi räknar ut HOMA-IR, TyG, METS-IR med mera, med intervall och trafikljus, och förklarar vad som påverkar din ämnesomsättning."
+      },
+      "intervene": {
+        "title": "Agera",
+        "text": "Din läkare, fysioterapeut och dietist godkänner din tränings- och kostplan, med recept för dig."
+      },
+      "follow": {
+        "title": "Följa upp",
+        "text": "Bocka av veckan, se utvecklingen efter 30 och 90 dagar och 12 månader och förstå varför risken ändrades."
+      }
+    },
+    "modules": {
+      "eyebrow": "Programmet",
+      "title": "Allt du behöver på ett ställe",
+      "labs": {
+        "alt": "Blodprovsrör i ett laboratorium",
+        "title": "Labbsvar som går att förstå",
+        "text": "Ladda upp labbrapporten så känner SILHO igen glukos, insulin, HbA1c, blodfetter, lever- och njurvärden. Du granskar varje värde innan det sparas.",
+        "point1": "Läser digitala och skannade pdf:er",
+        "point2": "Varje värde med intervall: normalt, gräns, högt och mycket högt",
+        "point3": "Standardiserade LOINC-koder"
+      },
+      "exercise": {
+        "alt": "Personer som stretchar på ett träningspass",
+        "title": "Träning anpassad för dig",
+        "text": "Enkla funktionstester och en plan för kondition, styrka, rörlighet och balans som granskas av din fysioterapeut.",
+        "point1": "Uppresning från stol, greppstyrka och 6 minuters gångtest",
+        "point2": "Veckovis progression och säkerhetsregler",
+        "point3": "Dagligt stegmål"
+      },
+      "nutrition": {
+        "alt": "Färsk sallad med fullkornsbröd",
+        "title": "Kost utan omöjliga dieter",
+        "text": "En plan efter dina data och smak: kalorier, protein, fibrer och tallriksmodellen, med recept som tar hänsyn till dina allergier.",
+        "point1": "Vegetariskt, veganskt eller allt",
+        "point2": "Över 20 recept med näringsinnehåll",
+        "point3": "Godkänd av din dietist"
+      },
+      "wearables": {
+        "alt": "Person som tittar på sin smartklocka",
+        "title": "Din klocka räknas också",
+        "text": "Importera steg, träning, sömn och puls från Apple Hälsa eller Google Fit och se dem bredvid veckoprogrammet.",
+        "point1": "Förhandsgranskning innan du sparar",
+        "point2": "28-dagarsmedelvärden med intervall",
+        "point3": "Du bestämmer när profilen uppdateras"
+      }
+    },
+    "tools": {
+      "assistant": {
+        "title": "Metabol assistent",
+        "text": "Förklaringar på enkel svenska och en simulator ”tänk om jag förbättrar …?”."
+      },
+      "week": {
+        "title": "Min vecka",
+        "text": "Ditt program från måndag till söndag och hur mycket du genomfört."
+      },
+      "team": {
+        "title": "Professionellt team",
+        "text": "En översikt med varningar för läkare, fysioterapeuter och dietister."
+      },
+      "privacy": {
+        "title": "Integritet",
+        "text": "Dina kliniska data skickas aldrig till externa AI-tjänster."
+      }
+    },
+    "plans": {
+      "eyebrow": "Abonnemang",
+      "title": "Välj ditt abonnemang",
+      "subtitle": "Engångsbetalning för vald period. Ingen automatisk förnyelse: du bestämmer om du fortsätter.",
+      "popular": "Mest populär",
+      "cta": "Kom igång",
+      "note": "Betalningar hanteras av PayPhone. Priser i US-dollar (USD)."
+    },
+    "faq": {
+      "title": "Vanliga frågor",
+      "what": {
+        "q": "Vad är den metabola poängen?",
+        "a": "En poäng från 0 till 100 som kombinerar labbsvar, mått och vanor. Ju högre, desto bättre. Du ser alltid vad som höjer eller sänker den."
+      },
+      "who": {
+        "q": "Vem är SILHO till för?",
+        "a": "För personer med insulinresistens, prediabetes, övervikt eller fettlever, eller som vill förebygga, med stöd av sitt vårdteam."
+      },
+      "doctor": {
+        "q": "Ersätter det min läkare?",
+        "a": "Nej. SILHO hjälper dig att mäta och följa upp; planerna granskas och godkänns av vårdpersonal. Vid symtom, kontakta din läkare."
+      },
+      "data": {
+        "q": "Vem ser mina data?",
+        "a": "Bara du och vårdpersonalen som behandlar dig. Forskning använder bara anonymiserade data om du tillåter det; du kan återkalla samtycket när som helst."
+      },
+      "cancel": {
+        "q": "Hur säger jag upp?",
+        "a": "Inga automatiska dragningar. Du betalar för 1, 3 eller 12 månader och bestämmer sedan om du förnyar."
+      }
+    },
+    "final": {
+      "title": "Din ämnesomsättning, mätt och med stöd",
+      "text": "Skapa ditt konto med e-post eller Google och börja din första bedömning i dag."
+    },
+    "footer": {
+      "disclaimer": "SILHO ersätter inte ett läkarbesök. Informationen är pedagogisk och granskas av vårdpersonal.",
+      "credits": "Foton: StockSnap och rawpixel (allmän egendom, CC0)."
+    },
+    "backHome": "← Tillbaka till start"
+  },
+  "billing": {
+    "plans": {
+      "monthly": "Månad",
+      "quarterly": "Kvartal",
+      "yearly": "År"
+    },
+    "period": {
+      "monthly": "1 månads åtkomst",
+      "quarterly": "3 månaders åtkomst",
+      "yearly": "12 månaders åtkomst"
+    },
+    "perMonth": "{{amount}} per månad",
+    "saving": "Spara {{percent}} %",
+    "features": {
+      "score": "Metabol poäng och värden med intervall",
+      "plans": "Övervakade tränings- och kostplaner",
+      "week": "Min vecka och följsamhet",
+      "ai": "Assistent och simulator",
+      "data": "Import av labbsvar och wearables"
+    },
+    "title": "Mitt abonnemang",
+    "subtitle": "Få tillgång till hela SILHO:s metabola program.",
+    "exempt": "Som vårdpersonal har du full åtkomst utan abonnemang.",
+    "notConfigured": "Onlinebetalningar aktiveras snart. Fram till dess är åtkomsten öppen.",
+    "activeTitle": "Aktivt abonnemang",
+    "activeUntil": "Abonnemang {{plan}} · gäller till {{date}}",
+    "noActive": "Du har inget aktivt abonnemang.",
+    "choose": "Välj ett abonnemang",
+    "extend": "Har du redan ett aktivt abonnemang börjar den nya perioden när det nuvarande tar slut.",
+    "pay": "Betala med PayPhone",
+    "paying": "Skickar dig till PayPhone…",
+    "terms": "Jag godkänner att betalningen bara gäller vald period, utan automatisk förnyelse, och att SILHO inte ersätter ett läkarbesök.",
+    "termsRequired": "Godkänn villkoren för att fortsätta.",
+    "secure": "Säker betalning med PayPhone. SILHO sparar inte dina kortuppgifter.",
+    "checkoutError": "Betalningen kunde inte startas. Försök igen om några minuter.",
+    "history": "Betalningshistorik",
+    "noHistory": "Inga betalningar ännu.",
+    "col": {
+      "date": "Datum",
+      "plan": "Abonnemang",
+      "amount": "Belopp",
+      "status": "Status",
+      "validUntil": "Gäller till"
+    },
+    "status": {
+      "active": "Betald",
+      "pending": "Väntar",
+      "cancelled": "Avbruten",
+      "rejected": "Nekad",
+      "error": "Misslyckades"
+    },
+    "response": {
+      "title": "Betalningsresultat",
+      "confirming": "Bekräftar din betalning hos PayPhone…",
+      "success": "Betalningen godkändes! Ditt abonnemang gäller till {{date}}.",
+      "rejected": "PayPhone godkände inte betalningen.",
+      "cancelled": "Du avbröt betalningen. Du kan försöka igen när du vill.",
+      "pending": "Betalningen väntar fortfarande hos PayPhone. Kolla igen om några minuter.",
+      "error": "Vi kunde inte bekräfta betalningen. Om du debiterats, kontakta oss så kontrollerar vi.",
+      "goProgram": "Till Min metabola hälsa",
+      "backToPlans": "Tillbaka till Mitt abonnemang"
+    },
+    "gate": {
+      "title": "Den här delen ingår i SILHO-programmet",
+      "text": "Prenumerera för att se din metabola poäng, tränings- och kostplaner, din vecka och assistenten.",
+      "cta": "Se abonnemang"
+    }
+  }
 }

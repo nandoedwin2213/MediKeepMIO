@@ -121,7 +121,8 @@
       "metabolicWeek": "我的一周",
       "metabolicAI": "我的助手",
       "metabolicLabs": "导入化验",
-      "metabolicWearables": "活动与可穿戴设备"
+      "metabolicWearables": "活动与可穿戴设备",
+      "subscription": "我的订阅"
     },
     "sections": {
       "administration": "管理",

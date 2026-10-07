@@ -1498,5 +1498,219 @@
       }
     }
   },
-  "warning": "Ostrzeżenie"
+  "warning": "Ostrzeżenie",
+  "landing": {
+    "nav": {
+      "label": "Nawigacja główna",
+      "how": "Jak to działa",
+      "program": "Program",
+      "plans": "Plany",
+      "faq": "Pytania"
+    },
+    "cta": {
+      "login": "Zaloguj się",
+      "start": "Załóż konto",
+      "haveAccount": "Mam już konto"
+    },
+    "hero": {
+      "eyebrow": "Nadzorowane zdrowie metaboliczne",
+      "title": "Zrozum swój metabolizm i popraw go razem z zespołem medycznym",
+      "subtitle": "SILHO łączy Twoje wyniki badań, pomiary, nawyki, aktywność i sen, oblicza Twój wynik metaboliczny i wspiera Cię planami ćwiczeń i żywienia zatwierdzonymi przez specjalistów.",
+      "trust1": "Zakresy referencyjne przy każdym wyniku",
+      "trust2": "Plany zatwierdzone przez specjalistów",
+      "trust3": "Twoje dane tylko dla Ciebie",
+      "imageAlt": "Lekarz rozmawiający z pacjentem"
+    },
+    "score": {
+      "label": "Wynik metaboliczny {{brand}}",
+      "favorable": "Korzystny",
+      "initial": "Początkowy",
+      "moderate": "Umiarkowany",
+      "high": "Wysoki",
+      "change": "▲ Poprawa o 6 punktów w 90 dni"
+    },
+    "steps": {
+      "eyebrow": "Jak to działa",
+      "title": "Od pojedynczego wyniku do planu, który możesz realizować",
+      "subtitle": "Cztery kroki powtarzane przy każdej kontroli.",
+      "measure": {
+        "title": "Mierz",
+        "text": "Prześlij wyniki badań (PDF, zdjęcie lub tekst), zapisz obwód talii, wagę i ciśnienie oraz zaimportuj kroki i sen z zegarka."
+      },
+      "interpret": {
+        "title": "Interpretuj",
+        "text": "Obliczamy HOMA-IR, TyG, METS-IR i inne, z zakresem i sygnalizacją, oraz wyjaśniamy, co wpływa na Twój metabolizm."
+      },
+      "intervene": {
+        "title": "Działaj",
+        "text": "Lekarz, fizjoterapeuta i dietetyk zatwierdzają Twój plan ćwiczeń i żywienia, z przepisami dla Ciebie."
+      },
+      "follow": {
+        "title": "Monitoruj",
+        "text": "Odhaczaj tydzień, śledź postępy po 30 i 90 dniach oraz 12 miesiącach i zrozum, dlaczego zmieniło się ryzyko."
+      }
+    },
+    "modules": {
+      "eyebrow": "Program",
+      "title": "Wszystko, czego potrzebujesz, w jednym miejscu",
+      "labs": {
+        "alt": "Probówki z krwią w laboratorium",
+        "title": "Wyniki badań, które rozumiesz",
+        "text": "Prześlij wyniki, a SILHO rozpozna glukozę, insulinę, HbA1c, lipidy oraz parametry wątroby i nerek. Każdą wartość sprawdzasz przed zapisaniem.",
+        "point1": "Odczytuje PDF cyfrowe i skany",
+        "point2": "Każdy wynik z zakresem: norma, granica, podwyższony, wysoki",
+        "point3": "Standardowe kody LOINC"
+      },
+      "exercise": {
+        "alt": "Osoby rozciągające się na zajęciach",
+        "title": "Ćwiczenia dopasowane do Ciebie",
+        "text": "Proste testy funkcjonalne i plan ćwiczeń aerobowych, siłowych, mobilności i równowagi sprawdzony przez fizjoterapeutę.",
+        "point1": "Wstawanie z krzesła, siła chwytu i 6-minutowy test marszu",
+        "point2": "Cotygodniowa progresja i zasady bezpieczeństwa",
+        "point3": "Dzienny cel kroków"
+      },
+      "nutrition": {
+        "alt": "Świeża sałatka z pieczywem pełnoziarnistym",
+        "title": "Żywienie bez niemożliwych diet",
+        "text": "Plan według Twoich danych i upodobań: kalorie, białko, błonnik i metoda talerza, z przepisami uwzględniającymi alergie.",
+        "point1": "Wegetariańska, wegańska lub tradycyjna",
+        "point2": "Ponad 20 przepisów z wartościami odżywczymi",
+        "point3": "Zatwierdzony przez dietetyka"
+      },
+      "wearables": {
+        "alt": "Osoba patrząca na smartwatch",
+        "title": "Twój zegarek też się liczy",
+        "text": "Importuj kroki, ćwiczenia, sen i tętno z Apple Zdrowie lub Google Fit i oglądaj je obok planu tygodnia.",
+        "point1": "Podgląd przed zapisaniem",
+        "point2": "Średnie z 28 dni z zakresami",
+        "point3": "Ty decydujesz, kiedy zaktualizować profil"
+      }
+    },
+    "tools": {
+      "assistant": {
+        "title": "Asystent metaboliczny",
+        "text": "Proste wyjaśnienia i symulator „co jeśli poprawię…?”."
+      },
+      "week": {
+        "title": "Mój tydzień",
+        "text": "Twój plan od poniedziałku do niedzieli i procent realizacji."
+      },
+      "team": {
+        "title": "Zespół specjalistów",
+        "text": "Panel z alertami dla lekarzy, fizjoterapeutów i dietetyków."
+      },
+      "privacy": {
+        "title": "Prywatność",
+        "text": "Twoje dane kliniczne nie trafiają do zewnętrznych usług AI."
+      }
+    },
+    "plans": {
+      "eyebrow": "Plany",
+      "title": "Wybierz plan",
+      "subtitle": "Jednorazowa płatność za wybrany okres. Bez automatycznego odnowienia — Ty decydujesz, czy kontynuować.",
+      "popular": "Najczęściej wybierany",
+      "cta": "Zacznij",
+      "note": "Płatności obsługuje PayPhone. Ceny w dolarach amerykańskich (USD)."
+    },
+    "faq": {
+      "title": "Najczęstsze pytania",
+      "what": {
+        "q": "Czym jest wynik metaboliczny?",
+        "a": "Wynik od 0 do 100 łączący badania, pomiary i nawyki. Im wyższy, tym korzystniej. Zawsze widzisz, co go podnosi, a co obniża."
+      },
+      "who": {
+        "q": "Dla kogo jest SILHO?",
+        "a": "Dla osób z insulinoopornością, stanem przedcukrzycowym, nadwagą lub stłuszczeniem wątroby albo chcących im zapobiec, pod opieką zespołu medycznego."
+      },
+      "doctor": {
+        "q": "Czy zastępuje lekarza?",
+        "a": "Nie. SILHO pomaga mierzyć i monitorować; plany sprawdza i zatwierdza specjalista. W razie objawów skontaktuj się z lekarzem."
+      },
+      "data": {
+        "q": "Kto widzi moje dane?",
+        "a": "Tylko Ty i specjaliści, którzy się Tobą opiekują. Do badań używa się wyłącznie zanonimizowanych danych za Twoją zgodą, którą możesz wycofać w każdej chwili."
+      },
+      "cancel": {
+        "q": "Jak zrezygnować?",
+        "a": "Nie ma automatycznych obciążeń. Płacisz za 1, 3 lub 12 miesięcy, a po ich upływie decydujesz o odnowieniu."
+      }
+    },
+    "final": {
+      "title": "Twój metabolizm — zmierzony i pod opieką",
+      "text": "Załóż konto przez e-mail lub Google i rozpocznij pierwszą ocenę już dziś."
+    },
+    "footer": {
+      "disclaimer": "SILHO nie zastępuje wizyty lekarskiej. Informacje mają charakter edukacyjny i są weryfikowane przez specjalistów.",
+      "credits": "Zdjęcia: StockSnap i rawpixel (domena publiczna, CC0)."
+    },
+    "backHome": "← Wróć na stronę główną"
+  },
+  "billing": {
+    "plans": {
+      "monthly": "Miesięczny",
+      "quarterly": "Kwartalny",
+      "yearly": "Roczny"
+    },
+    "period": {
+      "monthly": "1 miesiąc dostępu",
+      "quarterly": "3 miesiące dostępu",
+      "yearly": "12 miesięcy dostępu"
+    },
+    "perMonth": "{{amount}} miesięcznie",
+    "saving": "Oszczędzasz {{percent}}%",
+    "features": {
+      "score": "Wynik metaboliczny i wskaźniki z zakresami",
+      "plans": "Nadzorowane plany ćwiczeń i żywienia",
+      "week": "Mój tydzień i przestrzeganie planu",
+      "ai": "Asystent i symulator",
+      "data": "Import badań i danych z urządzeń"
+    },
+    "title": "Moja subskrypcja",
+    "subtitle": "Uzyskaj dostęp do pełnego programu metabolicznego SILHO.",
+    "exempt": "Jako specjalista masz pełny dostęp bez subskrypcji.",
+    "notConfigured": "Płatności online zostaną wkrótce uruchomione. Do tego czasu dostęp jest otwarty.",
+    "activeTitle": "Aktywna subskrypcja",
+    "activeUntil": "Plan {{plan}} · ważny do {{date}}",
+    "noActive": "Nie masz aktywnej subskrypcji.",
+    "choose": "Wybierz plan",
+    "extend": "Jeśli masz już aktywny plan, nowy okres zacznie się po zakończeniu obecnego.",
+    "pay": "Zapłać przez PayPhone",
+    "paying": "Przekierowanie do PayPhone…",
+    "terms": "Akceptuję, że płatność obejmuje tylko wybrany okres, bez automatycznego odnowienia, oraz że SILHO nie zastępuje wizyty lekarskiej.",
+    "termsRequired": "Zaakceptuj warunki, aby kontynuować.",
+    "secure": "Bezpieczna płatność przez PayPhone. SILHO nie przechowuje danych karty.",
+    "checkoutError": "Nie udało się rozpocząć płatności. Spróbuj ponownie za kilka minut.",
+    "history": "Historia płatności",
+    "noHistory": "Brak płatności.",
+    "col": {
+      "date": "Data",
+      "plan": "Plan",
+      "amount": "Kwota",
+      "status": "Status",
+      "validUntil": "Ważny do"
+    },
+    "status": {
+      "active": "Opłacone",
+      "pending": "Oczekuje",
+      "cancelled": "Anulowane",
+      "rejected": "Odrzucone",
+      "error": "Nieudane"
+    },
+    "response": {
+      "title": "Wynik płatności",
+      "confirming": "Potwierdzanie płatności w PayPhone…",
+      "success": "Płatność zatwierdzona! Subskrypcja jest aktywna do {{date}}.",
+      "rejected": "PayPhone nie zatwierdził płatności.",
+      "cancelled": "Anulowano płatność. Możesz spróbować ponownie w dowolnym momencie.",
+      "pending": "Płatność wciąż oczekuje w PayPhone. Sprawdź ponownie za kilka minut.",
+      "error": "Nie udało się potwierdzić płatności. Jeśli pobrano środki, napisz do nas, a sprawdzimy.",
+      "goProgram": "Przejdź do Moje zdrowie metaboliczne",
+      "backToPlans": "Wróć do Moja subskrypcja"
+    },
+    "gate": {
+      "title": "Ta sekcja jest częścią programu SILHO",
+      "text": "Wykup subskrypcję, aby zobaczyć wynik metaboliczny, plany ćwiczeń i żywienia, swój tydzień i asystenta.",
+      "cta": "Zobacz plany"
+    }
+  }
 }

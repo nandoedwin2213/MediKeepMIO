@@ -84,6 +84,10 @@ import MetabolicWeek from './pages/medical/MetabolicWeek';
 import MetabolicAI from './pages/medical/MetabolicAI';
 import MetabolicLabImport from './pages/medical/MetabolicLabImport';
 import MetabolicWearables from './pages/medical/MetabolicWearables';
+import Landing from './pages/public/Landing';
+import Subscription from './pages/billing/Subscription';
+import PaymentResponse from './pages/billing/PaymentResponse';
+import SubscriptionGate from './components/billing/SubscriptionGate';
 import MetabolicResearch from './pages/admin/MetabolicResearch';
 import MetabolicSettings from './pages/admin/MetabolicSettings';
 import Injuries from './pages/medical/Injuries';
@@ -498,7 +502,9 @@ function App() {
                             path="/my-metabolic-health"
                             element={
                               <ProtectedRoute>
-                                <MetabolicHealth />
+                                <SubscriptionGate>
+                                  <MetabolicHealth />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -523,7 +529,9 @@ function App() {
                             path="/metabolic-risk"
                             element={
                               <ProtectedRoute>
-                                <MetabolicRisk />
+                                <SubscriptionGate>
+                                  <MetabolicRisk />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -531,7 +539,9 @@ function App() {
                             path="/metabolic-movement"
                             element={
                               <ProtectedRoute>
-                                <MetabolicMovement />
+                                <SubscriptionGate>
+                                  <MetabolicMovement />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -539,7 +549,9 @@ function App() {
                             path="/metabolic-nutrition"
                             element={
                               <ProtectedRoute>
-                                <MetabolicNutrition />
+                                <SubscriptionGate>
+                                  <MetabolicNutrition />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -547,7 +559,9 @@ function App() {
                             path="/metabolic-recipes"
                             element={
                               <ProtectedRoute>
-                                <MetabolicRecipes />
+                                <SubscriptionGate>
+                                  <MetabolicRecipes />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -555,7 +569,25 @@ function App() {
                             path="/metabolic-labs"
                             element={
                               <ProtectedRoute>
-                                <MetabolicLabImport />
+                                <SubscriptionGate>
+                                  <MetabolicLabImport />
+                                </SubscriptionGate>
+                              </ProtectedRoute>
+                            }
+                          />
+                          <Route
+                            path="/subscription"
+                            element={
+                              <ProtectedRoute>
+                                <Subscription />
+                              </ProtectedRoute>
+                            }
+                          />
+                          <Route
+                            path="/billing/response"
+                            element={
+                              <ProtectedRoute>
+                                <PaymentResponse />
                               </ProtectedRoute>
                             }
                           />
@@ -563,7 +595,9 @@ function App() {
                             path="/metabolic-wearables"
                             element={
                               <ProtectedRoute>
-                                <MetabolicWearables />
+                                <SubscriptionGate>
+                                  <MetabolicWearables />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -571,7 +605,9 @@ function App() {
                             path="/metabolic-ai"
                             element={
                               <ProtectedRoute>
-                                <MetabolicAI />
+                                <SubscriptionGate>
+                                  <MetabolicAI />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -579,7 +615,9 @@ function App() {
                             path="/metabolic-week"
                             element={
                               <ProtectedRoute>
-                                <MetabolicWeek />
+                                <SubscriptionGate>
+                                  <MetabolicWeek />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -587,7 +625,9 @@ function App() {
                             path="/metabolic-profile"
                             element={
                               <ProtectedRoute>
-                                <MetabolicProfile />
+                                <SubscriptionGate>
+                                  <MetabolicProfile />
+                                </SubscriptionGate>
                               </ProtectedRoute>
                             }
                           />
@@ -859,7 +899,11 @@ function App() {
                           {/* Default redirect */}
                           <Route
                             path="/"
-                            element={<Navigate to="/dashboard" />}
+                            element={
+                              <PublicRoute>
+                                <Landing />
+                              </PublicRoute>
+                            }
                           />
                         </Routes>
                       </div>

@@ -1498,5 +1498,219 @@
       }
     }
   },
-  "warning": "Warnung"
+  "warning": "Warnung",
+  "landing": {
+    "nav": {
+      "label": "Hauptnavigation",
+      "how": "So funktioniert es",
+      "program": "Programm",
+      "plans": "Tarife",
+      "faq": "Fragen"
+    },
+    "cta": {
+      "login": "Anmelden",
+      "start": "Konto erstellen",
+      "haveAccount": "Ich habe bereits ein Konto"
+    },
+    "hero": {
+      "eyebrow": "Betreute Stoffwechselgesundheit",
+      "title": "Verstehe deinen Stoffwechsel und verbessere ihn mit deinem Behandlungsteam",
+      "subtitle": "SILHO bündelt Laborwerte, Messungen, Gewohnheiten, Aktivität und Schlaf, berechnet deinen Stoffwechsel-Score und begleitet dich mit von Fachleuten freigegebenen Trainings- und Ernährungsplänen.",
+      "trust1": "Referenzbereiche bei jedem Wert",
+      "trust2": "Von Fachleuten freigegebene Pläne",
+      "trust3": "Deine Daten, nur für dich",
+      "imageAlt": "Arzt im Gespräch mit einem Patienten"
+    },
+    "score": {
+      "label": "{{brand}} Stoffwechsel-Score",
+      "favorable": "Günstig",
+      "initial": "Beginnend",
+      "moderate": "Mäßig",
+      "high": "Hoch",
+      "change": "▲ 6 Punkte besser in 90 Tagen"
+    },
+    "steps": {
+      "eyebrow": "So funktioniert es",
+      "title": "Vom einzelnen Wert zum Plan, den du umsetzen kannst",
+      "subtitle": "Vier Schritte, die sich bei jeder Kontrolle wiederholen.",
+      "measure": {
+        "title": "Messen",
+        "text": "Lade Laborberichte hoch (PDF, Foto oder Text), erfasse Taille, Gewicht und Blutdruck und importiere Schritte und Schlaf von deiner Uhr."
+      },
+      "interpret": {
+        "title": "Verstehen",
+        "text": "Wir berechnen HOMA-IR, TyG, METS-IR und mehr mit Bereich und Ampel und erklären, was deinen Stoffwechsel beeinflusst."
+      },
+      "intervene": {
+        "title": "Handeln",
+        "text": "Arzt, Physiotherapeut und Ernährungsberater geben deinen Trainings- und Ernährungsplan frei – mit Rezepten für dich."
+      },
+      "follow": {
+        "title": "Verfolgen",
+        "text": "Hake deine Woche ab, sieh deinen Verlauf nach 30 und 90 Tagen und 12 Monaten und verstehe, warum sich dein Risiko verändert hat."
+      }
+    },
+    "modules": {
+      "eyebrow": "Das Programm",
+      "title": "Alles, was du brauchst, an einem Ort",
+      "labs": {
+        "alt": "Blutprobenröhrchen in einem Labor",
+        "title": "Laborwerte, die man versteht",
+        "text": "Lade deinen Laborbericht hoch – SILHO erkennt Glukose, Insulin, HbA1c, Blutfette, Leber- und Nierenwerte. Du prüfst jeden Wert vor dem Speichern.",
+        "point1": "Liest digitale und gescannte PDFs",
+        "point2": "Jeder Wert mit Bereich: normal, grenzwertig, hoch, sehr hoch",
+        "point3": "Standardisierte LOINC-Codes"
+      },
+      "exercise": {
+        "alt": "Menschen beim Dehnen in einem Kurs",
+        "title": "Training nach Maß",
+        "text": "Einfache Funktionstests und ein Plan für Ausdauer, Kraft, Beweglichkeit und Gleichgewicht, geprüft von deinem Physiotherapeuten.",
+        "point1": "Aufsteh-Test, Griffkraft und 6-Minuten-Gehtest",
+        "point2": "Wöchentliche Steigerung und Sicherheitsregeln",
+        "point3": "Tägliches Schrittziel"
+      },
+      "nutrition": {
+        "alt": "Frischer Salat mit Vollkornbrot",
+        "title": "Ernährung ohne unmögliche Diäten",
+        "text": "Ein Plan nach deinen Daten und Vorlieben: Kalorien, Eiweiß, Ballaststoffe und Tellermodell, mit Rezepten, die deine Allergien berücksichtigen.",
+        "point1": "Vegetarisch, vegan oder alles",
+        "point2": "Über 20 Rezepte mit Nährwertangaben",
+        "point3": "Freigegeben von deinem Ernährungsberater"
+      },
+      "wearables": {
+        "alt": "Person schaut auf ihre Smartwatch",
+        "title": "Auch deine Uhr zählt",
+        "text": "Importiere Schritte, Training, Schlaf und Puls aus Apple Health oder Google Fit und sieh sie neben deinem Wochenprogramm.",
+        "point1": "Vorschau vor dem Speichern",
+        "point2": "28-Tage-Durchschnitte mit Bereichen",
+        "point3": "Du entscheidest, wann dein Profil aktualisiert wird"
+      }
+    },
+    "tools": {
+      "assistant": {
+        "title": "Stoffwechsel-Assistent",
+        "text": "Erklärungen in einfacher Sprache und ein Simulator „Was wäre, wenn ich … verbessere?“."
+      },
+      "week": {
+        "title": "Meine Woche",
+        "text": "Dein Programm von Montag bis Sonntag und wie viel du davon geschafft hast."
+      },
+      "team": {
+        "title": "Fachteam",
+        "text": "Ein Dashboard mit Warnungen für Ärzte, Physiotherapeuten und Ernährungsberater."
+      },
+      "privacy": {
+        "title": "Datenschutz",
+        "text": "Deine klinischen Daten werden nie an externe KI-Dienste gesendet."
+      }
+    },
+    "plans": {
+      "eyebrow": "Tarife",
+      "title": "Wähle deinen Tarif",
+      "subtitle": "Einmalzahlung für den gewählten Zeitraum. Keine automatische Verlängerung: Du entscheidest, ob du weitermachst.",
+      "popular": "Am beliebtesten",
+      "cta": "Loslegen",
+      "note": "Zahlungen über PayPhone. Preise in US-Dollar (USD)."
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "what": {
+        "q": "Was ist der Stoffwechsel-Score?",
+        "a": "Ein Wert von 0 bis 100 aus Laborwerten, Messungen und Gewohnheiten. Je höher, desto günstiger. Du siehst immer, welche Faktoren ihn heben oder senken."
+      },
+      "who": {
+        "q": "Für wen ist SILHO?",
+        "a": "Für Menschen mit Insulinresistenz, Prädiabetes, Übergewicht oder Fettleber – oder alle, die vorbeugen möchten – begleitet von ihrem Behandlungsteam."
+      },
+      "doctor": {
+        "q": "Ersetzt es meinen Arzt?",
+        "a": "Nein. SILHO hilft beim Messen und Verfolgen; Pläne werden von Fachleuten geprüft und freigegeben. Bei Beschwerden wende dich an deinen Arzt."
+      },
+      "data": {
+        "q": "Wer sieht meine Daten?",
+        "a": "Nur du und die Fachleute, die dich betreuen. Für Forschung werden nur anonymisierte Daten mit deiner Zustimmung genutzt; du kannst sie jederzeit widerrufen."
+      },
+      "cancel": {
+        "q": "Wie kündige ich?",
+        "a": "Es gibt keine automatischen Abbuchungen. Du zahlst für 1, 3 oder 12 Monate und entscheidest am Ende, ob du verlängerst."
+      }
+    },
+    "final": {
+      "title": "Dein Stoffwechsel – gemessen und begleitet",
+      "text": "Erstelle dein Konto mit E-Mail oder Google und starte noch heute deine erste Auswertung."
+    },
+    "footer": {
+      "disclaimer": "SILHO ersetzt keinen Arztbesuch. Die Informationen dienen der Aufklärung und werden von Fachleuten geprüft.",
+      "credits": "Fotos: StockSnap und rawpixel (gemeinfrei, CC0)."
+    },
+    "backHome": "← Zur Startseite"
+  },
+  "billing": {
+    "plans": {
+      "monthly": "Monatlich",
+      "quarterly": "Vierteljährlich",
+      "yearly": "Jährlich"
+    },
+    "period": {
+      "monthly": "1 Monat Zugang",
+      "quarterly": "3 Monate Zugang",
+      "yearly": "12 Monate Zugang"
+    },
+    "perMonth": "{{amount}} pro Monat",
+    "saving": "{{percent}} % gespart",
+    "features": {
+      "score": "Stoffwechsel-Score und Werte mit Bereichen",
+      "plans": "Betreute Trainings- und Ernährungspläne",
+      "week": "Meine Woche und Therapietreue",
+      "ai": "Assistent und Simulator",
+      "data": "Import von Laborwerten und Wearables"
+    },
+    "title": "Mein Abo",
+    "subtitle": "Zugang zum vollständigen SILHO-Stoffwechselprogramm.",
+    "exempt": "Als Fachkraft hast du vollen Zugang ohne Abo.",
+    "notConfigured": "Onlinezahlungen werden in Kürze aktiviert. Bis dahin ist der Zugang offen.",
+    "activeTitle": "Aktives Abo",
+    "activeUntil": "Tarif {{plan}} · gültig bis {{date}}",
+    "noActive": "Du hast kein aktives Abo.",
+    "choose": "Tarif wählen",
+    "extend": "Hast du bereits ein aktives Abo, beginnt der neue Zeitraum nach dessen Ende.",
+    "pay": "Mit PayPhone bezahlen",
+    "paying": "Weiterleitung zu PayPhone…",
+    "terms": "Ich akzeptiere, dass die Zahlung nur den gewählten Zeitraum ohne automatische Verlängerung abdeckt und SILHO keinen Arztbesuch ersetzt.",
+    "termsRequired": "Bitte akzeptiere die Bedingungen, um fortzufahren.",
+    "secure": "Sichere Zahlung mit PayPhone. SILHO speichert keine Kartendaten.",
+    "checkoutError": "Die Zahlung konnte nicht gestartet werden. Bitte versuche es in einigen Minuten erneut.",
+    "history": "Zahlungsverlauf",
+    "noHistory": "Noch keine Zahlungen.",
+    "col": {
+      "date": "Datum",
+      "plan": "Tarif",
+      "amount": "Betrag",
+      "status": "Status",
+      "validUntil": "Gültig bis"
+    },
+    "status": {
+      "active": "Bezahlt",
+      "pending": "Ausstehend",
+      "cancelled": "Abgebrochen",
+      "rejected": "Abgelehnt",
+      "error": "Fehlgeschlagen"
+    },
+    "response": {
+      "title": "Zahlungsergebnis",
+      "confirming": "Zahlung wird bei PayPhone bestätigt…",
+      "success": "Zahlung genehmigt! Dein Abo ist bis {{date}} aktiv.",
+      "rejected": "PayPhone hat die Zahlung nicht genehmigt.",
+      "cancelled": "Du hast die Zahlung abgebrochen. Du kannst es jederzeit erneut versuchen.",
+      "pending": "Die Zahlung ist bei PayPhone noch ausstehend. Schau in ein paar Minuten nochmal nach.",
+      "error": "Wir konnten die Zahlung nicht bestätigen. Falls abgebucht wurde, schreib uns und wir prüfen es.",
+      "goProgram": "Zu Meine Stoffwechselgesundheit",
+      "backToPlans": "Zurück zu Mein Abo"
+    },
+    "gate": {
+      "title": "Dieser Bereich gehört zum SILHO-Programm",
+      "text": "Abonniere, um deinen Stoffwechsel-Score, deine Trainings- und Ernährungspläne, deine Woche und den Assistenten zu sehen.",
+      "cta": "Tarife ansehen"
+    }
+  }
 }
